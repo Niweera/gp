@@ -1,16 +1,13 @@
     <!--Footer for the website-->
-    <nav class="navbar sticky-bottom navbar-expand-lg navbar-dark" style="background-color: #212529;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                  <a class="nav-link" style="font-size:12px">Copyright © 2018 Regional Hospital, Bentota. All Rights Reserved.<span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
+    <footer class="stickyfooter">
+        <p class="footerleft" style="margin-top:0px;margin-bottom:0px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+        <div class="footerright">
+            <a href="https://www.facebook.com/"><img src="./homefiles/facebook.png" class="foot"></a>
+            <a href="https://twitter.com/"><img src="./homefiles/twitter.png" class="foot"></a>
+            <a href="https://www.linkedin.com"><img src="./homefiles/linkedin.png" class="foot"></a>
         </div>
-    </nav>
+        <div style="clear: both"></div>
+    </footer>
     <!--End of the footer codes-->
     
     <!--JS files needed for bootstrap to work-->
