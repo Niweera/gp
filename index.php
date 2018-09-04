@@ -2,6 +2,58 @@
     include 'header.php';
 ?>
 <br>
+<!--slide-area-->
+<div class="slideshow">
+
+<div class="mySlides">
+  <img src="1.jfif" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <img src="2.jfif" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <img src="3.jfif" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<div class="welcome">
+    <h3>Welcome to Regional Hospital,Bentot</h3>
+    <div class="Custom">
+        <h1>Centre of Excellence in Health Care.</h1>
+        <p>The Regional Hospital situated in Bentota in a 32 acre block of land is the largest teaching hospital in Sri Lanka. The nursing training Schools of Radiography, Pharmacy, Cardiograph, physiotherapy and occupational therapy are also affiliated to the National Hospital.</p>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
