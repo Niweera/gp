@@ -1,17 +1,6 @@
 <?php
 	include '../header.php';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>About</title>
-	<link rel="stylesheet" type="text/css" href="../styles.css">
-</head>
-<body>
-
-
-	</div>
-	</div>
 	<div class="head-bar">
 		<div class="image1">
 			<img src="../sourcefiles/1.jpg" alt="about">
@@ -60,8 +49,6 @@
 		</div><!--column-2-->
 	</div><!--column-->
 
-</body>
 <?php
 	include '../footer.php';
 ?>
-</html>
