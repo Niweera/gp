@@ -29,7 +29,7 @@
                 About Us
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Overview</a>
+                    <a class="dropdown-item" href="./about">Overview</a>
                     <a class="dropdown-item" href="#">Vision & Mission</a>
                 </div>
             </li>
