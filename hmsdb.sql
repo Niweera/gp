@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Aug 25, 2018 at 10:35 PM
--- Server version: 5.7.22
--- PHP Version: 7.0.30
+-- Host: 127.0.0.1
+-- Generation Time: Sep 10, 2018 at 06:06 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `hmsdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `adminid` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -216,9 +228,27 @@ CREATE TABLE `report` (
   `reportname` varchar(255) CHARACTER SET latin1 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `userid` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `flag` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`adminid`);
 
 --
 -- Indexes for table `appointment`
@@ -324,8 +354,20 @@ ALTER TABLE `report`
   ADD PRIMARY KEY (`reportid`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`userid`);
+
+--
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `adminfk` FOREIGN KEY (`adminid`) REFERENCES `user` (`userid`);
 
 --
 -- Constraints for table `appointment`
@@ -333,6 +375,18 @@ ALTER TABLE `report`
 ALTER TABLE `appointment`
   ADD CONSTRAINT `appfk` FOREIGN KEY (`clinicno`) REFERENCES `patient` (`clinicno`),
   ADD CONSTRAINT `appfk2` FOREIGN KEY (`slmcid`) REFERENCES `doctor` (`slmcid`);
+
+--
+-- Constraints for table `dispenser`
+--
+ALTER TABLE `dispenser`
+  ADD CONSTRAINT `disperfk` FOREIGN KEY (`dispid`) REFERENCES `user` (`userid`);
+
+--
+-- Constraints for table `doctor`
+--
+ALTER TABLE `doctor`
+  ADD CONSTRAINT `userfk` FOREIGN KEY (`slmcid`) REFERENCES `user` (`userid`);
 
 --
 -- Constraints for table `doctornote`
@@ -349,9 +403,16 @@ ALTER TABLE `drugupdate`
   ADD CONSTRAINT `drugfk` FOREIGN KEY (`drugid`) REFERENCES `drug` (`drugid`);
 
 --
+-- Constraints for table `nurse`
+--
+ALTER TABLE `nurse`
+  ADD CONSTRAINT `nurfk` FOREIGN KEY (`nurseid`) REFERENCES `user` (`userid`);
+
+--
 -- Constraints for table `patient`
 --
 ALTER TABLE `patient`
+  ADD CONSTRAINT `patfk` FOREIGN KEY (`clinicno`) REFERENCES `user` (`userid`),
   ADD CONSTRAINT `regfk` FOREIGN KEY (`nurseid`) REFERENCES `nurse` (`nurseid`);
 
 --
@@ -366,6 +427,12 @@ ALTER TABLE `patientrecord`
 ALTER TABLE `patienttest`
   ADD CONSTRAINT `ptfk` FOREIGN KEY (`clinicno`) REFERENCES `patient` (`clinicno`),
   ADD CONSTRAINT `ptfk2` FOREIGN KEY (`testid`) REFERENCES `medicaltest` (`testid`);
+
+--
+-- Constraints for table `pharmacist`
+--
+ALTER TABLE `pharmacist`
+  ADD CONSTRAINT `phfk` FOREIGN KEY (`pharmaid`) REFERENCES `user` (`userid`);
 
 --
 -- Constraints for table `pharmdisp`

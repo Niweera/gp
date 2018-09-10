@@ -1,3 +1,49 @@
+<?php
+	include '../dbconf/dbh.php';
+	session_start();
+	
+	
+	if(isset($_POST['submit']))
+	{
+		if((isset($_POST['email']) && $_POST['email'] !='') && (isset($_POST['password']) && $_POST['password'] !=''))
+		{
+			$email = trim($_POST['email']);
+			$password = trim($_POST['password']);
+			
+			$sqlEmail = "select * from customer where email = '".$email."'";
+			$rs = mysqli_query($conn,$sqlEmail);
+			$numRows = mysqli_num_rows($rs);
+			
+			if($numRows  == 1)
+			{
+				$row = mysqli_fetch_assoc($rs);
+				
+				if(password_verify($password,$row['Password']))
+				{
+					session_start();
+					$_SESSION['cuid'] = $row['CuID'];
+					$_SESSION['user_id'] = $row['CustID'];
+					$_SESSION['first_name'] = $row['FirstName'];
+					$_SESSION['last_name'] = $row['LastName'];
+					$_SESSION['email'] = $row['Email'];
+					$_SESSION['ContactNo'] = $row['ContactNo'];
+					header('location: ../user');
+					exit;
+					
+				}
+				else
+				{
+					echo "<script>alert(\"Wrong Email Or Password!\");</script>";
+				}
+			}
+			else
+			{
+				echo "<script>alert(\"No User Found!\");</script>"; 
+			}
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +54,11 @@
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles.css"/>
+	<link rel="stylesheet" href="./style.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+<body id="LoginForm">
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
     <a class="navbar-brand" href="../">Regional Hospital, Bentota</a>
@@ -28,7 +76,7 @@
             About Us
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./">Overview</a>
+                <a class="dropdown-item" href="../about">Overview</a>
                 <a class="dropdown-item" href="#">Vision & Mission</a>
             </div>
         </li>
@@ -46,61 +94,45 @@
         </li>
         <li class="nav-item">
             
-            <a class="nav-link" href="../login">Login</a>
+            <a class="nav-link active" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
         </li>
         </ul>
     </div>
 </nav>
 <!--End of the Header navigation bar for the website-->
-<br>
-	<div class="head-bar">
-		<div class="image1">
-			<img src="../sourcefiles/1.jpg" alt="about">
-		</div><!--image1-->
-	</div><!--head-bar-->
-	<div class="column">
-		<div class="column-1">
-			<h2>History</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-		</div><!--column-1-->
-		<div class="column-1">
-			<h2>History</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-		</div><!--column-1-->
-		<div class="column-2">
-			<div class="column-2">
-			<h2>Responsive Image Gallery</h2>
-			<div class="responsive">
- 			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-    			</a>
-  			</div>
-			</div>
-			<div class="responsive">
- 			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-    			</a>
-  			</div>
-			</div>
-			<div class="responsive">
- 			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-    			</a>
-  			</div>
-			</div>
-			<div class="responsive">
- 			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-    			</a>
-  			</div>
-			</div>
-		</div><!--column-2-->
-	</div><!--column-->
-<br>
-<?php
-	include '../footer.php';
-?>
+<!-- login modal codes-->
+<div class="container">
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>User Login</h2>
+   <p>Please enter your Login ID and Password</p>
+   </div>
+    <form id="Login" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+
+        <div class="form-group">
+
+
+            <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" required>
+
+        </div>
+
+        <div class="form-group">
+
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required>
+
+        </div>
+        <div class="forgot">
+        <a href="reset.html">Forgot password?</a>
+</div>
+        <button type="submit" class="btn btn-primary" name="submit">Login</button>
+
+    </form>
+    </div>
+</div>
+</div>
+</div>
+
+	<?php
+		include '../footer.php';
+	?>
