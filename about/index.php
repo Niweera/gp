@@ -1,3 +1,7 @@
+<?php
+	session_start();
+    include '../dbconf/dbh.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,7 @@
 </head>
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
-    <a class="navbar-brand" href="../">Regional Hospital, Bentota</a>
+    <a class="navbar-brand" href="./">Regional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,14 +25,14 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="../">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php if (isset($_SESSION['userid'])) {include './homelink.php';}else{echo "../";}?>"><?php if (isset($_SESSION['userid'])) { include '../homename.php';}else{echo "";}?> Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             About Us
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./">Overview</a>
+                <a class="dropdown-item active" href="./about">Overview</a>
                 <a class="dropdown-item" href="#">Vision & Mission</a>
             </div>
         </li>
@@ -45,9 +49,15 @@
             <a class="nav-link" href="./#">Contact Details</a>
         </li>
         <li class="nav-item">
-            
-            <a class="nav-link" href="../login">Login</a>
+            <?php
+                if(!isset($_SESSION['userid'])){
+                    echo '<a class="nav-link" href="../login">Log in</a>';
+                }else{
+                    echo '<a class="nav-link" href="../logout">Log out</a>';
+                }
+            ?>
         </li>
+        
         </ul>
     </div>
 </nav>

@@ -37,24 +37,27 @@
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            About Us
+            User Administration
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../../about">Overview</a>
-                <a class="dropdown-item" href="#">Vision & Mission</a>
+                <a class="dropdown-item" href="#">Create Profile</a>
+                <a class="dropdown-item" href="#">Edit Profile</a>
+                <a class="dropdown-item" href="#">Delete Profile</a>
             </div>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Services
+            View Profile
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Clinic Services</a>
-                <a class="dropdown-item" href="#">OPD Services</a>
+                <a class="dropdown-item" href="#">Doctor</a>
+                <a class="dropdown-item" href="#">Nurse</a>
+                <a class="dropdown-item" href="#">Dispenser</a>
+                <a class="dropdown-item" href="#">Pharmacist</a>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./#">Contact Details</a>
+            <a class="nav-link" href="./#">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
