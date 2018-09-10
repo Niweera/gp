@@ -10,7 +10,7 @@
 			$email = trim($_POST['email']);
 			$password = trim($_POST['password']);
 			
-			$sqlEmail = "select * from customer where email = '".$email."'";
+			$sqlEmail = "select * from user where userid = '".$email."'";
 			$rs = mysqli_query($conn,$sqlEmail);
 			$numRows = mysqli_num_rows($rs);
 			
@@ -18,17 +18,35 @@
 			{
 				$row = mysqli_fetch_assoc($rs);
 				
-				if(password_verify($password,$row['Password']))
+				if(password_verify($password,$row['password']))
 				{
 					session_start();
-					$_SESSION['cuid'] = $row['CuID'];
-					$_SESSION['user_id'] = $row['CustID'];
-					$_SESSION['first_name'] = $row['FirstName'];
-					$_SESSION['last_name'] = $row['LastName'];
-					$_SESSION['email'] = $row['Email'];
-					$_SESSION['ContactNo'] = $row['ContactNo'];
-					header('location: ../user');
-					exit;
+					$_SESSION['userid'] = $row['userid'];
+                    $_SESSION['flag'] = $row['flag'];
+                    if ($_SESSION['flag'] == 0){
+                        header('location: ../user/admin');
+					    exit;
+                    }
+                    elseif ($_SESSION['flag'] == 1){
+                        header('location: ../user/doctor');
+					    exit;
+                    }
+					elseif ($_SESSION['flag'] == 2){
+                        header('location: ../user/dispenser');
+					    exit;
+                    }
+                    elseif ($_SESSION['flag'] == 3){
+                        header('location: ../user/pharmacist');
+					    exit;
+                    }
+                    elseif ($_SESSION['flag'] == 4){
+                        header('location: ../user/nurse');
+					    exit;
+                    }
+                    elseif ($_SESSION['flag'] == 5){
+                        header('location: ../user/patient');
+					    exit;
+                    }
 					
 				}
 				else
