@@ -1,0 +1,26 @@
+.head-bar{
+    padding: 50px;
+}
+.image1 img{
+	width: 1250px;
+	height: 400px;
+}
+.column{
+	margin: 15px;
+	width: 1330px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	height: 400px;
+	background: #eee;
+	border-radius: 10px;
+}
+.column-1{
+	width: 423.33px;
+	height: 400px;
+	float: left;
+}
+.column-2{
+	width: 423.33px;
+	height: 400px;
+	float: left;
+}
