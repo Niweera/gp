@@ -1,3 +1,7 @@
+<?php
+	session_start();
+    include './dbconf/dbh.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +25,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link active" href="./">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="<?php if (isset($_SESSION['userid'])) {include './homelink.php';}else{echo "./";}?>"><?php if (isset($_SESSION['userid'])) { include './homename.php';}else{echo "";}?> Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,8 +49,15 @@
             <a class="nav-link" href="./#">Contact Details</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./login">Login</a>
+            <?php
+                if(!isset($_SESSION['userid'])){
+                    echo '<a class="nav-link" href="./login">Log in</a>';
+                }else{
+                    echo '<a class="nav-link" href="./logout">Log out</a>';
+                }
+            ?>
         </li>
+        
         </ul>
     </div>
 </nav>
