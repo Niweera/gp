@@ -55,7 +55,7 @@
 <br>
 	<div class="head-bar">
 		<div class="image1">
-			<img src="../sourcefiles/1.jpg" alt="about">
+			<img src="../sourcefiles/RHB.png" alt="about" width="1500px;" height="400px;">
 		</div><!--image1-->
 	</div><!--head-bar-->
 	<div class="column">
