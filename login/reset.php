@@ -1,65 +1,6 @@
 <?php
 	include '../dbconf/dbh.php';
 	session_start();
-	
-	
-	if(isset($_POST['submit']))
-	{
-		if((isset($_POST['email']) && $_POST['email'] !='') && (isset($_POST['password']) && $_POST['password'] !=''))
-		{
-			$email = trim($_POST['email']);
-			$password = trim($_POST['password']);
-			
-			$sqlEmail = "select * from user where userid = '".$email."'";
-			$rs = mysqli_query($conn,$sqlEmail);
-			$numRows = mysqli_num_rows($rs);
-			
-			if($numRows  == 1)
-			{
-				$row = mysqli_fetch_assoc($rs);
-				
-				if(password_verify($password,$row['password']))
-				{
-					session_start();
-					$_SESSION['userid'] = $row['userid'];
-                    $_SESSION['flag'] = $row['flag'];
-                    if ($_SESSION['flag'] == 0){
-                        header('location: ../user/admin');
-					    exit;
-                    }
-                    elseif ($_SESSION['flag'] == 1){
-                        header('location: ../user/doctor');
-					    exit;
-                    }
-					elseif ($_SESSION['flag'] == 2){
-                        header('location: ../user/dispenser');
-					    exit;
-                    }
-                    elseif ($_SESSION['flag'] == 3){
-                        header('location: ../user/pharmacist');
-					    exit;
-                    }
-                    elseif ($_SESSION['flag'] == 4){
-                        header('location: ../user/nurse');
-					    exit;
-                    }
-                    elseif ($_SESSION['flag'] == 5){
-                        header('location: ../user/patient');
-					    exit;
-                    }
-					
-				}
-				else
-				{
-					echo "<script>alert(\"Wrong Email Or Password!\");</script>";
-				}
-			}
-			else
-			{
-				echo "<script>alert(\"No User Found!\");</script>"; 
-			}
-		}
-	}
 ?>
 
 <!DOCTYPE html>
@@ -123,27 +64,19 @@
 <div class="login-form">
 <div class="main-div">
     <div class="panel">
-   <h2>User Login</h2>
-   <p>Please enter your Login ID and Password</p>
+   <h2>Password Reset</h2>
+   <p>Please enter your Login ID to reset the Password</p>
    </div>
-    <form id="Login" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+    <form id="Login" action="./reset.php" method="post">
 
         <div class="form-group">
 
 
             <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" required>
+            <br>
 
         </div>
-
-        <div class="form-group">
-
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required>
-
-        </div>
-        <div class="forgot">
-        <a href="reset.php">Forgot password?</a>
-</div>
-        <button type="submit" class="btn btn-primary" name="submit">Login</button>
+        <button type="submit" class="btn btn-primary" name="reset">Reset Password</button>
 
     </form>
     </div>
@@ -151,6 +84,42 @@
 </div>
 </div>
 
-	<?php
-		include '../footer.php';
-	?>
+<?php
+    include '../footer.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'C:/xampp/php/pear/PHPMailer/src/Exception.php';
+    require 'C:/xampp/php/pear/PHPMailer/src/PHPMailer.php';
+    require 'C:/xampp/php/pear/PHPMailer/src/SMTP.php';
+?>
+
+<?php
+
+if (null !==(filter_input(INPUT_POST, 'reset'))){
+    $username = mysqli_real_escape_string($conn, $_POST['email']);
+    include './test.php';
+    $email = returnEmail($username);
+	if($email != ""){
+        $password = rand(999, 99999);
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $usql = "UPDATE `user` SET password='$hashed_password' WHERE userid='$username'";
+        $result = mysqli_query($conn, $usql);
+        if($result){
+            $to = $email;
+            $subject = "Your Recovered Password";
+            $message = "Please use this password to login " . $password;
+            $headers = "From: hmsystem.noreply@gmail.me";
+            if(mail($to, $subject, $message, $headers)){
+                echo '<script>alert("Your Password has been sent to your email id");</script>';
+            }
+            else{
+                echo '<script>alert("Failed to Recover your password, try again");</script>';
+            }
+        }
+    }else{
+		echo '<script>alert("User name does not exist in database");</script>'; 
+	}
+}
+
+?>
