@@ -7,8 +7,8 @@
 	{
 		if((isset($_POST['email']) && $_POST['email'] !='') && (isset($_POST['password']) && $_POST['password'] !=''))
 		{
-			$email = trim($_POST['email']);
-			$password = trim($_POST['password']);
+			$email = trim(mysqli_real_escape_string($conn, $_POST['email']));
+			$password = trim(mysqli_real_escape_string($conn, $_POST['password']));
 			
 			$sqlEmail = "select * from user where userid = '".$email."'";
 			$rs = mysqli_query($conn,$sqlEmail);
