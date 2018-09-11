@@ -11,11 +11,16 @@
     <title>Home</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+    <style>
+        body{
+            background-color:  #f0f5f5;
+        }
+    </style>
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
     <a class="navbar-brand" href="./">Regional Hospital, Bentota</a>
@@ -69,11 +74,14 @@
 <div class="slideshow">
 
 <div class="mySlides">
-  <img src="./sourcefiles/1.jpg" style="width:100%">
+  <img src="./sourcefiles/1.jpg">
+  <div class="text"><h4>Healing with Feeling</h4><p>Offering the most up-to-date Health Care services and Support</p></div>
 </div>
 
 <div class="mySlides">
-  <img src="./sourcefiles/2.jpg" style="width:100%">
+  <img src="./sourcefiles/2.jpg">
+  <div class="text"><h4>Committed towards a Healthy Nation</h4>
+<p>We ensure you're diagnosed with equipment of latest technology</p></div>
 </div>
 
 <div class="mySlides">
