@@ -15,6 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+<body>
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
     <a class="navbar-brand" href="./">Regional Hospital, Bentota</a>

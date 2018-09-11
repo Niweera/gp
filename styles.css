@@ -238,3 +238,17 @@ div.gallery img {
 .login-help{
   font-size: 12px;
 }
+
+
+.list-group-item:hover .list-group-item-action:hover{
+    background-color: #075fc4 !important;
+}
+
+}
+.btn-primary {
+
+    color: #fff;
+    background-color: #242424 !important;
+    border-color: #000000 !important;
+
+}

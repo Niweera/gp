@@ -20,7 +20,9 @@
 				
 				if(password_verify($password,$row['password']))
 				{
-					session_start();
+                    session_start();
+                    include './test2.php';
+                    $_SESSION['name'] = returnName($email);
 					$_SESSION['userid'] = $row['userid'];
                     $_SESSION['flag'] = $row['flag'];
                     if ($_SESSION['flag'] == 0){
