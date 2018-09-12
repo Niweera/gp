@@ -43,9 +43,9 @@
             User Administration
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Create Profile</a>
-                <a class="dropdown-item" href="#">Edit Profile</a>
-                <a class="dropdown-item" href="#">Delete Profile</a>
+                <a class="dropdown-item" href="./create.php">Create Profile</a>
+                <a class="dropdown-item" href="./adminedit.php">Edit Profile</a>
+                <a class="dropdown-item" href="./delete.php">Delete Profile</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -121,7 +121,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Edit Profile</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">Go</a>
+                                    <a href="./adminedit.php" class="btn btn-primary btn-block">Go</a>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Delete Profile</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">Go</a>
+                                    <a href="./delete.php" class="btn btn-primary btn-block">Go</a>
                                 </div>
                             </div>
                         </div>

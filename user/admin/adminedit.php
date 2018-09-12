@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Doctor Registration</title>
+    <title>Edit Profile</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -43,8 +43,8 @@
             User Administration
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item active" href="./create.php">Create Profile</a>
-                <a class="dropdown-item" href="./adminedit.php">Edit Profile</a>
+                <a class="dropdown-item" href="./create.php">Create Profile</a>
+                <a class="dropdown-item active" href="./adminedit.php">Edit Profile</a>
                 <a class="dropdown-item" href="./delete.php">Delete Profile</a>
             </div>
         </li>
@@ -73,7 +73,7 @@
 
     <form name="doclog" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">
         <div class="container">
-            <center><h1 style="color:#242424;">Doctor Registration</h1></center>
+            <center><h1 style="color:#242424;">Edit Administrator Profile</h1></center>
         </div>
         <br>
         <br>
@@ -83,30 +83,37 @@
                     <div class="form-group row">
                         <label for="name" class="col-sm-4 col-form-label"><h5>Name</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Enter Name" required autofocus>
+                            <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Enter Name" value="<?php echo $_SESSION['name'];?>" required autofocus>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="email" class="col-sm-4 col-form-label"><h5>Email</h5></label>
                         <div class="col-lg-8">
-                            <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Enter Email">
+                            <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Enter Email" value="<?php echo $_SESSION['email'];?>">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="contactno" class="col-sm-4 col-form-label"><h5>Telephone Number</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="contactno" id="contactno" placeholder="Enter Telephone Number" required autofocus>
+                            <input type="text" class="form-control form-control-sm" name="contactno" id="contactno" placeholder="Enter Telephone Number" value = "<?php echo $_SESSION['contactno'];?>" required autofocus>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="slmcid" class="col-sm-4 col-form-label"><h5>SLMC ID</h5></label>
+                        <label for="password" class="col-sm-4 col-form-label"><h5>Password</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="slmcid" id="slmcid" placeholder="Enter SLMC ID" required autofocus>
+                            <input type="password" class="form-control form-control-sm" name="password" id="password" placeholder="Enter Password" onkeyup='check();' required autofocus>
+                        </div>
+                    </div> 
+                    <div class="form-group row">
+                        <label for="repassword" class="col-sm-4 col-form-label"><h5>Re-enter Password</h5></label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control form-control-sm" name="repassword" id="repassword" placeholder="Re-enter Password" onkeyup='check();' required autofocus>
+                            <div class="mt-2" id='message'></div>
                         </div>
                     </div> 
                 </div>
             </div>
-            <center> <input type="submit" value="Register" class="btn btn-primary btn-lg" name="submit"> </center>   
+            <center> <input type="submit" value="Edit Profile" class="btn btn-primary btn-lg" name="submit"> </center>   
             <br>
         </div>
         <br>
@@ -129,39 +136,26 @@
 
 <?php
     if (null !==(filter_input(INPUT_POST, 'submit'))){
+        $userid = $_SESSION['userid'];
         $name = filter_input(INPUT_POST,'name');
         $contactno = filter_input(INPUT_POST,'contactno');
-        $slmcid = filter_input(INPUT_POST,'slmcid');
         $email = filter_input(INPUT_POST,'email');
-        $password = rand(999, 99999);
+        $password = filter_input(INPUT_POST,'password');
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $flag = "1";
         
-        $sql .= "INSERT INTO user (userid,password,flag) VALUES ('$slmcid','$hashed_password','$flag');";
-        $sql .= "INSERT INTO doctor (name,contactno,slmcid,email) VALUES ('$name','$contactno','$slmcid','$email');";
+        $sql = "UPDATE user SET password='$hashed_password' WHERE userid='$userid';";
+        $sql .= "UPDATE admin SET name='$name',email='$email',contactno='$contactno' WHERE adminid='$userid';";
         
         $mysqli_query = mysqli_multi_query($conn, $sql);
        
         if (!$mysqli_query){
                     echo "<script>alert(\"Error Occured!\");</script>";
                 }else {
-                    $to = $email;
-                    $subject = "Activate your account";
-                    $message = "Please use this username and password to login: \nUsername: " . $slmcid . "\nPassword: ". $password ."\nGo to this link to login: http://localhost/gp/login/ \nPlease change the password after the first login.";
-                    $headers = "From: hmsystem.noreply@gmail.me";
-                    if(mail($to, $subject, $message, $headers)){
-                        echo "<script>alert(\"Successfully registered!\");</script>";
-                    }
-                    else{
-                        echo '<script>alert("Error occured in sending the password, try again");</script>';
-                    }
-                    
+                    $_SESSION['name'] = $name;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['contactno'] = $contactno;
+                    echo "<script>alert(\"Successfully Updated! Please refresh the browser to see the changes.\");</script>";
+
                 }
     }
-
-
-
-
-
-
 ?>
