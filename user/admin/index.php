@@ -103,11 +103,11 @@
                 <h3>Registration</h3>
                 <hr>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action"><strong>Administrator</strong></a>
-                    <a href="#" class="list-group-item list-group-item-action"><strong>Doctor</strong></a>
-                    <a href="#" class="list-group-item list-group-item-action"><strong>Dispenser</strong></a>
-                    <a href="#" class="list-group-item list-group-item-action"><strong>Pharmacist</strong></a>
-                    <a href="#" class="list-group-item list-group-item-action"><strong>Nurse</strong></a>
+                    <a href="./adminreg.php" class="list-group-item list-group-item-action"><strong>Administrator</strong></a>
+                    <a href="./doctorreg.php" class="list-group-item list-group-item-action"><strong>Doctor</strong></a>
+                    <a href="./dispreg.php" class="list-group-item list-group-item-action"><strong>Dispenser</strong></a>
+                    <a href="./pharmareg.php" class="list-group-item list-group-item-action"><strong>Pharmacist</strong></a>
+                    <a href="./nursereg.php" class="list-group-item list-group-item-action"><strong>Nurse</strong></a>
                 </div>
             </div>
         </div>

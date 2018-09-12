@@ -21,8 +21,11 @@
 				if(password_verify($password,$row['password']))
 				{
                     session_start();
-                    include './test2.php';
-                    $_SESSION['name'] = returnName($email);
+                    include './test3.php';
+                    $list = returnName($email);
+                    $_SESSION['name'] = $list[0];
+                    $_SESSION['email'] = $list[1];
+                    $_SESSION['contactno'] = $list[2];
 					$_SESSION['userid'] = $row['userid'];
                     $_SESSION['flag'] = $row['flag'];
                     if ($_SESSION['flag'] == 0){
@@ -133,13 +136,13 @@
         <div class="form-group">
 
 
-            <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" required>
+            <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" required autofocus>
 
         </div>
 
         <div class="form-group">
 
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required autofocus>
 
         </div>
         <div class="forgot">
