@@ -21,11 +21,14 @@
 				if(password_verify($password,$row['password']))
 				{
                     session_start();
-                    include './test3.php';
-                    $list = returnName($email);
-                    $_SESSION['name'] = $list[0];
-                    $_SESSION['email'] = $list[1];
-                    $_SESSION['contactno'] = $list[2];
+                    include './function.php';
+                    $list = returnFlag($email);
+                    $sql1 = "SELECT * FROM `$list[0]` WHERE `$list[1]`='$email';";
+                    $result2 = mysqli_query($conn,$sql1);
+                    $row1 = mysqli_fetch_assoc($result2);
+                    $_SESSION['name'] = $row1['name'];
+                    $_SESSION['email'] = $row1['email'];
+                    $_SESSION['contactno'] = $row1['contactno'];
 					$_SESSION['userid'] = $row['userid'];
                     $_SESSION['flag'] = $row['flag'];
                     if ($_SESSION['flag'] == 0){

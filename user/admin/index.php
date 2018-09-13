@@ -138,7 +138,7 @@
                             <div class="card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Reports</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">View Reports</a>
+                                    <a href="#" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
                             <div class="card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Inventory</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">View Inventory</a>
+                                    <a href="#" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>

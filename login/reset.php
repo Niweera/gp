@@ -98,8 +98,13 @@
 
 if (null !==(filter_input(INPUT_POST, 'reset'))){
     $username = mysqli_real_escape_string($conn, $_POST['email']);
-    include './test.php';
-    $email = returnEmail($username);
+
+    include './function.php';
+    $list = returnFlag($username);
+    $sql1 = "SELECT email FROM `$list[0]` WHERE `$list[1]`='$username';";
+    $result2 = mysqli_query($conn,$sql1);
+    $row1 = mysqli_fetch_assoc($result2);
+    $email = $row1['email'];
 	if($email != ""){
         $password = rand(999, 99999);
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -108,7 +113,7 @@ if (null !==(filter_input(INPUT_POST, 'reset'))){
         if($result){
             $to = $email;
             $subject = "Your Recovered Password";
-            $message = "Please use this password to login " . $password;
+            $message = "Please use this username and password to login: \nUsername: " . $username . "\nPassword: ". $password ."\nGo to this link to login: http://localhost/gp/login/ \nPlease change the password after the login.";
             $headers = "From: hmsystem.noreply@gmail.me";
             if(mail($to, $subject, $message, $headers)){
                 echo '<script>alert("Your Password has been sent to your email id");</script>';
