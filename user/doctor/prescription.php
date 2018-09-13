@@ -1,14 +1,14 @@
 <?php
     session_start();
     include '../../dbconf/dbh.php';
-    if(!isset($_SESSION['userid'])){
+    /*if(!isset($_SESSION['userid'])){
         header('location: ../../login');
         exit;
         }else{
             if ($_SESSION['flag'] != 1){
                 header('location: ../../login');	 	
             }
-        }
+        }*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +78,14 @@
         <br>
         <br>
         <div class="container border pt-4 bg-light rounded">
+            <div class="form-group row">
+                <div class="col-sm-3"></div>
+                <label for="clinicno" class="col-sm-2 col-form-label"><h5>Clinic No:</h5></label>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control form-control-sm" name="clinicno" id="clinicno" placeholder="Enter Clinic No" required autofocus>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -101,25 +109,29 @@
                             echo "<td style=\"width: 20.00%\">";
                             echo "<div class=\"row\">";
                             echo "<div class=\"col-md-8\">";
-                            echo "<input type=\"text\" class=\"form-control form-control-sm\" name=".$drugid."1 value=\"500\" autofocus>";
+                            echo "<input type=\"text\" class=\"form-control form-control-sm\" name=".$drugid."d>";
                             echo "</div>";
                             echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
                             echo "<td style=\"width: 20.00%\">";
-                            echo "<input type=\"text\" class=\"form-control form-control-sm\" name=".$drugid."2>";
+                            echo "<input type=\"text\" class=\"form-control form-control-sm\" name=".$drugid."f>";
                             echo "</td>";
                             echo "<td style=\"width: 20.00%\">";
-                            echo "<input type=\"text\" class=\"form-control form-control-sm\" name=".$drugid."3>";   
+                            echo "<input type=\"text\" class=\"form-control form-control-sm\" name=".$drugid."u>";   
                             echo "</td>";
                             echo "</tr>";
                         }
                     }
                 ?>
+                    <tr>  
+                        <td colspan="4" style="text-align:center">
+                            <input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg" name="submit">
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         <br>
         <br>
-        <center><input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg" name="submit"></center>
     </form>
 
 
@@ -132,29 +144,30 @@
 
 </html>
 
+<?php
 
-<?php/*
-    if (null !==(filter_input(INPUT_POST, 'submit'))){
-        $userid = $_SESSION['userid'];
-        $name = filter_input(INPUT_POST,'name');
-        $contactno = filter_input(INPUT_POST,'contactno');
-        $email = filter_input(INPUT_POST,'email');
-        $password = filter_input(INPUT_POST,'password');
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
-        $sql = "UPDATE user SET password='$hashed_password' WHERE userid='$userid';";
-        $sql .= "UPDATE doctor SET name='$name',email='$email',contactno='$contactno' WHERE slmcid='$userid';";
-        
-        $mysqli_query = mysqli_multi_query($conn, $sql);
-       
-        if (!$mysqli_query){
-                    echo "<script>alert(\"Error Occured!\");</script>";
-                }else {
-                    $_SESSION['name'] = $name;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['contactno'] = $contactno;
-                    echo "<script>alert(\"Successfully Updated! Please refresh the browser to see the changes.\");</script>";
-
-                }
-    }*/
+if (null !==(filter_input(INPUT_POST, 'submit'))){
+    $slmcid = $_SESSION['userid'];
+    $clinicno = filter_input(INPUT_POST,'clinicno');
+    
+    $sql = "SELECT drugid, drugname FROM drug;";
+    $result=mysqli_query($conn,$sql);
+    $queryResult=mysqli_num_rows($result);
+    if ($queryResult > 0){
+        while ($row=mysqli_fetch_assoc($result)){
+            $drugid = $row['drugid'];
+            $dose = filter_input(INPUT_POST,$drugid."d");
+            $frequency = filter_input(INPUT_POST,$drugid."f");
+            $duration = filter_input(INPUT_POST,$drugid."u");
+            $sql0 = "INSERT INTO prescription (slmcid, clinicno, drugid, frequency, dose, duration) VALUES ('$slmcid','$clinicno','$drugid','$dose','$frequency','$duration');";
+            $mysqli_query = mysqli_query($conn, $sql0);
+            if (!$mysqli_query){
+                echo "<script>alert(\"Error Occured!\");</script>";
+            }
+        }
+        echo "<script>alert(\"Prescription is sent to the dispenser successfully!\");</script>";
+    }
+}
 ?>
+
+
