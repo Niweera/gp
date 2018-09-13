@@ -125,34 +125,34 @@
 <!--End of the Header navigation bar for the website-->
 <!-- login modal codes-->
 <div class="container">
-<div class="login-form">
-<div class="main-div">
-    <div class="panel">
-   <h2>User Login</h2>
-   <p>Please enter your Login ID and Password</p>
-   </div>
-    <form id="Login" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+    <div class="login-form">
+        <div class="main-div">
+            <div class="panel">
+                <h2>User Login</h2>
+                <p>Please enter your Login ID and Password</p>
+            </div>
+            <form id="Login" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 
-        <div class="form-group">
+                <div class="form-group">
 
 
-            <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" required autofocus>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" required autofocus>
 
+                </div>
+
+                <div class="form-group">
+
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required autofocus>
+
+                </div>
+                <div class="forgot">
+                <a href="reset.php">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary" name="submit">Login</button>
+
+            </form>
         </div>
-
-        <div class="form-group">
-
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required autofocus>
-
-        </div>
-        <div class="forgot">
-        <a href="reset.php">Forgot password?</a>
-</div>
-        <button type="submit" class="btn btn-primary" name="submit">Login</button>
-
-    </form>
     </div>
-</div>
 </div>
 </div>
 
