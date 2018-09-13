@@ -296,3 +296,11 @@ div.gallery img {
     border-color: #000000 !important;
 
 }
+
+.navbar-brand {
+    font-size:30px !important;
+}
+
+.nav-item{
+    font-size:22px !important;
+}
