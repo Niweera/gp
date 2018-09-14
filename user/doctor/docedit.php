@@ -158,4 +158,7 @@
 
                 }
     }
+
+
+mysqli_close($conn);    
 ?>

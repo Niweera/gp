@@ -1,14 +1,14 @@
 <?php
     session_start();
     include '../../dbconf/dbh.php';
-    /*if(!isset($_SESSION['userid'])){
+    if(!isset($_SESSION['userid'])){
         header('location: ../../login');
         exit;
         }else{
             if ($_SESSION['flag'] != 1){
                 header('location: ../../login');	 	
             }
-        }*/
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +124,8 @@
                 ?>
                     <tr>  
                         <td colspan="4" style="text-align:center">
-                            <input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg" name="submit">
+                            <input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg mr-2" name="submit">
+                            <button type="submit" value="Submit Prescription" class="btn btn-primary btn-lg ml-2 disabled" name="print">Print Prescription</button>
                         </td>
                     </tr>
                 </tbody>

@@ -160,4 +160,5 @@
 <br>
 <?php
     include '../../footer.php';
+    mysqli_close($conn);  
 ?>
