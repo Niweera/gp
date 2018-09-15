@@ -112,7 +112,7 @@
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3>Aenean luctus lobortis tellus</h3>
                                              <h1>New Lifestyle</h1>
-                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+                                             <a href="./about/index.php" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
                                         </div>
                                    </div>
                               </div>
@@ -138,7 +138,7 @@
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ealth Center</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ospital</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
                                    <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
@@ -195,10 +195,10 @@
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Select Department</label>
                                         <select class="form-control">
-                                             <option>General Health</option>
-                                             <option>Cardiology</option>
-                                             <option>Dental</option>
-                                             <option>Medical Research</option>
+                                             <option></option>
+                                             <option>General Health (OPD)</option>
+                                             <option>Diabetec Clinic</option>
+                                             <option>Medical Clinic</option>
                                         </select>
                                    </div>
 
