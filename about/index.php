@@ -11,10 +11,23 @@
     <title>Home</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles.css"/>
-    <link rel="stylesheet" type="text/css" href="main.css">
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+    <!--MAIN-->
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="main.css">
+   
+
+
+
 </head>
 <body>
 <!--Header navigation bar for the website-->
@@ -65,94 +78,248 @@
 </nav>
 <!--End of the Header navigation bar for the website-->
 <br>
-	<div class="head-bar">
-		<div class="image1">
-			<img src="../sourcefiles/RHB.png" alt="about" width="1500px;" height="400px;">
-		</div><!--image1-->
-	</div><!--head-bar-->
+ <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                         <div class="owl-carousel owl-theme">
+                              <div class="item item-first">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h1>Your Hospital</h1>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-second">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h1>New Lifestyle</h1>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-third">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h1>Healthy Living</h1>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
 	<div class="column">
 		<div class="column-1">
 			<h2>History</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
 		</div><!--column-1-->
 		<div class="column-1">
 			<h2>History</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+        </p>
 		</div><!--column-1-->
 		<div class="column-2">
 			<h2>Responsive Image Gallery</h2>
 			<div class="responsive">
  			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    			<a target="_blank" href="../images/1.jpeg">
+      			<img src="../images/1.jpeg" alt="Cinque Terre" width="600" height="400">
     			</a>
   			</div>
 			</div>
 			<div class="responsive">
  			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    			<a target="_blank" href="../images/2.jpeg">
+      			<img src="../images/2.jpeg" alt="Cinque Terre" width="600" height="400">
     			</a>
   			</div>
 			</div>
 			<div class="responsive">
  			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    			<a target="_blank" href="../images/3.jpeg">
+      			<img src="../images/3.jpeg" alt="Cinque Terre" width="600" height="400">
     			</a>
   			</div>
 			</div>
 			<div class="responsive">
  			 <div class="gallery">
-    			<a target="_blank" href="img_5terre.jpg">
-      			<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    			<a target="_blank" href="../images/4.jpeg">
+      			<img src="../images/4.jpeg" alt="Cinque Terre" width="600" height="400">
     			</a>
   			</div>
 			</div>
+
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/5.jpeg">
+                <img src="../images/5.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/6.jpeg">
+                <img src="../images/6.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/7.jpeg">
+                <img src="../images/7.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/8.jpeg">
+                <img src="../images/8.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/9.jpeg">
+                <img src="../images/9.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/10.jpeg">
+                <img src="../images/10.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/11.jpeg">
+                <img src="../images/11.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/12.jpeg">
+                <img src="../images/12.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/13.jpeg">
+                <img src="../images/13.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/14.jpeg">
+                <img src="../images/14.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/15.jpeg">
+                <img src="../images/15.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/16.jpeg">
+                <img src="../images/16.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/17.jpeg">
+                <img src="../images/17.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/18.jpeg">
+                <img src="../images/18.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/19.jpeg">
+                <img src="../images/19.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/20.jpeg">
+                <img src="../images/20.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/21.jpeg">
+                <img src="../images/21.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/22.jpeg">
+                <img src="../images/22.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/23.jpeg">
+                <img src="../images/23.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+                <a target="_blank" href="../images/24.jpeg">
+                <img src="../images/24.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+            </div>
+            </div>
+
+
 		</div><!--column-2-->
 	</div><!--column-->
 <br>
-<div class="column">
-        <div class="column-1">
-            <h2>History</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div><!--column-1-->
-        <div class="column-1">
-            <h2>History</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div><!--column-1-->
-        <div class="column-2">
-            <h2>Responsive Image Gallery</h2>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="img_5terre.jpg">
-                <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="img_5terre.jpg">
-                <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="img_5terre.jpg">
-                <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="img_5terre.jpg">
-                <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-        </div><!--column-2-->
-    </div><!--column-->
+
+ <!-- SCRIPTS -->
+     <script src="../js/jquery.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/jquery.sticky.js"></script>
+     <script src="../js/jquery.stellar.min.js"></script>
+     <script src="../js/wow.min.js"></script>
+     <script src="../js/smoothscroll.js"></script>
+     <script src="../js/owl.carousel.min.js"></script>
+     <script src="../js/custom.js"></script>
+
 <br>
 <?php
 	include '../footer.php';
