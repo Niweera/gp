@@ -47,7 +47,7 @@
 			</div>	
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                <p>Copyright &copy 2018 Regional Hospital of Bentota. <span class="h6">&copy All right Reversed.</span><br />Developed by Group 16 of University of Colombo School of Computing.</p>
+                <p>Copyright &copy 2018 Divisional Hospital of Bentota. <span class="h6">&copy All right Reversed.</span><br />Developed by Group 16 of University of Colombo School of Computing.</p>
 					
 				</div>
 				</hr>

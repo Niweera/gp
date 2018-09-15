@@ -305,3 +305,30 @@ div.gallery img {
 {
     font-size:20px !important;
 }
+
+
+
+.result{
+    position: absolute;        
+    z-index: 999;
+    top: 100%;
+    width: 80%;
+    box-sizing: border-box;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Formatting result items */
+.result p{
+    margin: 0;
+    padding: 7px 10px;
+    border: 1px solid #CCCC;
+    border-top: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.result p:hover{
+    background: #212529;
+    color:white;
+    border-radius: 4px;
+}
