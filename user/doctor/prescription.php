@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Edit Profile</title>
+    <title>DC Prescription Sheet</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -25,6 +25,16 @@
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="script.js"></script>
+    <style>
+    input[type='number'] {
+    -moz-appearance:textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    </style>
 </head>
 <body>
 <!--Header navigation bar for the website-->
@@ -72,7 +82,7 @@
 <!--End of the Header navigation bar for the website-->
 <br>
 
-    <form name="doclog" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">
+    <form name="doclog" action="./sheet.php"  method="post">
         <div class="container">
             <center><h1 style="color:#242424;">Diabetes Clinic <br><hr>Prescription Sheet</h1></center>
         </div>
@@ -117,24 +127,24 @@
                             echo "<td style=\"width: 20.00%\">";
                             echo "<div class=\"row\">";
                             echo "<div class=\"col-md-8\">";
-                            echo "<input type=\"text\" class=\"form-control form-control-sm\" name=".$drugid."d>";
+                            echo "<input type=\"number\" class=\"form-control form-control-sm\" name=".$drugid."d>";
                             echo "</div>";
                             echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
                             echo "<td style=\"width: 20.00%\">";
                             echo "<select class ='form-control form-control-sm' name=".$drugid."f>";
-							echo '<option selected value="1">BD</option>';
-							echo '<option value="2">TDS</option>';
-							echo '<option value="3">Mane</option>';
-							echo '<option value="4">Nocte</option>';
-							echo '<option value="5">Vesper</option>';
-							echo '<option value="6">Daily</option>';
+							echo '<option selected value="BD">BD</option>';
+							echo '<option value="TDS2">TDS</option>';
+							echo '<option value="Mane">Mane</option>';
+							echo '<option value="Nocte">Nocte</option>';
+							echo '<option value="Vesper">Vesper</option>';
+							echo '<option value="Daily">Daily</option>';
                             echo '</select>';
                             echo "</td>";
                             echo "<td style=\"width: 20.00%\">";
                             echo "<select class ='form-control form-control-sm' name=".$drugid."u>";
-							echo '<option selected value="1">4 Weeks</option>';
-							echo '<option value="2">2 Weeks</option>';
-							echo '<option value="3">1 Week</option>';
+							echo '<option selected value="4 Weeks">4 Weeks</option>';
+							echo '<option value="2 Weeks">2 Weeks</option>';
+							echo '<option value="1 Week">1 Week</option>';
                             echo '</select>';
                             echo "</td>";
                             echo "</tr>";
@@ -143,8 +153,7 @@
                 ?>
                     <tr>  
                         <td colspan="4" style="text-align:center">
-                            <input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg mr-2" name="submit">
-                            <button type="submit" value="Submit Prescription" class="btn btn-primary btn-lg ml-2 disabled" name="print">Print Prescription</button>
+                            <input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg" name="submit">
                         </td>
                     </tr>
                 </tbody>
@@ -222,33 +231,6 @@
 </html>
 
 
-<?php
 
-if (null !==(filter_input(INPUT_POST, 'submit'))){
-    $slmcid = $_SESSION['userid'];
-    $clinicno = filter_input(INPUT_POST,'clinicno');
-    
-    $sql = "SELECT drugid, drugname FROM drug;";
-    $result=mysqli_query($conn,$sql);
-    $queryResult=mysqli_num_rows($result);
-    if ($queryResult > 0){
-        while ($row=mysqli_fetch_assoc($result)){
-            $drugid = $row['drugid'];
-            $d = filter_input(INPUT_POST,$drugid."d");
-            $dose=mysqli_real_escape_string($conn,$d);
-            $f = filter_input(INPUT_POST,$drugid."f");
-            $frequency=mysqli_real_escape_string($conn,$f);
-            $du = filter_input(INPUT_POST,$drugid."u");
-            $duration=mysqli_real_escape_string($conn,$du);
-            $sql0 = "INSERT INTO prescription (slmcid, clinicno, drugid, frequency, dose, duration) VALUES ('$slmcid','$clinicno','$drugid','$dose','$frequency','$duration');";
-            $mysqli_query = mysqli_query($conn, $sql0);
-            if (!$mysqli_query){
-                echo "<script>alert(\"Error Occured!\");</script>";
-            }
-        }
-        echo "<script>alert(\"Prescription is sent to the dispenser successfully!\");</script>";
-    }
-}
-?>
 
 

@@ -31,15 +31,22 @@ if ($queryResult == 1){
                 <label class='col-md-2 col-form-label border'><h5><strong>Gender:</strong> ".$sex."</h5></label>
                 <label class='col-md-3 col-form-label border'><h5><strong>Contact No:</strong> ".$contactno."</h5></label>
             </div>
-        </div>
+        </div>";
+
+
+    echo '<form action="./sheet.php" method="post">';
+    echo '<input type="hidden" name="name" value="'.$name.'">';
+    echo '<input type="hidden" name="age" value="'.$age.'">';
+    echo '<input type="hidden" name="contactno" value="'.$contactno.'">';
+    echo '</form>';
             
     
     
     
     
     
-    ";
-    //echo $name;
+    
+
 }
 mysqli_close($conn);
 ?>

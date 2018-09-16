@@ -26,6 +26,7 @@ CREATE TABLE `admin` (
   `adminid` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `contactno` int(10) NOT NULL,
   PRIMARY KEY (`adminid`),
   CONSTRAINT `adminfk` FOREIGN KEY (`adminid`) REFERENCES `user` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -37,7 +38,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('admin','Nipuna Weerasekara','w.nipuna@gmail.com');
+INSERT INTO `admin` VALUES ('admin','Test Administrator','w.nipuna@gmail.com',766419486),('akilag','Akila Gamage','akilai94@outlook.com',712402421),('juranaweera','Janindu Ranaweera','w.nipuna@gmail.com',766419486),('nipuna','Nipuna Weerasekara','w.nipuna@gmail.com',766419486),('nipuna2','Nipuna Weerasekara','w.nipuna@gmail.com',766419486),('nisald','Nisal Bandara','nisaldbandara96@gmail.com',714775775),('uditha','Nipuna Weerasekara','w.nipuna@gmail.com',766419486);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +94,7 @@ CREATE TABLE `dispenser` (
 
 LOCK TABLES `dispenser` WRITE;
 /*!40000 ALTER TABLE `dispenser` DISABLE KEYS */;
-INSERT INTO `dispenser` VALUES ('Nipuna',766419486,'disp','w.nipuna@hotmail.com');
+INSERT INTO `dispenser` VALUES ('Test Dispenser',766419486,'disp','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `dispenser` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,6 +122,7 @@ CREATE TABLE `doctor` (
 
 LOCK TABLES `doctor` WRITE;
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
+INSERT INTO `doctor` VALUES ('Test Doctor',766419486,'doctor','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -173,6 +175,7 @@ CREATE TABLE `drug` (
 
 LOCK TABLES `drug` WRITE;
 /*!40000 ALTER TABLE `drug` DISABLE KEYS */;
+INSERT INTO `drug` VALUES ('asp','ASPIRIN',1000),('ato','ATORVASTATIN',1000),('clo','CLOPIDOGREL',1000),('ena','ENALAPRIL',1000),('gli','GLIBENCLAMIDE',1000),('los','LOSARTAN K.',1000),('met','METFORMIN',1000),('mix','MIX.INSULIN',1000),('pio','PIOGLITAZONE',1000),('sit','SITAGLIPTIN',1000),('tol','TOLBUTAMIDE',1000);
 /*!40000 ALTER TABLE `drug` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -251,6 +254,7 @@ CREATE TABLE `nurse` (
 
 LOCK TABLES `nurse` WRITE;
 /*!40000 ALTER TABLE `nurse` DISABLE KEYS */;
+INSERT INTO `nurse` VALUES ('Test Nurse',766419486,'nurse','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `nurse` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,12 +267,16 @@ DROP TABLE IF EXISTS `patient`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `patient` (
   `name` varchar(255) NOT NULL,
+  `gender` tinyint(1) NOT NULL,
+  `dob` date NOT NULL,
   `contactno` int(10) NOT NULL,
   `clinicno` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `nurseid` varchar(255) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dc` tinyint(1) DEFAULT '0',
+  `mc` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`clinicno`),
   KEY `regfk` (`nurseid`),
   CONSTRAINT `patfk` FOREIGN KEY (`clinicno`) REFERENCES `user` (`userid`),
@@ -282,6 +290,7 @@ CREATE TABLE `patient` (
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
+INSERT INTO `patient` VALUES ('Test Patient ',1,'1996-03-11',766419486,'patient','w.nipuna@gmail.com','vfsafdhafdhafdbdfz','nurse','2018-09-13 20:11:25',1,0),('Test Patient1',0,'1995-03-11',766419486,'patient1','w.nipuna@gmail.com','vfsafdhafdhafdbdfz','nurse','2018-09-13 20:11:25',1,0),('Test Patient2',1,'1994-03-11',766419486,'patient2','w.nipuna@gmail.com','vfsafdhafdhafdbdfz','nurse','2018-09-13 20:11:25',1,0),('Test Patient3',1,'1993-03-11',766419486,'patient3','w.nipuna@gmail.com','vfsafdhafdhafdbdfz','nurse','2018-09-13 20:11:25',1,1),('Test Patient4',1,'1992-03-11',766419486,'patient4','w.nipuna@gmail.com','vfsafdhafdhafdbdfz','nurse','2018-09-13 20:11:25',0,1),('Test Patient5',1,'1991-03-11',766419486,'patient5','w.nipuna@gmail.com','vfsafdhafdhafdbdfz','nurse','2018-09-13 20:11:25',0,1);
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -361,6 +370,7 @@ CREATE TABLE `pharmacist` (
 
 LOCK TABLES `pharmacist` WRITE;
 /*!40000 ALTER TABLE `pharmacist` DISABLE KEYS */;
+INSERT INTO `pharmacist` VALUES ('Test Pharmacist',766419486,'pharma','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `pharmacist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -405,10 +415,10 @@ CREATE TABLE `prescription` (
   `slmcid` varchar(255) NOT NULL,
   `clinicno` varchar(255) NOT NULL,
   `drugid` varchar(255) NOT NULL,
-  `date` date NOT NULL,
-  `frequency` varchar(255) NOT NULL,
-  `dose` int(11) NOT NULL,
-  `duration` varchar(255) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `frequency` int(255) NOT NULL DEFAULT '0',
+  `dose` int(1) NOT NULL DEFAULT '0',
+  `duration` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`slmcid`,`clinicno`,`drugid`,`date`),
   KEY `presfk` (`clinicno`),
   KEY `presfk2` (`drugid`),
@@ -424,6 +434,7 @@ CREATE TABLE `prescription` (
 
 LOCK TABLES `prescription` WRITE;
 /*!40000 ALTER TABLE `prescription` DISABLE KEYS */;
+INSERT INTO `prescription` VALUES ('doctor','patient','asp','2018-09-15 12:31:36',100,1,1),('doctor','patient','ato','2018-09-15 12:31:36',125,1,1),('doctor','patient','clo','2018-09-15 12:31:36',100,1,1),('doctor','patient','ena','2018-09-15 12:31:37',10,1,1),('doctor','patient','gli','2018-09-15 12:31:37',15,1,1),('doctor','patient','los','2018-09-15 12:31:37',10,1,1),('doctor','patient','met','2018-09-15 12:31:37',10,1,1),('doctor','patient','mix','2018-09-15 12:31:37',10,1,1),('doctor','patient','pio','2018-09-15 12:31:37',10,1,1),('doctor','patient','sit','2018-09-15 12:31:37',11,1,1),('doctor','patient','tol','2018-09-15 12:31:37',15,1,1);
 /*!40000 ALTER TABLE `prescription` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -471,7 +482,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('admin','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',0),('disp','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',2),('doctor','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',1),('nurse','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',4),('patien','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',5),('pharma','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',3);
+INSERT INTO `user` VALUES ('admin','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',0),('akilag','$2y$10$orVVcHZA.FTg/0T3elxKqeb3.llH1RulEyT6igpsKRCn70VH7HPHG',0),('disp','$2y$10$gUlYF7uWya08F0PNXi2R1OPgQih4L/2aWYnq9NRsM27RDOgyADp4.',2),('doctor','$2y$10$YHrd3gyIRDq1O2fDJWXBIOVeZYkRygqBAI4l170GR4qxqrGCiukV6',1),('juranaweera','$2y$10$YDpdphZEIDwLqwEnDwGhRe7G7DcNHaJuRjsc4kfdDBgp21Dh7v1Wm',0),('nipuna','$2y$10$LNqrSrd07jCa8UGo9kNkOeVKHb5B.ZdQgNCPJEG.G7LeZf4uw3/JG',0),('nipuna2','$2y$10$fOToKw3wTa8ENSrQw/w4POyys0pDwhVwFp2FMaguXpT9t9aYUMNzS',0),('nisald','$2y$10$Cl.jnlU8RAygOf.3wY5EXeYaBRtFJTO2nzimLXhYXDYrgi0D7iuGe',0),('nurse','$2y$10$j42BPiLfOXhxvNrL4WrJE.o0OiJjpqH6HJfEPe7XqHJOy1R/c0ZuO',4),('patient','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',5),('patient1','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',5),('patient2','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',5),('patient3','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',5),('patient4','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',5),('patient5','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC',5),('pharma','$2y$10$9Qtuh5mcgo49iWUXtdlG7evfNM.fNfJLFIFtphvm3KwhKc3KpjRN.',3),('uditha','$2y$10$Kjoxb2GrsxuBmRaRzDiQvePdtKb4XFtLGoSEy/T8sloLes1yzmydi',0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -484,4 +495,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-11 15:46:49
+-- Dump completed on 2018-09-16 10:19:27
