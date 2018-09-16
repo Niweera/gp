@@ -81,38 +81,38 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 
     <div id="printthis" class="container mt-5 mb-5">
         <div class="container border border-dark rounded">
-        <div class="row">
-            <div class="col-md-12 bg-light border border-dark">
-                <h1 class="text-center">Divisional Hospital, Bentota</h1>
+            <div class="row">
+                <div class="col-md-12 bg-light border border-dark">
+                    <h1 class="text-center">Divisional Hospital, Bentota</h1>
+                </div>
             </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <label class="h4"><strong>Clinic No: </strong><?php echo $clinicno; ?></label>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <label class="h4"><strong>Clinic No: </strong><?php echo $clinicno; ?></label>
+                </div>
+                <div class="col-md-6">
+                    <label class="h4"><strong>Name: </strong><?php echo $name; ?></label>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label class="h4"><strong>Name: </strong><?php echo $name; ?></label>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label class="h4"><strong>Age: </strong><?php echo $age; ?></label>
+                </div>
+                <div class="col-md-6">
+                    <label class="h4"><strong>Contact No: </strong><?php echo "0".$contactno; ?></label>
+                </div>
             </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-6">
-                <label class="h4"><strong>Age: </strong><?php echo $age; ?></label>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../sourcefiles/rx.jpg" style="width:80px;height:80px" class="rounded float-left" alt="Rx">
+                </div>
+                <div class="col-md-6">
+                    <label class="h4"><strong>Date: </strong><?php echo date("d-m-Y"); ?></label>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label class="h4"><strong>Contact No: </strong><?php echo "0".$contactno; ?></label>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-6">
-            <img src="../../sourcefiles/rx.jpg" style="width:80px;height:80px" class="rounded float-left" alt="Rx">
-            </div>
-            <div class="col-md-6">
-                <label class="h4"><strong>Date: </strong><?php echo date("d-m-Y"); ?></label>
-            </div>
-        </div>
-        <hr>
-        <table class="table">
+            <hr>
+            <table class="table">
                 <thead class="thead-light">
                     <tr>
                     <th scope="col">Name of The Drug</th>
@@ -154,17 +154,17 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                         }
                     }
                 ?>
-            </tbody>
-        </table>
-        <hr>
-        <div class="row">
-            <div class="col-md-8"></div>
-            <div class="col-md-4">
-                <br>
-                <hr>
-                <p class="text-center"><strong><?php echo $_SESSION['name']; ?><strong></p>
+                </tbody>
+            </table>
+            <hr>
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <br>
+                    <hr>
+                    <p class="text-center"><strong><?php echo $_SESSION['name']; ?><strong></p>
+                </div>
             </div>
-        </div>
         </div>
     </div>
     <div class="container">

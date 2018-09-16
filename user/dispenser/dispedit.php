@@ -24,6 +24,17 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="script.js"></script>
+    <script>
+        var check = function() {
+            if (document.getElementById('password').value == document.getElementById('repassword').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'Password confirmed!';
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Not matching';
+            }
+        }
+    </script>
 </head>
 <body>
 <!--Header navigation bar for the website-->
@@ -40,7 +51,7 @@
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Quick Access
+            Inventory Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">View Inventory</a>
@@ -54,8 +65,8 @@
             Quick Links
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./dispedit.php">Edit Profile</a>
-                <a class="dropdown-item" href="./prescription.php">Issue Drugs</a>
+                <a class="dropdown-item active" href="./dispedit.php">Edit Profile</a>
+                <a class="dropdown-item" href="./drugissue.php">Issue Drugs</a>
                 <a class="dropdown-item" href="#">View Reports</a>
                 <a class="dropdown-item" href="#">Send Reports</a>
             </div>
@@ -74,7 +85,7 @@
 
     <form name="doclog" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">
         <div class="container">
-            <center><h1 style="color:#242424;">Edit Doctor Profile</h1></center>
+            <center><h1 style="color:#242424;">Edit Dispenser Profile</h1></center>
         </div>
         <br>
         <br>
@@ -145,7 +156,7 @@
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         
         $sql = "UPDATE user SET password='$hashed_password' WHERE userid='$userid';";
-        $sql .= "UPDATE doctor SET name='$name',email='$email',contactno='$contactno' WHERE slmcid='$userid';";
+        $sql .= "UPDATE dispenser SET name='$name',email='$email',contactno='$contactno' WHERE dispid='$userid';";
         
         $mysqli_query = mysqli_multi_query($conn, $sql);
        

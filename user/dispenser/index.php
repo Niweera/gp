@@ -55,7 +55,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./dispedit.php">Edit Profile</a>
-                <a class="dropdown-item" href="./prescription.php">Issue Drugs</a>
+                <a class="dropdown-item" href="./drugissue.php">Issue Drugs</a>
                 <a class="dropdown-item" href="#">View Reports</a>
                 <a class="dropdown-item" href="#">Send Reports</a>
             </div>

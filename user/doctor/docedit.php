@@ -23,7 +23,18 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        var check = function() {
+            if (document.getElementById('password').value == document.getElementById('repassword').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'Password confirmed!';
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Not matching';
+            }
+        }
+    </script>
 </head>
 <body>
 <!--Header navigation bar for the website-->
