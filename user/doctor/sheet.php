@@ -186,5 +186,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 
 
 
-
+<?php
+mysqli_close($conn);
+?>
 
