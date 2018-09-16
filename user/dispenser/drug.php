@@ -97,7 +97,7 @@
                 <?php
                     if (null !==(filter_input(INPUT_POST, 'submit'))){
                         $clinicno = $_POST['clinicno'];
-
+                        date_default_timezone_set("Asia/Colombo");
                         $today = date("Y-m-d");
                         $sql0 = "SELECT drug.drugname, prescription.drugid, prescription.slmcid, prescription.frequency, prescription.dose, prescription.duration FROM prescription INNER JOIN drug ON prescription.drugid = drug.drugid WHERE date LIKE '".$today."%' AND clinicno = '".$clinicno."';";
                         $result0 = mysqli_query($conn,$sql0);
