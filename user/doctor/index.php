@@ -36,26 +36,26 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="./">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../create.php">Patients</a>
-                <a class="dropdown-item" href="./adminedit.php">Schedule</a>
-                <a class="dropdown-item" href="./delete.php">Appointments</a>
-                <a class="dropdown-item" href="./delete.php">Inventory</a>
+                <a class="dropdown-item" href="#">Patients</a>
+                <a class="dropdown-item" href="#">Schedule</a>
+                <a class="dropdown-item" href="#">Appointments</a>
+                <a class="dropdown-item" href="#">Inventory</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Quick Links
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./docedit.php">Edit Profile</a>
-                <a class="dropdown-item active" href="./prescription.php">Prescription Sheet</a>
+                <a class="dropdown-item" href="./prescription.php">Prescription Sheet</a>
                 <a class="dropdown-item" href="#">Medical Records</a>
             </div>
         </li>
@@ -103,10 +103,10 @@
                 <h3>Quick Access</h3>
                 <hr>
                 <div class="list-group">
-                    <a href="./adminreg.php" class="list-group-item list-group-item-action"><strong>View Patients</strong></a>
-                    <a href="./doctorreg.php" class="list-group-item list-group-item-action"><strong>View Schedule</strong></a>
-                    <a href="./dispreg.php" class="list-group-item list-group-item-action"><strong>View Appointments</strong></a>
-                    <a href="./pharmareg.php" class="list-group-item list-group-item-action"><strong>View Inventory</strong></a>
+                    <a href="#" class="list-group-item list-group-item-action"><strong>View Patients</strong></a>
+                    <a href="#" class="list-group-item list-group-item-action"><strong>View Schedule</strong></a>
+                    <a href="#" class="list-group-item list-group-item-action"><strong>View Appointments</strong></a>
+                    <a href="#" class="list-group-item list-group-item-action"><strong>View Inventory</strong></a>
                 </div>
             </div>
         </div>
