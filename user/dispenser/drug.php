@@ -96,79 +96,84 @@
                 <?php
                     if (null !==(filter_input(INPUT_POST, 'submit'))){
                         $clinicno = $_POST['clinicno'];
-                        date_default_timezone_set("Asia/Colombo");
-                        $today = date("Y-m-d");
-                        $sql0 = "SELECT drug.drugname, prescription.drugid, prescription.slmcid, prescription.frequency, prescription.dose, prescription.duration FROM prescription INNER JOIN drug ON prescription.drugid = drug.drugid WHERE date LIKE '".$today."%' AND clinicno = '".$clinicno."';";
+                        $sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
                         $result0 = mysqli_query($conn,$sql0);
-                        $queryResult0=mysqli_num_rows($result0);
+                        $queryResult0 = mysqli_num_rows($result0);
                         if ($queryResult0 > 0){
-                            echo "<br>
-                            <table class=\"table\">
-                                    <thead class=\"thead-dark\">
-                                        <tr>
-                                        <th scope=\"col\">Name of The Drug</th>
-                                        <th scope=\"col\">Dose</th>
-                                        <th scope=\"col\">Frequency</th>
-                                        <th scope=\"col\">Duration</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                            ";
-                            while ($row = mysqli_fetch_array($result0)){
-                                $slmcid = $row['slmcid'];
-                                $drugname = $row['drugname'];
-                                $drugid = $row['drugid'];
-                                $dose = $row['dose'];
-                                $frequency = $row['frequency'];
-                                $duration = $row['duration'];
+                            date_default_timezone_set("Asia/Colombo");
+                            $today = date("Y-m-d");
+                            $sql0 = "SELECT drug.drugname, prescription.drugid, prescription.slmcid, prescription.frequency, prescription.dose, prescription.duration FROM prescription INNER JOIN drug ON prescription.drugid = drug.drugid WHERE date LIKE '".$today."%' AND clinicno = '".$clinicno."';";
+                            $result0 = mysqli_query($conn,$sql0);
+                            $queryResult0=mysqli_num_rows($result0);
+                            if ($queryResult0 > 0){
+                                echo "<br>
+                                <table class=\"table\">
+                                        <thead class=\"thead-dark\">
+                                            <tr>
+                                            <th scope=\"col\">Name of The Drug</th>
+                                            <th scope=\"col\">Dose</th>
+                                            <th scope=\"col\">Frequency</th>
+                                            <th scope=\"col\">Duration</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                ";
+                                while ($row = mysqli_fetch_array($result0)){
+                                    $slmcid = $row['slmcid'];
+                                    $drugname = $row['drugname'];
+                                    $drugid = $row['drugid'];
+                                    $dose = $row['dose'];
+                                    $frequency = $row['frequency'];
+                                    $duration = $row['duration'];
 
-                                if ($frequency == "BD"){
-                                    $freq = 2;
-                                }elseif ($frequency == "TDS"){
-                                    $freq = 3;
-                                }else{
-                                    $freq = 1;
+                                    if ($frequency == "BD"){
+                                        $freq = 2;
+                                    }elseif ($frequency == "TDS"){
+                                        $freq = 3;
+                                    }else{
+                                        $freq = 1;
+                                    }
+
+                                    if ($duration == "4 Weeks"){
+                                        $dur = 28;
+                                    }elseif ($duration == "2 Weeks"){
+                                        $dur = 14;
+                                    }else{
+                                        $dur = 7;
+                                    }
+
+                                    $drugCount = $freq * $dur;
+                                    
+                                    echo "<tr>";
+                                    echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
+                                    echo "<td style=\"width: 20.00%\">";
+                                    echo "<div class=\"row\">";
+                                    echo "<div class=\"col-md-8\">";
+                                    echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$dose.">";
+                                    echo "</div>";
+                                    echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
+                                    echo "<td style=\"width: 20.00%\">";
+                                    echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$frequency.">";
+                                    echo "</td>";
+                                    echo "<td style=\"width: 20.00%\">";
+                                    echo "<p class=\"form-control form-control-sm\">".$duration."</p>";
+                                    echo "</td>";
+                                    echo "</tr>";
+
+                                    $drugArray[$drugid] = $drugCount;
+
                                 }
-
-                                if ($duration == "4 Weeks"){
-                                    $dur = 28;
-                                }elseif ($duration == "2 Weeks"){
-                                    $dur = 14;
-                                }else{
-                                    $dur = 7;
-                                }
-
-                                $drugCount = $freq * $dur;
+                                echo "</tbody>
+                                    </table>";
                                 
-                                echo "<tr>";
-                                echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
-                                echo "<td style=\"width: 20.00%\">";
-                                echo "<div class=\"row\">";
-                                echo "<div class=\"col-md-8\">";
-                                echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$dose.">";
-                                echo "</div>";
-                                echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
-                                echo "<td style=\"width: 20.00%\">";
-                                echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$frequency.">";
-                                echo "</td>";
-                                echo "<td style=\"width: 20.00%\">";
-                                echo "<p class=\"form-control form-control-sm\">".$duration."</p>";
-                                echo "</td>";
-                                echo "</tr>";
-
-                                $drugArray[$drugid] = $drugCount;
-
+                                $_SESSION['drugarray'] = $drugArray;
+                            }else{
+                                echo "<script>alert('Patient has no prescription records for today!');window.location.href = './drugissue.php';</script>";  
                             }
-                            echo "</tbody>
-                                </table>";
-                            
-                            $_SESSION['drugarray'] = $drugArray;
+
                         }else{
-                            echo "<label class='col-md-12 col-form-label text-center'><h5><strong>Patient has no prescription records for today!</strong></h5></label>";
-                            
+                            echo "<script>alert('Patient is not valid! Check the Clinic No and enter agian.');window.location.href = './drugissue.php';</script>";  
                         }
-
-
 
                     }
                 ?>
@@ -186,6 +191,7 @@
                 <br>
                 <div class="form-group row mb-3">
                     <div class="col-sm-5"></div>
+                    <input type="hidden" value="<?php echo $clinicno; ?>" name="strval2" id="strval">
                     <input type="submit" value="Issue Drugs" class="col-md-2 text-center btn btn-primary btn" name="update">
                     <div class="col-sm-5"></div>
                 </div>
@@ -264,24 +270,25 @@
 
 <?php
 if (null !==(filter_input(INPUT_POST, 'update'))){
-
     $drugarray = $_SESSION['drugarray'];
     $test = 0;
     foreach(array_keys($drugarray) as $key){
-	$oldcount = $drugarray[$key];
-	$sql="UPDATE drug SET count = count - '".$oldcount."' WHERE drugid = '".$key."';";
-	$result = mysqli_query($conn,$sql);
-	if ($result){
-	    $test++;
-	}
+        $oldcount = $drugarray[$key];
+        $sql="UPDATE drug SET count = count - '".$oldcount."' WHERE drugid = '".$key."';";
+        $result = mysqli_query($conn,$sql);
+        if ($result){
+            $test++;
+        }
     }
     if ($test == count($drugarray)){
-	$_SESSION['drugarray'] = array();
-	echo "<script>alert('Drug inventory updated successfully! Redirecting to Drug Issue Page...');window.location.href = './drugissue.php';</script>";
+        $_SESSION['drugarray'] = array();
+        echo "<script>alert('Drug inventory updated successfully! Redirecting to Drug Issue Page...');window.location.href = './drugissue.php';</script>";
     }else{
-	echo "<script>alert('Error Occured!')</script>";
+        echo "<script>alert('Error Occured!');window.location.href = './drugissue.php';</script>";
     }
+
 }
+
 ?>
 
 
