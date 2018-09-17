@@ -40,13 +40,8 @@ if ($queryResult == 1){
     echo '<input type="hidden" name="contactno" value="'.$contactno.'">';
     echo '</form>';
             
-    
-    
-    
-    
-    
-    
-
+}else{
+    echo "<center><label class='col-md-5 col-form-label border'><h5>Patient is not in the database.</h5></label><center>";
 }
 mysqli_close($conn);
 ?>

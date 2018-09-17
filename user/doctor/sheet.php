@@ -10,6 +10,15 @@
             }
         }
 ?>
+
+<?php
+if (null !==(filter_input(INPUT_POST, 'submit'))){
+$clinicno = filter_input(INPUT_POST,'clinicno');
+$sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
+$result0 = mysqli_query($conn,$sql0);
+$queryResult0 = mysqli_num_rows($result0);
+if ($queryResult0 > 0){
+ ?>
 <?php
 if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno'])){
     $name = $_POST['name'];
@@ -49,9 +58,12 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             echo "<script>alert(\"Error Occured! Please insert the data again.\");window.location.href = './prescription.php';</script>";
         }
     }
+    
 }else{
     echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './prescription.php';</script>";
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +103,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                     <label class="h4"><strong>Clinic No: </strong><?php echo $clinicno; ?></label>
                 </div>
                 <div class="col-md-6">
-                    <label class="h4"><strong>Name: </strong><?php echo $name; ?></label>
+                    <label class="h4"><strong>Name: </strong><?php if (isset($name)){echo $name; }?></label>
                 </div>
             </div>
             <div class="row mt-3">
@@ -122,7 +134,8 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                     </tr>
                 </thead>
                 <tbody>
-                <?php
+                <?php    
+                    
                     $sql = "SELECT drugid, drugname FROM drug;";
                     $result=mysqli_query($conn,$sql);
                     $queryResult=mysqli_num_rows($result);
@@ -153,6 +166,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                             }
                         }
                     }
+        
                 ?>
                 </tbody>
             </table>
@@ -183,7 +197,14 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
   </body>
 </html>
 
-
+<?php }else{
+    //echo "<script>alert('works!)</script>";
+    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './prescription.php';</script>";
+}
+}else{
+    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './prescription.php';</script>";
+}
+?>
 
 
 <?php
