@@ -10,7 +10,14 @@
             }
         }
 ?>
-
+<?php
+if (null !==(filter_input(INPUT_POST, 'submit'))){
+$clinicno = filter_input(INPUT_POST,'clinicno');
+$sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
+$result0 = mysqli_query($conn,$sql0);
+$queryResult0 = mysqli_num_rows($result0);
+if ($queryResult0 > 0){
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -284,6 +291,17 @@ if (null !==(filter_input(INPUT_POST, 'update'))){
 }
 
 
+<?php }else{
+    //echo "<script>alert('works!)</script>";
+    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './drugissue.php';</script>";
+}
+}else{
+    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './drugissue.php';</script>";
+}
+?>
+
+
+<?php
 mysqli_close($conn);
 ?>
 
