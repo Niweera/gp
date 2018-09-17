@@ -276,6 +276,7 @@ if (null !==(filter_input(INPUT_POST, 'update'))){
 	}
     }
     if ($test == count($drugarray)){
+	unset($_SESSION['drugarray']);
 	echo "<script>alert('Drug inventory updated successfully! Redirecting to Drug Issue Page...');window.location.href = './drugissue.php';</script>";
     }else{
 	echo "<script>alert('Error Occured!')</script>";
