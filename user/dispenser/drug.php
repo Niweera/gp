@@ -206,6 +206,26 @@ if ($queryResult0 > 0){
         </div>
     </div>
 <br>
+	<?php
+	if (null !==(filter_input(INPUT_POST, 'update'))){
+
+	    $drugarray = $_SESSION['drugarray'];
+	    $test = 0;
+	    foreach(array_keys($drugarray) as $key){
+		$oldcount = $drugarray[$key];
+		$sql="UPDATE drug SET count = count - '".$oldcount."' WHERE drugid = '".$key."';";
+		$result = mysqli_query($conn,$sql);
+		if ($result){
+		    $test++;
+		}
+	    }
+	    if ($test == count($drugarray)){
+		echo "<script>alert('Drug inventory updated successfully! Redirecting to Drug Issue Page...');window.location.href = './drugissue.php';</script>";
+	    }else{
+		echo "<script>alert('Error Occured!')</script>";
+	    }
+	}
+	?>
 <!--Footer for the website-->
 <section id="footer">
 		<div class="container">
@@ -270,26 +290,7 @@ if ($queryResult0 > 0){
   </body>
 </html>
 
-<?php
-if (null !==(filter_input(INPUT_POST, 'update'))){
 
-    $drugarray = $_SESSION['drugarray'];
-    $test = 0;
-    foreach(array_keys($drugarray) as $key){
-        $oldcount = $drugarray[$key];
-        $sql="UPDATE drug SET count = count - '".$oldcount."' WHERE drugid = '".$key."';";
-        $result = mysqli_query($conn,$sql);
-        if ($result){
-            $test++;
-        }
-    }
-    if ($test == count($drugarray)){
-        echo "<script>alert('Drug inventory updated successfully! Redirecting to Drug Issue Page...');window.location.href = './drugissue.php';</script>";
-    }else{
-        echo "<script>alert('Error Occured!')</script>";
-    }
-}
-?>
 
 <?php }else{
     //echo "<script>alert('works!)</script>";
