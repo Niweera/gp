@@ -293,10 +293,10 @@ if (null !==(filter_input(INPUT_POST, 'update'))){
 
 <?php }else{
     //echo "<script>alert('works!)</script>";
-    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './drugissue.php';</script>";
+    echo "<script>alert(\"Please check the Clinic No again!\");window.location.href = './drugissue.php';</script>";
 }
 }else{
-    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './drugissue.php';</script>";
+    echo "<script>alert(\"Go To Drug Issue Page to continue!\");window.location.href = './drugissue.php';</script>";
 }
 ?>
 
