@@ -289,7 +289,7 @@ if (null !==(filter_input(INPUT_POST, 'update'))){
         echo "<script>alert('Error Occured!')</script>";
     }
 }
-
+?>
 
 <?php }else{
     //echo "<script>alert('works!)</script>";
