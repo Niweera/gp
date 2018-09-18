@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="script.js"></script>
+    <script src="script2.js"></script>
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -82,7 +83,7 @@
 <!--End of the Header navigation bar for the website-->
 <br>
 
-    <form name="doclog" action="./sheet.php"  method="post">
+    <form name="doclog" action="./sheet.php"  method="post" onsubmit="return validateForm()">
         <div class="container">
             <center><h1 style="color:#242424;">Diabetes Clinic <br><hr>Prescription Sheet</h1></center>
         </div>
