@@ -11,6 +11,15 @@
         }
 ?>
 
+<?php
+if (null !==(filter_input(INPUT_POST, 'submit'))){
+    $clinicno = $_POST['clinicno'];
+    $sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
+    $result0 = mysqli_query($conn,$sql0);
+    $queryResult0 = mysqli_num_rows($result0);
+    if ($queryResult0 > 0){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,16 +99,10 @@
     <br>
     <br>
     <div class="container border bg-light rounded">
-        <form name="doclog" action="./drug.php"  method="post">
+        <form name="doclog" action="./drug2.php"  method="post">
             <div class="container pt-4 bg-light rounded mt-3">
                 <div id="txtHint"></div>
                 <?php
-                    if (null !==(filter_input(INPUT_POST, 'submit'))){
-                        $clinicno = $_POST['clinicno'];
-                        $sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
-                        $result0 = mysqli_query($conn,$sql0);
-                        $queryResult0 = mysqli_num_rows($result0);
-                        if ($queryResult0 > 0){
                             date_default_timezone_set("Asia/Colombo");
                             $today = date("Y-m-d");
                             $sql0 = "SELECT drug.drugname, prescription.drugid, prescription.slmcid, prescription.frequency, prescription.dose, prescription.duration FROM prescription INNER JOIN drug ON prescription.drugid = drug.drugid WHERE date LIKE '".$today."%' AND clinicno = '".$clinicno."';";
@@ -171,37 +174,23 @@
                                 echo "<script>alert('Patient has no prescription records for today!');window.location.href = './drugissue.php';</script>";  
                             }
 
-                        }else{
-                            echo "<script>alert('Patient is not valid! Check the Clinic No and enter agian.');window.location.href = './drugissue.php';</script>";  
-                        }
+                        
 
-                    }else{
-                        echo "<script>alert('Go to Drug Issue page to continue.');window.location.href = './drugissue.php';</script>";  
-                    }
                 ?>
                 <br>
+            
                 <div class="form-group row mb-3">
                     <div class="col-sm-5"></div>
                     <input type="hidden" value="<?php echo $clinicno; ?>" name="strval" id="strval">
-                    <div class="col-sm-5"></div>
-                </div>
-            </div>    
-        </form>
-        <form name="doclog" action="./drug.php"  method="post">
-            <div class="container pt-4 bg-light rounded mt-3">
-                <div id="txtHint"></div>
-                <br>
-                <div class="form-group row mb-3">
-                    <div class="col-sm-5"></div>
                     <input type="submit" value="Issue Drugs" class="col-md-2 text-center btn btn-primary btn" name="update">
                     <div class="col-sm-5"></div>
                 </div>
             </div>    
         </form>
         <div class = "row">
-        <div class="col-sm-5"></div>
-        <div class="col-sm-4"></div>
-        <button  class="col-md-2 text-center btn btn-primary btn mb-2" onclick="window.location.href='./drugissue.php'">Go Back</button>
+            <div class="col-sm-5"></div>
+            <div class="col-sm-4"></div>
+            <button  class="col-md-2 text-center btn btn-primary btn mb-2" onclick="window.location.href='./drugissue.php'">Go Back</button>
         </div>
     </div>
 <br>
@@ -269,32 +258,17 @@
   </body>
 </html>
 
-<?php
-if (null !==(filter_input(INPUT_POST, 'update'))){
-    $drugarray = $_SESSION['drugarray'];
-    $test = 0;
-    foreach(array_keys($drugarray) as $key){
-        $oldcount = $drugarray[$key];
-        $sql="UPDATE drug SET count = count - '".$oldcount."' WHERE drugid = '".$key."';";
-        $result = mysqli_query($conn,$sql);
-        if ($result){
-            $test++;
-        }
-    }
-    if ($test == count($drugarray)){
-        $_SESSION['drugarray'] = array();
-        echo "<script>alert('Drug inventory updated successfully! Redirecting to Drug Issue Page...');window.location.href = './drugissue.php';</script>";
-    }else{
-        echo "<script>alert('Error Occured!');window.location.href = './drugissue.php';</script>";
-    }
 
+
+<?php 
+    }else{
+        echo "<script>alert('Patient is not valid! Check the Clinic No and enter agian.');window.location.href = './drugissue.php';</script>";  
+    }
+}else{
+    echo "<script>alert('Go to Drug Issue page to continue.');window.location.href = './drugissue.php';</script>";  
 }
 
 ?>
-
-
-
-
 <?php
 mysqli_close($conn);
 ?>
