@@ -29,7 +29,7 @@ if ($queryResult == 1){
                 <label class='col-md-5 col-form-label border'><h5><strong>Name:</strong> ".$name."</h5></label>
                 <label class='col-md-2 col-form-label border'><h5><strong>Age:</strong> ".$age."</h5></label>
                 <label class='col-md-2 col-form-label border'><h5><strong>Gender:</strong> ".$sex."</h5></label>
-                <label class='col-md-3 col-form-label border'><h5><strong>Contact No:</strong> ".$contactno."</h5></label>
+                <label class='col-md-3 col-form-label border'><h5><strong>Contact No:</strong> 0".$contactno."</h5></label>
             </div>
         </div>";
 

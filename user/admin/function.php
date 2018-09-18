@@ -30,10 +30,12 @@
                 return $user;
             }
             else{
-                return "";
+                $user = array("", "");
+                return $user;
             }
         }else{
-            return "";
+            $user = array("", "");
+                return $user;
         }
     }
 ?>

@@ -29,7 +29,6 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
 if (null !==(filter_input(INPUT_POST, 'submit'))){
     $slmcid = $_SESSION['userid'];
     $clinicno = filter_input(INPUT_POST,'clinicno');
-    
     $sql = "SELECT drugid, drugname FROM drug;";
     $result=mysqli_query($conn,$sql);
     $queryResult=mysqli_num_rows($result);
@@ -198,8 +197,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 </html>
 
 <?php }else{
-    //echo "<script>alert('works!)</script>";
-    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './prescription.php';</script>";
+    echo "<script>alert(\"Clinic no is not valid!\");window.location.href = './prescription.php';</script>";
 }
 }else{
     echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './prescription.php';</script>";

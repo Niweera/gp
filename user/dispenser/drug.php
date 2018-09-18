@@ -175,6 +175,8 @@
                             echo "<script>alert('Patient is not valid! Check the Clinic No and enter agian.');window.location.href = './drugissue.php';</script>";  
                         }
 
+                    }else{
+                        echo "<script>alert('Go to Drug Issue page to continue.');window.location.href = './drugissue.php';</script>";  
                     }
                 ?>
                 <br>
@@ -191,7 +193,6 @@
                 <br>
                 <div class="form-group row mb-3">
                     <div class="col-sm-5"></div>
-                    <input type="hidden" value="<?php echo $clinicno; ?>" name="strval2" id="strval">
                     <input type="submit" value="Issue Drugs" class="col-md-2 text-center btn btn-primary btn" name="update">
                     <div class="col-sm-5"></div>
                 </div>

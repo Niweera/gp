@@ -95,7 +95,7 @@
                     <div class="form-group row">
                         <label for="contactno" class="col-sm-4 col-form-label"><h5>Telephone Number</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="contactno" id="contactno" placeholder="Enter Telephone Number" value = "<?php echo $_SESSION['contactno'];?>" required autofocus>
+                            <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" placeholder="Enter Telephone Number" value = "<?php echo $_SESSION['contactno'];?>" required autofocus>
                         </div>
                     </div>
                     <div class="form-group row">

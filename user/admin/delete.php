@@ -76,7 +76,7 @@
 <br>
 
    <div class="container text-center">
-        <h3>Delete Profile</h3>
+        <h3>Delete Administrator Profile</h3>
         <hr>
         <div class = "row">
             <div class = "col-lg-4 col-md-4 col-sm-4"></div>
