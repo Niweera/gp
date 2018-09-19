@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="script.js"></script>
-    <script src="script2.js"></script>
+    <script src="script.js"></script> <!-- Script for the AJAX queries -->
+    <script src="script2.js"></script> <!-- Script for form data validation -->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -35,7 +35,7 @@
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
-    </style>
+    </style> <!-- Removing the number input styles -->
 </head>
 <body>
 <!--Header navigation bar for the website-->
