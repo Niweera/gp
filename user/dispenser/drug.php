@@ -117,6 +117,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                                             <th scope=\"col\">Dose</th>
                                             <th scope=\"col\">Frequency</th>
                                             <th scope=\"col\">Duration</th>
+                                            <th scope=\"col\">Drug Count</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -148,7 +149,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                                     $drugCount = $freq * $dur;
                                     
                                     echo "<tr>";
-                                    echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
+                                    echo "<th style=\"width: 25.00%\" scope=\"row\">".$drugname."</th>";  
                                     echo "<td style=\"width: 20.00%\">";
                                     echo "<div class=\"row\">";
                                     echo "<div class=\"col-md-8\">";
@@ -160,6 +161,9 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                                     echo "</td>";
                                     echo "<td style=\"width: 20.00%\">";
                                     echo "<p class=\"form-control form-control-sm\">".$duration."</p>";
+                                    echo "</td>";
+                                    echo "<td style=\"width: 15.00%\">";
+                                    echo "<p class=\"form-control form-control-sm\">".$drugCount."</p>";
                                     echo "</td>";
                                     echo "</tr>";
 
