@@ -85,7 +85,7 @@
                     <div class="form-group row">
                         <label for="userid" class="col-sm-4 col-form-label"><h5>User ID</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="userid" id="userid" placeholder="Enter User ID" required autofocus>
+                            <input type="text" class="form-control form-control-sm" name="userid" id="userid" placeholder="Enter User ID" autocomplete="off" required autofocus>
                         </div>
                     </div>
                     <input type="submit" value="Delete Profile" class="btn btn-primary btn-lg" name="submit">

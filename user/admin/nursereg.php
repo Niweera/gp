@@ -83,13 +83,13 @@
                     <div class="form-group row">
                         <label for="name" class="col-sm-4 col-form-label"><h5>Name</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Enter Name" required autofocus>
+                            <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Enter Name" autocomplete="off" required autofocus>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="email" class="col-sm-4 col-form-label"><h5>Email</h5></label>
                         <div class="col-lg-8">
-                            <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Enter Email">
+                            <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Enter Email" autocomplete="off">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -101,7 +101,7 @@
                     <div class="form-group row">
                         <label for="nurseid" class="col-sm-4 col-form-label"><h5>Nurse ID</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="nurseid" id="nurseid" placeholder="Enter Nurse ID" required autofocus>
+                            <input type="text" class="form-control form-control-sm" name="nurseid" id="nurseid" placeholder="Enter Nurse ID" autocomplete="off" required autofocus>
                         </div>
                     </div> 
                 </div>

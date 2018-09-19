@@ -72,7 +72,7 @@
         <div class="form-group">
 
 
-            <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" required>
+            <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" autocomplete="off" required>
             <br>
 
         </div>
