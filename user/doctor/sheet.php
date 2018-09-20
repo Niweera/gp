@@ -175,7 +175,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                 <div class="col-md-4">
                     <br>
                     <hr>
-                    <p class="text-center"><strong><?php echo $_SESSION['name']; ?><strong></p>
+                    <p class="text-center"><strong><?php echo "Dr. ".$_SESSION['name']; ?><strong></p>
                 </div>
             </div>
         </div>
