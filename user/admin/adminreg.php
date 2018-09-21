@@ -137,7 +137,7 @@
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $flag = "0";
         
-        $sql .= "INSERT INTO user (userid,password,flag) VALUES ('$adminid','$hashed_password','$flag');";
+        $sql = "INSERT INTO user (userid,password,flag) VALUES ('$adminid','$hashed_password','$flag');";
         $sql .= "INSERT INTO admin (name,contactno,adminid,email) VALUES ('$name','$contactno','$adminid','$email');";
         
         $mysqli_query = mysqli_multi_query($conn, $sql);
@@ -153,7 +153,7 @@
                         echo "<script>alert(\"Successfully registered!\");</script>";
                     }
                     else{
-                        echo '<script>alert("Error occured in sending the password, try again");</script>';
+                        echo '<script>alert("Error occured in sending the password, delete the user id and try again!");</script>';
                     }
                     
                 }
