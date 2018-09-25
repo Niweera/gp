@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="../css/tooplate-style.css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     
         <!-- Template main Css -->
         <link rel="stylesheet" href="../assets/css/style.css">
