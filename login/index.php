@@ -88,7 +88,7 @@
     <link rel="stylesheet" href="../styles.css"/>
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="../css/tooplate-style.css">
-    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body id="LoginForm">
 
@@ -140,8 +140,8 @@
           </div>
      </section>
 
-<!-- login modal codes-->
-<div class="container">
+<!-- login modal codes--><br><br>
+<div class="container bg-danger">
     <div class="login-form">
         <div class="main-div">
             <div class="panel">
@@ -151,16 +151,11 @@
             <form id="Login" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 
                 <div class="form-group">
-
-
                     <input type="text" class="form-control" id="inputEmail" placeholder="Login ID" name="email" autocomplete="off" required autofocus>
-
                 </div>
 
                 <div class="form-group">
-
                     <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" required autofocus>
-
                 </div>
                 <div class="forgot">
                 <a href="reset.php">Forgot password?</a>
@@ -170,7 +165,6 @@
             </form>
         </div>
     </div>
-</div>
 </div>
 
    <!-- FOOTER -->

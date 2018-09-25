@@ -23,7 +23,7 @@
      <!--MAIN-->
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" href="css/tooplate-style.css">
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   
 </head>
 
