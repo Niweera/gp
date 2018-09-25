@@ -25,9 +25,12 @@
     <link rel="stylesheet" href="../styles.css"/>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="../css/tooplate-style.css">
-   
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 
-
+    
+        <!-- Template main Css -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+        
 
 </head>
 <body>
@@ -80,204 +83,299 @@
      </section>
 <br>
  <!-- HOME -->
-  <div class="head-image">
-    <img src="../images/14.jpeg" alt="about">
-    <h1>Healthy Living</h1>
+ <div class="im">
+   <img src="../images/sliderr-1.jpeg" alt="we">
+ </div>
+
+ <div id="body">
+  <div id="contents">
+    <div class="headerr">
+      <div class="footer">
+        <div class="body">
+          <h1>Our History..</h1>
+          <h4>We Have Free Templates for Everyone</h4>
+          <p> Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What&acute;s more, they&acute;re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the Terms of Use. You can even remove all our links if you want to. </p>
+          <h4>We Have More Templates for You</h4>
+          <p> Looking for more templates? Just browse through all our Free Website Templates and find what you&acute;re looking for. But if you don&acute;t find any website template you can use, you can try our Free Web Design service and tell us all about it. Maybe you&acute;re looking for something different, something special. And we love the challenge of doing something different and something special. </p>
+          <h4>Be Part of Our Community</h4>
+          <p> If you&acute;re experiencing issues and concerns about this website template, join the discussion on our forum and meet other people in the community who share the same interests with you. </p>
+          <h4>Template details</h4>
+          <p> Version 11<br>
+            Website Template details, discussion and updates for this Natural Health Web Template. Website Template design by Free Website Templates. Please feel free to remove some or all the text and links of this page and replace it with your own About content. </p>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="column">
-    <div class="column-1">
-      <h2>History</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-    </div><!--column-1-->
-    <div class="column-1">
-      <h2>History</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<div class="main-container">
 
-        </p>
-    </div><!--column-1-->
-    <div class="column-2">
-      <h2>Responsive Image Gallery</h2>
-      <div class="responsive">
-       <div class="gallery">
-          <a target="_blank" href="../images/1.jpeg">
-            <img src="../images/1.jpeg" alt="Cinque Terre" width="600" height="400">
-          </a>
-        </div>
+    <div class="container gallery fadeIn animated">
+
+      <div class="row">
+        
+
+          <a href="../images/1.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/1.jpeg" alt="">
+
+            <span class="on-hover">
+              <span class="hover-caption">Map</span>
+            </span>
+
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/2.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/2.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/3.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/3.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/4.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/4.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/5.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/5.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/6.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/6.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/7.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/7.jpeg" alt="">
+
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/8.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/8.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/9.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/9.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/10.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/10.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/11.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/11.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/12.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/12.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/13.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/13.jpeg" alt="">
+
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/14.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/14.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/15.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/15.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/16.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/16.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/17.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/17.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/18.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/18.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/19.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/19.jpeg" alt="">
+
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/20.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/20.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/21.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/21.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+
+          <a href="../images/22.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/22.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/23.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/23.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+
+          <a href="../images/24.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+            <img src="../images/24.jpeg" alt="">
+            
+            <span class="on-hover">
+              <span class="hover-caption">Image Caption</span>
+            </span>
+            
+          </a> <!-- /.gallery-item -->
+          
+          
+        
       </div>
-      <div class="responsive">
-       <div class="gallery">
-          <a target="_blank" href="../images/2.jpeg">
-            <img src="../images/2.jpeg" alt="Cinque Terre" width="600" height="400">
-          </a>
-        </div>
-      </div>
-      <div class="responsive">
-       <div class="gallery">
-          <a target="_blank" href="../images/3.jpeg">
-            <img src="../images/3.jpeg" alt="Cinque Terre" width="600" height="400">
-          </a>
-        </div>
-      </div>
-      <div class="responsive">
-       <div class="gallery">
-          <a target="_blank" href="../images/4.jpeg">
-            <img src="../images/4.jpeg" alt="Cinque Terre" width="600" height="400">
-          </a>
-        </div>
-      </div>
-
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/5.jpeg">
-                <img src="../images/5.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/6.jpeg">
-                <img src="../images/6.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/7.jpeg">
-                <img src="../images/7.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/8.jpeg">
-                <img src="../images/8.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/9.jpeg">
-                <img src="../images/9.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/10.jpeg">
-                <img src="../images/10.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/11.jpeg">
-                <img src="../images/11.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/12.jpeg">
-                <img src="../images/12.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/13.jpeg">
-                <img src="../images/13.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/14.jpeg">
-                <img src="../images/14.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/15.jpeg">
-                <img src="../images/15.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/16.jpeg">
-                <img src="../images/16.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/17.jpeg">
-                <img src="../images/17.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/18.jpeg">
-                <img src="../images/18.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/19.jpeg">
-                <img src="../images/19.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/20.jpeg">
-                <img src="../images/20.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/21.jpeg">
-                <img src="../images/21.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/22.jpeg">
-                <img src="../images/22.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/23.jpeg">
-                <img src="../images/23.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
-            <div class="responsive">
-             <div class="gallery">
-                <a target="_blank" href="../images/24.jpeg">
-                <img src="../images/24.jpeg" alt="Cinque Terre" width="600" height="400">
-                </a>
-            </div>
-            </div>
+      
+    </div>
 
 
-    </div><!--column-2-->
-  </div><!--column-->
+  </div> <!-- /.main-container  -->
+
+ 
+ 
 
    <!-- FOOTER -->
      <footer data-stellar-background-ratio="5">
