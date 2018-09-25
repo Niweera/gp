@@ -68,67 +68,9 @@
     background-image: url(../images/sliderr-3.jpeg);
   }
 
-
-
-
-.column{
-	margin: 15px;
-	width: 1330px;
-	margin-bottom: 15px;
-	padding-bottom: 15px;
-	height: 600px;
-	border-radius: 10px;
-}
-.column-1{
-	width: 423.33px;
-	height: 600px;
-    background: #eee;
-	float: left;
-}
-.column-2{
-	width: 423.33px;
-	height: 600px;
-    background: #ccffdd;
-	float: left;
-}
-.gallery {
-    border: 1px solid #ccc;
+.im img{
+  width: 1400px;
+  height: 500px;
 }
 
-.gallery:hover {
-    border: 1px solid #777;
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-}
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
- }
 
