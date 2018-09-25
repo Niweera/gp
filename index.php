@@ -33,6 +33,11 @@
           <div class="container">
 
                <div class="navbar-header">
+                  <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
                    
                     <!-- lOGO TEXT HERE -->
                     <a href="./" class="navbar-brand"><i class="fa fa-h-square"></i>&nbsp &nbsp Divisional Hospital, Bentota</a>
