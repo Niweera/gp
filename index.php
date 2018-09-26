@@ -60,12 +60,12 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="./about">Clinic Services</a></li>
-                  <li><a href="index-video.html">OPD Services</a></li>
+                  <li><a href="./services">Clinic Services</a></li>
+                  <li><a href="./services/opd.php">OPD Services</a></li>
                   </ul>
             </li>
                          
-                         <li><a href="#" class="smoothScroll">Contact Details</a></li>
+                         <li><a href="../contact" class="smoothScroll">Contact Details</a></li>
                          <li class="nav-item">
                     <?php
                         if(!isset($_SESSION['userid'])){
