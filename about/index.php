@@ -28,12 +28,9 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
     
         <!-- Template main Css -->
-        <link rel="stylesheet" href="../assets/css/style.css">
-        
-
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
  <!-- MENU -->
@@ -61,8 +58,8 @@
                          <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="./about">Overview</a></li>
-                                    <li><a href="index-video.html">Vission & Mission</a></li>
+                                    <li><a href="./">Overview</a></li>
+                                    <li><a href="./vission.php">Vission & Mission</a></li>
                                 </ul>
                         </li>
                         <li class="dropdown">
