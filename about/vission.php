@@ -70,12 +70,12 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="./about">Clinic Services</a></li>
-                                    <li><a href="index-video.html">OPD Services</a></li>
+                                    <li><a href="../services">Clinic Services</a></li>
+                                    <li><a href="../services/opd.php">OPD Services</a></li>
                                 </ul>
                         </li>
                          
-                         <li><a href="#" class="smoothScroll">Contact Details</a></li>
+                         <li><a href="../contact" class="smoothScroll">Contact Details</a></li>
                          <li class="nav-item">
                             <?php
                                 if(!isset($_SESSION['userid'])){
@@ -112,48 +112,8 @@
 
                 <div class="carousel-caption">
 
-                  <h2 class="carousel-title bounceInDown animated slow">Because they need your help</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow ">Do not let them down</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
-
-                </div> <!-- /.carousel-caption -->
-
-              </div>
-
-            </div> <!-- /.item -->
-
-
-            <div class="item ">
-
-              <img src="../images/images-1.jpg" alt="">
-
-              <div class="container">
-
-                <div class="carousel-caption">
-
                   <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow"> So let's do it !</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
-
-                </div> <!-- /.carousel-caption -->
-
-              </div>
-
-            </div> <!-- /.item -->
-
-
-
-
-            <div class="item ">
-
-              <img src="../images/images-1.jpg" alt="">
-
-              <div class="container">
-
-                <div class="carousel-caption">
-
-                  <h2 class="carousel-title bounceInDown animated slow" >A penny is a lot of money, if you have not got a penny.</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow">You can make the diffrence !</h4>
+                  <h4 class="carousel-subtitle bounceInUp animated slow ">So let's do it !</h4>
                   <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
 
                 </div> <!-- /.carousel-caption -->
@@ -162,17 +122,9 @@
 
             </div> <!-- /.item -->
 
+
+           
           </div>
-
-          <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
-            <span class="fa fa-angle-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-
-          <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
-            <span class="fa fa-angle-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
 
     </div><!-- /.carousel -->
 
