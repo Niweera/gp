@@ -205,7 +205,7 @@
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Our Location</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="../images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <h5>Address</h5></a>
