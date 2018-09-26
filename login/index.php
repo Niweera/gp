@@ -86,7 +86,7 @@
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
     
     <link rel="stylesheet" href="../styles.css"/>
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../css/tooplate-style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -118,7 +118,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="../about">Overview</a></li>
-                                    <li><a href="index-video.html">Vission & Mission</a></li>
+                                    <li><a href="../about/vission.php">Vission & Mission</a></li>
                                 </ul>
                         </li>
                         <li class="dropdown">
