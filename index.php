@@ -75,8 +75,6 @@
                                 }
                             ?>
                           </li>
-
-                          <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li>
                     </ul>
                   </div><!--collapse navbar-collapse-->
             </div><!--container-->

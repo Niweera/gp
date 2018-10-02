@@ -9,6 +9,11 @@
                 header('location: ../../login');	 	
             }
         }
+
+    $sqlc = "SELECT COUNT(clinicno) AS count FROM patient;";
+    $mysqli_query = mysqli_query($conn, $sqlc);
+    $row = mysqli_fetch_array($mysqli_query);
+    $patientCount =  $row['count'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -164,7 +169,13 @@
         $dc = filter_input(INPUT_POST,'clinicd');
         $mc = filter_input(INPUT_POST,'clinicm');
         
-        $clinicno = rand(999, 99999); //need to implement a mechanism to auto generate clinicno #firstLetterofSurname/last2digitsDOBYear/NoofRegdPatients#
+        $firstSurname = strtolower($surname[0]);
+        $dobDigits =  date('Y', strtotime($dob));
+        $dob2Digits = substr($dobDigits, 2, 2);
+        $str_length = 4;
+        $patientCount = $patientCount + 1;
+        $no = substr("0000{$patientCount}", -$str_length);
+        $clinicno = $firstSurname.$dob2Digits.$no;
         $password = rand(999, 99999);
         $nurseid = $_SESSION['userid'];
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -175,7 +186,7 @@
         
         $mysqli_query = mysqli_multi_query($conn, $sql);
        
-        /*if (!$mysqli_query){
+        if (!$mysqli_query){
                     echo "<script>alert(\"Error Occured!\");</script>";
                 }else {
                     $to = $email;
@@ -189,7 +200,7 @@
                         echo '<script>alert("Error occured in sending the password, try again!");</script>';
                     }
                     
-                }*/
+                }
     }
     
 
