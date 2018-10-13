@@ -92,9 +92,9 @@
         <div class="container border pt-4 bg-light rounded">
             <div class="form-group row">
                 <div class="col-sm-3"></div>
-                <label for="clinicno" class="col-sm-2 col-form-label"><h5>Clinic No:</h5></label>
+                <label for="clinicno" class="col-sm-2 col-form-label"><h5>Patient ID:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="clinicno" id="clinicno" placeholder="Enter Clinic No" autocomplete="off" required autofocus>
+                    <input type="text" class="form-control form-control-sm" name="clinicno" id="clinicno" placeholder="Enter Patient ID" autocomplete="off" required autofocus>
                     <div id='resultbox' class="result"></div>
                 </div>
                 <!--<div class="col-lg-2">

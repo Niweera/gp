@@ -99,7 +99,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             </div>
             <div class="row mt-5">
                 <div class="col-md-6">
-                    <label class="h4"><strong>Clinic No: </strong><?php echo $clinicno; ?></label>
+                    <label class="h4"><strong>Patient ID: </strong><?php echo $clinicno; ?></label>
                 </div>
                 <div class="col-md-6">
                     <label class="h4"><strong>Name: </strong><?php if (isset($name)){echo $name; }?></label>

@@ -49,6 +49,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item active" href="./register.php">Register Patient</a>
+                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -80,7 +81,7 @@
                     <div class="form-group row">
                         <label for="reg" class="col-sm-4 col-form-label"><h5>Already registered in another clinic?</h5></label>
                         <div class="col-lg-8">
-                            <button  class="text-center btn btn-primary btn mb-2" onclick="window.location.href='#'">Register for another clinic</button>
+                            <button  class="text-center btn btn-primary btn mb-2" onclick="window.location.href='./register2.php'">Register for another clinic</button>
                         </div>
                     </div>
                     <hr>

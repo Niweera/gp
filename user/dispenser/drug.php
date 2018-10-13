@@ -266,7 +266,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 
 <?php 
     }else{
-        echo "<script>alert('Patient is not valid! Check the Clinic No and enter agian.');window.location.href = './drugissue.php';</script>";  
+        echo "<script>alert('Patient is not valid! Check the Patient ID and enter agian.');window.location.href = './drugissue.php';</script>";  
     }
 }else{
     echo "<script>alert('Go to Drug Issue page to continue.');window.location.href = './drugissue.php';</script>";  

@@ -6,7 +6,7 @@ if (!$conn) {
     die('Could not connect: ' . mysqli_error($conn));
 }
 
-$sql="SELECT * FROM patient WHERE dc = 1 AND clinicno = '".$q."'";
+$sql="SELECT * FROM patient WHERE clinicno = '".$q."'";
 $result = mysqli_query($conn,$sql);
 $queryResult=mysqli_num_rows($result);
 if ($queryResult == 1){

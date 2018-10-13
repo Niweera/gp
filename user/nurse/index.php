@@ -44,6 +44,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
+                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -96,6 +97,7 @@
                 <hr>
                 <div class="list-group">
                     <a href="./register.php" class="list-group-item list-group-item-action"><strong>Register Patient</strong></a>
+                    <a href="./register2.php" class="list-group-item list-group-item-action"><strong>Further Patient Registration</strong></a>
                 </div>
             </div>
         </div>
@@ -117,8 +119,8 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">########</h5><hr>
-                                    <a href="./drugissue.php" class="btn btn-primary btn-block">View</a>
+                                    <h5 class="card-title">#######</h5><hr>
+                                    <a href="./#" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>
