@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Patient Registration</title>
+    <title>View Patient</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -56,8 +56,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
-                <a class="dropdown-item active" href="./register2.php">Further Patient Registration</a>
-                <a class="dropdown-item" href="./patientview.php">View Patient Details</a>
+                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
+                <a class="dropdown-item active" href="./patientview.php">View Patient Details</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -78,11 +78,11 @@
 <br>
 
     <div class="container">
-        <center><h1 style="color:#242424;">Further Patient Registration</h1></center>
+        <center><h1 style="color:#242424;">View Patient</h1></center>
     </div>
     <br>
     <br>
-    <form name="doclog" action="./register2.php"  method="post">
+    <form name="doclog" action="./patientview2.php"  method="post">
         <div class="container border pt-4 bg-light rounded mt-3 mb-5">
             <div class="form-group row mt-3">
                 <div class="col-sm-3"></div>
@@ -95,14 +95,9 @@
             </div>
             <div id="txtHint"></div>
             <br>
-            <hr>
-            <div class="form-group row">
-                <label for="clinic" class="col-sm-12 col-form-label"><h5>* Click Submit to register in both Diabetes and Medical clinics</h5></label>
-            </div>
-            <hr>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <input type="submit" value="Submit" class="col-md-2 text-center btn btn-primary btn" name="submit" onclick="myFunction()">
+                <input type="submit" value="View & Edit Details" class="col-md-2 text-center btn btn-primary btn" name="edit">
                 <div class="col-sm-5"></div>
             </div>
         </div>    
@@ -174,26 +169,7 @@
   </body>
 </html>
 
-<?php
-if (null !==(filter_input(INPUT_POST, 'submit'))){
-    $q = filter_input(INPUT_POST,'clinicno');
-    $sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$q."';";
-    $result0 = mysqli_query($conn,$sql0);
-    $queryResult0 = mysqli_num_rows($result0);
-    if ($queryResult0 > 0){
-        $sqlupdate = "UPDATE `patient` SET `mc` = '1', `dc` = '1' WHERE `patient`.`clinicno` = '".$q."';";
-        $result = mysqli_query($conn,$sqlupdate);
-        if (!$result){
-            echo "<script>alert('Error occured!');window.location.href = './register2.php';</script>";
-        }else{
-            echo "<script>alert('Successfully clinic detials updated!');window.location.href = './register2.php';</script>";
-        }
-    }else{
-        echo "<script>alert('Please check the Patient ID and try again!');window.location.href = './register2.php';</script>";
-    }
-}
-mysqli_close($conn);
-?>
+
 
 
 

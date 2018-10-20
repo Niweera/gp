@@ -45,6 +45,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
                 <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
+                <a class="dropdown-item" href="./patientview.php">View Patient Details</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -98,6 +99,7 @@
                 <div class="list-group">
                     <a href="./register.php" class="list-group-item list-group-item-action"><strong>Register Patient</strong></a>
                     <a href="./register2.php" class="list-group-item list-group-item-action"><strong>Further Patient Registration</strong></a>
+                    <a href="./patientview.php" class="list-group-item list-group-item-action"><strong>View Patient Details</strong></a>
                 </div>
             </div>
         </div>
