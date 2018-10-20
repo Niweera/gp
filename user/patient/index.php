@@ -43,7 +43,7 @@
             Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">View Medical Records</a>
+                <a class="dropdown-item" href="./viewrecords.php">View Medical Records</a>
                 <a class="dropdown-item" href="#">Make an Appointment</a>
             </div>
         </li>
@@ -99,7 +99,7 @@
                 <h3>Quick Access</h3>
                 <hr>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action"><strong>View Medical Records</strong></a>
+                    <a href="./viewrecords.php" class="list-group-item list-group-item-action"><strong>View Medical Records</strong></a>
                     <a href="#" class="list-group-item list-group-item-action"><strong>Make an Appointment</strong></a>
                 </div>
             </div>

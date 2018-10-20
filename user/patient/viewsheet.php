@@ -5,7 +5,7 @@
         header('location: ../../login');
         exit;
         }else{
-            if ($_SESSION['flag'] != 1){
+            if ($_SESSION['flag'] != 5){
                 header('location: ../../login');	 	
             }
         }
@@ -13,24 +13,13 @@
 
 <?php
 if (null !==(filter_input(INPUT_POST, 'submit'))){
-    $clinicno = filter_input(INPUT_POST,'clinicno');
+    $clinicno = $_SESSION['userid'];
     $date = $_POST['date'];
-    $sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
     $sqlcheck = "SELECT * FROM prescription WHERE date LIKE '".$date."%' AND clinicno = '".$clinicno."';";
-    $result0 = mysqli_query($conn,$sql0);
     $resultcheck = mysqli_query($conn,$sqlcheck);
-    $queryResult0 = mysqli_num_rows($result0);
     $queryResult1 = mysqli_num_rows($resultcheck);
-    if ($queryResult0 > 0){
-        if ($queryResult1 > 0){
+    if ($queryResult1 > 0){
  ?>
-<?php
-if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno'])){
-    $name = $_POST['name'];
-    $age = $_POST['age'];
-    $contactno = $_POST['contactno'];
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,15 +59,7 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
                     <label class="h4"><strong>Patient ID: </strong><?php echo $clinicno; ?></label>
                 </div>
                 <div class="col-md-6">
-                    <label class="h4"><strong>Name: </strong><?php if (isset($name)){echo $name; }?></label>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-6">
-                    <label class="h4"><strong>Age: </strong><?php echo $age; ?></label>
-                </div>
-                <div class="col-md-6">
-                    <label class="h4"><strong>Contact No: </strong><?php echo "0".$contactno; ?></label>
+                    <label class="h4"><strong>Date: </strong><?php echo $date; ?></label>
                 </div>
             </div>
             <hr>
@@ -87,7 +68,7 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
                     <img src="../../sourcefiles/rx.jpg" style="width:80px;height:80px" class="rounded float-left" alt="Rx">
                 </div>
                 <div class="col-md-6">
-                    <label class="h4"><strong>Date: </strong><?php echo $date; ?></label>
+                    
                 </div>
             </div>
             <hr>
@@ -155,10 +136,7 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
 </html>
 
 <?php }else{
-    echo "<script>alert(\"This patient has no presciption for this day!\");history.go(-1);</script>";
-}
-}else{
-    echo "<script>alert(\"Patient ID is not valid!\");history.go(-1);</script>";
+    echo "<script>alert(\"You have no presciptions for this day!\");history.go(-1);</script>";
 }
 }else{
     echo "<script>alert(\"Go To View Medical Records Page to continue!\");history.go(-1);</script>";
