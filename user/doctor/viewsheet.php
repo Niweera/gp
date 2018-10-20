@@ -13,11 +13,16 @@
 
 <?php
 if (null !==(filter_input(INPUT_POST, 'submit'))){
-$clinicno = filter_input(INPUT_POST,'clinicno');
-$sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
-$result0 = mysqli_query($conn,$sql0);
-$queryResult0 = mysqli_num_rows($result0);
-if ($queryResult0 > 0){
+    $clinicno = filter_input(INPUT_POST,'clinicno');
+    $date = $_POST['date'];
+    $sql0 = "SELECT clinicno FROM patient WHERE clinicno = '".$clinicno."';";
+    $sqlcheck = "SELECT * FROM prescription WHERE date LIKE '".$date."%' AND clinicno = '".$clinicno."';";
+    $result0 = mysqli_query($conn,$sql0);
+    $resultcheck = mysqli_query($conn,$sqlcheck);
+    $queryResult0 = mysqli_num_rows($result0);
+    $queryResult1 = mysqli_num_rows($resultcheck);
+    if ($queryResult0 > 0){
+        if ($queryResult1 > 0){
  ?>
 <?php
 if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno'])){
@@ -25,45 +30,8 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
     $age = $_POST['age'];
     $contactno = $_POST['contactno'];
 }
-
-if (null !==(filter_input(INPUT_POST, 'submit'))){
-    $slmcid = $_SESSION['userid'];
-    $clinicno = filter_input(INPUT_POST,'clinicno');
-    $sql = "SELECT drugid, drugname FROM drug;";
-    $result=mysqli_query($conn,$sql);
-    $queryResult=mysqli_num_rows($result);
-    if ($queryResult > 0){
-        $test = 0;
-        while ($row=mysqli_fetch_assoc($result)){
-            $drugid = $row['drugid'];
-            $d = filter_input(INPUT_POST,$drugid."d");
-            $dose=mysqli_real_escape_string($conn,$d);
-            $f = filter_input(INPUT_POST,$drugid."f");
-            $frequency=mysqli_real_escape_string($conn,$f);
-            $du = filter_input(INPUT_POST,$drugid."u");
-            $duration=mysqli_real_escape_string($conn,$du);
-            if ($d != ""){
-                $sql0 = "INSERT INTO prescription (slmcid, clinicno, drugid, dose, frequency, duration) VALUES ('$slmcid','$clinicno','$drugid','$dose','$frequency','$duration');";
-                $mysqli_query = mysqli_query($conn, $sql0);
-                
-                if ($mysqli_query){
-                    $test++;
-                }
-            }else{
-                $test++;
-            }
-        }
-        if ($test != 23){
-            echo "<script>alert(\"Error Occured! Please insert the data again.\");history.go(-1);</script>";
-        }
-    }
-    
-}else{
-    echo "<script>alert(\"Go To Prescription Page to continue!\");history.go(-1);</script>";
-}
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,7 +87,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                     <img src="../../sourcefiles/rx.jpg" style="width:80px;height:80px" class="rounded float-left" alt="Rx">
                 </div>
                 <div class="col-md-6">
-                    <label class="h4"><strong>Date: </strong><?php echo date("d-m-Y"); ?></label>
+                    <label class="h4"><strong>Date: </strong><?php echo $date; ?></label>
                 </div>
             </div>
             <hr>
@@ -134,41 +102,39 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                 </thead>
                 <tbody>
                 <?php    
-                    
-                    $sql = "SELECT drugid, drugname FROM drug;";
+                    $sql = "SELECT drug.drugname, prescription.drugid, prescription.slmcid, prescription.frequency, prescription.dose, prescription.duration FROM prescription INNER JOIN drug ON prescription.drugid = drug.drugid WHERE date LIKE '".$date."%' AND clinicno = '".$clinicno."';";
                     $result=mysqli_query($conn,$sql);
                     $queryResult=mysqli_num_rows($result);
                     if ($queryResult > 0){
                         while ($row=mysqli_fetch_assoc($result)){
-                            $drugid = $row['drugid'];
                             $drugname = $row['drugname'];
+                            $dose = $row['dose'];
+                            $frequency = $row['frequency'];
+                            $duration = $row['duration'];
                             
-                            $d = filter_input(INPUT_POST,$drugid."d");
-                            if ($d != ""){
-                                echo "<tr>";
-                                echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
-                                echo "<td style=\"width: 20.00%\">";
-                                echo "<div class=\"row\">";
-                                echo "<div class=\"col-md-8\">";
-                                echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$d.">";
-                                echo "</div>";
-                                echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
-                                echo "<td style=\"width: 20.00%\">";
-                                $f = filter_input(INPUT_POST,$drugid."f");
-                                echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$f.">";
-                                echo "</td>";
-                                echo "<td style=\"width: 20.00%\">";
-                                $du = filter_input(INPUT_POST,$drugid."u");
-                                echo "<p class=\"form-control form-control-sm\">".$du."</p>";
-                                echo "</td>";
-                                echo "</tr>";
-                            }
+                            
+                            echo "<tr>";
+                            echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
+                            echo "<td style=\"width: 20.00%\">";
+                            echo "<div class=\"row\">";
+                            echo "<div class=\"col-md-8\">";
+                            echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$dose.">";
+                            echo "</div>";
+                            echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
+                            echo "<td style=\"width: 20.00%\">";
+                            echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$frequency.">";
+                            echo "</td>";
+                            echo "<td style=\"width: 20.00%\">";
+                            echo "<p class=\"form-control form-control-sm\">".$duration."</p>";
+                            echo "</td>";
+                            echo "</tr>";
+                            
                         }
+                        echo "</tbody>
+                        </table>";
                     }
         
                 ?>
-                </tbody>
-            </table>
             <hr>
             <div class="row">
                 <div class="col-md-8"></div>
@@ -197,10 +163,13 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 </html>
 
 <?php }else{
+    echo "<script>alert(\"This patient has no presciption for this day!\");history.go(-1);</script>";
+}
+}else{
     echo "<script>alert(\"Patient ID is not valid!\");history.go(-1);</script>";
 }
 }else{
-    echo "<script>alert(\"Go To Prescription Page to continue!\");history.go(-1);</script>";
+    echo "<script>alert(\"Go To View Medical Records Page to continue!\");history.go(-1);</script>";
 }
 ?>
 

@@ -10,7 +10,7 @@ if($conn === false){
  
 if(isset($_REQUEST["term"])){
     // Prepare a select statement
-    $sql = "SELECT * FROM patient WHERE mc = 1 AND clinicno LIKE ? LIMIT 7";
+    $sql = "SELECT * FROM patient WHERE clinicno LIKE ? LIMIT 7";
     
     if($stmt = mysqli_prepare($conn, $sql)){
         // Bind variables to the prepared statement as parameters
@@ -44,5 +44,5 @@ if(isset($_REQUEST["term"])){
 // close connection
 mysqli_close($conn);
 
-//This backend-search.php file is for the mc prescription sheet
+//This backend-search.php file is for the view medical records
 ?>

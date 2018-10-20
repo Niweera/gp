@@ -104,7 +104,7 @@
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <input type="submit" value="Enter Clinic No" class="col-md-2 text-center btn btn-primary btn" name="submit">
+                <input type="submit" value="Enter Patient ID" class="col-md-2 text-center btn btn-primary btn" name="submit">
                 <div class="col-sm-5"></div>
             </div>
         </div>    

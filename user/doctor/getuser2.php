@@ -44,4 +44,6 @@ if ($queryResult == 1){
     echo "<center><label class='col-md-5 col-form-label border'><h5>Patient is not in the database.</h5></label><center>";
 }
 mysqli_close($conn);
+
+//This backend-search.php file is for the mc prescription sheet
 ?>

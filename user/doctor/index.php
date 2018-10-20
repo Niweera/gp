@@ -43,7 +43,6 @@
             Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Patients</a>
                 <a class="dropdown-item" href="#">Schedule</a>
                 <a class="dropdown-item" href="#">Appointments</a>
                 <a class="dropdown-item" href="#">Inventory</a>
@@ -57,7 +56,7 @@
                 <a class="dropdown-item" href="./docedit.php">Edit Profile</a>
                 <a class="dropdown-item" href="./prescription.php">Diabetes Clinic Prescription</a>
                 <a class="dropdown-item" href="./prescription2.php">Medical Clinic Prescription</a>
-                <a class="dropdown-item" href="#">Medical Records</a>
+                <a class="dropdown-item" href="./viewrecords.php">Medical Records</a>
             </div>
         </li>
         <li class="nav-item">
@@ -104,7 +103,6 @@
                 <h3>Quick Access</h3>
                 <hr>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action"><strong>View Patients</strong></a>
                     <a href="#" class="list-group-item list-group-item-action"><strong>View Schedule</strong></a>
                     <a href="#" class="list-group-item list-group-item-action"><strong>View Appointments</strong></a>
                     <a href="#" class="list-group-item list-group-item-action"><strong>View Inventory</strong></a>
@@ -147,7 +145,7 @@
                             <div class="card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Medical Records</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">View</a>
+                                    <a href="./viewrecords.php" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>

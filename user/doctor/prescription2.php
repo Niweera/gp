@@ -55,7 +55,6 @@
             Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../create.php">Patients</a>
                 <a class="dropdown-item" href="./adminedit.php">Schedule</a>
                 <a class="dropdown-item" href="./delete.php">Appointments</a>
                 <a class="dropdown-item" href="./delete.php">Inventory</a>
@@ -69,7 +68,7 @@
                 <a class="dropdown-item" href="./docedit.php">Edit Profile</a>
                 <a class="dropdown-item" href="./prescription.php">Diabetes Clinic Prescription</a>
                 <a class="dropdown-item active" href="./prescription2.php">Medical Clinic Prescription</a>
-                <a class="dropdown-item" href="#">Medical Records</a>
+                <a class="dropdown-item" href="./viewrecords.php">Medical Records</a>
             </div>
         </li>
         <li class="nav-item">
