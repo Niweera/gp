@@ -29,6 +29,10 @@
                 $user = array("nurse", "nurseid");
                 return $user;
             }
+            if ($flag == 5){
+                $user = array("patient", "clinicno");
+                return $user;
+            }
             else{
                 return "";
             }

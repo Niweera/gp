@@ -5,35 +5,33 @@
         header('location: ../../login');
         exit;
         }else{
-            if ($_SESSION['flag'] != 4){
+            if ($_SESSION['flag'] != 5){
                 header('location: ../../login');	 	
             }
         }
 
-    if (null !==(filter_input(INPUT_POST, 'edit'))){    
-        $q = filter_input(INPUT_POST,'clinicno');
-        $sql0 = "SELECT name,email,contactno,gender,dob,address,dc,mc FROM patient WHERE clinicno = '".$q."';";
-        $result0 = mysqli_query($conn,$sql0);
-        $queryResult0 = mysqli_num_rows($result0);
-        if ($queryResult0 == 1){
-            $row = mysqli_fetch_array($result0);
-            $name =  $row['name'];
-            $namesplit = preg_split('/\s+/', $name, -1, PREG_SPLIT_NO_EMPTY);
-            $initials = $namesplit[0];
-            $surname = $namesplit[1];
-            $email =  $row['email'];
-            $contactno =  $row['contactno'];
-            $gender =  $row['gender'];
-            $dob =  $row['dob'];
-            $address =  $row['address'];
-            $dc =  $row['dc'];
-            $mc =  $row['mc'];
-        }else{
-            echo "<script>alert('Please check the Patient ID and try again!');window.location.href = './patientview.php';</script>";
-        }
+ 
+    $q = $_SESSION['userid'];
+    $sql0 = "SELECT name,email,contactno,gender,dob,address,dc,mc FROM patient WHERE clinicno = '".$q."';";
+    $result0 = mysqli_query($conn,$sql0);
+    $queryResult0 = mysqli_num_rows($result0);
+    if ($queryResult0 == 1){
+        $row = mysqli_fetch_array($result0);
+        $name =  $row['name'];
+        $namesplit = preg_split('/\s+/', $name, -1, PREG_SPLIT_NO_EMPTY);
+        $initials = $namesplit[0];
+        $surname = $namesplit[1];
+        $email =  $row['email'];
+        $contactno =  $row['contactno'];
+        $gender =  $row['gender'];
+        $dob =  $row['dob'];
+        $address =  $row['address'];
+        $dc =  $row['dc'];
+        $mc =  $row['mc'];
     }else{
-        echo "<script>window.location.href = './patientview.php';</script>";
+        echo "<script>alert('Please check the Patient ID and try again!');window.location.href = './patientview.php';</script>";
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +39,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Edit Patient Details</title>
+    <title>Edit Profile</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -49,6 +47,17 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="script.js"></script>
+    <script>
+        var check = function() {
+            if (document.getElementById('password').value == document.getElementById('repassword').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'Password confirmed!';
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Not matching';
+            }
+        }
+    </script>
 </head>
 <body>
 <!--Header navigation bar for the website-->
@@ -61,16 +70,15 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="./">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Patient Management
+            Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./register.php">Register Patient</a>
-                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
-                <a class="dropdown-item active" href="./patientview.php">View Patient Details</a>
+                <a class="dropdown-item" href="#">View Medical Records</a>
+                <a class="dropdown-item" href="#">Make an Appointment</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -78,8 +86,11 @@
             Quick Links
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./nursedit.php">Edit Profile</a>
+                <a class="dropdown-item" href="./patientedit.php">Edit Profile</a>
             </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./#">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
@@ -90,9 +101,9 @@
 <!--End of the Header navigation bar for the website-->
 <br>
 
-    <form name="doclog" action="./patientview3.php"  method="post">
+    <form name="doclog" action="./patientedit.php"  method="post">
         <div class="container">
-            <center><h1 style="color:#242424;">View & Edit Patient Details</h1></center>
+            <center><h1 style="color:#242424;">View & Edit Profile</h1></center>
         </div>
         <br>
         <br>
@@ -146,6 +157,19 @@
                             <label class="checkbox-inline col-lg-3"><input type="checkbox" name="clinicm" value="1" <?php echo ($mc=='1')?'checked':'' ?>> Medical Clinic</label>
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-4 col-form-label"><h5>Password</h5></label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control form-control-sm" name="password" id="password" placeholder="Enter Password" onkeyup='check();' required autofocus>
+                        </div>
+                    </div> 
+                    <div class="form-group row">
+                        <label for="repassword" class="col-sm-4 col-form-label"><h5>Re-enter Password</h5></label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control form-control-sm" name="repassword" id="repassword" placeholder="Re-enter Password" onkeyup='check();' required autofocus>
+                            <div class="mt-2" id='message'></div>
+                        </div>
+                    </div> 
                     <input type="hidden" name="clinicno" value="<?php echo $q;?>">
                 </div>
             </div>
@@ -153,10 +177,10 @@
                 <div class="col-lg-4">
                 </div>
                 <div class="col-lg-2">
-                    <input type="submit" value="Update Details" class="btn btn-primary btn-lg" name="submit">  
+                    <input type="submit" value="Update Profile" class="btn btn-primary btn-lg" name="submit">  
                 </div>
                 <div class="col-lg-2">
-                    <input type="button" value="Go Back" class="btn btn-primary btn-lg" onclick="history.go(-1);"> 
+                    <input type="button" value="Go Back" class="btn btn-primary btn-lg" onclick="window.location.href = './index.php';"> 
                 </div>
                 <div class="col-lg-4">
                 </div>  
@@ -175,4 +199,37 @@
 
 </html>
 
+<?php
+    if (null !==(filter_input(INPUT_POST, 'submit'))){
+        $userid = $_SESSION['userid'];
+        $initials = filter_input(INPUT_POST,'initials');
+        $surname = filter_input(INPUT_POST,'surname');
+        $name = $initials." ".$surname;
+        $contactno = filter_input(INPUT_POST,'contactno');
+        $gender = filter_input(INPUT_POST,'gender');
+        $email = filter_input(INPUT_POST,'email');
+        $dob = filter_input(INPUT_POST,'dob');
+        $address = filter_input(INPUT_POST,'address');
+        $dc = filter_input(INPUT_POST,'clinicd');
+        $mc = filter_input(INPUT_POST,'clinicm');
+        $password = filter_input(INPUT_POST,'password');
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        
+        $sql = "UPDATE user SET password='$hashed_password' WHERE userid='$userid';";
+        $sql .= "UPDATE patient SET name='$name',gender='$gender',dob='$dob',address='$address',dc='$dc',mc='$mc',email='$email',contactno='$contactno' WHERE clinicno='$userid';";
+        
+        $mysqli_query = mysqli_multi_query($conn, $sql);
+       
+        if (!$mysqli_query){
+                    echo "<script>alert(\"Error Occured!\");</script>";
+                }else {
+                    $_SESSION['name'] = $name;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['contactno'] = $contactno;
+                    echo "<script>alert(\"Successfully Updated!\");window.location.href = './patientedit.php';</script>";
 
+                }
+    }
+
+mysqli_close($conn);    
+?>
