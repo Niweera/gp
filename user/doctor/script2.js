@@ -56,3 +56,5 @@ function validateForm() {
     
     
 }
+
+//this script2.js file is the validation script file for dc clinic prescription sheet

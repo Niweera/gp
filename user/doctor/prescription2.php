@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>DC Prescription Sheet</title>
+    <title>MC Prescription Sheet</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="script.js"></script> <!-- Script for the AJAX queries -->
-    <script src="script2.js"></script> <!-- Script for form data validation -->
+    <script src="script1.js"></script> <!-- Script for the AJAX queries -->
+    <script src="script3.js"></script> <!-- Script for form data validation -->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -67,8 +67,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./docedit.php">Edit Profile</a>
-                <a class="dropdown-item active" href="./prescription.php">Diabetes Clinic Prescription</a>
-                <a class="dropdown-item" href="./prescription2.php">Medical Clinic Prescription</a>
+                <a class="dropdown-item" href="./prescription.php">Diabetes Clinic Prescription</a>
+                <a class="dropdown-item active" href="./prescription2.php">Medical Clinic Prescription</a>
                 <a class="dropdown-item" href="#">Medical Records</a>
             </div>
         </li>
@@ -86,7 +86,7 @@
 
     <form name="doclog" action="./sheet.php"  method="post" onsubmit="return validateForm()">
         <div class="container">
-            <center><h1 style="color:#242424;">Diabetes Clinic <br><hr>Prescription Sheet</h1></center>
+            <center><h1 style="color:#242424;">Medical Clinic <br><hr>Prescription Sheet</h1></center>
         </div>
         <br>
         <br>
@@ -123,7 +123,7 @@
                     if ($queryResult > 0){
                         while ($row=mysqli_fetch_assoc($result)){
                             $flag = $row['flag'];
-                            if ($flag == '0' || $flag == '2'){
+                            if ($flag == '1' || $flag == '2'){
                                 $drugid = $row['drugid'];
                                 $drugname = $row['drugname'];
                                 echo "<tr>";

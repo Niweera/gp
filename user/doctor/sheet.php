@@ -53,13 +53,13 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                 $test++;
             }
         }
-        if ($test != 11){
-            echo "<script>alert(\"Error Occured! Please insert the data again.\");window.location.href = './prescription.php';</script>";
+        if ($test != 23){
+            echo "<script>alert(\"Error Occured! Please insert the data again.\");history.go(-1);</script>";
         }
     }
     
 }else{
-    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './prescription.php';</script>";
+    echo "<script>alert(\"Go To Prescription Page to continue!\");history.go(-1);</script>";
 }
 
 
@@ -184,7 +184,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         <div class="row">
             <div class="col-md-12 text-center mb-5">
                 <button id="printbutton" class="btn btn-primary btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
-                <button  class="btn btn-primary btn-lg ml-2" onclick="window.location.href='./prescription.php'">Go Back</button>
+                <button  class="btn btn-primary btn-lg ml-2" onclick="history.go(-1);">Go Back</button>
             </div>
         </div>
     </div>
@@ -197,10 +197,10 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 </html>
 
 <?php }else{
-    echo "<script>alert(\"Clinic no is not valid!\");window.location.href = './prescription.php';</script>";
+    echo "<script>alert(\"Clinic no is not valid!\");history.go(-1);</script>";
 }
 }else{
-    echo "<script>alert(\"Go To Prescription Page to continue!\");window.location.href = './prescription.php';</script>";
+    echo "<script>alert(\"Go To Prescription Page to continue!\");history.go(-1);</script>";
 }
 ?>
 

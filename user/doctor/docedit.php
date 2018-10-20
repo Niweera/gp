@@ -66,7 +66,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item active" href="./docedit.php">Edit Profile</a>
-                <a class="dropdown-item" href="#">Prescription Sheet</a>
+                <a class="dropdown-item" href="./prescription.php">Diabetes Clinic Prescription</a>
+                <a class="dropdown-item" href="./prescription2.php">Medical Clinic Prescription</a>
                 <a class="dropdown-item" href="#">Medical Records</a>
             </div>
         </li>
