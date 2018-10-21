@@ -44,7 +44,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./viewrecords.php">View Medical Records</a>
-                <a class="dropdown-item" href="#">Make an Appointment</a>
+                <a class="dropdown-item" href="./appointment.php">Make an Appointment</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -54,9 +54,6 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./patientedit.php">Edit Profile</a>
             </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./#">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
@@ -100,7 +97,7 @@
                 <hr>
                 <div class="list-group">
                     <a href="./viewrecords.php" class="list-group-item list-group-item-action"><strong>View Medical Records</strong></a>
-                    <a href="#" class="list-group-item list-group-item-action"><strong>Make an Appointment</strong></a>
+                    <a href="./appointment.php" class="list-group-item list-group-item-action"><strong>Make an Appointment</strong></a>
                 </div>
             </div>
         </div>

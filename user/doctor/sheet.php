@@ -27,8 +27,11 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
 }
 
 if (null !==(filter_input(INPUT_POST, 'submit'))){
+    $effectiveDate = filter_input(INPUT_POST,'effectivedate');
+    $clinic = filter_input(INPUT_POST,'clinic');
+    $sqlTime = "INSERT INTO patientrecord (clinicno, clinic, nextdate) VALUES ('$clinicno', '$clinic', '$effectiveDate');";
+    $resultTime=mysqli_query($conn,$sqlTime);
     $slmcid = $_SESSION['userid'];
-    $clinicno = filter_input(INPUT_POST,'clinicno');
     $sql = "SELECT drugid, drugname FROM drug;";
     $result=mysqli_query($conn,$sql);
     $queryResult=mysqli_num_rows($result);

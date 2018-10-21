@@ -1,5 +1,5 @@
 <?php
-        include '../../dbconf/dbh.php';
+        /*include '../../dbconf/dbh.php';
     
 
         $x = 6;
@@ -34,6 +34,6 @@
             $mysqli_query1 = mysqli_query($conn, $sql1);
 
             $x++;
-        }     
-        
-        
+        }     */
+
+

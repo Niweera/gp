@@ -156,7 +156,20 @@
                     }
                 ?>
                     <tr>  
+                        <td colspan="4">
+                            <div class="form-group row mb-0">
+                                <div class="col-sm-5"></div>
+                                <div class="col-sm-3"></div>
+                                <label for="effectivedate" class="col-sm-2 col-form-label"><h5>Next Clinic Date:</h5></label>
+                                <div class="col-lg-2">
+                                    <input type="date" class="form-control form-control-sm" name="effectivedate" id="effectivedate"  autocomplete="off" required>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="4" style="text-align:center">
+                            <input type="hidden" value="1" name="clinic">
                             <input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg" name="submit">
                         </td>
                     </tr>
