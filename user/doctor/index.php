@@ -44,7 +44,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Schedule</a>
-                <a class="dropdown-item" href="#">Appointments</a>
+                <a class="dropdown-item" href="./appointments.php">Appointments</a>
                 <a class="dropdown-item" href="#">Inventory</a>
             </div>
         </li>
@@ -104,7 +104,7 @@
                 <hr>
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action"><strong>View Schedule</strong></a>
-                    <a href="#" class="list-group-item list-group-item-action"><strong>View Appointments</strong></a>
+                    <a href="./appointments.php" class="list-group-item list-group-item-action"><strong>View Appointments</strong></a>
                     <a href="#" class="list-group-item list-group-item-action"><strong>View Inventory</strong></a>
                 </div>
             </div>

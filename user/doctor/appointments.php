@@ -10,13 +10,14 @@
             }
         }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>DC Prescription Sheet</title>
+    <title>Appointments</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -24,8 +25,6 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="script.js"></script> <!-- Script for the AJAX queries -->
-    <script src="script2.js"></script> <!-- Script for form data validation -->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -35,7 +34,7 @@
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
-    </style> <!-- Removing the number input styles -->
+    </style>
 </head>
 <body>
 <!--Header navigation bar for the website-->
@@ -51,22 +50,22 @@
             <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./adminedit.php">Schedule</a>
-                <a class="dropdown-item" href="./appointments.php">Appointments</a>
+                <a class="dropdown-item active" href="./appointments.php">Appointments</a>
                 <a class="dropdown-item" href="./delete.php">Inventory</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Quick Links
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./docedit.php">Edit Profile</a>
-                <a class="dropdown-item active" href="./prescription.php">Diabetes Clinic Prescription</a>
+                <a class="dropdown-item" href="./prescription.php">Diabetes Clinic Prescription</a>
                 <a class="dropdown-item" href="./prescription2.php">Medical Clinic Prescription</a>
                 <a class="dropdown-item" href="./viewrecords.php">Medical Records</a>
             </div>
@@ -83,103 +82,33 @@
 <!--End of the Header navigation bar for the website-->
 <br>
 
-    <form name="doclog" action="./sheet.php"  method="post" onsubmit="return validateForm()">
-        <div class="container">
-            <center><h1 style="color:#242424;">Diabetes Clinic <br><hr>Prescription Sheet</h1></center>
-        </div>
-        <br>
-        <br>
-        <div class="container border pt-4 bg-light rounded">
-            <div class="form-group row">
+    <div class="container">
+        <center><h1 style="color:#242424;">View Appointments</h1></center>
+    </div>
+    <br>
+    <br>
+    <form name="doclog" action="./viewappointment.php"  method="post">
+        <div class="container border pt-4 bg-light rounded mt-3 mb-5">
+            <div class="form-group row mt-4">
                 <div class="col-sm-3"></div>
-                <label for="clinicno" class="col-sm-2 col-form-label"><h5>Patient ID:</h5></label>
-                <div class="col-lg-4 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="clinicno" id="clinicno" placeholder="Enter Patient ID" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
+                <label for="date" class="col-sm-2 col-form-label"><h5>Please enter date:</h5></label>
+                <div class="col-lg-4 mb-1">
+                    <input type="date" class="form-control form-control-sm" name="date" id="date" placeholder="Enter Date" required>
                 </div>
                 <div class="col-sm-3"></div>
             </div>
-
-            <div id="txtHint"></div>
-            <br>
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                    <th scope="col">Name of The Drug</th>
-                    <th scope="col">Dose</th>
-                    <th scope="col">Frequency</th>
-                    <th scope="col">Duration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
-                    $sql = "SELECT drugid, drugname,flag FROM drug;";
-                    $result=mysqli_query($conn,$sql);
-                    $queryResult=mysqli_num_rows($result);
-                    if ($queryResult > 0){
-                        while ($row=mysqli_fetch_assoc($result)){
-                            $flag = $row['flag'];
-                            if ($flag == '0' || $flag == '2'){
-                                $drugid = $row['drugid'];
-                                $drugname = $row['drugname'];
-                                echo "<tr>";
-                                echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
-                                echo "<td style=\"width: 20.00%\">";
-                                echo "<div class=\"row\">";
-                                echo "<div class=\"col-md-8\">";
-                                echo "<input type=\"number\" class=\"form-control form-control-sm\" name=".$drugid."d>";
-                                echo "</div>";
-                                echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
-                                echo "<td style=\"width: 20.00%\">";
-                                echo "<select class ='form-control form-control-sm' name=".$drugid."f>";
-                                echo '<option selected value="BD">BD</option>';
-                                echo '<option value="TDS">TDS</option>';
-                                echo '<option value="Mane">Mane</option>';
-                                echo '<option value="Nocte">Nocte</option>';
-                                echo '<option value="Vesper">Vesper</option>';
-                                echo '<option value="Daily">Daily</option>';
-                                echo '</select>';
-                                echo "</td>";
-                                echo "<td style=\"width: 20.00%\">";
-                                echo "<select class ='form-control form-control-sm' name=".$drugid."u>";
-                                echo '<option selected value="4 Weeks">4 Weeks</option>';
-                                echo '<option value="2 Weeks">2 Weeks</option>';
-                                echo '<option value="1 Week">1 Week</option>';
-                                echo '</select>';
-                                echo "</td>";
-                                echo "</tr>";
-                            }
-                        }
-                    }
-                ?>
-                    <tr>  
-                        <td colspan="4">
-                            <div class="form-group row mb-0">
-                                <div class="col-sm-5"></div>
-                                <div class="col-sm-3"></div>
-                                <label for="effectivedate" class="col-sm-2 col-form-label"><h5>Next Clinic Date:</h5></label>
-                                <div class="col-lg-2">
-                                    <input type="date" class="form-control form-control-sm" name="effectivedate" id="effectivedate"  autocomplete="off" required>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" style="text-align:center">
-                            <input type="hidden" value="0" name="clinic">
-                            <input type="submit" value="Submit Prescription" class="btn btn-primary btn-lg" name="submit">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <br>
+            <div class="form-group row mb-5">
+                <div class="col-sm-3"></div>
+                <input type="submit" value="Diabetes Clinic" class="col-md-2 text-center btn btn-primary btn" name="dcsubmit">
+                <div class="col-sm-2"></div>
+                <input type="submit" value="Medical Clinic" class="col-md-2 text-center btn btn-primary btn" name="mcsubmit">
+                <div class="col-sm-3"></div>
+            </div>
+        </div>    
     </form>
+    
 
-
-
-    <br>
+<br>
 <!--Footer for the website-->
 <section id="footer">
 		<div class="container">
