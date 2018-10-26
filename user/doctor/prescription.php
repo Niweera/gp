@@ -102,6 +102,14 @@
 
             <div id="txtHint"></div>
             <br>
+            <div class="form-group row mb-0">
+                <div class="col-sm-5"></div>
+                <div class="col-sm-3"></div>
+                <label for="effectivedate" class="col-sm-2 col-form-label"><h5>Next Clinic Date:</h5></label>
+                <div class="col-lg-2">
+                    <input type="date" class="form-control form-control-sm" name="effectivedate" id="effectivedate"  autocomplete="off" required>
+                </div>
+            </div>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -152,18 +160,6 @@
                         }
                     }
                 ?>
-                    <tr>  
-                        <td colspan="4">
-                            <div class="form-group row mb-0">
-                                <div class="col-sm-5"></div>
-                                <div class="col-sm-3"></div>
-                                <label for="effectivedate" class="col-sm-2 col-form-label"><h5>Next Clinic Date:</h5></label>
-                                <div class="col-lg-2">
-                                    <input type="date" class="form-control form-control-sm" name="effectivedate" id="effectivedate"  autocomplete="off" required>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
                     <tr>
                         <td colspan="4" style="text-align:center">
                             <input type="hidden" value="0" name="clinic">
