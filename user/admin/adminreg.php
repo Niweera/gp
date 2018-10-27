@@ -44,19 +44,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item active" href="./create.php">Create Profile</a>
+                <a class="dropdown-item" href="./adminview.php">View Profile</a>
                 <a class="dropdown-item" href="./adminedit.php">Edit Profile</a>
                 <a class="dropdown-item" href="./delete.php">Delete Profile</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            View Profile
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Doctor</a>
-                <a class="dropdown-item" href="#">Nurse</a>
-                <a class="dropdown-item" href="#">Dispenser</a>
-                <a class="dropdown-item" href="#">Pharmacist</a>
             </div>
         </li>
         <li class="nav-item">

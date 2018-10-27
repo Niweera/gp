@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Delete Profile</title>
+    <title>View Profile</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="script.js"></script>
-    <script src="getscript.js"></script>
+    <script src="viewscript.js"></script>
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -57,9 +57,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./create.php">Create Profile</a>
-                <a class="dropdown-item" href="./adminview.php">View Profile</a>
+                <a class="dropdown-item active" href="./adminview.php">View Profile</a>
                 <a class="dropdown-item" href="./adminedit.php">Edit Profile</a>
-                <a class="dropdown-item active" href="./delete.php">Delete Profile</a>
+                <a class="dropdown-item" href="./delete.php">Delete Profile</a>
             </div>
         </li>
         <li class="nav-item">
@@ -75,28 +75,23 @@
 <br>
 
     <div class="container">
-        <center><h1 style="color:#242424;">Delete Profile</h1></center>
+        <center><h1 style="color:#242424;">View Profile</h1></center>
     </div>
     <br>
     <br>
-    <form name="doclog" action="delete.php"  method="post">
+    <form name="doclog" action=""  method="post">
         <div class="container border pt-4 bg-light rounded mt-3 mb-5">
             <div class="form-group row mt-3">
                 <div class="col-sm-3"></div>
-                <label for="userid" class="col-sm-2 col-form-label"><h5>Admin ID:</h5></label>
+                <label for="userid" class="col-sm-2 col-form-label"><h5>User ID:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="userid" id="userid" placeholder="Enter Admin ID" autocomplete="off" required autofocus>
+                    <input type="text" class="form-control form-control-sm" name="userid" id="userid" placeholder="Enter User ID" autocomplete="off" required autofocus>
                     <div id='resultbox' class="result"></div>
                 </div>
                 <div class="col-sm-3"></div>
             </div>
             <div id="txtHint"></div>
             <br>
-            <div class="form-group row mb-5">
-                <div class="col-sm-5"></div>
-                <input type="submit" value="Submit" class="col-md-2 text-center btn btn-primary btn" name="submit">
-                <div class="col-sm-5"></div>
-            </div>
         </div>    
     </form>
     
@@ -167,17 +162,8 @@
 </html>
 
 <?php
-	if (null !==(filter_input(INPUT_POST, 'submit'))){
-        $userid=mysqli_real_escape_string($conn,filter_input(INPUT_POST, 'userid'));
-        //include './function.php';  
-        //$list = returnFlag($userid);
-        $sql1 = "DELETE FROM admin WHERE adminid='$userid';";
-        $sql1 .= "DELETE FROM user WHERE userid='$userid';";
-        $result2 = mysqli_multi_query($conn,$sql1);
-        if (!$result2){
-            echo "<script>alert(\"Error Occured!\");</script>";
-        }else {
-            echo "<script>alert(\"Successfully deleted!\");</script>";
-        }
-    }
+mysqli_close($conn);
 ?>
+
+
+
