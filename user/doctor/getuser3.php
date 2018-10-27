@@ -1,4 +1,5 @@
 <?php
+session_start();
 $qu = filter_input(INPUT_GET,'q');
 $conn = mysqli_connect('localhost','root','srilanka','hmsdb');
 $q=mysqli_real_escape_string($conn,$qu);
@@ -39,6 +40,8 @@ if ($queryResult == 1){
     echo '<input type="hidden" name="age" value="'.$age.'">';
     echo '<input type="hidden" name="contactno" value="'.$contactno.'">';
     echo '</form>';
+    echo '<br>';
+    $_SESSION['patientid'] = $q;
             
 }else{
     echo "<center><label class='col-md-5 col-form-label border'><h5>Patient is not in the database.</h5></label><center>";

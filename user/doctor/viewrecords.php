@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="./script4.js"></script>
+    <script src="./script5.js"></script>
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -101,11 +102,12 @@
             </div>
             <div id="txtHint"></div>
             
-            <div class="form-group row mt-4">
+            <div class="form-group row">
                 <div class="col-sm-3"></div>
-                <label for="date" class="col-sm-2 col-form-label"><h5>Date:</h5></label>
-                <div class="col-lg-4 mb-1">
-                    <input type="date" class="form-control form-control-sm" name="date" id="date" placeholder="Enter Date" required>
+                <label for="date" class="col-sm-2 col-form-label"><h5>Required date:</h5></label>
+                <div class="col-lg-4 mb-1 search-box2">
+                    <input type="text" class="form-control form-control-sm" name="date" id="date" placeholder="Enter date YYYY-MM-DD" autocomplete="off" required autofocus>
+                    <div id='resultbox2' class="result2"></div>
                 </div>
                 <div class="col-sm-3"></div>
             </div>

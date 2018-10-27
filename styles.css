@@ -253,6 +253,30 @@ section .section-title {
     color:white;
     border-radius: 4px;
 }
+.resul2{
+    position: absolute;        
+    z-index: 999;
+    top: 100%;
+    width: 80%;
+    box-sizing: border-box;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Formatting result items */
+.result2 p{
+    margin: 0;
+    padding: 7px 10px;
+    border: 1px solid #CCCC;
+    border-top: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.result2 p:hover{
+    background: #212529;
+    color:white;
+    border-radius: 4px;
+}
 
 input[type='number'] {
     -moz-appearance:textfield;
