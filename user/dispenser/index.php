@@ -43,7 +43,7 @@
             Inventory Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">View Inventory</a>
+                <a class="dropdown-item" href="./viewinventory.php">View Inventory</a>
                 <a class="dropdown-item" href="#">Update Inventory</a>
                 <a class="dropdown-item" href="#">Add Drugs</a>
                 <a class="dropdown-item" href="#">View Messages</a>
@@ -104,7 +104,7 @@
                 <h3>Inventory Management</h3>
                 <hr>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action"><strong>View Inventory</strong></a>
+                    <a href="./viewinventory.php" class="list-group-item list-group-item-action"><strong>View Inventory</strong></a>
                     <a href="#" class="list-group-item list-group-item-action"><strong>Update Inventory</strong></a>
                     <a href="#" class="list-group-item list-group-item-action"><strong>Add Drugs</strong></a>          
                     <a href="#" class="list-group-item list-group-item-action"><strong>View System Messages</strong></a>

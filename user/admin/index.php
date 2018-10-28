@@ -136,7 +136,7 @@
                             <div class="card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Inventory</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">View</a>
+                                    <a href="./viewinventory.php" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>

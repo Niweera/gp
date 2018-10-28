@@ -56,7 +56,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./adminedit.php">Schedule</a>
                 <a class="dropdown-item active" href="./appointments.php">Appointments</a>
-                <a class="dropdown-item" href="./delete.php">Inventory</a>
+                <a class="dropdown-item" href="./viewinventory.php">Inventory</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -90,8 +90,8 @@
     <form name="doclog" action="./viewappointment.php"  method="post">
         <div class="container border pt-4 bg-light rounded mt-3 mb-5">
             <div class="form-group row mt-4">
-                <div class="col-sm-3"></div>
-                <label for="date" class="col-sm-2 col-form-label"><h5>Please enter date:</h5></label>
+                <div class="col-sm-2"></div>
+                <label for="date" class="col-sm-3 col-form-label"><h5>Please enter date:</h5></label>
                 <div class="col-lg-4 mb-1">
                     <input type="date" class="form-control form-control-sm" name="date" id="date" placeholder="Enter Date" required>
                 </div>
