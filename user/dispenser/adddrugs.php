@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Drug Issue</title>
+    <title>Add Drugs</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="script.js"></script>
+    <script src="updatescript.js"></script>
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -51,23 +51,23 @@
             <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Inventory Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./viewinventory.php">View Inventory</a>
                 <a class="dropdown-item" href="./updateinventory.php">Update Inventory</a>
-                <a class="dropdown-item" href="./adddrugs.php">Add Drugs</a>
+                <a class="dropdown-item active" href="./adddrugs.php">Add Drugs</a>
                 <a class="dropdown-item" href="#">View Messages</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Quick Links
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./dispedit.php">Edit Profile</a>
-                <a class="dropdown-item active" href="./drugissue.php">Issue Drugs</a>
+                <a class="dropdown-item" href="./drugissue.php">Issue Drugs</a>
                 <a class="dropdown-item" href="#">View Reports</a>
                 <a class="dropdown-item" href="#">Send Reports</a>
             </div>
@@ -85,30 +85,69 @@
 <br>
 
     <div class="container">
-        <center><h1 style="color:#242424;">Issue Drugs</h1></center>
+        <center><h1 style="color:#242424;">Add Drugs to Inventory</h1></center>
     </div>
     <br>
     <br>
-    <form name="doclog" action="./drug.php"  method="post">
-        <div class="container border pt-4 bg-light rounded mt-3 mb-5">
+        
+    <div class="container border pt-4 bg-light rounded mt-3 mb-5">
+        <form id="myForm" action="./adddrugs.php" method="post">
             <div class="form-group row mt-3">
-                <div class="col-sm-3"></div>
-                <label for="clinicno" class="col-sm-2 col-form-label"><h5>Patient ID:</h5></label>
+                <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Name:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="clinicno" id="clinicno" placeholder="Enter Patient ID" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
+                    <input type="text" class="form-control form-control-sm" name="drugname" id="drugname" placeholder="Enter Drug Name" autocomplete="off" required autofocus>
                 </div>
-                <div class="col-sm-3"></div>
+                <label for="drug" class="col-sm-2 col-form-label"><h5>Drug ID:</h5></label>
+                <div class="col-lg-3 mb-1 search-box">
+                    <input type="text" class="form-control form-control-sm" name="drugid" id="drugid" placeholder="Enter Drug ID" autocomplete="off" required>
+                </div>
+                <div class="col-lg-1 mb-1 search-box" id="search-result"></div>
             </div>
-            <div id="txtHint"></div>
+            <div class="form-group row mt-3">
+                <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Count:</h5></label>
+                <div class="col-lg-4 mb-1 search-box">
+                    <input type="number" class="form-control form-control-sm" name="drugcount" id="drugcount" placeholder="Enter Drug Count" autocomplete="off" required autofocus>
+                </div>
+                <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Flag:</h5></label>
+                <div class="col-lg-4 mb-1 search-box">
+                    <select class="form-control form-control-sm" name="drugflag" id="drugflag">
+                        <option selected value="0">Diabetic Drugs</option>
+                        <option value="1">Medical Drugs</option>
+                        <option value="2">Both</option>
+                    </select>
+                </div>
+            </div>
             <br>
+            <input type="hidden" name="dispid" value="<?php echo $_SESSION['userid']; ?>">
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <input type="submit" value="Enter Patient ID" class="col-md-2 text-center btn btn-primary btn" name="submit">
+                <button id="updateButton" class="col-md-2 text-center btn btn-primary btn mb-2">Submit</button>
                 <div class="col-sm-5"></div>
             </div>
-        </div>    
-    </form>
+        </form>
+        <?php
+        if (isset($_POST['dispid'])){
+            $connect = mysqli_connect("localhost", "root", "srilanka", "hmsdb");
+            $dispid = filter_input(INPUT_POST,'dispid');
+            $drugname = filter_input(INPUT_POST,'drugname');
+            $drugcount = filter_input(INPUT_POST,'drugcount');
+            $drugid = filter_input(INPUT_POST,'drugid');
+            $drugflag = filter_input(INPUT_POST,'drugflag');
+            
+            $sql = "INSERT INTO drug(drugid,drugname,count,flag) VALUES('$drugid', '$drugname','$drugcount','$drugflag');";
+            $sql .= "INSERT INTO drugupdate(dispid,drugid,count) VALUES('$dispid', '$drugid','$drugcount');";
+            $result = mysqli_multi_query($connect, $sql);
+            if($result){
+                    echo "<div class='text-center h5'>Successfully Added!</div><br>";
+                }else{
+                    echo "<div class='text-center h5'>Error Occured!</div><br>";
+                }
+        }
+        mysqli_close($conn);
+        ?>
+    </div>    
+        
+        
     
 
 <br>
@@ -176,9 +215,7 @@
   </body>
 </html>
 
-<?php
-mysqli_close($conn);
-?>
+
 
 
 

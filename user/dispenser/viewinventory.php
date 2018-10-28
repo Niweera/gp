@@ -56,8 +56,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item active" href="./viewinventory.php">View Inventory</a>
-                <a class="dropdown-item" href="#">Update Inventory</a>
-                <a class="dropdown-item" href="#">Add Drugs</a>
+                <a class="dropdown-item" href="./updateinventory.php">Update Inventory</a>
+                <a class="dropdown-item" href="./adddrugs.php">Add Drugs</a>
                 <a class="dropdown-item" href="#">View Messages</a>
             </div>
         </li>
@@ -96,7 +96,6 @@
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Search:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="search_text" id="search_text" placeholder="Search for a drug" autocomplete="off" autofocus>
-                    <div id='resultbox' class="result"></div>
                 </div>
                 <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
             </div>
@@ -104,7 +103,7 @@
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <button  class="col-md-2 text-center btn btn-primary btn mb-2" onclick="window.location.href='./drugissue.php'">Update Inventory</button>
+                <button  class="col-md-2 text-center btn btn-primary btn mb-2" onclick="window.location.href='./updateinventory.php'">Update Inventory</button>
                 <div class="col-sm-5"></div>
             </div>
         </div>    
