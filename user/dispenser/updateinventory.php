@@ -123,11 +123,13 @@
             if(mysqli_num_rows($drugresult) == 1){
                 $row = mysqli_fetch_array($drugresult);
                 $drugid = $row['drugid']; 
+                $sqldelete = "DELETE FROM drugupdate WHERE drugid = '$drugid';";
                 $sql = "INSERT INTO drugupdate(dispid,drugid,count) VALUES('$dispid', '$drugid','$drugcount');";
                 $updatesql ="UPDATE drug SET count = count + '$drugcount' WHERE drugid = '$drugid';";
+                $deleteresult = mysqli_query($connect, $sqldelete);
                 $result = mysqli_query($connect, $sql);
                 $updateresult = mysqli_query($connect, $updatesql);
-                if($result && $updateresult){
+                if($deleteresult && $result && $updateresult){
                     echo "<div class='text-center h5'>Successfully Updated!</div><br>";
                 }else{
                     echo "<div class='text-center h5'>Error Occured!</div><br>";
