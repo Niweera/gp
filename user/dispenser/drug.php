@@ -99,7 +99,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     <br>
     <br>
     <div class="container border bg-light rounded">
-        <form name="doclog" action="./drug2.php"  method="post">
+        <form name="doclog" action="./issuedrug.php"  method="post">
             <div class="container pt-4 bg-light rounded mt-3">
                 <div id="txtHint"></div>
                 <?php
