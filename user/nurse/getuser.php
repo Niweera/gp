@@ -47,6 +47,6 @@ if ($queryResult == 1){
 }
 
 
-
+//this is for script.js ajax file
 mysqli_close($conn);
 ?>

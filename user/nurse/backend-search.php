@@ -43,4 +43,5 @@ if(isset($_REQUEST["term"])){
  
 // close connection
 mysqli_close($conn);
+//this is for script.js ajax file
 ?>

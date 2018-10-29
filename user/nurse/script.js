@@ -43,3 +43,4 @@ function showUser(str) {
     }
 }
 
+//ajax script for patient id retrieve. backend-search.php file and getuser.php is needed for this script

@@ -56,7 +56,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
-                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
+                <a class="dropdown-item" href="./furtherregister.php">Further Patient Registration</a>
                 <a class="dropdown-item active" href="./patientview.php">View Patient Details</a>
             </div>
         </li>
@@ -82,7 +82,7 @@
     </div>
     <br>
     <br>
-    <form name="doclog" action="./patientview2.php"  method="post">
+    <form name="doclog" action="./viewpatient.php"  method="post">
         <div class="container border pt-4 bg-light rounded mt-3 mb-5">
             <div class="form-group row mt-3">
                 <div class="col-sm-3"></div>

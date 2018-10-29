@@ -55,7 +55,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
-                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
+                <a class="dropdown-item" href="./furtherregister.php">Further Patient Registration</a>
                 <a class="dropdown-item" href="./patientview.php">View Patient Details</a>
             </div>
         </li>

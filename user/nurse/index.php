@@ -23,7 +23,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
-    <script src="../admin/script.js"></script>
+    <script src="../admin/script.js"></script><!--script file for time function-->
 </head>
 <body onload="startTime()">
 <!--Header navigation bar for the website-->
@@ -44,7 +44,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
-                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
+                <a class="dropdown-item" href="./furtherregister.php">Further Patient Registration</a>
                 <a class="dropdown-item" href="./patientview.php">View Patient Details</a>
             </div>
         </li>
@@ -98,7 +98,7 @@
                 <hr>
                 <div class="list-group">
                     <a href="./register.php" class="list-group-item list-group-item-action"><strong>Register Patient</strong></a>
-                    <a href="./register2.php" class="list-group-item list-group-item-action"><strong>Further Patient Registration</strong></a>
+                    <a href="./furtherregister.php" class="list-group-item list-group-item-action"><strong>Further Patient Registration</strong></a>
                     <a href="./patientview.php" class="list-group-item list-group-item-action"><strong>View Patient Details</strong></a>
                 </div>
             </div>

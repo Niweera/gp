@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js"></script><!--script for ajax patient id retrieve-->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -82,7 +82,7 @@
     </div>
     <br>
     <br>
-    <form name="doclog" action="./register2.php"  method="post">
+    <form name="doclog" action="./furtherregister.php"  method="post">
         <div class="container border pt-4 bg-light rounded mt-3 mb-5">
             <div class="form-group row mt-3">
                 <div class="col-sm-3"></div>

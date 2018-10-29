@@ -69,7 +69,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
-                <a class="dropdown-item" href="./register2.php">Further Patient Registration</a>
+                <a class="dropdown-item" href="./furtherregister.php">Further Patient Registration</a>
                 <a class="dropdown-item active" href="./patientview.php">View Patient Details</a>
             </div>
         </li>
@@ -90,7 +90,7 @@
 <!--End of the Header navigation bar for the website-->
 <br>
 
-    <form name="doclog" action="./patientview3.php"  method="post">
+    <form name="doclog" action="./pvfunction.php"  method="post">
         <div class="container">
             <center><h1 style="color:#242424;">View & Edit Patient Details</h1></center>
         </div>
