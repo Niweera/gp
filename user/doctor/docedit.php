@@ -54,7 +54,6 @@
             Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./adminedit.php">Schedule</a>
                 <a class="dropdown-item" href="./appointments.php">Appointments</a>
                 <a class="dropdown-item" href="./viewinventory.php">Inventory</a>
             </div>

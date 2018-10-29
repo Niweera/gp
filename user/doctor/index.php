@@ -43,7 +43,6 @@
             Quick Access
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Schedule</a>
                 <a class="dropdown-item" href="./appointments.php">Appointments</a>
                 <a class="dropdown-item" href="./viewinventory.php">Inventory</a>
             </div>
@@ -103,7 +102,6 @@
                 <h3>Quick Access</h3>
                 <hr>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action"><strong>View Schedule</strong></a>
                     <a href="./appointments.php" class="list-group-item list-group-item-action"><strong>View Appointments</strong></a>
                     <a href="./viewinventory.php" class="list-group-item list-group-item-action"><strong>View Inventory</strong></a>
                 </div>
