@@ -156,8 +156,8 @@
                     <div class="form-group row">
                         <label for="clinic" class="col-sm-4 col-form-label"><h5>Clinic</h5></label>
                         <div class="col-lg-8">
-                            <label class="checkbox-inline col-lg-3"><input type="checkbox" name="clinicd" value="1" <?php echo ($dc=='1')?'checked':'' ?>> Diabetes Clinic</label>
-                            <label class="checkbox-inline col-lg-3"><input type="checkbox" name="clinicm" value="1" <?php echo ($mc=='1')?'checked':'' ?>> Medical Clinic</label>
+                            <label class="checkbox-inline col-lg-3"><input type="checkbox" name="clinicd" disabled value="1" <?php echo ($dc=='1')?'checked':'' ?>> Diabetes Clinic</label>
+                            <label class="checkbox-inline col-lg-3"><input type="checkbox" name="clinicm" disabled value="1" <?php echo ($mc=='1')?'checked':'' ?>> Medical Clinic</label>
                         </div>
                     </div>
                     <div class="form-group row">
