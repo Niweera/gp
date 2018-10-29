@@ -54,8 +54,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./docedit.php">Edit Profile</a>
-                <a class="dropdown-item" href="./prescription.php">Diabetes Clinic Prescription</a>
-                <a class="dropdown-item" href="./prescription2.php">Medical Clinic Prescription</a>
+                <a class="dropdown-item" href="./dcprescription.php">Diabetes Clinic Prescription</a>
+                <a class="dropdown-item" href="./mcprescription.php">Medical Clinic Prescription</a>
                 <a class="dropdown-item" href="./viewrecords.php">Medical Records</a>
             </div>
         </li>
@@ -128,8 +128,8 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Prescription Sheet</h5><hr>
-                                    <a href="./prescription.php" class="btn btn-primary btn-block">Diabetes Clinic</a>
-                                    <a href="./prescription2.php" class="btn btn-primary btn-block">Medical Clinic</a>
+                                    <a href="./dcprescription.php" class="btn btn-primary btn-block">Diabetes Clinic</a>
+                                    <a href="./mcprescription.php" class="btn btn-primary btn-block">Medical Clinic</a>
                                 </div>
                             </div>
                         </div>
