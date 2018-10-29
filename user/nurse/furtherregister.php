@@ -184,12 +184,12 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         $sqlupdate = "UPDATE `patient` SET `mc` = '1', `dc` = '1' WHERE `patient`.`clinicno` = '".$q."';";
         $result = mysqli_query($conn,$sqlupdate);
         if (!$result){
-            echo "<script>alert('Error occured!');window.location.href = './register2.php';</script>";
+            echo "<script>alert('Error occured!');window.location.href = './furtherregister.php';</script>";
         }else{
-            echo "<script>alert('Successfully clinic detials updated!');window.location.href = './register2.php';</script>";
+            echo "<script>alert('Successfully clinic detials updated!');window.location.href = './furtherregister.php';</script>";
         }
     }else{
-        echo "<script>alert('Please check the Patient ID and try again!');window.location.href = './register2.php';</script>";
+        echo "<script>alert('Please check the Patient ID and try again!');window.location.href = './furtherregister.php';</script>";
     }
 }
 mysqli_close($conn);

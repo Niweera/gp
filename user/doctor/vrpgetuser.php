@@ -37,15 +37,15 @@ if ($queryResult == 1){
     
             <div class='row'>
                 <div class='col-md-3'></div>";
-            if ($dc == 1){
-                echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinic:</strong> Diabetes Clinic</h5></label>";
-            }elseif ($mc == 1){
-                echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinic:</strong> Medical Clinic</h5></label>";
-            }elseif ($dc ==1 && $mc ==1){
-                echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinics:</strong> Diabetes Clinic & Medical Clinic</h5></label>";
-            }else{
-                echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinic:</strong> N/A</h5></label>";
-            }
+                if ($dc ==1 && $mc ==1){
+                    echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinics:</strong> Diabetes Clinic & Medical Clinic</h5></label>";
+                }elseif ($mc == 1){
+                    echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinic:</strong> Medical Clinic</h5></label>";
+                }elseif ($dc ==1){
+                    echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinic:</strong> Diabetes Clinic</h5></label>";
+                }else{
+                    echo "<label class='col-md-6 col-form-label border text-center'><h5><strong>Registered Clinic:</strong> N/A</h5></label>";
+                }
 
     echo        "<div class='col-md-3'></div>
             </div>

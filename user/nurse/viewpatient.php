@@ -100,6 +100,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group row">
+                        <label for="pid" class="col-sm-4 col-form-label"><h5>Patient ID</h5></label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control form-control-sm col-sm-3" name="pid" id="pid" value="<?php echo $q;?>" autocomplete="off" required disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label for="name" class="col-sm-4 col-form-label"><h5>Name</h5></label>
                         <div class="col-lg-8">
                             <div class="input-group">
