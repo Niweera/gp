@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="script1.js"></script> <!-- Script for the AJAX queries -->
-    <script src="script3.js"></script> <!-- Script for form data validation -->
+    <script src="mcscript.js"></script> <!-- Script for the AJAX queries -->
+    <script src="mcvalidatescript.js"></script> <!-- Script for form data validation -->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;

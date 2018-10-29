@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./script4.js"></script>
-    <script src="./script5.js"></script>
+    <script src="./vrpscript.js"></script><!--AJAX script for retrieving patient ids-->
+    <script src="./vrdscript.js"></script><!--AJAX script for retrieving dates-->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;

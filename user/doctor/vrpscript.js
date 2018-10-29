@@ -4,7 +4,7 @@ $(document).ready(function(){
         var inputVal = $(this).val();
         var resultDropdown = $(this).siblings(".result");
         if(inputVal.length){
-            $.get("backend-search3.php", {term: inputVal}).done(function(data){
+            $.get("vrp-search.php", {term: inputVal}).done(function(data){
                 // Display the returned data in browser
                 resultDropdown.html(data);
             });
@@ -38,7 +38,7 @@ function showUser(str) {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getuser3.php?q="+str,true);
+        xmlhttp.open("GET","vrpgetuser.php?q="+str,true);
         xmlhttp.send();
     }
 }

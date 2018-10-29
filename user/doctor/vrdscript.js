@@ -4,7 +4,7 @@ $(document).ready(function(){
         var inputVal2 = $(this).val();
         var resultDropdown2 = $(this).siblings(".result2");
         if(inputVal2.length){
-            $.get("backend-search4.php", {term: inputVal2}).done(function(data){
+            $.get("vrd-search.php", {term: inputVal2}).done(function(data){
                 // Display the returned data in browser
                 resultDropdown2.html(data);
             });
