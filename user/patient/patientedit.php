@@ -78,7 +78,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./viewrecords.php">View Medical Records</a>
-                <a class="dropdown-item" href="#">Make an Appointment</a>
+                <a class="dropdown-item" href="./appointment.php">Make an Appointment</a>
             </div>
         </li>
         <li class="nav-item dropdown">

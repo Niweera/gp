@@ -43,4 +43,4 @@ function showUser(str) {
     }
 }
 
-//this script.js file is the script file for backend-search.php file 
+//this script.js file is the script file for date retrieiving in viewrecords.php and needs backend-search.php file 

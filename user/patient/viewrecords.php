@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js"></script><!--ajax script for date retrieiving-->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -56,7 +56,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item active" href="./viewrecords.php">View Medical Records</a>
-                <a class="dropdown-item" href="#">Make an Appointment</a>
+                <a class="dropdown-item" href="./appointment.php">Make an Appointment</a>
             </div>
         </li>
         <li class="nav-item dropdown">
