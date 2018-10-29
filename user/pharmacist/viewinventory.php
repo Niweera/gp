@@ -51,25 +51,19 @@
             <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Inventory Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./viewinventory.php">View Inventory</a>
-                <a class="dropdown-item" href="#">Update Inventory</a>
-                <a class="dropdown-item" href="#">Add Drugs</a>
-                <a class="dropdown-item" href="#">View Messages</a>
+                <a class="dropdown-item active" href="./viewinventory.php">View Inventory</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Quick Links
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./dispedit.php">Edit Profile</a>
-                <a class="dropdown-item active" href="./drugissue.php">Issue Drugs</a>
-                <a class="dropdown-item" href="#">View Reports</a>
-                <a class="dropdown-item" href="#">Send Reports</a>
+                <a class="dropdown-item" href="./pharmaedit.php">Edit Profile</a>
             </div>
         </li>
         <li class="nav-item">
