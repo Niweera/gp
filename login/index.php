@@ -139,9 +139,9 @@
                         <li class="nav-item">
                             <?php
                                 if(!isset($_SESSION['userid'])){
-                                    echo '<a class="nav-link" href="./login">Log in</a>';
+                                    echo '<a class="nav-link" href="./">Log in</a>';
                                 }else{
-                                    echo '<a class="nav-link" href="./logout">Log out</a>';
+                                    echo '<a class="nav-link" href="../logout">Log out</a>';
                                         }
                             ?>
                         </li>

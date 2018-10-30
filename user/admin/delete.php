@@ -94,7 +94,7 @@
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <input type="submit" value="Submit" class="col-md-2 text-center btn btn-primary btn" name="submit">
+                <input type="submit" value="Submit" class="col-md-2 text-center btn btn-primary btn" name="submit" onclick="return confirm('Are you sure?')">
                 <div class="col-sm-5"></div>
             </div>
         </div>    
@@ -169,8 +169,6 @@
 <?php
 	if (null !==(filter_input(INPUT_POST, 'submit'))){
         $userid=mysqli_real_escape_string($conn,filter_input(INPUT_POST, 'userid'));
-        //include './function.php';  
-        //$list = returnFlag($userid);
         $sql1 = "DELETE FROM admin WHERE adminid='$userid';";
         $sql1 .= "DELETE FROM user WHERE userid='$userid';";
         $result2 = mysqli_multi_query($conn,$sql1);
