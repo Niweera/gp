@@ -42,4 +42,4 @@ $(document).ready(function(){
 	});
 	
 });
-
+//getscript.js is the ajax file for fetch.php and the basic view inventory pages

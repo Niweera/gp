@@ -58,7 +58,7 @@
                 <a class="dropdown-item" href="./viewinventory.php">View Inventory</a>
                 <a class="dropdown-item" href="./updateinventory.php">Update Inventory</a>
                 <a class="dropdown-item active" href="./adddrugs.php">Add Drugs</a>
-                <a class="dropdown-item" href="#">View Messages</a>
+                <a class="dropdown-item" href="./sysmessages.php">View Messages</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -68,12 +68,16 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./dispedit.php">Edit Profile</a>
                 <a class="dropdown-item" href="./drugissue.php">Issue Drugs</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Reports
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">View Reports</a>
                 <a class="dropdown-item" href="#">Send Reports</a>
             </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./#">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>

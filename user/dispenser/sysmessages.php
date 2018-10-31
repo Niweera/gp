@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Update Inventory</title>
+    <title>System Messages</title>
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -25,8 +25,7 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="updatescript.js"></script>
-    <script src="drugscript.js"></script>
+    <script src="viewscript.js"></script><!-- this file is for viewing the new sys msgs from ajax calls-->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -57,9 +56,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./viewinventory.php">View Inventory</a>
-                <a class="dropdown-item active" href="./updateinventory.php">Update Inventory</a>
+                <a class="dropdown-item" href="./updateinventory.php">Update Inventory</a>
                 <a class="dropdown-item" href="./adddrugs.php">Add Drugs</a>
-                <a class="dropdown-item" href="./sysmessages.php">View Messages</a>
+                <a class="dropdown-item active" href="./sysmessages.php">View Messages</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -90,64 +89,47 @@
 <br>
 
     <div class="container">
-        <center><h1 style="color:#242424;">Update Drug Inventory</h1></center>
+        <center><h1 style="color:#242424;">New Messages</h1></center>
     </div>
     <br>
     <br>
-        
-    <div class="container border pt-4 bg-light rounded mt-3 mb-5">
-        <form id="myForm" action="./updateinventory.php" method="post">
-            <div class="form-group row mt-3">
-                <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Name:</h5></label>
-                <div class="col-lg-4 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="drugname" id="drugname" placeholder="Enter Drug Name" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
-                </div>
-                <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Count:</h5></label>
-                <div class="col-lg-4 mb-1 search-box">
-                    <input type="number" class="form-control form-control-sm" name="drugcount" id="drugcount" placeholder="Enter Drug Count" autocomplete="off" required>
-                </div>
-            </div>
-            <br>
-            <input type="hidden" name="dispid" value="<?php echo $_SESSION['userid']; ?>">
-            <div class="form-group row mb-5">
-                <div class="col-sm-5"></div>
-                <button id="updateButton" class="col-md-2 text-center btn btn-primary btn mb-2">Update Inventory</button>
-                <div class="col-sm-5"></div>
-            </div>
-        </form>
-        <?php
-        if (isset($_POST['dispid'])){
-            $connect = mysqli_connect("localhost", "root", "srilanka", "hmsdb");
-            $dispid = filter_input(INPUT_POST,'dispid');
-            $drugname = filter_input(INPUT_POST,'drugname');
-            $drugcount = filter_input(INPUT_POST,'drugcount');
-            $drugsql = "SELECT drugid FROM drug WHERE drugname = '$drugname';";
-            $drugresult = mysqli_query($connect, $drugsql);
-            if(mysqli_num_rows($drugresult) == 1){
-                $row = mysqli_fetch_array($drugresult);
-                $drugid = $row['drugid']; 
-                $sqldelete = "DELETE FROM drugupdate WHERE drugid = '$drugid';";
-                $sql = "INSERT INTO drugupdate(dispid,drugid,count) VALUES('$dispid', '$drugid','$drugcount');";
-                $updatesql ="UPDATE drug SET count = count + '$drugcount' WHERE drugid = '$drugid';";
-                $deleteresult = mysqli_query($connect, $sqldelete);
-                $result = mysqli_query($connect, $sql);
-                $updateresult = mysqli_query($connect, $updatesql);
-                if($deleteresult && $result && $updateresult){
-                    echo "<div class='text-center h5'>Successfully Updated!</div><br>";
-                }else{
-                    echo "<div class='text-center h5'>Error Occured!</div><br>";
-                }
-            }else{
-                echo "<div class='text-center h5'>Please check the drug name again!</div><br>";
-            }
-        }
-        mysqli_close($conn);
-        ?>
-    </div>    
-        
-        
     
+    <div class="container border pt-4 bg-light rounded mt-3 mb-5">
+        <div class="form-group row mt-3">
+            <div class="col-sm-3"></div>
+            <label for="newdate" class="col-sm-2 col-form-label" id="f"><h5>Search Messages:</h5></label>
+            <div class="col-lg-4 mb-1 search-box">
+                <input type="text" class="form-control form-control-sm" name="newdate" id="newdate" placeholder="Enter date YYYY-MM-DD" autocomplete="off" autofocus>
+            </div>
+            <div class="col-sm-3"><button id="newButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
+        </div>
+        <div id="newresult"></div>
+        <div class="form-group row mt-3">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-2"><button id="okButton" class="text-center btn btn-primary btn" disabled>OK</button></div>
+            <div class="col-sm-5"></div>
+        </div>
+        <br>
+    </div>    
+    
+    <div class="container">
+        <center><h1 style="color:#242424;">Viewed Messages</h1></center>
+    </div>
+    <br>
+    <br>
+    
+    <div class="container border pt-4 bg-light rounded mt-3 mb-5">
+        <div class="form-group row mt-3">
+            <div class="col-sm-3"></div>
+            <label for="readdate" class="col-sm-2 col-form-label"><h5>Search Messages:</h5></label>
+            <div class="col-lg-4 mb-1 search-box">
+                <input type="text" class="form-control form-control-sm" name="readdate" id="readdate" placeholder="Enter date YYYY-MM-DD" autocomplete="off" autofocus>
+            </div>
+            <div class="col-sm-3"><button id="readButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
+        </div>
+        <div id="readresult"></div>
+        <br>
+    </div>    
 
 <br>
 <!--Footer for the website-->
@@ -212,9 +194,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
+
+
+
+
+
 </html>
 
-
+<?php
+mysqli_close($conn);
+?>
 
 
 

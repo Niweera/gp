@@ -295,3 +295,17 @@ input[type='number'] {
   width: 42px;
   margin-top: -7px;
 }
+#newButton{
+  background: url('./images/Refresh-icon.png');
+  background-size: 40px 45px;
+  height: 45px;
+  width: 42px;
+  margin-top: -7px;
+}
+#readButton{
+  background: url('./images/Refresh-icon.png');
+  background-size: 40px 45px;
+  height: 45px;
+  width: 42px;
+  margin-top: -7px;
+}
