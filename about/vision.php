@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
 
-    <title>Vission</title>
+    <title>Vision</title>
 
     <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
 
@@ -58,7 +58,7 @@
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="./">Overview</a></li>
-                                <li><a href="./vission.php">Vission & Mission</a></li>
+                                <li><a href="./vision.php">Vision & Mission</a></li>
                             </ul>
                       </li>
 

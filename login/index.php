@@ -122,7 +122,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="../about">Overview</a></li>
-                                    <li><a href="../about/vission.php">Vission & Mission</a></li>
+                                    <li><a href="../about/vision.php">Vision & Mission</a></li>
                                 </ul>
                         </li>
 

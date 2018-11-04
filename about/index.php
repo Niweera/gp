@@ -60,7 +60,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="./">Overview</a></li>
-                                    <li><a href="./vission.php">Vission & Mission</a></li>
+                                    <li><a href="./vision.php">Vision & Mission</a></li>
                                 </ul>
                         </li>
 
