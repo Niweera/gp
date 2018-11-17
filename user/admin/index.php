@@ -50,7 +50,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./#">Reports</a>
+            <a class="nav-link" href="./viewinventory.php">View Inventory</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
@@ -121,14 +121,6 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Delete Profile</h5><hr>
                                     <a href="./delete.php" class="btn btn-primary btn-block">Go</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="card mt-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Reports</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>

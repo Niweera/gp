@@ -59,9 +59,6 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./#">Reports</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
         </li>
         </ul>
@@ -121,29 +118,27 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Prescription Sheet</h5><hr>
-                                    <a href="./dcprescription.php" class="btn btn-primary btn-block">Diabetes Clinic</a>
-                                    <a href="./mcprescription.php" class="btn btn-primary btn-block">Medical Clinic</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="card mt-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Reports</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">View</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="card mt-4">
-                                <div class="card-body">
                                     <h5 class="card-title">Medical Records</h5><hr>
                                     <a href="./viewrecords.php" class="btn btn-primary btn-block">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prescription Sheet</h5><hr>
+                                    <a href="./dcprescription.php" class="btn btn-primary btn-block">Diabetes Clinic</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prescription Sheet</h5><hr>
+                                    <a href="./mcprescription.php" class="btn btn-primary btn-block">Medical Clinic</a>
                                 </div>
                             </div>
                         </div>
