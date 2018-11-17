@@ -66,7 +66,7 @@ CREATE TABLE `appointment` (
 
 LOCK TABLES `appointment` WRITE;
 /*!40000 ALTER TABLE `appointment` DISABLE KEYS */;
-INSERT INTO `appointment` VALUES ('a640008',0,'2018-11-05',1,'2018-11-04 06:18:56');
+INSERT INTO `appointment` VALUES ('patient0',0,'2018-11-18',1,'2018-11-17 08:14:25');
 /*!40000 ALTER TABLE `appointment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,7 +176,7 @@ CREATE TABLE `drug` (
 
 LOCK TABLES `drug` WRITE;
 /*!40000 ALTER TABLE `drug` DISABLE KEYS */;
-INSERT INTO `drug` VALUES ('aml','AMLODIPINE',1000,1),('asp','ASPIRIN',282,2),('ate','ATENOLOL',1000,1),('ato','ATORVASTATIN',944,2),('car','CARVEDILOL',1000,1),('clo','CLOPIDOGREL',1000,2),('dil','DILTIAZEM',1000,1),('ena','ENALAPRIL',1000,0),('gli','GLIBENCLAMIDE',1000,0),('gtn','GTN',1000,1),('htc','HTC',1000,1),('ism','ISMN',1000,1),('las','LASIX',1000,1),('los','LOSARTAN K.',1000,2),('met','METFORMIN',1000,0),('meto','METOPROLOL',1000,1),('mix','MIX.INSULIN',1000,0),('nsr','NSR',1000,1),('ole','OLEMESARTAN',1000,1),('pio','PIOGLITAZONE',1000,0),('sit','SITAGLIPTIN',1000,0),('tol','TOLBUTAMIDE',500,0),('ver','VERPAMIL',1000,1);
+INSERT INTO `drug` VALUES ('aml','AMLODIPINE',1000,1),('asp','ASPIRIN',226,2),('ate','ATENOLOL',1000,1),('ato','ATORVASTATIN',888,2),('car','CARVEDILOL',1000,1),('clo','CLOPIDOGREL',1000,2),('dil','DILTIAZEM',1000,1),('ena','ENALAPRIL',1000,0),('gli','GLIBENCLAMIDE',1000,0),('gtn','GTN',1000,1),('htc','HTC',1000,1),('ism','ISMN',1000,1),('las','LASIX',1000,1),('los','LOSARTAN K.',1000,2),('met','METFORMIN',1000,0),('meto','METOPROLOL',1000,1),('mix','MIX.INSULIN',1000,0),('nsr','NSR',1000,1),('ole','OLEMESARTAN',1000,1),('pio','PIOGLITAZONE',1000,0),('sit','SITAGLIPTIN',1000,0),('tol','TOLBUTAMIDE',500,0),('ver','VERPAMIL',1000,1);
 /*!40000 ALTER TABLE `drug` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -319,7 +319,7 @@ CREATE TABLE `patientrecord` (
 
 LOCK TABLES `patientrecord` WRITE;
 /*!40000 ALTER TABLE `patientrecord` DISABLE KEYS */;
-INSERT INTO `patientrecord` VALUES ('a640008',0,'2018-11-05','2018-11-04 06:11:20'),('patient1',1,'2018-11-30','2018-11-02 08:18:17'),('patient1',1,'2018-12-01','2018-11-02 08:18:43'),('w960003',0,'2018-11-30','2018-11-02 08:17:44'),('w960003',0,'2018-12-05','2018-11-04 06:13:15');
+INSERT INTO `patientrecord` VALUES ('patient0',0,'2018-11-18','2018-11-17 08:13:16');
 /*!40000 ALTER TABLE `patientrecord` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -439,6 +439,7 @@ CREATE TABLE `prescription` (
 
 LOCK TABLES `prescription` WRITE;
 /*!40000 ALTER TABLE `prescription` DISABLE KEYS */;
+INSERT INTO `prescription` VALUES ('doctor','patient0','asp','2018-11-17 08:13:16','BD',125,'4 Weeks'),('doctor','patient0','ato','2018-11-17 08:13:16','BD',125,'4 Weeks');
 /*!40000 ALTER TABLE `prescription` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -525,4 +526,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-05 20:45:10
+-- Dump completed on 2018-11-17 13:45:36

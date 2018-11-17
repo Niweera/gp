@@ -98,14 +98,9 @@
         <form id="myForm" action="./adddrugs.php" method="post">
             <div class="form-group row mt-3">
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Name:</h5></label>
-                <div class="col-lg-4 mb-1 search-box">
+                <div class="col-lg-10 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="drugname" id="drugname" placeholder="Enter Drug Name" autocomplete="off" required autofocus>
                 </div>
-                <label for="drug" class="col-sm-2 col-form-label"><h5>Drug ID:</h5></label>
-                <div class="col-lg-3 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="drugid" id="drugid" placeholder="Enter Drug ID" autocomplete="off" required>
-                </div>
-                <div class="col-lg-1 mb-1 search-box" id="search-result"></div>
             </div>
             <div class="form-group row mt-3">
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Count:</h5></label>
@@ -133,9 +128,14 @@
         if (isset($_POST['dispid'])){
             $connect = mysqli_connect("localhost", "root", "srilanka", "hmsdb");
             $dispid = filter_input(INPUT_POST,'dispid');
-            $drugname = filter_input(INPUT_POST,'drugname');
+            $drugname = strtoupper(filter_input(INPUT_POST,'drugname'));
             $drugcount = filter_input(INPUT_POST,'drugcount');
-            $drugid = filter_input(INPUT_POST,'drugid');
+            $sqlcount = "SELECT count(drugid) as count FROM drug;";
+            $resultcount=mysqli_query($conn,$sqlcount);
+            $rowcount=mysqli_fetch_assoc($resultcount);
+            $drugfullcount = $rowcount['count'];
+            $drugid = "d";
+            $drugid .= $drugfullcount + 1;
             $drugflag = filter_input(INPUT_POST,'drugflag');
             
             $sql = "INSERT INTO drug(drugid,drugname,count,flag) VALUES('$drugid', '$drugname','$drugcount','$drugflag');";

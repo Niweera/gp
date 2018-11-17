@@ -32,6 +32,10 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     $sqlTime = "INSERT INTO patientrecord (clinicno, clinic, nextdate) VALUES ('$clinicno', '$clinic', '$effectiveDate');";
     $resultTime=mysqli_query($conn,$sqlTime);
     $slmcid = $_SESSION['userid'];
+    $sqlcount = "SELECT count(drugid) as count FROM drug;";
+    $resultcount=mysqli_query($conn,$sqlcount);
+    $rowcount=mysqli_fetch_assoc($resultcount);
+    $drugcount = $rowcount['count'];
     $sql = "SELECT drugid, drugname FROM drug;";
     $result=mysqli_query($conn,$sql);
     $queryResult=mysqli_num_rows($result);
@@ -56,7 +60,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                 $test++;
             }
         }
-        if ($test != 23){
+        if ($test != $drugcount){
             echo "<script>alert(\"Error Occured! Please insert the data again.\");history.go(-1);</script>";
         }
     }

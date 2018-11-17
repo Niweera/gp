@@ -82,7 +82,7 @@
 <!--End of the Header navigation bar for the website-->
 <br>
 
-    <form name="doclog" action="./sheet.php"  method="post" onsubmit="return validateForm()">
+    <form name="doclog" id="mcform" action="./sheet.php"  method="post" onsubmit="return validateForm()">
         <div class="container">
             <center><h1 style="color:#242424;">Medical Clinic <br><hr>Prescription Sheet</h1></center>
         </div>
@@ -106,7 +106,7 @@
                 <div class="col-sm-3"></div>
                 <label for="effectivedate" class="col-sm-2 col-form-label"><h5>Next Clinic Date:</h5></label>
                 <div class="col-lg-2">
-                    <input type="date" class="form-control form-control-sm" name="effectivedate" id="effectivedate"  autocomplete="off" required>
+                    <input type="date" class="form-control form-control-sm" name="effectivedate" id="effectivedate"  autocomplete="off" max="2050-12-31" required>
                 </div>
             </div>
             <table class="table">
