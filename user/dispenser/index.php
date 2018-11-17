@@ -65,8 +65,7 @@
             Reports
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./viewreports.php">View Reports</a>
-                <a class="dropdown-item" href="#">Send Reports</a>
+                <a class="dropdown-item" href="./sendreports.php">Send Reports</a>
             </div>
         </li>
         <li class="nav-item">
@@ -143,16 +142,8 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="card mt-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">View Reports</h5><hr>
-                                    <a href="./viewreports.php" class="btn btn-primary btn-block">Go</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <div class="card mt-4">
-                                <div class="card-body">
                                     <h5 class="card-title">Send Reports</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">Go</a>
+                                    <a href="./sendreports.php" class="btn btn-primary btn-block">Go</a>
                                 </div>
                             </div>
                         </div>

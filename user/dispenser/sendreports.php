@@ -74,8 +74,7 @@
             Reports
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item active" href="./viewreports.php">View Reports</a>
-                <a class="dropdown-item" href="#">Send Reports</a>
+                <a class="dropdown-item active" href="./sendreports.php">Send Reports</a>
             </div>
         </li>
         <li class="nav-item">
