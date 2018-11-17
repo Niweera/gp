@@ -93,7 +93,7 @@
     <link rel="stylesheet" href="../css/tooplate-style.css">    
 </head>
 
-<body id="LoginForm">
+<body id="LoginForm" style="background-color: #E0E0E0;">
 
     <!-- MENU -->
     <section class="navbar navbar-default navbar-static-top" role="navigation">
@@ -153,9 +153,9 @@
      </section><!--navbar navbar-default navbar-static-top-->
 
     <!--LOGIN MODAL CODES--><br><br>
-    <div class="container bg-danger">
+    <div class="container">
       <div class="login-form">
-        <div class="main-div">
+        <div class="main-div" style="box-shadow: 0px 0px 12px #828282;">
             <div class="panel">
                 <h2>User Login</h2>
                 <p>Please enter your Login ID and Password</p>
@@ -183,7 +183,7 @@
   </div><!--container bg-danger-->
 <br><br>
       <!-- FOOTER -->
-      <footer data-stellar-background-ratio="5">
+      <footer data-stellar-background-ratio="5"  style="background-color: white;">
           <div class="container">
               <div class="row">
 
