@@ -55,7 +55,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./#">Reports</a>
+            <a class="nav-link" href="./viewreports.php">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
@@ -121,7 +121,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">View Reports</h5><hr>
-                                    <a href="#" class="btn btn-primary btn-block">View</a>
+                                    <a href="./viewreports.php" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>

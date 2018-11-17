@@ -8,7 +8,7 @@ $(document).ready(function(){
 			data:{query:query},
 			success:function(data)
 			{
-				$('#result').html(data);
+				$('#resultnurse').html(data);
 			}/*,
 			complete: function() {
 				// Schedule the next request when the current one's complete
