@@ -30,12 +30,8 @@
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    
-    <script>
-    $( function() {
-        $( "#dialog" ).dialog();
-    } );
-    </script>
+    <script src="validate_script.js"></script>
+    <script src="register_script.js"></script>
 </head>
 <body>
 <!--Header navigation bar for the website-->
@@ -76,13 +72,16 @@
 </nav>
 <!--End of the Header navigation bar for the website-->
 <br>
-
+    <div class="container">
+        <h1 class="text-center" style="color:#242424;">Patient Registration</h1>
+    </div>
+    <br>
+    <div class="container border pt-2 bg-light rounded"> <!--List of all the patients previously registered-->
+        <h5 class="pb-3">Last Registered:</h5>
+        <div id="result"><p class="text-danger">Please wait system is retrieving data!</p></div><br>
+    </div>
+    <br>
     <form name="doclog" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">
-        <div class="container">
-            <center><h1 style="color:#242424;">Patient Registration</h1></center>
-        </div>
-        <br>
-        <br>
         <div class="container border pt-4 bg-light rounded">
             <div class="row">
                 <div class="col-lg-12">
@@ -99,7 +98,7 @@
                         <div class="col-lg-8">
                             <div class="input-group">
                             <input type="text" class="form-control form-control-sm col-sm-3" name="initials" id="initials" placeholder="Enter Initials" autocomplete="off" required autofocus>
-                            <input type="text" class="form-control form-control-sm col-sm-9" name="surname" id="surname" placeholder="Enter Surname" autocomplete="off" required autofocus>
+                            <input type="text" class="form-control form-control-sm col-sm-9" name="surname" id="surname" placeholder="Enter Surname" autocomplete="off" required>
                             </div>
                         </div>
                     </div>
@@ -113,25 +112,25 @@
                     <div class="form-group row">
                         <label for="dob" class="col-sm-4 col-form-label"><h5>Date of Birth</h5></label>
                         <div class="col-lg-8">
-                            <input type="date" class="form-control form-control-sm" name="dob" id="dob" placeholder="Enter Date of Birth YYYY-MM-DD" autocomplete="off">
+                            <input type="date" class="form-control form-control-sm" name="dob" id="dob" placeholder="Enter Date of Birth YYYY-MM-DD" autocomplete="off" max="2018-12-31" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="email" class="col-sm-4 col-form-label"><h5>Email</h5></label>
                         <div class="col-lg-8">
-                            <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Enter Email" autocomplete="off">
+                            <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Enter Email" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="address" class="col-sm-4 col-form-label"><h5>Address</h5></label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control form-control-sm" name="address" id="address" placeholder="Enter Address" autocomplete="off" required autofocus>
+                            <input type="text" class="form-control form-control-sm" name="address" id="address" placeholder="Enter Address" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="contactno" class="col-sm-4 col-form-label"><h5>Telephone Number</h5></label>
                         <div class="col-lg-8">
-                            <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" placeholder="Enter Telephone Number" required autofocus>
+                            <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" placeholder="Enter Telephone Number" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -144,7 +143,7 @@
                      
                 </div>
             </div>
-            <center> <input type="submit" value="Register" class="btn btn-primary btn-lg" name="submit"> </center>   
+            <center> <input type="submit" value="Register" class="btn btn-primary btn-lg" name="submit" id="submitButton"> </center>   
             <br>
         </div>
         <br>
