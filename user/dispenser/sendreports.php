@@ -94,11 +94,11 @@
         <br>
         <br>
         <?php
-        $sql = "SELECT DISTINCT(readtime) FROM pharmdisp WHERE readtime IS NOT NULL;";
+        $sql = "SELECT DISTINCT(readtime) FROM pharmdisp WHERE readtime IS NOT NULL ORDER BY readtime DESC;";
         $result = mysqli_query($conn,$sql);
         $queryResult=mysqli_num_rows($result);
         if ($queryResult > 0){
-            echo "<div class=\"container border pt-2 bg-light rounded\">";
+            echo "<div class=\"container border pt-2 bg-light rounded\" style=\"width:auto;overflow-y: auto;height: 115px;\">";
             while($row=mysqli_fetch_assoc($result)){
                 $readtime = $row['readtime'];
                 $sqlread = "SELECT pharmacist.name, pharmdisp.createtime FROM pharmdisp INNER JOIN pharmacist ON pharmacist.pharmaid = pharmdisp.pharmaid WHERE readtime = '$readtime';";
