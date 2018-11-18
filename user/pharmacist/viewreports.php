@@ -11,16 +11,19 @@
         }
 ?>
 <?php
-$sql = "SELECT * FROM pharmdisp WHERE readtime is NULL;";
+$sql = "SELECT DISTINCT(createtime) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;";
 $result = mysqli_query($conn,$sql);
 $queryResult=mysqli_num_rows($result);
 if ($queryResult > 0){
     $row=mysqli_fetch_assoc($result);
-    $dispid = $row['dispid'];
     $createtime = $row['createtime'];
     $time_array = preg_split('/\s+/', $createtime, -1, PREG_SPLIT_NO_EMPTY);
     $createdate = $time_array[0];
     $create_time = $time_array[1];
+    $sqlpharm = "SELECT dispid FROM pharmdisp WHERE createtime = '$createtime';";
+    $resultpharm = mysqli_query($conn,$sqlpharm);
+    $rowpharm = mysqli_fetch_assoc($resultpharm);
+    $dispid = $rowpharm['dispid'];
     $sqldisp = "SELECT name FROM dispenser WHERE dispid = '$dispid';";
     $resultdisp = mysqli_query($conn,$sqldisp);
     $rowdisp = mysqli_fetch_assoc($resultdisp);
@@ -136,7 +139,7 @@ if ($queryResult > 0){
                         </thead>
                         <tbody>
                         <?php
-                            $sql0 = "SELECT pharmdisp.dispid,pharmdisp.createtime, pharmdisp.count, drug.drugname FROM pharmdisp INNER JOIN drug ON pharmdisp.drugid = drug.drugid WHERE readtime is NULL;";
+                            $sql0 = "SELECT pharmdisp.dispid,pharmdisp.createtime, pharmdisp.count, drug.drugname FROM pharmdisp INNER JOIN drug ON pharmdisp.drugid = drug.drugid WHERE createtime = '$createtime';";
                             $result0 = mysqli_query($conn,$sql0);
                             $queryResult0=mysqli_num_rows($result0);
                             if ($queryResult0 > 0){
@@ -158,6 +161,7 @@ if ($queryResult > 0){
             <div class="row">
                 <div class="col-md-5"></div>
                 <div class="col-md-2">
+                    <input type="hidden" value="<?php echo $createtime; ?>" name="createtime">
                     <input type="submit" value="Acknowledge" class="btn btn-primary btn-lg mb-2" name="submit">
                 </div>
                 <div class="col-md-5"></div>
@@ -230,7 +234,8 @@ if ($queryResult > 0){
 </html>
 <?php
 }else{
-    echo "<script>alert(\"No new Reports!\");window.location.href = './index.php';</script>";
+    $_SESSION['report_status'] = 0;
+    echo "<script>window.location.href = './view_reports.php';</script>";
 }
 ?>
 

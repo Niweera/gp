@@ -9,11 +9,6 @@ if(!isset($_SESSION['userid'])){
             header('location: ../../login');	 	
         }
     }
-if (null !==(filter_input(INPUT_POST, 'submit'))){
-    $pharmaid = $_SESSION['userid'];
-    $sqlupdate = "UPDATE pharmdisp SET readtime = CURRENT_TIMESTAMP(), pharmaid = '$pharmaid' WHERE readtime is NULL;";
-    $resultupdate = mysqli_query($conn,$sqlupdate);
-    if ($resultupdate){
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,6 +75,17 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 </nav>
 <!--End of the Header navigation bar for the website-->
 <br>
+    <?php
+    if (null !==(filter_input(INPUT_POST, 'submit'))){
+        $createtime = $_POST['createtime'];
+        $pharmaid = $_SESSION['userid'];
+        $sqlupdate = "UPDATE pharmdisp SET readtime = CURRENT_TIMESTAMP(), pharmaid = '$pharmaid' WHERE createtime = '$createtime';";
+        $resultupdate = mysqli_query($conn,$sqlupdate);
+        if ($resultupdate){
+            $_SESSION['report_status'] = 1;
+        }
+    }
+    ?>
 
     <div class="container">
         <center><h1 style="color:#242424;">View Reports</h1></center>
@@ -88,14 +94,17 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     <br>
         
     <div class="container border bg-light rounded">
-        <div id="printthis" class="container mt-5 mb-5">
-                <h5 class="text-center">Report acknowledged.</h5> 
-                <h5 class="text-center">No new request reports to view.</h5> 
+        <div id="printthis" class="container mt-5 mb-5"> 
+                <?php if ($_SESSION['report_status'] == 0){ ?>
+                <h5 class="text-center">No new request reports to view!</h5>
+                <?php }else{ ?>
+                <h5 class="text-center">Report acknowledged!</h5> 
+                <?php } ?>
         </div>
         <div class="row">
             <div class="col-md-5"></div>
             <div class="col-md-2">
-                <button  class="btn btn-primary btn-lg mb-2" onclick="window.location.href = './index.php';">Go Back</button>
+                <button  class="btn btn-primary btn-lg mb-2" onclick="window.location.href = './index.php';">Home</button>
             </div>
             <div class="col-md-5"></div>
         </div>
@@ -166,8 +175,6 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 </html>
 
 <?php
- }
-}
 mysqli_close($conn);
 ?>
 
