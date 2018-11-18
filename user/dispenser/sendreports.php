@@ -10,6 +10,7 @@
             }
         }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,13 +86,34 @@
 </nav>
 <!--End of the Header navigation bar for the website-->
 <br>
-
+    
     <form name="doclog" id="dcform" action="./sheet.php"  method="post" onsubmit="return validateForm()">
         <div class="container">
             <h1 style="color:#242424;" class="text-center">Drug Inventory Report <br></h1><hr><h2 style="color:#242424;" class="text-center">Request Drugs Form</h2>
         </div>
         <br>
         <br>
+        <?php
+        $sql = "SELECT DISTINCT(readtime) FROM pharmdisp WHERE readtime IS NOT NULL;";
+        $result = mysqli_query($conn,$sql);
+        $queryResult=mysqli_num_rows($result);
+        if ($queryResult > 0){
+            echo "<div class=\"container border pt-2 bg-light rounded\">";
+            while($row=mysqli_fetch_assoc($result)){
+                $readtime = $row['readtime'];
+                $sqlread = "SELECT pharmacist.name, pharmdisp.createtime FROM pharmdisp INNER JOIN pharmacist ON pharmacist.pharmaid = pharmdisp.pharmaid WHERE readtime = '$readtime';";
+                $resultread = mysqli_query($conn,$sqlread);
+                $queryResult=mysqli_num_rows($resultread);
+                if ($queryResult > 0){
+                    $row=mysqli_fetch_assoc($resultread);
+                    $pharmaname = $row['name'];
+                    $createtime = $row['createtime'];
+                    echo "<p>The drug request report sent on ".$createtime." has acknowledged by ".$pharmaname." on ".$readtime.".</p>";
+                }
+            }
+            echo "</div><br>";
+        }
+        ?>
         <div class="container border pt-4 bg-light rounded">
             <table class="table">
                 <thead class="thead-dark">
