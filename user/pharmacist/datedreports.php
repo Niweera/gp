@@ -1,15 +1,35 @@
 <?php
-session_start();
-include '../../dbconf/dbh.php';
-if(!isset($_SESSION['userid'])){
-    header('location: ../../login');
-    exit;
-    }else{
-        if ($_SESSION['flag'] != 3){
-            header('location: ../../login');	 	
+    session_start();
+    include '../../dbconf/dbh.php';
+    if(!isset($_SESSION['userid'])){
+        header('location: ../../login');
+        exit;
+        }else{
+            if ($_SESSION['flag'] != 3){
+                header('location: ../../login');	 	
+            }
         }
-    }
 ?>
+<?php
+if (null !==(filter_input(INPUT_POST, 'submit'))){
+    $createtime = $_POST['createtime'];
+    $sql = "SELECT dispenser.name FROM pharmdisp INNER JOIN dispenser ON dispenser.dispid = pharmdisp.dispid WHERE createtime = '$createtime';";
+    $result = mysqli_query($conn,$sql);
+    $queryResult=mysqli_num_rows($result);
+    if ($queryResult > 0){
+        $row=mysqli_fetch_assoc($result);
+        $dispname = $row['name'];
+        $time_array = preg_split('/\s+/', $createtime, -1, PREG_SPLIT_NO_EMPTY);
+        $createdate = $time_array[0];
+        $create_time = $time_array[1];
+    }else{
+        echo "<script>alert('No Reports to display!');window.location.href = './index.php';</script>";
+    }
+}else{
+    echo "<script>window.location.href = './index.php';</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +44,6 @@ if(!isset($_SESSION['userid'])){
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./script.js"></script><!--ajax script for date retrieiving--> 
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -76,17 +95,6 @@ if(!isset($_SESSION['userid'])){
 </nav>
 <!--End of the Header navigation bar for the website-->
 <br>
-    <?php
-    if (null !==(filter_input(INPUT_POST, 'submit'))){
-        $createtime = $_POST['createtime'];
-        $pharmaid = $_SESSION['userid'];
-        $sqlupdate = "UPDATE pharmdisp SET readtime = CURRENT_TIMESTAMP(), pharmaid = '$pharmaid' WHERE createtime = '$createtime';";
-        $resultupdate = mysqli_query($conn,$sqlupdate);
-        if ($resultupdate){
-            $_SESSION['report_status'] = 1;
-        }
-    }
-    ?>
 
     <div class="container">
         <center><h1 style="color:#242424;">View Reports</h1></center>
@@ -95,36 +103,68 @@ if(!isset($_SESSION['userid'])){
     <br>
         
     <div class="container border bg-light rounded">
-        <div id="printthis" class="container mt-5 mb-5"> 
-                <?php if ($_SESSION['report_status'] == 0){ ?>
-                <h5 class="text-center">No new request reports to view!</h5>
-                <?php }else{ ?>
-                <h5 class="text-center">Report acknowledged!</h5> 
-                <?php } ?>
+        <div id="printthis" class="container mt-5 mb-5">
+            <div class="container border border-dark rounded">
+                <div class="row">
+                    <div class="col-md-12 bg-light border border-dark">
+                        <h1 class="text-center">Divisional Hospital, Bentota</h1>
+                    </div>
+                </div>
+                <br>
+                <h2 class="text-center">Drug Request Report</h2>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="h4"><strong>Date: </strong><?php echo $createdate; ?></label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="h4"><strong>Time: </strong><?php echo $create_time; ?></label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="h4"><strong>Dispenser: </strong><?php echo $dispname; ?></label>
+                    </div>
+                </div>
+                <hr>
+                <h5>The following drugs and their respective counts are hereby requested.</h5>
+                <br>
+                <table class="table" style="width:50%;margin-left:auto; margin-right:auto;">
+                    <thead class="thead-light">
+                        <tr>
+                        <th scope="col">Name of The Drug</th>
+                        <th scope="col">Requested Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $sql0 = "SELECT pharmdisp.dispid,pharmdisp.createtime, pharmdisp.count, drug.drugname FROM pharmdisp INNER JOIN drug ON pharmdisp.drugid = drug.drugid WHERE createtime = '$createtime';";
+                        $result0 = mysqli_query($conn,$sql0);
+                        $queryResult0=mysqli_num_rows($result0);
+                        if ($queryResult0 > 0){
+                            while ($row=mysqli_fetch_assoc($result0)){
+                                $drugname = $row['drugname'];
+                                $drugcount = $row['count'];
+                                echo "<tr>";
+                                echo "<th style=\"width: 50.00%\" scope=\"row\">".$drugname."</th>";
+                                echo "<th style=\"width: 50.00%\" scope=\"row\">".$drugcount."</th>";
+                                echo "</tr>";
+                            }
+                        }
+                    ?>
+                    </tbody>
+                </table>
+                <hr>
+            </div>
         </div>
-        <form action="./datedreports.php" method="post">
-            <div class="form-group row">
-                <div class="col-sm-2"></div>
-                <label for="date" class="col-sm-3 col-form-label"><h5>Search received date:</h5></label>
-                <div class="col-lg-4 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="createtime" id="date" placeholder="Enter date YYYY-MM-DD" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
-                </div>
-                <div class="col-sm-3"></div>
+        <div class="form-group row mb-5">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-2">
+                <button  class="btn btn-primary btn-lg mb-2" onclick="window.location.href = './index.php';">Home</button>
             </div>
-            <div class="form-group row mb-5">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-2">
-                    <input type="submit" value="View Report" class="btn btn-primary btn-lg mb-2" name="submit">
-                </div>
-                <div class="col-sm-2">
-                    <button  class="btn btn-primary btn-lg mb-2" onclick="window.location.href = './index.php';">Home</button>
-                </div>
-                <div class="col-sm-4"></div>
-            </div>
-        </form>
+            <div class="col-sm-5"></div>
+        </div>           
     </div>
-<br>
 <br>
 <!--Footer for the website-->
 <section id="footer">
@@ -190,8 +230,6 @@ if(!isset($_SESSION['userid'])){
   </body>
 </html>
 
-<?php
-mysqli_close($conn);
-?>
+
 
 
