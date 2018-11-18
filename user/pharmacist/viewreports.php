@@ -85,7 +85,7 @@ if ($queryResult > 0){
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="./viewreports.php">Reports</a>
+            <a class="nav-link active" href="./view_reports.php">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>

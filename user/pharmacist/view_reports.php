@@ -9,6 +9,14 @@ if(!isset($_SESSION['userid'])){
             header('location: ../../login');	 	
         }
     }
+$sql = "SELECT DISTINCT(createtime) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;";
+$result = mysqli_query($conn,$sql);
+$queryResult=mysqli_num_rows($result);
+if ($queryResult > 0){
+    $_SESSION['report_status'] = 1;
+}else{
+    $_SESSION['report_status'] = 0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +74,7 @@ if(!isset($_SESSION['userid'])){
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="./viewreports.php">Reports</a>
+            <a class="nav-link active" href="./view_reports.php">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
@@ -83,7 +91,7 @@ if(!isset($_SESSION['userid'])){
         $sqlupdate = "UPDATE pharmdisp SET readtime = CURRENT_TIMESTAMP(), pharmaid = '$pharmaid' WHERE createtime = '$createtime';";
         $resultupdate = mysqli_query($conn,$sqlupdate);
         if ($resultupdate){
-            $_SESSION['report_status'] = 1;
+            $_SESSION['report_status'] = 2;
         }
     }
     ?>
@@ -98,7 +106,18 @@ if(!isset($_SESSION['userid'])){
         <div id="printthis" class="container mt-5 mb-5"> 
                 <?php if ($_SESSION['report_status'] == 0){ ?>
                 <h5 class="text-center">No new request reports to view!</h5>
-                <?php }else{ ?>
+                <?php }elseif ($_SESSION['report_status'] == 1){ ?>
+                <div class = "row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <h5 class="text-center">You have new request reports to view!</h5>
+                    </div>
+                    <div class="col-md-2">
+                        <button  class="btn btn-primary btn-sm mb-2" onclick="window.location.href = './viewreports.php';">View</button>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <?php }elseif ($_SESSION['report_status'] == 2){ ?>
                 <h5 class="text-center">Report acknowledged!</h5> 
                 <?php } ?>
         </div>

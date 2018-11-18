@@ -57,7 +57,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./viewreports.php">Reports</a>
+            <a class="nav-link" href="./view_reports.php">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>
@@ -123,7 +123,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">View Reports &nbsp<span class="badge badge-danger" id="msgCount"></span></h5><hr>
-                                    <a href="./viewreports.php" class="btn btn-primary btn-block">View</a>
+                                    <a href="./view_reports.php" class="btn btn-primary btn-block">View</a>
                                 </div>
                             </div>
                         </div>
