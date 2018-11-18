@@ -13,7 +13,7 @@
 <?php
 if (null !==(filter_input(INPUT_POST, 'submit'))){
     $dispid = $_SESSION['userid'];
-    $sql = "SELECT drugid, drugname FROM drug;";
+    $sql = "SELECT drugid FROM drug;";
     $result=mysqli_query($conn,$sql);
     $queryResult=mysqli_num_rows($result);
     if ($queryResult > 0){

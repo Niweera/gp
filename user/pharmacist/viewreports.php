@@ -20,14 +20,10 @@ if ($queryResult > 0){
     $time_array = preg_split('/\s+/', $createtime, -1, PREG_SPLIT_NO_EMPTY);
     $createdate = $time_array[0];
     $create_time = $time_array[1];
-    $sqlpharm = "SELECT dispid FROM pharmdisp WHERE createtime = '$createtime';";
+    $sqlpharm = "SELECT dispenser.name FROM pharmdisp INNER JOIN dispenser ON dispenser.dispid = pharmdisp.dispid WHERE createtime = '$createtime';";
     $resultpharm = mysqli_query($conn,$sqlpharm);
     $rowpharm = mysqli_fetch_assoc($resultpharm);
-    $dispid = $rowpharm['dispid'];
-    $sqldisp = "SELECT name FROM dispenser WHERE dispid = '$dispid';";
-    $resultdisp = mysqli_query($conn,$sqldisp);
-    $rowdisp = mysqli_fetch_assoc($resultdisp);
-    $dispname = $rowdisp['name'];
+    $dispname = $rowpharm['name'];
 ?>
 
 <!DOCTYPE html>

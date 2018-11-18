@@ -23,7 +23,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         $createdate = $time_array[0];
         $create_time = $time_array[1];
     }else{
-        echo "<script>alert('No Reports to display!');window.location.href = './index.php';</script>";
+        echo "<script>alert('No Reports to display!');window.location.href = './view_reports.php';</script>";
     }
 }else{
     echo "<script>window.location.href = './index.php';</script>";

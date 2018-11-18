@@ -139,7 +139,7 @@
                             echo $drugcount;
                             echo "</td>";
                             echo "<td style=\"width: 30.00%\">";
-                            echo "<input type=\"number\" class=\"form-control form-control-sm\" name=".$drugid."d>";
+                            echo "<input type=\"number\" class=\"form-control form-control-sm\" name=".$drugid."d autofocus>";
                             echo "</td>";
                             echo "</tr>";
                         }
