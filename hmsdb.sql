@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('admin','Test Administrator','w.nipuna@gmail.com',766419486);
+INSERT INTO `admin` VALUES ('admin','J.S Perera','w.nipuna@gmail.com',766419486);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +93,7 @@ CREATE TABLE `dispenser` (
 
 LOCK TABLES `dispenser` WRITE;
 /*!40000 ALTER TABLE `dispenser` DISABLE KEYS */;
-INSERT INTO `dispenser` VALUES ('Test Dispenser',766419486,'disp','w.nipuna@gmail.com');
+INSERT INTO `dispenser` VALUES ('K.S. Vithanage',766419486,'disp','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `dispenser` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,7 +121,7 @@ CREATE TABLE `doctor` (
 
 LOCK TABLES `doctor` WRITE;
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` VALUES ('Test Doctor',766419486,'doctor','w.nipuna@gmail.com');
+INSERT INTO `doctor` VALUES ('H.G.S.P. Abeynayake',766419486,'doctor','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -255,7 +255,7 @@ CREATE TABLE `nurse` (
 
 LOCK TABLES `nurse` WRITE;
 /*!40000 ALTER TABLE `nurse` DISABLE KEYS */;
-INSERT INTO `nurse` VALUES ('Test Nurse',766419486,'nurse','w.nipuna@gmail.com');
+INSERT INTO `nurse` VALUES ('H.S. Silva',766419486,'nurse','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `nurse` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -318,7 +318,6 @@ CREATE TABLE `patientrecord` (
 
 LOCK TABLES `patientrecord` WRITE;
 /*!40000 ALTER TABLE `patientrecord` DISABLE KEYS */;
-INSERT INTO `patientrecord` VALUES ('patient0',0,'2018-11-08','2018-11-17 08:50:01'),('patient0',0,'2018-11-18','2018-11-17 08:51:07'),('patient0',0,'2018-11-18','2018-11-17 08:51:54'),('patient1',1,'2018-11-18','2018-11-17 08:53:06'),('patient1',1,'2018-11-28','2018-11-17 08:53:26'),('patient1',1,'2018-11-18','2018-11-17 08:54:01');
 /*!40000 ALTER TABLE `patientrecord` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,7 +373,7 @@ CREATE TABLE `pharmacist` (
 
 LOCK TABLES `pharmacist` WRITE;
 /*!40000 ALTER TABLE `pharmacist` DISABLE KEYS */;
-INSERT INTO `pharmacist` VALUES ('Test Pharmacist',766419486,'pharma','w.nipuna@gmail.com');
+INSERT INTO `pharmacist` VALUES ('N. Jayathissa',766419486,'pharma','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `pharmacist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -386,16 +385,18 @@ DROP TABLE IF EXISTS `pharmdisp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pharmdisp` (
-  `pharmaid` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `pharmaid` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
   `dispid` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `reportid` varchar(255) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`pharmaid`,`dispid`,`timestamp`),
-  KEY `reportfk` (`reportid`),
-  KEY `dispenfk` (`dispid`),
-  CONSTRAINT `dispenfk` FOREIGN KEY (`dispid`) REFERENCES `dispenser` (`dispid`),
-  CONSTRAINT `pharmfk` FOREIGN KEY (`pharmaid`) REFERENCES `pharmacist` (`pharmaid`),
-  CONSTRAINT `reportfk` FOREIGN KEY (`reportid`) REFERENCES `report` (`reportid`)
+  `createtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `readtime` timestamp NULL DEFAULT NULL,
+  `drugid` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `count` int(11) NOT NULL,
+  PRIMARY KEY (`dispid`,`createtime`,`drugid`),
+  KEY `pharmdrugfk` (`drugid`),
+  KEY `pharmpharmfk` (`pharmaid`),
+  CONSTRAINT `pharmdispfk` FOREIGN KEY (`dispid`) REFERENCES `dispenser` (`dispid`),
+  CONSTRAINT `pharmdrugfk` FOREIGN KEY (`drugid`) REFERENCES `drug` (`drugid`),
+  CONSTRAINT `pharmpharmfk` FOREIGN KEY (`pharmaid`) REFERENCES `pharmacist` (`pharmaid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -439,29 +440,6 @@ CREATE TABLE `prescription` (
 LOCK TABLES `prescription` WRITE;
 /*!40000 ALTER TABLE `prescription` DISABLE KEYS */;
 /*!40000 ALTER TABLE `prescription` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `report`
---
-
-DROP TABLE IF EXISTS `report`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `report` (
-  `reportid` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `reportname` varchar(255) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`reportid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `report`
---
-
-LOCK TABLES `report` WRITE;
-/*!40000 ALTER TABLE `report` DISABLE KEYS */;
-/*!40000 ALTER TABLE `report` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -524,4 +502,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-17 15:06:11
+-- Dump completed on 2018-11-20 17:56:34
