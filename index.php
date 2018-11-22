@@ -108,8 +108,8 @@
                               <div class="item item-second">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Aenean luctus lobortis tellus</h3>
-                                             <h1>New Lifestyle</h1>    
+                                             <h3></h3>
+                                             <h1>Providing Health Solutions</h1>    
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
                               </div><!--item item-second-->
@@ -117,7 +117,7 @@
                               <div class="item item-third">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Pellentesque nec libero nisi</h3>
+                                             <h3></h3>
                                              <h1>Your Health Benefits</h1>
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
