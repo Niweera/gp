@@ -122,183 +122,107 @@
     </div><!--body-->
 
     <!--PAGES GALLERY-->
-    <div class="main-container">
-      <div class="container gallery fadeIn animated">
-        <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <h3>Image Gallery</h3>
+        </div><!--col-lg-12-->
 
-          <a href="../images/1.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/1.jpeg" alt="1">
-            <span class="on-hover">
-              <span class="hover-caption">Map</span>
-            </span>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/1.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/1.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/2.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/2.jpeg" alt="2">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span> 
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/2.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/2.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/3.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/3.jpeg" alt="3">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/3.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/3.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/4.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/4.jpeg" alt="4">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/4.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/4.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/5.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/5.jpeg" alt="5">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/5.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/5.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/6.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/6.jpeg" alt="6">           
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/6.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/6.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/7.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/7.jpeg" alt="7">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/7.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/7.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/8.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/8.jpeg" alt="8">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
+        
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/8.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/8.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-
-          <a href="../images/9.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/9.jpeg" alt="9">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/9.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/9.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/10.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/10.jpeg" alt="10">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/10.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/10.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/11.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/11.jpeg" alt="11">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/11.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/11.jpeg" alt="1"/>  
           </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
 
-          <a href="../images/12.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/12.jpeg" alt="12">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
+        
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="../images/12.jpeg" class="thumbnail">
+            <p>Map</p>
+            <img src="../images/12.jpeg" alt="1"/>  
           </a>
-
-          <a href="../images/13.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/13.jpeg" alt="13">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>
-          </a> 
-
-          <a href="../images/14.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/14.jpeg" alt="14">           
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/15.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/15.jpeg" alt="15">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/16.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/16.jpeg" alt="16">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/17.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/17.jpeg" alt="17">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/18.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/18.jpeg" alt="18">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a> 
-
-          <a href="../images/19.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/19.jpeg" alt="19">
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>
-          </a>
-
-          <a href="../images/20.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/20.jpeg" alt="20">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/21.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/21.jpeg" alt="21">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/22.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/22.jpeg" alt="22">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/23.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/23.jpeg" alt="23">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
-
-          <a href="../images/24.jpeg" class="col-md-3 col-sm-4 gallery-item lightbox">
-            <img src="../images/24.jpeg" alt="24">            
-            <span class="on-hover">
-              <span class="hover-caption">Image Caption</span>
-            </span>            
-          </a>
+        </div><!--col-lg-3 col-md-4 col-sm-6-->
                   
         </div><!--row-->      
-      </div><!--container gallery fadeIn animated-->
-    </div> <!--main-container-->
-
+      </div><!--container-->
 
     <!-- FOOTER -->
     <footer data-stellar-background-ratio="5">
