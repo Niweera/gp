@@ -96,8 +96,6 @@
                 <div class="container">
                     <div class="carousel-caption">
                       <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
-                      <h4 class="carousel-subtitle bounceInUp animated slow ">So let's do it !</h4>
-                      <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
                     </div> <!--carousel-caption -->
                 </div><!--container-->
               </div> <!--item active-->      
@@ -110,7 +108,7 @@
         <div class="headerr">
           <div class="footer">
             <div class="body">
-                <h1>Our Vission</h1>
+                <h1>Our Vision</h1>
                 <p> Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What&acute;s more, they&acute;re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the Terms of Use. You can even remove all our links if you want to. </p>
 
                 <h1>Our Mission</h1>
