@@ -488,48 +488,7 @@
     margin: 0;
   }
 
-  /*---------------------------------------
-      APPOINTMENT             
-  -----------------------------------------*/
-
-  #appointment {
-    padding-top: 100px;
-  }
-
-  #appointment label {
-    color: #393939;
-    font-weight: 500;
-  }
-
-  #appointment .form-control {
-    background: #f9f9f9;
-    border: none;
-    border-radius: 3px;
-    box-shadow: none;
-    font-size: 14px;
-    font-weight: normal;
-    margin-bottom: 15px;
-    transition: all ease-in-out 0.4s;
-  }
-
-  #appointment input,
-  #appointment select {
-    height: 45px;
-  }
-
-  #appointment button#cf-submit {
-    background: #a5c422;
-    color: #ffffff;
-    font-weight: 600;
-    height: 55px;
-  }
-
-  #appointment button#cf-submit:hover {
-    background: #393939;
-    color: #ffffff;
-  }
-
-
+ 
   /*---------------------------------------
      FOOTER              
   -----------------------------------------*/
