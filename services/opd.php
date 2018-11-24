@@ -84,13 +84,20 @@
           </div><!--container-->
      </section><!--navbar navbar-default navbar-static-top-->
 
-    <!--HEADER IMAGE-->
-    <div class="im">
-      <img src="../images/opd service.jpg" alt="we" width="100%">
-    </div><!--im-->
-
+    <!--HEADER IMAGE--> 
+    
+      <img src="../images/bbb.jpg" alt="we" width="100%" height="320">
+    
+    
     <!--CONTENT-->
+    <div class="container contain-area" id="es-content">
+        
+        <h1 class="inner-page-title"> OPD Services</h1>
+    </div>
+    
     <div class="roww">
+       
+        
         <div class="col-md-6">
 
             <h5><span style="color: #135cae;"><strong>Room No 1- Medical Examination</strong></span></h5>
