@@ -63,8 +63,6 @@
                                 <li><a href="./services/opd.php">OPD Services</a></li>
                             </ul>
                         </li>
-                         
-                         <li><a href="./contact" class="smoothScroll">Contact Details</a></li>
 
                          <li class="nav-item">
                             <?php
@@ -136,8 +134,8 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ospital</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
-                                   <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+                                   <p>The entry of Bentota Hospitals into the state dominated healthcare sector in 1985, saw the public health care system take root in Sri Lanka.</p> 
+                                   <p>The launch of the hospital and the overwhelming response it received from the people demonstrated a long felt need for healthcare in a pleasant environment.</p>
                               </div><!--wow fadeInUp-->
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
                                    <img src="images/author-image.jpg" class="img-responsive" alt="founder">
@@ -167,8 +165,6 @@
                     <div class="col-md-4 col-sm-4">
                          <div class="footer-thumb"> 
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                              <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
-
                               <div class="contact-info">
                                    <p><i class="fa fa-phone"></i> 010-070-0170</p>
                                    <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
