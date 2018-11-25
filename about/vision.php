@@ -70,7 +70,6 @@
                             </ul>
                       </li>
                          
-                      <li><a href="../contact" class="smoothScroll">Contact Details</a></li>
 
                       <li class="nav-item">
                           <?php
@@ -92,7 +91,7 @@
       <div id="homeCarousel" class="carousel slide carousel-home" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img src="../images/images-1.jpg" alt="">
+                <img src="../images/vision.jpg" alt="">
                 <div class="container">
                     <div class="carousel-caption">
                       <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
@@ -127,51 +126,68 @@
   </div><!--body-->
 
   <!--FOUNDER-->
-  <div class="section-home home-reasons">
-      <div class="container">
-          <div class="row">
 
-              <div class="col-md-6">
-                  <div class="reasons-col animate-onscroll fadeIn">
-                      <img src="../images/author-image.jpg" alt="">
-                        <div class="reasons-titles">
-                            <h3 class="reasons-title">We fight together</h3>
-                            <h5 class="reason-subtitle">We are humans</h5>     
-                        </div><!--reasons-titles-->
+  <div class="container">
+    <div class="reasons-titles">
+        <h2>Our Department</h2>    
+    </div><!--reasons-titles-->
+    <div class="row">
+      <div  class="col-md-6">
 
-                        <div class="on-hover hidden-xs">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+        <div class="alert alert-success">
+          <h4><strong>Lab Test Department</strong></h4>
+            <p>The lab at Hospital offers tests covering the full range of medicinal pathology. </p>
+        </div>
 
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+         <div class="alert alert-info">
+          <h4><strong>Dental Department</strong></h4>
+            <p>The Dental Clinic program tremendously affects patients' lives. </p>
+        </div>
 
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>        
-                        </div><!--on-hover hidden-xs-->
+         <div class="alert alert-warning">
+          <h4><strong>Primary Health</strong></h4>
+            <p>Primary healthcare services are provided by general practitioners and nurses in Hospital. </p>
+        </div>
+        
+      </div><!--col-md-8-->  
 
-                  </div><!--reasons-col animate-onscroll fadeIn-->    
-              </div><!--col-md-6-->
+      <div class="col-md-6">
 
-              <div class="col-md-6">
-                  <div class="reasons-col animate-onscroll fadeIn">
-                      <img src="../images/author-image.jpg" alt="">
-                        <div class="reasons-titles">
-                            <h3 class="reasons-title">WE care about others</h3>
-                            <h5 class="reason-subtitle">We are humans</h5>   
-                        </div><!--reasons-titles-->
+        <img src="../images/images-2.jpg" alt="" width="100%">
 
-                        <div class="on-hover hidden-xs">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+      </div>
 
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+    </div><!--row-->  
 
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>                                
-                        </div><!--on-hover hidden-xs-->
+    <div class="row">
+      <div  class="col-md-6">
 
-                  </div><!--reasons-col animate-onscroll fadeIn-->    
-              </div><!--col-md-6-->
+        <div class="alert alert-success">
+          <h4><strong>Pediatrics Department</strong></h4>
+            <p>From that moment your child is born, your goal is to keep them healthy and safe.</p>
+        </div>
 
-        </div><!--row-->        
-      </div><!--container-->
-    </div> <!--section-home home-reasons-->
+         <div class="alert alert-info">
+          <h4><strong>Neurology Department</strong></h4>
+            <p>The Hospital Department of Neurology is one of the biggest on the planet.</p>
+        </div>
+
+         <div class="alert alert-warning">
+          <h4><strong>Gynecology Department</strong></h4>
+            <p>Welcome to the Department of Obstetrics and Gynecology at Hospital Clinic.</p>
+        </div>
+
+      </div><!--col-md-8--> 
+
+      <div class="col-md-6">
+        
+        <img src="../images/department-2.jpg" alt="" width="100%">
+       
+      </div> 
+
+    </div><!--row-->  
+  </div><!--container-->
+
 
     <!-- FOOTER -->
     <footer data-stellar-background-ratio="5">
@@ -181,7 +197,6 @@
                   <div class="col-md-4 col-sm-4">
                       <div class="footer-thumb"> 
                           <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                          <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
 
                           <div class="contact-info">
                               <p><i class="fa fa-phone"></i> 010-070-0170</p>
