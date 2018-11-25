@@ -52,7 +52,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="./about">Overview</a></li>
-                                <li><a href="./about/vission.php">Vission & Mission</a></li>
+                                <li><a href="./about/vision.php">Vision & Mission</a></li>
                             </ul>
                         </li>
 
@@ -137,13 +137,6 @@
                                    <p>The entry of Bentota Hospitals into the state dominated healthcare sector in 1985, saw the public health care system take root in Sri Lanka.</p> 
                                    <p>The launch of the hospital and the overwhelming response it received from the people demonstrated a long felt need for healthcare in a pleasant environment.</p>
                               </div><!--wow fadeInUp-->
-                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                                   <img src="images/author-image.jpg" class="img-responsive" alt="founder">
-                                   <figcaption>
-                                        <h3>Dr. Neil Jackson</h3>
-                                        <p>General Principal</p>
-                                   </figcaption>
-                              </figure>
                          </div><!--about-info-->
                     </div><!--col-md-6 col-sm-6-->                    
                </div><!--row-->
