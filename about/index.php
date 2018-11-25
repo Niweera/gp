@@ -71,8 +71,6 @@
                                     <li><a href="../services/opd.php">OPD Services</a></li>
                                 </ul>
                         </li>
-                         
-                         <li><a href="../contact" class="smoothScroll">Contact Details</a></li>
 
                          <li class="nav-item">
                             <?php
@@ -93,7 +91,7 @@
 
     <!--HEADER IMAGE-->
     <div class="im">
-        <img src="../images/sliderr-1.jpeg" alt="we">
+        <img src="../images/main.jpg" alt="we">
     </div><!--im-->
 
     <!--CONTENT-->
@@ -129,40 +127,40 @@
         </div><!--col-lg-12-->
 
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/1.jpeg" class="thumbnail">
+          <a href="../images/gallary-1.jpg" class="thumbnail">
             <p>Map</p>
-            <img src="../images/1.jpeg" alt="1"/>  
+            <img src="../images/gallary-1.jpg" alt="1"/>  
           </a>
         </div><!--col-lg-3 col-md-4 col-sm-6-->
 
 
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/2.jpeg" class="thumbnail">
+          <a href="../images/gallary-2.jpg" class="thumbnail">
             <p>Map</p>
-            <img src="../images/2.jpeg" alt="1"/>  
+            <img src="../images/gallary-2.jpg" alt="1"/>  
           </a>
         </div><!--col-lg-3 col-md-4 col-sm-6-->
 
 
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/3.jpeg" class="thumbnail">
+          <a href="../images/gallary-3.jpg" class="thumbnail">
             <p>Map</p>
-            <img src="../images/3.jpeg" alt="1"/>  
+            <img src="../images/gallary-3.jpg" alt="1"/>  
           </a>
         </div><!--col-lg-3 col-md-4 col-sm-6-->
 
 
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/4.jpeg" class="thumbnail">
+          <a href="../images/gallary-4.jpg" class="thumbnail">
             <p>Map</p>
-            <img src="../images/4.jpeg" alt="1"/>  
+            <img src="../images/gallary-4.jpg"" alt="1"/>  
           </a>
         </div><!--col-lg-3 col-md-4 col-sm-6-->
 
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/5.jpeg" class="thumbnail">
+          <a href="../images/gallary-5.jpg" class="thumbnail">
             <p>Map</p>
-            <img src="../images/5.jpeg" alt="1"/>  
+            <img src="../images/gallary-5.jpg" alt="1"/>  
           </a>
         </div><!--col-lg-3 col-md-4 col-sm-6-->
 
@@ -232,7 +230,6 @@
             <div class="col-md-4 col-sm-4">
                 <div class="footer-thumb"> 
                     <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                      <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
     
                           <div class="contact-info">
                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
