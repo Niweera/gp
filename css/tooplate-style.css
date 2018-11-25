@@ -467,8 +467,7 @@
     padding-bottom: 150px;
   }
 
-  .profile img,
-  .profile figcaption {
+  .profile img {
     display: inline-block;
     vertical-align: top;
     margin-top: 1em;
@@ -478,9 +477,6 @@
     width: 65px;
     height: 65px;
     margin-right: 1em;
-  }
-  .profile figcaption h3 {
-    margin-top: 0;
   }
 
   #about h6 {
