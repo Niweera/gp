@@ -137,25 +137,23 @@
         <div class="alert alert-success">
           <h4><strong>Lab Test Department</strong></h4>
             <p>The lab at Hospital offers tests covering the full range of medicinal pathology. </p>
-        </div>
+        </div><!--alert alert-success-->
 
          <div class="alert alert-info">
           <h4><strong>Dental Department</strong></h4>
             <p>The Dental Clinic program tremendously affects patients' lives. </p>
-        </div>
+        </div><!--alert alert-info-->
 
          <div class="alert alert-warning">
           <h4><strong>Primary Health</strong></h4>
             <p>Primary healthcare services are provided by general practitioners and nurses in Hospital. </p>
-        </div>
+        </div><!--alert alert-warning-->
         
       </div><!--col-md-8-->  
 
       <div class="col-md-6">
-
-        <img src="../images/images-2.jpg" alt="" width="100%">
-
-      </div>
+        <img src="../images/images-2.jpg" alt="" width="100%" class="img-rounded">
+      </div><!--col-md-6-->
 
     </div><!--row-->  
 
@@ -165,25 +163,23 @@
         <div class="alert alert-success">
           <h4><strong>Pediatrics Department</strong></h4>
             <p>From that moment your child is born, your goal is to keep them healthy and safe.</p>
-        </div>
+        </div><!--alert alert-success-->
 
          <div class="alert alert-info">
           <h4><strong>Neurology Department</strong></h4>
             <p>The Hospital Department of Neurology is one of the biggest on the planet.</p>
-        </div>
+        </div><!--alert alert-info-->
 
          <div class="alert alert-warning">
           <h4><strong>Gynecology Department</strong></h4>
             <p>Welcome to the Department of Obstetrics and Gynecology at Hospital Clinic.</p>
-        </div>
+        </div><!--alert alert-warning-->
 
       </div><!--col-md-8--> 
 
-      <div class="col-md-6">
-        
-        <img src="../images/department-2.jpg" alt="" width="100%">
-       
-      </div> 
+      <div class="col-md-6">        
+        <img src="../images/department-2.jpg" alt="" width="100%" class="img-rounded">       
+      </div><!--col-md-6-->
 
     </div><!--row-->  
   </div><!--container-->
@@ -197,7 +193,6 @@
                   <div class="col-md-4 col-sm-4">
                       <div class="footer-thumb"> 
                           <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-
                           <div class="contact-info">
                               <p><i class="fa fa-phone"></i> 010-070-0170</p>
                               <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
