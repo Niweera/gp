@@ -39,7 +39,7 @@
                   </button>
                    
                   <!-- lOGO TEXT HERE -->
-                  <a href="./" class="navbar-brand"><i class="fa fa-h-square"></i>&nbsp &nbsp Divisional Hospital, Bentota</a>
+                  <a href="../" class="navbar-brand"><i class="fa fa-h-square"></i>&nbsp &nbsp Divisional Hospital, Bentota</a>
               </div><!--navbar-header-->
 
               <!-- MENU LINKS -->
@@ -65,9 +65,7 @@
                                 <li><a href="./opd.php">OPD Services</a></li>
                             </ul>
                       </li>
-                         
-                      <li><a href="../contact" class="smoothScroll">Contact Details</a></li>
-
+        
                       <li class="nav-item">
                           <?php
                               if(!isset($_SESSION['userid'])){
@@ -91,21 +89,17 @@
     
      <!--content area-->
     <div class="container contain-area" id="es-content">
-        
-                <h1 class="inner-page-title"> Clinic Services</h1>
-    
+
+      <h1 class="inner-page-title"> Clinic Services</h1>
 						
-		<p style="text-align: justify;"><span style="font-size: 14pt;">The National Hospital of Sri Lanka is one of its kind and a unique hospital in Sri Lanka in many ways such as being the final referral centre of the country, largest hospital of Sri Lanka and the south East Asia.</span></p>
-<p style="text-align: justify;">It has a bed capacity of 3404 &nbsp;and over 7000 dedicated health staff in providing uninterrupted service to the whole nation. For a single given month more than 5000 Major and Minor surgeries done.</p>
-<p style="text-align: justify;">The National Hospital has 18 well equipped Intensive Care Units and 17 High Dependency Units located at each major care providing sectors such as Surgical Department and Medical Department. There are 19 surgical theatres under operation. While some Operation theatres are dedicated for certain surgical specialities, some are in operation 24 hours per day.</p>
-<p style="text-align: justify;">The National hospital of Sri Lanka hosts the countryâ€™s one and only Neuro-trauma Centre . This Centre provides its unique services 24/7 hours.</p>
-<p style="text-align: justify;">The Accident and Trauma unit in this hospital is the largest of its kind in Sri Lanka, which served immensely during the country's 30 years long war. &nbsp;</p>
-<p style="text-align: justify;">In 2013 the hospital provided care for 240,000 in-ward patients and 2 million out patients and clinic patients. The National Hospital features many Medical sub specialities in Health care and most of these specialities are only available at NHSL. The service recipients of&nbsp;this National Heritage spans across the entire country.</p>
+		    <p style="text-align: justify;"><span style="font-size: 14pt;">The National Hospital of Sri Lanka is one of its kind and a unique hospital in Sri Lanka in many ways such as being the final referral centre of the country, largest hospital of Sri Lanka and the south East Asia.</span></p>
+        <p style="text-align: justify;">It has a bed capacity of 3404 &nbsp;and over 7000 dedicated health staff in providing uninterrupted service to the whole nation. For a single given month more than 5000 Major and Minor surgeries done.</p>
+        <p style="text-align: justify;">The National Hospital has 18 well equipped Intensive Care Units and 17 High Dependency Units located at each major care providing sectors such as Surgical Department and Medical Department. There are 19 surgical theatres under operation. While some Operation theatres are dedicated for certain surgical specialities, some are in operation 24 hours per day.</p>
+        <p style="text-align: justify;">The National hospital of Sri Lanka hosts the countryâ€™s one and only Neuro-trauma Centre . This Centre provides its unique services 24/7 hours.</p>
+        <p style="text-align: justify;">The Accident and Trauma unit in this hospital is the largest of its kind in Sri Lanka, which served immensely during the country's 30 years long war. &nbsp;</p>
+        <p style="text-align: justify;">In 2013 the hospital provided care for 240,000 in-ward patients and 2 million out patients and clinic patients. The National Hospital features many Medical sub specialities in Health care and most of these specialities are only available at NHSL. The service recipients of&nbsp;this National Heritage spans across the entire country.</p>
 
-	
-		
-
-   
+  </div><!--container contain-area--> 
   
     <!-- FOOTER -->
      <footer data-stellar-background-ratio="5">
@@ -115,8 +109,6 @@
                     <div class="col-md-4 col-sm-4">
                          <div class="footer-thumb"> 
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                              <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
-
                               <div class="contact-info">
                                    <p><i class="fa fa-phone"></i> 010-070-0170</p>
                                    <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
