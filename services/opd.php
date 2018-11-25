@@ -39,7 +39,7 @@
                 </button>
                    
                 <!-- lOGO TEXT HERE -->
-                <a href="./" class="navbar-brand"><i class="fa fa-h-square"></i>&nbsp &nbsp Divisional Hospital, Bentota</a>
+                <a href="../" class="navbar-brand"><i class="fa fa-h-square"></i>&nbsp &nbsp Divisional Hospital, Bentota</a>
             </div><!--navbar-header-->
 
             <!-- MENU LINKS -->
@@ -66,8 +66,6 @@
                           </ul>
                     </li>
                          
-                    <li><a href="../contact" class="smoothScroll">Contact Details</a></li>
-
                     <li class="nav-item">
                         <?php
                             if(!isset($_SESSION['userid'])){
@@ -85,19 +83,15 @@
      </section><!--navbar navbar-default navbar-static-top-->
 
     <!--HEADER IMAGE--> 
-    
       <img src="../images/bbb.jpg" alt="we" width="100%" height="320">
     
     
     <!--CONTENT-->
-    <div class="container contain-area" id="es-content">
-        
+    <div class="container contain-area" id="es-content">    
         <h1 class="inner-page-title"> OPD Services</h1>
-    </div>
+    </div><!--container contain-area-->
     
-    <div class="roww">
-       
-        
+    <div class="roww">              
         <div class="col-md-6">
 
             <h5><span style="color: #135cae;"><strong>Room No 1- Medical Examination</strong></span></h5>
@@ -209,8 +203,6 @@
                     <div class="col-md-4 col-sm-4">
                          <div class="footer-thumb"> 
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                              <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
-
                               <div class="contact-info">
                                    <p><i class="fa fa-phone"></i> 010-070-0170</p>
                                    <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
