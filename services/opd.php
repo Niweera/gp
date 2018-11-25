@@ -91,6 +91,11 @@
         <h1 class="inner-page-title"> OPD Services</h1>
     </div><!--container contain-area-->
     
+    <br>
+    <br>
+    <br>
+     <img src="../images/opd.jpg" alt="we" width="100%">
+    
     <div class="roww">              
         <div class="col-md-6">
 
