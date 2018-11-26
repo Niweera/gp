@@ -102,7 +102,7 @@
       </div><!--homeCarousel-->
 
     <!--CONTENT-->
-    <div id="body">
+   <!-- <div id="body">
       <div id="contents">
         <div class="headerr">
           <div class="footer">
@@ -123,7 +123,9 @@
         </div><!--footer-->
       </div><!--headerr-->
     </div><!--contents-->
-  </div><!--body-->
+  </div><!--body--> 
+
+<img src="../images/vsn.jpg" alt="we" width="50%">
 
   <!--FOUNDER-->
 
