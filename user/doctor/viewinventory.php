@@ -39,7 +39,7 @@
 </head>
 <body>
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -93,13 +93,13 @@
                     <input type="text" class="form-control form-control-sm" name="search_text" id="search_text" placeholder="Search for a drug" autocomplete="off" autofocus>
                     <div id='resultbox' class="result"></div>
                 </div>
-                <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2" style="background: url('../../images/Refresh-icon.png');background-size: 40px 45px;height: 45px;width: 42px;margin-top: -7px;"></button></div>
+                <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2" style="background: url('../../images/refresh.png');background-size: 40px 45px;height: 45px;width: 42px;margin-top: -7px;"></button></div><!--change-->
             </div>
             <div id="result"></div>
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <button  class="col-md-2 text-center btn btn-primary btn mb-2" onclick="window.location.href='./drugissue.php'">Update Inventory</button>
+                <button  class="col-md-2 text-center btn btn-info btn mb-2" onclick="window.location.href='./drugissue.php'">Update Inventory</button><!--change-->
                 <div class="col-sm-5"></div>
             </div>
         </div>    

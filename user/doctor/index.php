@@ -27,7 +27,8 @@
 </head>
 <body onload="startTime()">
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<!--<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">-->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -73,7 +74,7 @@
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="container">
-                <img class="border" src="../../sourcefiles/admin.svg" style="width:450px;height:450px" alt="Admin"/>
+                <img class="border" src="../../sourcefiles/doctor (1).svg" style="width:450px;height:450px" alt="Admin"/><!--change-->
             </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -114,7 +115,8 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Edit Profile</h5><hr>
-                                    <a href="./docedit.php" class="btn btn-primary btn-block">Go</a>
+                                    <!--<a href="./docedit.php" class="btn btn-primary btn-block">Go</a>-->
+                                    <a href="./docedit.php" class="btn btn-info btn-block" >Go</a><!--change-->
                                 </div>
                             </div>
                         </div>
@@ -122,7 +124,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Medical Records</h5><hr>
-                                    <a href="./viewrecords.php" class="btn btn-primary btn-block">View</a>
+                                    <a href="./viewrecords.php" class="btn btn-info btn-block">View</a><!--change-->
                                 </div>
                             </div>
                         </div>
@@ -130,7 +132,7 @@
                             <div class="card mt-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Prescription Sheet</h5><hr>
-                                    <a href="./dcprescription.php" class="btn btn-primary btn-block">Diabetes Clinic</a>
+                                    <a href="./dcprescription.php" class="btn btn-info btn-block">Diabetes Clinic</a><!--change-->
                                 </div>
                             </div>
                         </div>
@@ -138,7 +140,7 @@
                             <div class="card mt-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Prescription Sheet</h5><hr>
-                                    <a href="./mcprescription.php" class="btn btn-primary btn-block">Medical Clinic</a>
+                                    <a href="./mcprescription.php" class="btn btn-info btn-block">Medical Clinic</a><!--change-->
                                 </div>
                             </div>
                         </div>
