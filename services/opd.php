@@ -91,114 +91,31 @@
         <h1 class="inner-page-title"> OPD Services</h1>
     </div><!--container contain-area-->
     
-    <br>
-    <br>
 
-     <img src="../images/opd.jpg" alt="we" width="100%">
+    <div class="col-md-6">
+        <img src="../images/opd1.jpg" alt="" width="70%" class="img-rounded">
+      </div><!--col-md-6-->
+		
+    <div align="center" itemprop="articleBody">
+		<div  class="row">
+<div  class="col-md-6">
+<h3><span style="color: #135cae;"><strong>Medical Clinic</strong></span></h3>
+<p>On Every Thursdays from 8.0am to 12.00noon  &nbsp; this medical service is provided to the patients. &nbsp;</p>
+<hr id="mce-hr-marker" />
+<h3><span style="color: #135cae;"><strong>&nbsp;Diabetes Clinic</strong></span></h3>
+<p>Except on 4th week monday, every mondays from 8.00 am to 12.00 noon this clinic will be in operation.</p>
+<hr id="mce-hr-marker" />
+
     
-    <div class="roww">              
-        <div class="col-md-6">
+            </div>
+                                    </div>
+                        </div>
+                                </div>
+        </div>
+        
+ 
 
-            <h5><span style="color: #135cae;"><strong>Room No 1- Medical Examination</strong></span></h5>
-                <p>Medical examination for special occasions, local and&nbsp; foreign employment seekers are done at OPD Room 1.&nbsp;</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>&nbsp;Room No 2- Anti Rabies Treatment Unit</strong></span></h5>
-                <p>Anti Rabies treatment clinic is conducted on every working day from 8.00am to 6.00pm and on Sunday and Public Holidays till 4pm.</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>&nbsp;Room No 3- Injection Room</strong></span></h5>
-                <p>All the injectable at the OPD level are given here</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>&nbsp;Room No 5- Dressing Room</strong></span></h5>
-                <p>All the dressing work of old wounds, suture removal are done here.</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>&nbsp;Room No 6-Patient Registration Room</strong></span></h5>
-                <p>All the OPD Patient registration and forwarding of OPD registrations to the relevant sections are done here</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>Room No 7-OPD&nbsp; Xray Room</strong></span></h5>
-                <p>OPD Xrays are taken here</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>Room No 10- OPD ECG Room</strong></span></h5>
-                <p>OPD ECGs are done in this room based on the medical recommendations of OPD Medical Officers.</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>Room No 11- Health Education Unit</strong></span></h5>
-                <p>This room host the Health education Unit of the NHSL which is operating from 8.00 am to 4.00pm on working days and 8.00 am to 12noon on Saturdays. Closed on Sundays and Public Holidays.</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>Room No 12,13- Urine Test &amp; Bool Collection Rooms</strong></span></h5>
-                <p>All the OPD based Urine and Blood sample testing are done at this room.</p>
-                <hr id="mce-hr-marker" />
-
-            <h5><span style="color: #135cae;"><strong>Room No 15- Out Patient Consultation Room</strong></span></h5>
-                <p>This room hosts the OPD medical consultation&nbsp; and when you come to obtain OPD treatment this is the place you will be consulted by OPD medical officers and prescribe the relevant treatments/investigations. This is under operation from 8.00 am to 4.00pm on Week days and Saturday &amp; Sundays from 8.00am to 12.00 noon.</p>
-                <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 16- Patient admission Room</strong></span></h5>
-                <p>The patients who needs inward medical or surgical treatment will be admitted t the wards from this room. This service is 24 hours service.</p>
-                <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 18- Surgical Clinic</strong></span></h5>
-                <p>In this room VS OPD will conduct a clinic for the OPD patients who underwent surgeries at OPD Theatre from 8.00 am to 12.00 noon and 2.00pm to 4.00pm on week days.</p>
-
-      </div><!--col-md-6-->
-
-      <div class="col-md-6">
-
-          <h5><span style="color: #135cae;"><strong>Room No 21- Leprosy Clinic</strong></span></h5>
-              <p>For OPD and Inward patients with Leprosy this clinic is conducted on Week days from 8.00am to 4.00pm.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 22- Psychiatric Clinic</strong></span></h5>
-              <p>Except on Sundays every day from 8.00 am to 12pm this clinic is in operation for the psychiatric patients who have obtained treatments from Angoda National Institute of Mental Health. You can obtain the services of Consultant psychiatrists here.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 34- Renal &amp; Transplant Clinic</strong></span></h5>
-              <p>This clinic is under operation on very week day from 8.00 am to 12.00 noon and 2.00pm to 4pm except on Fridays for Kidney transplanted patients and renal disease patients. In addition to this a surgical clinic too is hosted here.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 36- Dermatology Clinic</strong></span></h5>
-              <p>Except on Wednesdays every week day from 8.00 am to 12.00 noon this clinic will be in operation.<br /> In additionally on every&nbsp; Tuesday and Thursdays a special&nbsp; dermatology clinic is conducted from 1.00 pm to 4.00pm.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 40- Psychological Counselling Room</strong></span></h5>
-              <p>On Every Monday from 2.00pm to 4.00pm this counselling service is provided, and if a patient needs further treatments or follow up will be directed to Room 22 &amp; 45.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 41- Diabetic Clinic</strong></span></h5>
-              <p>This clinic is in operation on Monday to Friday from 7.30am to 4.00pm, and on Saturday 8.00am to 12pm. A specialist Endocrinologist is available at this clinic for consultation.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room&nbsp; No 43 &amp; 44- OPD Theatre</strong></span></h5>
-              <p>In this OPD theatre all the surgeries which can be treated at the OPD level is being carried out by a Consultant Surgeon.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Room No 45- VP OPD Room</strong></span></h5>
-              <p>On every week day from 8.00am to 4.00pm this clinic is conducted and a consultant physician is available for the service. Additional Genito Unrinay clinic is also in parallel operation in this room.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Medical Nutrition Clinic</strong></span></h5>
-              <p>A medical nutrition clinic is conducted here from 8.00 am to 4.00pm for the inward patients who needs dietary advice.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>Emergency Treatment Unit</strong></span></h5>
-              <p>For the patients who needs Emergency medical treatments this unit provides its service in 24 hours per day.</p>
-              <hr id="mce-hr-marker" />
-
-          <h5><span style="color: #135cae;"><strong>OPD Pharmacy&nbsp;</strong></span></h5>
-              <p>For all the OPD&nbsp; patients who needs drugs will be issued from this room.</p>
-
-        <h5><span style="color: #135cae;"><strong>&nbsp;</strong></span></h5>
-
-      </div><!--col-md-6-->
-
-  </div><!--roww-->
-
+  
 
     <!-- FOOTER -->
      <footer data-stellar-background-ratio="5">
