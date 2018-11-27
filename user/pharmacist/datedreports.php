@@ -13,7 +13,7 @@
 <?php
 if (null !==(filter_input(INPUT_POST, 'submit'))){
     $reportid = $_POST['reportid'];
-    $reportid = substr($reportid, -1);
+    $reportid = substr($reportid, 2);
     $sql = "SELECT dispenser.name, pharmdisp.createtime FROM pharmdisp INNER JOIN dispenser ON dispenser.dispid = pharmdisp.dispid WHERE reportid = '$reportid';";
     $result = mysqli_query($conn,$sql);
     $queryResult=mysqli_num_rows($result);
