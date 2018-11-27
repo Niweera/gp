@@ -128,6 +128,9 @@
 
 <br>
 <?php
+    include '../../real_footer.php';
     include '../../footer.php';
+?>
+<?php
     mysqli_close($conn);  
 ?>

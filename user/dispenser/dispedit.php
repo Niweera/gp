@@ -141,12 +141,10 @@
 
 
     <br>
-<?php
+    <?php
+    include '../../real_footer.php';
     include '../../footer.php';
 ?>
-</body>
-
-</html>
 
 
 <?php
