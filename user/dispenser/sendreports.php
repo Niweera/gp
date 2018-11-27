@@ -109,7 +109,7 @@
                     $pharmaname = $row['name'];
                     $createtime = $row['createtime'];
                     $readtime = $row['readtime'];
-                    echo "<p>The drug request report sent on ".$createtime." has acknowledged by ".$pharmaname." on ".$readtime.".</p>";
+                    echo "<p>The drug request report (Report ID: <b>DR".$reportid."</b>) sent on <b>".$createtime."</b> has acknowledged by <b>".$pharmaname."</b> on <b>".$readtime."</b>.</p>";
                 }
             }
             echo "</div><br>";
