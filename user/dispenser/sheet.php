@@ -12,6 +12,15 @@
 ?>
 <?php
 if (null !==(filter_input(INPUT_POST, 'submit'))){
+    $sqlidcount = "SELECT MAX(reportid) as reportid FROM pharmdisp;";
+    $resultcount=mysqli_query($conn,$sqlidcount);
+    $queryResultCount=mysqli_num_rows($resultcount);
+    if ($queryResultCount == 1){
+        $row=mysqli_fetch_assoc($resultcount);
+        $newReportID = $row['reportid'] + 1;
+    }else{
+        $newReportID = 1;
+    }
     $dispid = $_SESSION['userid'];
     $sql = "SELECT drugid FROM drug;";
     $result=mysqli_query($conn,$sql);
@@ -22,7 +31,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             $d = filter_input(INPUT_POST,$drugid."d");
             $drugcount=mysqli_real_escape_string($conn,$d);
             if ($d != ""){
-                $sql0 = "INSERT INTO pharmdisp (dispid, drugid, count) VALUES ('$dispid','$drugid','$drugcount');";
+                $sql0 = "INSERT INTO pharmdisp (dispid, drugid, count,reportid) VALUES ('$dispid','$drugid','$drugcount','$newReportID');";
                 $mysqli_query = mysqli_query($conn, $sql0);
             }
         }
@@ -70,6 +79,9 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             <div class="row mt-3">
                 <div class="col-md-6">
                     <label class="h4"><strong>Dispenser: </strong><?php echo $_SESSION['name']; ?></label>
+                </div>
+                <div class="col-md-6">
+                    <label class="h4"><strong>Report ID: </strong><?php echo "DR".$newReportID; ?></label>
                 </div>
             </div>
             <hr>

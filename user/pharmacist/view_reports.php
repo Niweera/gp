@@ -9,7 +9,7 @@ if(!isset($_SESSION['userid'])){
             header('location: ../../login');        
         }
     }
-$sql = "SELECT DISTINCT(createtime) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;";
+$sql = "SELECT DISTINCT(reportid) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;";
 $result = mysqli_query($conn,$sql);
 $queryResult=mysqli_num_rows($result);
 if ($queryResult > 0){
@@ -86,9 +86,9 @@ if ($queryResult > 0){
 <br>
     <?php
     if (null !==(filter_input(INPUT_POST, 'submit'))){
-        $createtime = $_POST['createtime'];
+        $reportID = $_POST['reportid'];
         $pharmaid = $_SESSION['userid'];
-        $sqlupdate = "UPDATE pharmdisp SET readtime = CURRENT_TIMESTAMP(), pharmaid = '$pharmaid' WHERE createtime = '$createtime';";
+        $sqlupdate = "UPDATE pharmdisp SET readtime = CURRENT_TIMESTAMP(), pharmaid = '$pharmaid' WHERE reportid = '$reportID';";
         $resultupdate = mysqli_query($conn,$sqlupdate);
         if ($resultupdate){
             $_SESSION['report_status'] = 2;
@@ -124,9 +124,9 @@ if ($queryResult > 0){
         <form action="./datedreports.php" method="post">
             <div class="form-group row">
                 <div class="col-sm-2"></div>
-                <label for="date" class="col-sm-3 col-form-label"><h5>Search received date:</h5></label>
+                <label for="reportid" class="col-sm-3 col-form-label"><h5>Please enter Report ID:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
-                    <input type="text" class="form-control form-control-sm" name="createtime" id="date" placeholder="Enter date YYYY-MM-DD" autocomplete="off" required autofocus>
+                    <input type="text" class="form-control form-control-sm" name="reportid" id="reportid" placeholder="Enter only the Report ID number" autocomplete="off" required autofocus>
                     <div id='resultbox' class="result"></div>
                 </div>
                 <div class="col-sm-3"></div>

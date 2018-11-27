@@ -11,19 +11,20 @@
         }
 ?>
 <?php
-$sql = "SELECT DISTINCT(createtime) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;";
+$sql = "SELECT DISTINCT(reportid) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;";
 $result = mysqli_query($conn,$sql);
 $queryResult=mysqli_num_rows($result);
 if ($queryResult > 0){
     $row=mysqli_fetch_assoc($result);
-    $createtime = $row['createtime'];
-    $time_array = preg_split('/\s+/', $createtime, -1, PREG_SPLIT_NO_EMPTY);
-    $createdate = $time_array[0];
-    $create_time = $time_array[1];
-    $sqlpharm = "SELECT dispenser.name FROM pharmdisp INNER JOIN dispenser ON dispenser.dispid = pharmdisp.dispid WHERE createtime = '$createtime';";
+    $reportID = $row['reportid'];
+    $sqlpharm = "SELECT dispenser.name,pharmdisp.createtime FROM pharmdisp INNER JOIN dispenser ON dispenser.dispid = pharmdisp.dispid WHERE reportid = '$reportID' LIMIT 1;";
     $resultpharm = mysqli_query($conn,$sqlpharm);
     $rowpharm = mysqli_fetch_assoc($resultpharm);
     $dispname = $rowpharm['name'];
+    $createtime = $rowpharm['createtime'];
+    $time_array = preg_split('/\s+/', $createtime, -1, PREG_SPLIT_NO_EMPTY);
+    $createdate = $time_array[0];
+    $create_time = $time_array[1];
 ?>
 
 <!DOCTYPE html>
@@ -122,6 +123,9 @@ if ($queryResult > 0){
                         <div class="col-md-6">
                             <label class="h4"><strong>Dispenser: </strong><?php echo $dispname; ?></label>
                         </div>
+                        <div class="col-md-6">
+                            <label class="h4"><strong>Report ID: </strong><?php echo "DR".$reportID; ?></label>
+                        </div>
                     </div>
                     <hr>
                     <h5>The following drugs and their respective counts are hereby requested.</h5>
@@ -135,7 +139,7 @@ if ($queryResult > 0){
                         </thead>
                         <tbody>
                         <?php
-                            $sql0 = "SELECT pharmdisp.dispid,pharmdisp.createtime, pharmdisp.count, drug.drugname FROM pharmdisp INNER JOIN drug ON pharmdisp.drugid = drug.drugid WHERE createtime = '$createtime';";
+                            $sql0 = "SELECT pharmdisp.dispid,pharmdisp.createtime, pharmdisp.count, drug.drugname FROM pharmdisp INNER JOIN drug ON pharmdisp.drugid = drug.drugid WHERE reportid = '$reportID';";
                             $result0 = mysqli_query($conn,$sql0);
                             $queryResult0=mysqli_num_rows($result0);
                             if ($queryResult0 > 0){
@@ -157,7 +161,7 @@ if ($queryResult > 0){
             <div class="row">
                 <div class="col-md-5"></div>
                 <div class="col-md-2">
-                    <input type="hidden" value="<?php echo $createtime; ?>" name="createtime">
+                    <input type="hidden" value="<?php echo $reportID; ?>" name="reportid">
                     <input type="submit" value="Acknowledge" class="btn btn-primary btn-lg mb-2" name="submit">
                 </div>
                 <div class="col-md-5"></div>

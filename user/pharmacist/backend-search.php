@@ -10,8 +10,7 @@ if($conn === false){
  
 if(isset($_REQUEST["term"])){
     // Prepare a select statement
-    
-    $sql = "SELECT DISTINCT (createtime) AS createtime FROM pharmdisp WHERE createtime LIKE ? LIMIT 7";
+    $sql = "SELECT DISTINCT(reportid) FROM pharmdisp WHERE reportid LIKE ? LIMIT 7";
     
     if($stmt = mysqli_prepare($conn, $sql)){
         // Bind variables to the prepared statement as parameters
@@ -28,7 +27,7 @@ if(isset($_REQUEST["term"])){
             if(mysqli_num_rows($result) > 0){
                 // Fetch result rows as an associative array
                 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    echo "<p>" . $row["createtime"] . "</p>";
+                    echo "<p>DR" . $row["reportid"] . "</p>";
                 }
             } else{
                 echo "<p>No matches found</p>";
