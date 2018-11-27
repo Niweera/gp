@@ -61,7 +61,7 @@
 </head>
 <body>
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -180,10 +180,10 @@
                 <div class="col-lg-4">
                 </div>
                 <div class="col-lg-2">
-                    <input type="submit" value="Update Profile" class="btn btn-primary btn-lg" name="submit">  
-                </div>
+                    <input type="submit" value="Update Profile" class="btn btn-info btn-lg" name="submit">  
+                </div><!--change-->
                 <div class="col-lg-2">
-                    <input type="button" value="Go Back" class="btn btn-primary btn-lg" onclick="window.location.href = './index.php';"> 
+                    <input type="button" value="Go Back" class="btn btn-info btn-lg" onclick="window.location.href = './index.php';"><!--change--> 
                 </div>
                 <div class="col-lg-4">
                 </div>  
