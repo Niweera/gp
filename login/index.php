@@ -172,7 +172,7 @@
                     <a href="reset.php">Forgot password?</a>
                 </div><!--forgot-->
 
-                <button type="submit" class="btn btn-primary" name="submit">Login</button>
+                <button type="submit" class="btn btn-info btn-block" name="submit">Login</button><!--change-->
 
             </form>
 
