@@ -35,7 +35,7 @@
 </head>
 <body>
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -88,7 +88,7 @@
                     <div class="form-group row">
                         <label for="reg" class="col-sm-4 col-form-label"><h5>Already registered in another clinic?</h5></label>
                         <div class="col-lg-8">
-                            <button  class="text-center btn btn-primary btn mb-2" onclick="window.location.href='./furtherregister.php'">Register for another clinic</button>
+                            <button  class="text-center btn btn-info btn mb-2" onclick="window.location.href='./furtherregister.php'">Register for another clinic</button><!--change-->
                         </div>
                     </div>
                     <hr>
@@ -143,7 +143,7 @@
                      
                 </div>
             </div>
-            <center> <input type="submit" value="Register" class="btn btn-primary btn-lg" name="submit" id="submitButton"> </center>   
+            <center> <input type="submit" value="Register" class="btn btn-info btn-lg" name="submit" id="submitButton"> </center><!--change-->   
             <br>
         </div>
         <br>
