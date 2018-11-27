@@ -6,7 +6,7 @@
         exit;
         }else{
             if ($_SESSION['flag'] != 2){
-                header('location: ../../login');	 	
+                header('location: ../../login');        
             }
         }
 ?>
@@ -39,7 +39,7 @@
 </head>
 <body>
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -116,8 +116,8 @@
         ?>
         <div class="container border pt-4 bg-light rounded">
             <table class="table">
-                <thead class="thead-dark">
-                    <tr>
+                <thead>
+                    <tr class="table-primary"><!--change-->
                     <th scope="col">Name of The Drug</th>
                     <th scope="col">Current Drug Count</th>
                     <th scope="col">Request Drug Count</th>
@@ -147,7 +147,7 @@
                 ?>
                     <tr>
                         <td colspan="4" style="text-align:center">
-                            <input type="submit" value="Send Request Report" class="btn btn-primary btn-lg" name="submit">
+                            <input type="submit" value="Send Request Report" class="btn btn-info btn-lg" name="submit"><!--change-->
                         </td>
                     </tr>
                 </tbody>

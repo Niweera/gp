@@ -6,7 +6,7 @@
         exit;
         }else{
             if ($_SESSION['flag'] != 2){
-                header('location: ../../login');	 	
+                header('location: ../../login');        
             }
         }
 ?>
@@ -40,7 +40,7 @@
 </head>
 <body>
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -111,7 +111,7 @@
             <input type="hidden" name="dispid" value="<?php echo $_SESSION['userid']; ?>">
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <button id="updateButton" class="col-md-2 text-center btn btn-primary btn mb-2">Update Inventory</button>
+                <button id="updateButton" class="col-md-2 text-center btn btn-info btn mb-2">Update Inventory</button><!--change-->
                 <div class="col-sm-5"></div>
             </div>
         </form>
@@ -144,6 +144,7 @@
         mysqli_close($conn);
         ?>
     </div>    
+        
         
         
     
