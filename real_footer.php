@@ -54,4 +54,4 @@
         </div>	
     </div>
 </section>
-    <!--End of the footer codes-->
+<!--End of the footer codes-->
