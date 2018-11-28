@@ -5,13 +5,13 @@ if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
 	$query = "
-	SELECT drug.drugname,sysmsg.createtime,sysmsg.readtime FROM sysmsg INNER JOIN drug ON drug.drugid = sysmsg.message WHERE sysmsg.createtime LIKE '%".$search."%';
+	SELECT drug.drugname,sysmsg.createtime,sysmsg.readtime FROM sysmsg INNER JOIN drug ON drug.drugid = sysmsg.message WHERE sysmsg.createtime LIKE '%".$search."% ORDER BY sysmsg.createtime DESC';
 	";
 }    
 else
 {
 	$query = "
-	SELECT drug.drugname,sysmsg.createtime,sysmsg.readtime FROM sysmsg INNER JOIN drug ON drug.drugid = sysmsg.message WHERE readtime IS NOT NULL;";
+	SELECT drug.drugname,sysmsg.createtime,sysmsg.readtime FROM sysmsg INNER JOIN drug ON drug.drugid = sysmsg.message WHERE readtime IS NOT NULL ORDER BY sysmsg.createtime DESC;";
 }
 $result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)

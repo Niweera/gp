@@ -126,7 +126,7 @@
                 </thead>
                 <tbody>
                 <?php
-                    $sql = "SELECT * FROM drug;";
+                    $sql = "SELECT * FROM drug ORDER BY count ASC;";
                     $result=mysqli_query($conn,$sql);
                     $queryResult=mysqli_num_rows($result);
                     if ($queryResult > 0){
@@ -134,8 +134,13 @@
                             $drugid = $row['drugid'];
                             $drugname = $row['drugname'];
                             $drugcount = $row['count'];
+                            if ($drugcount < 500){
+                                $dangerColor = "#FF0000";
+                            }else{
+                                $dangerColor = "black";
+                            }
                             echo "<tr>";
-                            echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
+                            echo "<th style=\"width: 40.00%;color:".$dangerColor."\" scope=\"row\">".$drugname."</th>";  
                             echo "<td style=\"width: 30.00%\">";
                             echo $drugcount;
                             echo "</td>";
