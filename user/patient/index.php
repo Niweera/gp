@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="container">
-                <img class="border" src="../../sourcefiles/patient.svg" style="width:450px;height:450px" alt="Admin"/><!--change-->
+                <img class="border" src=<?php echo returnImage(); ?> style="width:450px;height:450px" alt="Admin"/><!--change-->
             </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -130,5 +130,23 @@
     include '../../footer.php';
 ?>
 <?php
-    mysqli_close($conn);  
+    function returnImage() {
+        include '../../dbconf/dbh.php';
+        $clinicno = $_SESSION['userid'];
+        $sql = "SELECT gender FROM patient WHERE clinicno = '$clinicno';";
+        $query = mysqli_query($conn,$sql);
+        $queryResult = mysqli_num_rows($query);
+        if ($queryResult == 1){
+            $row = mysqli_fetch_array($query);
+            $gender =  $row['gender'];
+            if ($gender == 0){
+                return "../../sourcefiles/patientfemale.svg";
+            }else{
+                return "../../sourcefiles/patientmale.svg";
+            }
+        }else{
+            return "../../sourcefiles/patientmale.svg";
+        }
+    }
+    mysqli_close($conn);
 ?>
