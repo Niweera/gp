@@ -46,6 +46,15 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        function printContent(el){
+            var restorepage = document.body.innerHTML;
+            var printcontent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printcontent;
+            window.print();
+            document.body.innerHTML = restorepage;
+        }
+    </script>
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -163,11 +172,14 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             </div>
         </div>
         <div class="form-group row mb-5">
-            <div class="col-sm-5"></div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2">
+                <button id="printbutton" class="btn btn-primary btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
+            </div>
             <div class="col-sm-2">
                 <button  class="btn btn-primary btn-lg mb-2" onclick="window.location.href = './index.php';">Home</button>
             </div>
-            <div class="col-sm-5"></div>
+            <div class="col-sm-4"></div>
         </div>           
     </div>
 <br>

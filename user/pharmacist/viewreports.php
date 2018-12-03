@@ -41,6 +41,15 @@ if ($queryResult > 0){
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        function printContent(el){
+            var restorepage = document.body.innerHTML;
+            var printcontent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printcontent;
+            window.print();
+            document.body.innerHTML = restorepage;
+        }
+    </script>
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -159,12 +168,15 @@ if ($queryResult > 0){
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2">
+                    <button id="printbutton" class="btn btn-primary btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
+                </div>
                 <div class="col-md-2">
                     <input type="hidden" value="<?php echo $reportID; ?>" name="reportid">
                     <input type="submit" value="Acknowledge" class="btn btn-primary btn-lg mb-2" name="submit">
                 </div>
-                <div class="col-md-5"></div>
+                <div class="col-md-4"></div>
             </div>               
         </form>
     </div>
