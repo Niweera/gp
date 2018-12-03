@@ -18,6 +18,12 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     $result0 = mysqli_query($conn,$sql0);
     $queryResult0 = mysqli_num_rows($result0);
     if ($queryResult0 > 0){
+        date_default_timezone_set("Asia/Colombo");
+        $today = date("Y-m-d");
+        $sql0 = "SELECT drug.drugname, prescription.drugid, prescription.slmcid, prescription.frequency, prescription.dose, prescription.duration FROM prescription INNER JOIN drug ON prescription.drugid = drug.drugid WHERE date LIKE '".$today."%' AND clinicno = '".$clinicno."';";
+        $result0 = mysqli_query($conn,$sql0);
+        $queryResult0=mysqli_num_rows($result0);
+        if ($queryResult0 > 0){
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +54,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 </head>
 <body onload="showUser(document.getElementById('strval').value);">
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;">
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -102,84 +108,72 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         <form name="doclog" action="./issuedrug.php"  method="post">
             <div class="container pt-4 bg-light rounded mt-3">
                 <div id="txtHint"></div>
-                <?php
-                            date_default_timezone_set("Asia/Colombo");
-                            $today = date("Y-m-d");
-                            $sql0 = "SELECT drug.drugname, prescription.drugid, prescription.slmcid, prescription.frequency, prescription.dose, prescription.duration FROM prescription INNER JOIN drug ON prescription.drugid = drug.drugid WHERE date LIKE '".$today."%' AND clinicno = '".$clinicno."';";
-                            $result0 = mysqli_query($conn,$sql0);
-                            $queryResult0=mysqli_num_rows($result0);
-                            if ($queryResult0 > 0){
-                                echo "<br>
-                                <table class=\"table\">
-                                        <thead class=\"thead-dark\">
-                                            <tr>
-                                            <th scope=\"col\">Name of The Drug</th>
-                                            <th scope=\"col\">Dose</th>
-                                            <th scope=\"col\">Frequency</th>
-                                            <th scope=\"col\">Duration</th>
-                                            <th scope=\"col\">Drug Count</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                ";
-                                while ($row = mysqli_fetch_array($result0)){
-                                    $slmcid = $row['slmcid'];
-                                    $drugname = $row['drugname'];
-                                    $drugid = $row['drugid'];
-                                    $dose = $row['dose'];
-                                    $frequency = $row['frequency'];
-                                    $duration = $row['duration'];
+                <?php                            
+                    echo "<br>
+                    <table class=\"table\">
+                            <thead class=\"thead-dark\">
+                                <tr>
+                                <th scope=\"col\">Name of The Drug</th>
+                                <th scope=\"col\">Dose</th>
+                                <th scope=\"col\">Frequency</th>
+                                <th scope=\"col\">Duration</th>
+                                <th scope=\"col\">Drug Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    ";
+                    while ($row = mysqli_fetch_array($result0)){
+                        $slmcid = $row['slmcid'];
+                        $drugname = $row['drugname'];
+                        $drugid = $row['drugid'];
+                        $dose = $row['dose'];
+                        $frequency = $row['frequency'];
+                        $duration = $row['duration'];
 
-                                    if ($frequency == "BD"){
-                                        $freq = 2;
-                                    }elseif ($frequency == "TDS"){
-                                        $freq = 3;
-                                    }else{
-                                        $freq = 1;
-                                    }
+                        if ($frequency == "BD"){
+                            $freq = 2;
+                        }elseif ($frequency == "TDS"){
+                            $freq = 3;
+                        }else{
+                            $freq = 1;
+                        }
 
-                                    if ($duration == "4 Weeks"){
-                                        $dur = 28;
-                                    }elseif ($duration == "2 Weeks"){
-                                        $dur = 14;
-                                    }else{
-                                        $dur = 7;
-                                    }
+                        if ($duration == "4 Weeks"){
+                            $dur = 28;
+                        }elseif ($duration == "2 Weeks"){
+                            $dur = 14;
+                        }else{
+                            $dur = 7;
+                        }
 
-                                    $drugCount = $freq * $dur;
-                                    
-                                    echo "<tr>";
-                                    echo "<th style=\"width: 25.00%\" scope=\"row\">".$drugname."</th>";  
-                                    echo "<td style=\"width: 20.00%\">";
-                                    echo "<div class=\"row\">";
-                                    echo "<div class=\"col-md-8\">";
-                                    echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$dose.">";
-                                    echo "</div>";
-                                    echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
-                                    echo "<td style=\"width: 20.00%\">";
-                                    echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$frequency.">";
-                                    echo "</td>";
-                                    echo "<td style=\"width: 20.00%\">";
-                                    echo "<p class=\"form-control form-control-sm\">".$duration."</p>";
-                                    echo "</td>";
-                                    echo "<td style=\"width: 15.00%\">";
-                                    echo "<p class=\"form-control form-control-sm\">".$drugCount."</p>";
-                                    echo "</td>";
-                                    echo "</tr>";
-
-                                    $drugArray[$drugid] = $drugCount;
-
-                                }
-                                echo "</tbody>
-                                    </table>";
-                                
-                                $_SESSION['drugarray'] = $drugArray;
-                            }else{
-                                echo "<script>alert('Patient has no prescription records for today!');window.location.href = './drugissue.php';</script>";  
-                            }
-
+                        $drugCount = $freq * $dur;
                         
+                        echo "<tr>";
+                        echo "<th style=\"width: 25.00%\" scope=\"row\">".$drugname."</th>";  
+                        echo "<td style=\"width: 20.00%\">";
+                        echo "<div class=\"row\">";
+                        echo "<div class=\"col-md-8\">";
+                        echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$dose.">";
+                        echo "</div>";
+                        echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
+                        echo "<td style=\"width: 20.00%\">";
+                        echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$frequency.">";
+                        echo "</td>";
+                        echo "<td style=\"width: 20.00%\">";
+                        echo "<p class=\"form-control form-control-sm\">".$duration."</p>";
+                        echo "</td>";
+                        echo "<td style=\"width: 15.00%\">";
+                        echo "<p class=\"form-control form-control-sm\">".$drugCount."</p>";
+                        echo "</td>";
+                        echo "</tr>";
 
+                        $drugArray[$drugid] = $drugCount;
+
+                    }
+                    echo "</tbody>
+                        </table>";
+                    
+                    $_SESSION['drugarray'] = $drugArray;                                                
                 ?>
                 <br>
             
@@ -198,63 +192,9 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         </div>
     </div>
 <br>
-<!--Footer for the website-->
-<section id="footer">
-		<div class="container">
-			<div class="row text-center text-xs-center text-sm-left text-md-left">
-				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				</hr>
-			</div>	
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                <p>Copyright &copy 2018 Divisional Hospital of Bentota. <span class="h6">&copy All right Reserved.</span><br />Developed by Group 16 of University of Colombo School of Computing.</p>
-					
-				</div>
-				</hr>
-			</div>	
-		</div>
-	</section>
-    <!--End of the footer codes-->
+<?php
+    include '../../real_footer.php';
+?>
     
     <!--JS files needed for bootstrap to work-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -265,6 +205,9 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 
 
 <?php 
+        }else{
+            echo "<script>alert('Patient has no prescription records for today!');window.location.href = './drugissue.php';</script>";  
+        }
     }else{
         echo "<script>alert('Patient is not valid! Check the Patient ID and enter agian.');window.location.href = './drugissue.php';</script>";  
     }

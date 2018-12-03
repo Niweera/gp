@@ -39,7 +39,7 @@
 </head>
 <body>
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;">
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -107,7 +107,7 @@
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <input type="submit" value="Enter Patient ID" class="col-md-2 text-center btn btn-primary btn" name="submit">
+                <input type="submit" value="Enter Patient ID" class="col-md-2 text-center btn btn-info btn-block" name="submit">
                 <div class="col-sm-5"></div>
             </div>
         </div>    

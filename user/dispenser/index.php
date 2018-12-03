@@ -81,21 +81,21 @@
 <!-- Start of the body content -->
 <div class="container">
     <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="container">
-                <img class="border" src="../../sourcefiles/dispenser-1.svg" style="width:450px;height:450px" alt="Admin"/>
+                <img class="border" src="../../sourcefiles/dispenser-1.svg" style="width:266px;height:266px" alt="Dispenser"/>
             </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="container border">
-                    <p class="display-4">Welcome,<br> <?php echo $_SESSION['name']; ?>.</p>
-                    <h1>What would you like to do today?</h1>
-                    <h2>Today is:</h2>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div class="container border pb-3">
+                    <p class="display-4"><strong>Welcome, <?php echo $_SESSION['name']; ?>.</strong></p>
+                    <h1>What would you like to do today?</h1><br>
+                    <h2>Today is:<br><span class="h3">
                     <?php 
                         date_default_timezone_set("Asia/Colombo");
-                        echo "<p style=\"font-size:38px;margin:0px\">" .date("l").","." ".date("d/m/Y")."</p>";
-                    ?>
-                    <p class="display-4" id="time"></p>
+                        echo date("l").","." ".date("d/m/Y");
+                    ?></span>
+                    <span class="h3" id="time"></span></h2>
             </div>
         </div>
     </div>

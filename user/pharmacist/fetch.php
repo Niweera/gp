@@ -5,7 +5,7 @@ if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
 	$query = "
-	SELECT drug.drugname, drug.count, dispenser.name,drugupdate.timestamp FROM drug LEFT JOIN drugupdate ON drug.drugid = drugupdate.drugid LEFT JOIN dispenser ON drugupdate.dispid = dispenser.dispid WHERE drugname LIKE '%".$search."%';
+	SELECT drug.drugname, drug.count, dispenser.name,drugupdate.timestamp FROM drug LEFT JOIN drugupdate ON drug.drugid = drugupdate.drugid LEFT JOIN dispenser ON drugupdate.dispid = dispenser.dispid WHERE drugname LIKE '%".$search."%' ORDER BY drug.count ASC;
 	";
 }    
 else
@@ -17,7 +17,7 @@ else
 			ON drug.drugid = drugupdate.drugid
 		LEFT JOIN dispenser
 			ON drugupdate.dispid = dispenser.dispid
-	;";
+	ORDER BY drug.count ASC;";
 }
 $result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)
@@ -31,15 +31,21 @@ if(mysqli_num_rows($result) > 0)
 							<th>Updated By</th>
 						</tr>';
 	while($row = mysqli_fetch_array($result))
-	{
-		$output .= '
+	{	
+		$drugcount = $row['count'];
+		if ($drugcount < 500){
+			$dangerColor = "#FF0000";
+		}else{
+			$dangerColor = "black";
+		} 
+		$output .= "
 			<tr>
-				<td>'.$row["drugname"].'</td>
-				<td>'.$row["count"].'</td>
-				<td>'.$row["timestamp"].'</td>
-				<td>'.$row["name"].'</td>
+				<td style = \"color:".$dangerColor."\">".$row["drugname"]."</td>
+				<td>".$drugcount."</td>
+				<td>".$row["timestamp"]."</td>
+				<td>".$row["name"]."</td>
 			</tr>
-		';
+		";
 	}
 	echo $output;
 }
