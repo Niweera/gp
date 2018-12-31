@@ -91,10 +91,10 @@
       <div id="homeCarousel" class="carousel slide carousel-home" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img src="../images/vision.jpg" alt="">
+                <img src="../images/vsn.jpg" alt="we">
                 <div class="container">
                     <div class="carousel-caption">
-                      <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
+                      <h2 class="carousel-title bounceInDown animated slow"></h2>
                     </div> <!--carousel-caption -->
                 </div><!--container-->
               </div> <!--item active-->      
@@ -123,17 +123,16 @@
         </div><!--footer-->
       </div><!--headerr-->
     </div><!--contents-->
-  </div><!--body--> 
+  </div><!--body-->
 
-<img src="../images/vsn.jpg" alt="we" width="50%">
 
   <!--FOUNDER-->
 
-  <div class="container">
+  <!--<div class="container">
     <div class="reasons-titles">
         <h2>Our Department</h2>    
     </div><!--reasons-titles-->
-    <div class="row">
+    <!--<div class="row">
       <div  class="col-md-6">
 
         <div class="alert alert-success">
@@ -141,25 +140,25 @@
             <p>The lab at Hospital offers tests covering the full range of medicinal pathology. </p>
         </div><!--alert alert-success-->
 
-         <div class="alert alert-info">
+         <!--<div class="alert alert-info">
           <h4><strong>Dental Department</strong></h4>
             <p>The Dental Clinic program tremendously affects patients' lives. </p>
         </div><!--alert alert-info-->
 
-         <div class="alert alert-warning">
+         <!--<div class="alert alert-warning">
           <h4><strong>Primary Health</strong></h4>
             <p>Primary healthcare services are provided by general practitioners and nurses in Hospital. </p>
         </div><!--alert alert-warning-->
         
-      </div><!--col-md-8-->  
+      <!--</div><!--col-md-8-->  
 
-      <div class="col-md-6">
+      <!--<div class="col-md-6">
         <img src="../images/images-2.jpg" alt="" width="100%" class="img-rounded">
       </div><!--col-md-6-->
 
-    </div><!--row-->  
+    <!--</div><!--row-->  
 
-    <div class="row">
+    <!--<div class="row">
       <div  class="col-md-6">
 
         <div class="alert alert-success">
@@ -167,24 +166,24 @@
             <p>From that moment your child is born, your goal is to keep them healthy and safe.</p>
         </div><!--alert alert-success-->
 
-         <div class="alert alert-info">
+         <!--<div class="alert alert-info">
           <h4><strong>Neurology Department</strong></h4>
             <p>The Hospital Department of Neurology is one of the biggest on the planet.</p>
         </div><!--alert alert-info-->
 
-         <div class="alert alert-warning">
+         <!--<div class="alert alert-warning">
           <h4><strong>Gynecology Department</strong></h4>
             <p>Welcome to the Department of Obstetrics and Gynecology at Hospital Clinic.</p>
         </div><!--alert alert-warning-->
 
-      </div><!--col-md-8--> 
+      <!--</div><!--col-md-8--> 
 
-      <div class="col-md-6">        
+      <!--<div class="col-md-6">        
         <img src="../images/department-2.jpg" alt="" width="100%" class="img-rounded">       
       </div><!--col-md-6-->
 
-    </div><!--row-->  
-  </div><!--container-->
+    <!--</div><!--row-->  
+  <!--</div><!--container-->
 
 
     <!-- FOOTER -->
