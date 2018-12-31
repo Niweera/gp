@@ -39,7 +39,7 @@
 </head>
 <body>
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;"><!--change-->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -82,7 +82,7 @@
     <br>
     <br>
     <form name="doclog" action="./viewsheet.php"  method="post">
-        <div class="container border pt-4 bg-light rounded mt-3 mb-5">
+        <div class="container border pt-4 bg-light rounded mt-5 mb-5">
             <div class="form-group row">
                 <div class="col-sm-3"></div>
                 <label for="date" class="col-sm-2 col-form-label"><h5>Required date:</h5></label>
