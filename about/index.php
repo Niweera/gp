@@ -221,7 +221,7 @@
                 <div class="footer-thumb"> 
                     <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>    
                           <div class="contact-info">
-                            <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                            <p><i class="fa fa-phone"></i>034-2275260</p>
                             <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
                           </div><!--contact-info-->
                 </div><!--footer-thumb-->
@@ -249,7 +249,8 @@
                               <a href="#"><img src="../images/news-image.jpg" class="img-responsive" alt=""></a>
                           </div><!--stories-image-->
                           <div class="stories-info">
-                              <h5>Address</h5></a>
+                              <h5>Address</h5>
+                              <p>Divisional Hospital, Bentota</p></a>
                           </div><!--stories-info-->
                       </div><!--latest-stories-->
               </div><!--footer-thumb-->
