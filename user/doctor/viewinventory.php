@@ -93,7 +93,8 @@
                     <input type="text" class="form-control form-control-sm" name="search_text" id="search_text" placeholder="Search for a drug" autocomplete="off" autofocus>
                     <div id='resultbox' class="result"></div>
                 </div>
-                <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2" style="background: url('../../images/refresh.png');background-size: 40px 45px;height: 45px;width: 42px;margin-top: -7px;"></button></div><!--change-->
+                <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
+                
             </div>
             <div id="result"></div>
             <br>
