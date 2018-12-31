@@ -100,19 +100,9 @@
         <div class="headerr">
           <div class="footer">
             <div class="body">
-                <h1>Our History..</h1>
-                <h4>We Have Free Templates for Everyone</h4>
-                <p> Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What&acute;s more, they&acute;re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the Terms of Use. You can even remove all our links if you want to. </p>
-
-                <h4>We Have More Templates for You</h4>
-                <p> Looking for more templates? Just browse through all our Free Website Templates and find what you&acute;re looking for. But if you don&acute;t find any website template you can use, you can try our Free Web Design service and tell us all about it. Maybe you&acute;re looking for something different, something special. And we love the challenge of doing something different and something special. </p>
-
-                <h4>Be Part of Our Community</h4>
-                <p> If you&acute;re experiencing issues and concerns about this website template, join the discussion on our forum and meet other people in the community who share the same interests with you. </p>
-
-                <h4>Template details</h4>
-                <p> Version 11<br>
-                Website Template details, discussion and updates for this Natural Health Web Template. Website Template design by Free Website Templates. Please feel free to remove some or all the text and links of this page and replace it with your own About content. </p>
+                <h1>Our History..</h1><br>
+                <h3><li>In &nbsp Elasto &nbsp PVT &nbsp LTD's &nbsp Mr.Donald &nbsp Gunasekara &nbsp and &nbsp his &nbsp brother &nbsp Wilson &nbsp Gunasekera &nbsp donated &nbsp by &nbsp this &nbsp hospital &nbsp on &nbsp 1977 &nbsp June &nbsp 06.</li><br>
+                <li> The &nbsp hospital &nbsp open &nbsp by &nbsp Siva &nbsp Obeysekera &nbsp Health &nbsp ministress &nbsp of &nbsp Sirimavo &nbsp Bandaranaike &nbsp Govt.</li></h3>
             </div><!--body-->
           </div><!--footer-->
         </div><!--headerr-->
