@@ -134,7 +134,7 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ospital</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>The entry of Bentota Hospitals into the state dominated healthcare sector in 1985, saw the public health care system take root in Sri Lanka.</p> 
+                                   <p>The entry of Bentota Hospitals into the state dominated healthcare sector in 1977, saw the public health care system take root in Sri Lanka.</p> 
                                    <p>The launch of the hospital and the overwhelming response it received from the people demonstrated a long felt need for healthcare in a pleasant environment.</p>
                               </div><!--wow fadeInUp-->
                          </div><!--about-info-->
