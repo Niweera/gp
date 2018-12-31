@@ -68,7 +68,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 </head>
 <body onload="showUser(document.getElementById('strval').value);">
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #212529;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;">
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -174,10 +174,10 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         <div class="form-group row mb-5">
             <div class="col-sm-4"></div>
             <div class="col-sm-2">
-                <button id="printbutton" class="btn btn-primary btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
+                <button id="printbutton" class="btn btn-info btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
             </div>
             <div class="col-sm-2">
-                <button  class="btn btn-primary btn-lg mb-2" onclick="window.location.href = './index.php';">Home</button>
+                <button  class="btn btn-info btn-lg mb-2" onclick="window.location.href = './index.php';">Home</button>
             </div>
             <div class="col-sm-4"></div>
         </div>           
