@@ -83,41 +83,93 @@
      </section><!--navbar navbar-default navbar-static-top-->
 
     <!--HEADER IMAGE--> 
+    
       <img src="../images/bbb.jpg" alt="we" width="100%" height="320">
-    
-    
-    <!--CONTENT-->
-    <div class="container contain-area" id="es-content">    
+
+
+      <div class="container contain-area" id="es-content">    
         <h1 class="inner-page-title"> OPD Services</h1>
     </div><!--container contain-area-->
     
-
-    <div class="col-md-6">
-        <img src="../images/opd1.jpg" alt="" width="70%" class="img-rounded">
-      </div><!--col-md-6-->
-		
-    <div align="center" itemprop="articleBody">
-		<div  class="row">
-<div  class="col-md-6">
-<h3><span style="color: #135cae;"><strong>Medical Clinic</strong></span></h3>
-<p>On Every Thursdays from 8.0am to 12.00noon  &nbsp; this medical service is provided to the patients. &nbsp;</p>
-<hr id="mce-hr-marker" />
-<h3><span style="color: #135cae;"><strong>&nbsp;Diabetes Clinic</strong></span></h3>
-<p>Except on 4th week monday, every mondays from 8.00 am to 12.00 noon this clinic will be in operation.</p>
-<hr id="mce-hr-marker" />
-
     
-            </div>
-                                    </div>
-                        </div>
-                                </div>
-        </div>
-        
- 
+     <!--CONTENT-->
+    <div class="rw">  
+    <div class="row">
+        <div class="col-md-6">
+
+            <h5><span style="color: #135cae;"><strong>Room No 1- Medical Examination</strong></span></h5>
+                <p>Medical examination for special occasions.</p>
+                <hr id="mce-hr-marker" />
+
+            <h5><span style="color: #135cae;"><strong>&nbsp;Room No 2- Injection Room</strong></span></h5>
+                <p>All the injectable at the OPD level are given here</p>
+                <hr id="mce-hr-marker" />
+
+            <h5><span style="color: #135cae;"><strong>&nbsp;Room No 3- Dressing Room</strong></span></h5>
+                <p>All the dressing work of old wounds, suture removal are done here.</p>
+                <hr id="mce-hr-marker" />
+
+            <h5><span style="color: #135cae;"><strong>&nbsp;Room No 4-Patient Registration Room</strong></span></h5>
+                <p>All the OPD Patient registration and forwarding of OPD registrations to the relevant sections are done here</p>
+                <hr id="mce-hr-marker" />
+
+            <h5><span style="color: #135cae;"><strong>Room No 5-OPD&nbsp; Xray Room</strong></span></h5>
+                <p>OPD Xrays are taken here</p>
+                <hr id="mce-hr-marker" />
+
+             <h5><span style="color: #135cae;"><strong>Room No 8- OPD ECG Room</strong></span></h5>
+                <p>OPD ECGs are done in this room based on the medical recommendations of OPD Medical Officers.</p>
+                <hr id="mce-hr-marker" /> 
+
+           
+      </div><!--col-md-6-->
+
+      <div class="col-md-6">
+
+
+
+            <h5><span style="color: #135cae;"><strong>Room No 9,10- Urine Test &amp; Bool Collection Rooms</strong></span></h5>
+                <p>All the OPD based Urine and Blood sample testing are done at this room.</p>
+                <hr id="mce-hr-marker" />
+
+            <h5><span style="color: #135cae;"><strong>Room No 11- Out Patient Consultation Room</strong></span></h5>
+                <p>This room hosts the OPD medical consultation&nbsp; and when you come to obtain OPD treatment this is the place you will be consulted by OPD medical officers and prescribe the relevant treatments/investigations. This is under operation from 8.00 am to 4.00pm on Week days and Saturday &amp; Sundays from 8.00am to 12.00 noon.</p>
+                <hr id="mce-hr-marker" />
+
+          <h5><span style="color: #135cae;"><strong>Room No 12- Patient admission Room</strong></span></h5>
+                <p>The patients who needs inward medical or surgical treatment will be admitted t the wards from this room. This service is 24 hours service.</p>
+                <hr id="mce-hr-marker" />
+
+         
+
+          
+
+          <h5><span style="color: #135cae;"><strong>Emergency Treatment Unit</strong></span></h5>
+              <p>For the patients who needs Emergency medical treatments this unit provides its service in 24 hours per day.</p>
+              <hr id="mce-hr-marker" />
+
+          <h5><span style="color: #135cae;"><strong>OPD Pharmacy&nbsp;</strong></span></h5>
+              <p>For all the OPD&nbsp; patients who needs drugs will be issued from this room.</p>
+              <hr id="mce-hr-marker" />
+
+
+
+      </div><!--col-md-6-->
+
+  </div><!--row-->
+</div>
+
+
+
+
+    <!--CONTENT-->
+    
+   
 
   
 
     <!-- FOOTER -->
+    <div>
      <footer data-stellar-background-ratio="5">
           <div class="container">
                <div class="row">
@@ -180,8 +232,9 @@
                     </div><!--col-md-12 col-sm-12 border-top-->
 
                </div><!--row-->
-          </div><!--container-->
-     </footer>         
+          </div><!--container--> 
+     </footer>  
+     </div>       
 
     <!-- SCRIPTS -->
     <script src="../js/jquery.js"></script>

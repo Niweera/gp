@@ -92,14 +92,60 @@
 
       <h1 class="inner-page-title"> Clinic Services</h1>
 						
-		    <p style="text-align: justify;"><span style="font-size: 14pt;">The National Hospital of Sri Lanka is one of its kind and a unique hospital in Sri Lanka in many ways such as being the final referral centre of the country, largest hospital of Sri Lanka and the south East Asia.</span></p>
-        <p style="text-align: justify;">It has a bed capacity of 3404 &nbsp;and over 7000 dedicated health staff in providing uninterrupted service to the whole nation. For a single given month more than 5000 Major and Minor surgeries done.</p>
-        <p style="text-align: justify;">The National Hospital has 18 well equipped Intensive Care Units and 17 High Dependency Units located at each major care providing sectors such as Surgical Department and Medical Department. There are 19 surgical theatres under operation. While some Operation theatres are dedicated for certain surgical specialities, some are in operation 24 hours per day.</p>
-        <p style="text-align: justify;">The National hospital of Sri Lanka hosts the countryâ€™s one and only Neuro-trauma Centre . This Centre provides its unique services 24/7 hours.</p>
-        <p style="text-align: justify;">The Accident and Trauma unit in this hospital is the largest of its kind in Sri Lanka, which served immensely during the country's 30 years long war. &nbsp;</p>
-        <p style="text-align: justify;">In 2013 the hospital provided care for 240,000 in-ward patients and 2 million out patients and clinic patients. The National Hospital features many Medical sub specialities in Health care and most of these specialities are only available at NHSL. The service recipients of&nbsp;this National Heritage spans across the entire country.</p>
-
   </div><!--container contain-area--> 
+
+
+<div class="rw">
+  <div class="row">
+        <div class="col-md-6">
+
+
+          <h5><span style="color: #135cae;"><strong>Room No 13- Surgical Clinic</strong></span></h5>
+                <p>In this room VS OPD will conduct a clinic for the OPD patients who underwent surgeries at OPD Theatre from 8.00 am to 12.00 noon on week days.</p>
+
+
+  
+          <h5><span style="color: #135cae;"><strong>Room No 14- Psychiatric Clinic</strong></span></h5>
+              <p>Except on Sundays every day from 8.00 am to 12.00 noon this clinic is in operation for the psychiatric patients who have obtained treatments. You can obtain the services of Consultant psychiatrists here.</p>
+              <hr id="mce-hr-marker" />
+
+          <h5><span style="color: #135cae;"><strong>Room No 15- Renal &amp; Transplant Clinic</strong></span></h5>
+              <p>This clinic is under operation on very week day from 8.00 am to 12.00 noon except on Fridays for Kidney transplanted patients and renal disease patients. In addition to this a surgical clinic too is hosted here.</p>
+              <hr id="mce-hr-marker" />
+
+          <h5><span style="color: #135cae;"><strong>Room No 16- Dermatology Clinic</strong></span></h5>
+              <p>Except on Wednesdays every week day from 8.00 am to 12.00 noon this clinic will be in operation.</p>
+              <hr id="mce-hr-marker" />
+
+         
+      </div><!--col-md-6-->
+
+      <div class="col-md-6">
+
+         <h5><span style="color: #135cae;"><strong>Room No 17- Psychological Counselling Room</strong></span></h5>
+              <p>On Every Tuesday from 8.00pm to 12.00 noon this counselling service is provided.</p>
+              <hr id="mce-hr-marker" />
+
+          <h5><span style="color: #135cae;"><strong>Room No 18- Diabetic Clinic</strong></span></h5>
+              <p>Except on 4th week monday, every mondays from 8.00 am to 12.00 noon this clinic will be in operation. A specialist Endocrinologist is available at this clinic for consultation.</p>
+              <hr id="mce-hr-marker" />
+
+          
+
+          <h5><span style="color: #135cae;"><strong>Room No 19- VP OPD Room</strong></span></h5>
+              <p>On every week day from 8.00am to 4.00pm this clinic is conducted and a consultant physician is available for the service. Additional Genito Unrinay clinic is also in parallel operation in this room.</p>
+              <hr id="mce-hr-marker" />
+
+          <h5><span style="color: #135cae;"><strong>Room No-20 Medical Clinic</strong></span></h5>
+              <p>On Every Thursdays from 8.0am to 12.00noon   this medical service is provided to the patients.  </p>
+              <hr id="mce-hr-marker" />
+
+    
+
+      </div><!--col-md-6-->
+
+  </div><!--row-->
+ </div> 
   
     <!-- FOOTER -->
      <footer data-stellar-background-ratio="5">
