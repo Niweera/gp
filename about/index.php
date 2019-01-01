@@ -101,9 +101,8 @@
         <div class="headerr">
           <div class="footer">
             <div class="body">
-                <h1>Our History..</h1><br>
-                <h3><li>In &nbsp Elasto &nbsp PVT &nbsp LTD's &nbsp Mr.Donald &nbsp Gunasekara &nbsp and &nbsp his &nbsp brother &nbsp Wilson &nbsp Gunasekera &nbsp donated &nbsp by &nbsp this &nbsp hospital &nbsp on &nbsp 1977 &nbsp June &nbsp 06.</li><br>
-                <li> The &nbsp hospital &nbsp open &nbsp by &nbsp Siva &nbsp Obeysekera &nbsp Health &nbsp ministress &nbsp of &nbsp Sirimavo &nbsp Bandaranaike &nbsp Govt.</li></h3>
+                <h1>Overview and History..</h1><br>
+                <h3><li>Mr.Donald Gunasekara and his brother Wilson Gunasekara, of Elasto PVT LTD, donated this hospital on 6th of June 1977.</li> <br> <li>The hospital was opened to the public by Mrs. Siva Obesekara, the heslth minister of Sirimawo Bandaranayke government era.</li> <br> <li>This Hospital is a government hospital in Bentota, Sri Lanka.  It  is controlled by the central government.</li> <br> <li>As of 2017 it had 900 beds.The hospital has a intensive care unit and 2 operating theaters. It employs 3,000 staff of which 200 are doctors.</li> <br> <li>The hospital treats over one million out patients a year.</li></h3>
             </div><!--body-->
           </div><!--footer-->
         </div><!--headerr-->
