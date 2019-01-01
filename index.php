@@ -160,7 +160,7 @@
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
                               <div class="contact-info">
                                    <p><i class="fa fa-phone"></i>034-2275260</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@divisionalhospitalbentota.com</a></p>
                               </div><!--contact-info-->
                          </div><!--footer-thumb-->
                     </div><!--col-md-4 col-sm-4-->
