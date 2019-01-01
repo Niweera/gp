@@ -30,6 +30,7 @@
     <!-- This page main -->
     <link rel="stylesheet" href="style.css">
 
+
 </head>
 
 <body>
@@ -91,7 +92,7 @@
 
     <!--HEADER IMAGE-->
     <div class="im">
-        <img src="../images/main.jpg" alt="we">
+        <img src="../images/1.jpg" alt="we">
     </div><!--im-->
 
     <!--CONTENT-->
@@ -109,108 +110,139 @@
       </div><!--contents-->
     </div><!--body-->
 
-    <!--PAGES GALLERY-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
+
+<!--PAGES GALLERY-->
+<div class="container">
+    <div id="main_area">
+        <!-- Slider -->
+        <div class="row">
+          <div class="col-lg-12">
             <h3>Image Gallery</h3>
         </div><!--col-lg-12-->
+            
+            <div class="col-sm-6">
+                <div class="col-xs-12" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="row">
+                        <div class="col-sm-12" id="carousel-bounding-box">
+                            <div class="carousel slide" id="myCarousel">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                        <img src="../images/1.jpg" alt="1"></div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/gallary-1.jpg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/gallary-1.jpg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
+                                    <div class="item" data-slide-number="1">
+                                        <img src="../images/2.jpg" alt="1"></div>
 
+                                    <div class="item" data-slide-number="2">
+                                        <img src="../images/3.jpg" alt="1"></div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/gallary-2.jpg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/gallary-2.jpg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
+                                    <div class="item" data-slide-number="3">
+                                        <img src="../images/4.jpeg" alt="1"></div>
 
+                                    <div class="item" data-slide-number="4">
+                                        <img src="../images/5.jpg" alt="1"></div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/gallary-3.jpg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/gallary-3.jpg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/gallary-4.jpg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/gallary-4.jpg"" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/gallary-5.jpg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/gallary-5.jpg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/6.jpeg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/6.jpeg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/7.jpeg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/7.jpeg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-
-        
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/8.jpeg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/8.jpeg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/9.jpeg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/9.jpeg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
+                                    <div class="item" data-slide-number="5">
+                                        <img src="../images/6.jpeg" alt="1"></div>
+                                    
+                                    <div class="item" data-slide-number="6">
+                                        <img src="../images/7.jpeg" alt="1"></div>
+                                    
+                                    <div class="item" data-slide-number="7">
+                                        <img src="../images/8.jpg" alt="1"></div>
+                                    
+                                    <div class="item" data-slide-number="8">
+                                        <img src="../images/9.jpeg" alt="1"></div>
+                                    
+                                    <div class="item" data-slide-number="9">
+                                        <img src="../images/10.jpeg" alt="1"></div>
+                                    
+                                    <div class="item" data-slide-number="10">
+                                        <img src="../images/11.jpeg" alt="1"></div>
+                                    
+                                    <div class="item" data-slide-number="11">
+                                        <img src="../images/12.jpeg" alt="1"></div>
+                                    
+                              
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/10.jpeg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/10.jpeg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
+            <div class="col-sm-6" id="slider-thumbs">
+                <!-- Bottom switcher of slider -->
+               
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-0">
+                            <img src="../images/1.jpg" alt="1">
+                        </a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-1">
+                          <img src="../images/2.jpg" alt="1">
+                      </a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-2"><img src="../images/3.jpg" alt="1"></a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-3"><img src="../images/4.jpeg" alt="1"></a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-4"><img src="../images/5.jpg" alt="1"></a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-5"><img src="../images/6.jpeg" alt="1"></a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-6"><img src="../images/7.jpeg" alt="1"></a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-7"><img src="../images/8.jpg" alt="1"></a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-8"><img src="../images/9.jpeg" alt="1"></a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-9"><img src="../images/10.jpeg" alt="1"></a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-10"><img src="../images/11.jpeg" alt="1"></a>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-11"><img src="../images/12.jpeg" alt="1"></a>
+                    </div>
+
+                   
+            </div>
+            <!--/Slider-->
+        </div>
+
+    </div>
+</div>
 
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/11.jpeg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/11.jpeg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-
-        
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="../images/12.jpeg" class="thumbnail">
-            <p>Map</p>
-            <img src="../images/12.jpeg" alt="1"/>  
-          </a>
-        </div><!--col-lg-3 col-md-4 col-sm-6-->
-                  
-        </div><!--row-->      
-      </div><!--container-->
+ 
 
     <!-- FOOTER -->
     <footer data-stellar-background-ratio="5">
@@ -222,7 +254,7 @@
                     <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>    
                           <div class="contact-info">
                             <p><i class="fa fa-phone"></i>034-2275260</p>
-                            <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
+                            <p><i class="fa fa-envelope-o"></i> <a href="#">info@divisionalhospitalbentota.com</a></p>
                           </div><!--contact-info-->
                 </div><!--footer-thumb-->
             </div><!--col-md-4 col-sm-4-->
