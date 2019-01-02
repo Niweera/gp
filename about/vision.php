@@ -91,7 +91,7 @@
       <div id="homeCarousel" class="carousel slide carousel-home" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img src="../images/vsn.jpg" alt="we">
+                <img src="../images/ViMi.jpg">
                 <div class="container">
                     <div class="carousel-caption">
                       <h2 class="carousel-title bounceInDown animated slow"></h2>
