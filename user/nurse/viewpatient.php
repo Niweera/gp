@@ -159,10 +159,10 @@
                 <div class="col-lg-4">
                 </div>
                 <div class="col-lg-2">
-                    <input type="submit" value="Update Details" class="btn btn-primary btn-lg" name="submit">  
+                    <input type="submit" value="Update Details" class="btn btn-info btn-lg" name="submit">  
                 </div>
                 <div class="col-lg-2">
-                    <input type="button" value="Go Back" class="btn btn-primary btn-lg" onclick="history.go(-1);"> 
+                    <input type="button" value="Go Back" class="btn btn-info btn-lg" onclick="history.go(-1);"> 
                 </div>
                 <div class="col-lg-4">
                 </div>  

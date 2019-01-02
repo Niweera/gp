@@ -98,9 +98,9 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
 <body>
 
     <div id="printthis" class="container mt-5 mb-5">
-        <div class="container border border-dark rounded">
+        <div class="container border pt-4 bg-light rounded"><!--container border border-dark rounded-->
             <div class="row">
-                <div class="col-md-12 bg-light border border-dark">
+                <div class="col-md-12 bg-light border"><!--col-md-12 bg-light border border-dark-->
                     <h1 class="text-center">Divisional Hospital, Bentota</h1>
                 </div>
             </div>
@@ -131,8 +131,8 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             </div>
             <hr>
             <table class="table">
-                <thead class="thead-light">
-                    <tr>
+                <thead>
+                    <tr class="table-primary"><!--change-->
                     <th scope="col">Name of The Drug</th>
                     <th scope="col">Dose</th>
                     <th scope="col">Frequency</th>
@@ -190,8 +190,8 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center mb-5">
-                <button id="printbutton" class="btn btn-primary btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
-                <button  class="btn btn-primary btn-lg ml-2" onclick="history.go(-1);">Go Back</button>
+                <button id="printbutton" class="btn btn-info btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
+                <button  class="btn btn-info btn-lg ml-2" onclick="history.go(-1);">Go Back</button>
             </div>
         </div>
     </div>
