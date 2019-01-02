@@ -111,9 +111,9 @@ if ($queryResult > 0){
     <div class="container border bg-light rounded">
         <form action = "view_reports.php" method="post">
             <div id="printthis" class="container mt-5 mb-5">
-                <div class="container border border-dark rounded">
+                <div class="container border pt-4 bg-light rounded">
                     <div class="row">
-                        <div class="col-md-12 bg-light border border-dark">
+                        <div class="col-md-12 bg-light border">
                             <h1 class="text-center">Divisional Hospital, Bentota</h1>
                         </div>
                     </div>
@@ -140,8 +140,8 @@ if ($queryResult > 0){
                     <h5>The following drugs and their respective counts are hereby requested.</h5>
                     <br>
                     <table class="table" style="width:50%;margin-left:auto; margin-right:auto;">
-                        <thead class="thead-light">
-                            <tr>
+                        <thead>
+                            <tr class="table-primary">
                             <th scope="col">Name of The Drug</th>
                             <th scope="col">Requested Count</th>
                             </tr>
@@ -170,11 +170,11 @@ if ($queryResult > 0){
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-2">
-                    <button id="printbutton" class="btn btn-primary btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
+                    <button id="printbutton" class="btn btn-info btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
                 </div>
                 <div class="col-md-2">
                     <input type="hidden" value="<?php echo $reportID; ?>" name="reportid">
-                    <input type="submit" value="Acknowledge" class="btn btn-primary btn-lg mb-2" name="submit">
+                    <input type="submit" value="Acknowledge" class="btn btn-info btn-lg mb-2" name="submit">
                 </div>
                 <div class="col-md-4"></div>
             </div>               

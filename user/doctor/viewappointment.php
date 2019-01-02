@@ -137,7 +137,7 @@
         </div>
         <div class="form-group row mb-5">
             <div class="col-sm-5"></div>
-            <input type="button" value="Go Back" class="col-md-2 text-center btn btn-primary btn" onclick="history.go(-1);">
+            <input type="button" value="Go Back" class="col-md-2 text-center btn btn-info btn" onclick="history.go(-1);">
             <div class="col-sm-5"></div>
         </div>
     </div>    
