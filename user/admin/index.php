@@ -23,9 +23,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!--script for java script timer linking(importing javascript timer) -->
 </head>
-<body onload="startTime()">
+<body onload="startTime()"> <!--calling the javascript function -->
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
@@ -79,7 +79,7 @@
                         date_default_timezone_set("Asia/Colombo");
                         echo date("l").","." ".date("d/m/Y");
                     ?></span>
-                    <span class="h3" id="time"></span></h2>
+                    <span class="h3" id="time"></span></h2> <!--java script timer output -->
             </div>
         </div>
     </div>
