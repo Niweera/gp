@@ -16,9 +16,9 @@
     $queryResult0 = mysqli_num_rows($result0);
     if ($queryResult0 > 0){
         while ($row=mysqli_fetch_assoc($result0)){
-            $clinic0 = $row['clinic'];
+            $clinic0 = $row['clinic']; 
             $appointmentno = $row['appointmentno'];
-            $appointmentArray[$clinic0]=$appointmentno;
+            $appointmentArray[$clinic0]=$appointmentno; //get the appointment no to the relevent clinic for a patient.
             $_SESSION['appointmentarray']=$appointmentArray;
         }
     }else{
@@ -27,10 +27,10 @@
         $_SESSION['appointmentarray']=$appointmentArray;
     }
     if (!isset($appointmentArray['0'])){
-        $appointmentArray['0']="";
+        $appointmentArray['0']=""; //avoiding the $appointmentArray['0'] variable not set error
     }
     if (!isset($appointmentArray['1'])){
-        $appointmentArray['1']="";
+        $appointmentArray['1']=""; //avoiding the $appointmentArray['0'] variable not set error
     }
 
     $sqlcheck = "SELECT clinic,nextdate FROM patientrecord WHERE clinicno = '".$_SESSION['userid']."';";
@@ -53,6 +53,19 @@
     }
     if (!isset($clinicArray['1'])){
         $clinicArray['1']="";
+    }
+?>
+<?php
+    $message = "";
+    function setDisable($clinic_date){
+        date_default_timezone_set('Asia/Colombo');
+        $today = date("Y-m-d");
+        $clinicDate = $clinic_date; //get next clinic date
+        $releaseDate = date('Y-m-d', strtotime($clinicDate. ' - 1 days')); //check the date before the clinic date
+        if($today != $releaseDate){
+            echo "disabled";
+            $GLOBALS['message'] = "<div><p class='text-danger'>*Appointment numbers will be available only from one day before the clinic date.</p></div>"; 
+        }//here if today is not equal to the day before the clinic, the submit button will be disabled
     }
 ?>
 
@@ -128,7 +141,7 @@
     <form name="doclog" action="./setappointment.php"  method="post">
         <div class="container border pt-4 bg-light rounded mt-5 mb-5">
 
-            <?php if ($clinicArray['0'] != "" && $clinicArray['1'] == ""){?>
+            <?php if ($clinicArray['0'] != "" && $clinicArray['1'] == ""){?><!--checking if the patient is in diabetes clinic only-->
             <div class="form-group row mt-4">
                 <label class="col-sm-4 col-form-label"><h5>Next Diabetes Clinic Date:</h5></label>
                 <label class="col-sm-2 col-form-label"><h5><b><?php echo $clinicArray['0'];?></b></h5></label>
@@ -136,14 +149,7 @@
                 <?php if ($appointmentArray['0'] == ""){?>
                 <input type="submit" value="Get an Appointment No." class="col-md-2 text-center btn-sm btn-info btn" name="dcappoint" 
                 <?php 
-                    date_default_timezone_set('Asia/Colombo');
-                    $today = date("Y-m-d");
-                    $clinicDate = $clinicArray['0'];
-                    $releaseDate = date('Y-m-d', strtotime($clinicDate. ' - 1 days'));
-                    if($today != $releaseDate){
-                        echo "disabled";
-                        $message = "<div><p class='text-danger'>*Appointment numbers will be available only from one day before the clinic date.</p></div>"; 
-                    }//here if today is not equal to the day before the clinic, the submit button will be disabled
+                    setDisable($clinicArray['0']); //here if today is not equal to the day before the clinic, the submit button will be disabled
                 ?>>
                 <?php }else{?>
                 <label class="col-sm-3 col-form-label"><h5><b><?php echo $appointmentArray['0'];?></h5></b></label>
@@ -151,7 +157,7 @@
             </div>
             <?php if(isset($message)){echo $message;} ?> <!--here if today is not the day before the clinic, a message will display-->
 
-            <?php }else if ($clinicArray['1'] != "" && $clinicArray['0'] == "") {?>
+            <?php }else if ($clinicArray['1'] != "" && $clinicArray['0'] == "") {?><!--checking if the patient is in medical clinic only-->
             <div class="form-group row mt-4">
                 <label class="col-sm-4 col-form-label"><h5>Next Medical Clinic Date:</h5></label>
                 <label class="col-sm-2 col-form-label"><h5><b><?php echo $clinicArray['1'];?></b></h5></label>
@@ -159,14 +165,7 @@
                 <?php if ($appointmentArray['1'] == ""){?>
                 <input type="submit" value="Get an Appointment No." class="col-md-2 text-center btn-sm btn-info btn" name="mcappoint"
                 <?php 
-                    date_default_timezone_set('Asia/Colombo');
-                    $today = date("Y-m-d");
-                    $clinicDate = $clinicArray['1'];
-                    $releaseDate = date('Y-m-d', strtotime($clinicDate. ' - 1 days'));
-                    if($today != $releaseDate){
-                        echo "disabled";
-                        $message = "<div><p class='text-danger'>*Appointment numbers will be available only from one day before the clinic date.</p></div>"; 
-                    }//here if today is not equal to the day before the clinic, the submit button will be disabled
+                    setDisable($clinicArray['1']);
                 ?>>
                 <?php }else{?>
                 <label class="col-sm-3 col-form-label"><h5><b><?php echo $appointmentArray['1'];?></h5></b></label>
@@ -174,11 +173,11 @@
             </div>
             <?php if(isset($message)){echo $message;} ?> <!--here if today is not the day before the clinic, a message will display-->
 
-            <?php }else if ($clinicArray['1'] == "" && $clinicArray['0'] == "") {?>    
+            <?php }else if ($clinicArray['1'] == "" && $clinicArray['0'] == "") {?><!--checking if the patient is not in any clinics-->    
             <div class="form-group row mt-4">
                 <label class="col-sm-12 col-form-label"><h3><b><center>Please register in a clinic first!</center></b></h3></label>
             </div>       
-            <?php }else{?>  
+            <?php }else{?><!--checking if the patient is in both clinics-->  
             <div class="form-group row mt-4">
                 <label class="col-sm-4 col-form-label"><h5>Next Diabetes Clinic Date:</h5></label>
                 <label class="col-sm-2 col-form-label"><h5><b><?php echo $clinicArray['0'];?></b></h5></label>
@@ -186,14 +185,7 @@
                 <?php if ($appointmentArray['0'] == ""){?>
                 <input type="submit" value="Get an Appointment No." class="col-md-2 text-center btn-sm btn-info btn" name="dcappoint"
                 <?php 
-                    date_default_timezone_set('Asia/Colombo');
-                    $today = date("Y-m-d");
-                    $clinicDate = $clinicArray['0'];
-                    $releaseDate = date('Y-m-d', strtotime($clinicDate. ' - 1 days'));
-                    if($today != $releaseDate){
-                        echo "disabled";
-                        $message = "<div><p class='text-danger'>*Appointment numbers will be available only from one day before the clinic date.</p></div>"; 
-                    }//here if today is not equal to the day before the clinic, the submit button will be disabled
+                    setDisable($clinicArray['0']);
                 ?>>
                 <?php }else{?>
                 <label class="col-sm-3 col-form-label"><h5><b><?php echo $appointmentArray['0'];?></h5></b></label>
@@ -206,14 +198,7 @@
                 <?php if ($appointmentArray['1'] == ""){?>
                 <input type="submit" value="Get an Appointment No." class="col-md-2 text-center btn-sm btn-info btn" name="mcappoint"
                 <?php 
-                    date_default_timezone_set('Asia/Colombo');
-                    $today = date("Y-m-d");
-                    $clinicDate = $clinicArray['1'];
-                    $releaseDate = date('Y-m-d', strtotime($clinicDate. ' - 1 days'));
-                    if($today != $releaseDate){
-                        echo "disabled";
-                        $message = "<div><p class='text-danger'>*Appointment numbers will be available only from one day before the clinic date.</p></div>"; 
-                    }//here if today is not equal to the day before the clinic, the submit button will be disabled
+                    setDisable($clinicArray['1']);
                 ?>>
                 <?php }else{?>
                 <label class="col-sm-3 col-form-label"><h5><b><?php echo $appointmentArray['1'];?></h5></b></label>
