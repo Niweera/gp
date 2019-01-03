@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-sm-3"></div>
             </div>
-            <div id="txtHint"></div>
+            <div id="txtHint"></div> <!-- Display the result--> 
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
