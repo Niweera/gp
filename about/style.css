@@ -6,8 +6,9 @@
   -----------------------------------------*/
 
  .im img{
-  width: 1400px;
-  height: 500px;
+  width: 1520px;
+  height: 550px;
+  margin: auto;
 }
 
 .body{
