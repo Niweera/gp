@@ -180,7 +180,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                 <div class="form-group row mb-3">
                     <div class="col-sm-5"></div>
                     <input type="hidden" value="<?php echo $clinicno; ?>" name="strval" id="strval">
-                    <input type="submit" value="Issue Drugs" class="col-md-2 text-center btn btn-primary btn" name="update">
+                    <input type="submit" value="Issue Drugs" class="col-md-2 text-center btn btn-info btn" name="update">
                     <div class="col-sm-5"></div>
                 </div>
             </div>    
@@ -188,7 +188,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         <div class = "row">
             <div class="col-sm-5"></div>
             <div class="col-sm-4"></div>
-            <button  class="col-md-2 text-center btn btn-primary btn mb-2" onclick="window.location.href='./drugissue.php'">Go Back</button>
+            <button  class="col-md-2 text-center btn btn-info btn mb-2" onclick="window.location.href='./drugissue.php'">Go Back</button>
         </div>
     </div>
 <br>
