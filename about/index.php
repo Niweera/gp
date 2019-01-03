@@ -102,7 +102,7 @@
           <div class="footer">
             <div class="body">
                 <h1>Overview and History...</h1><br>
-                <h3><li>Mr.Donald Gunasekara and his brother Wilson Gunasekara, of Elasto PVT LTD, donated this hospital on 6th of June 1977.</li> <br> <li>The hospital was opened to the public by Mrs. Siva Obesekara, the health minister of Sirimawo Bandaranayake government era.</li> <br> </h3>
+                <h3><li>Mr. Donald Gunasekara and his brother Wilson Gunasekara, of Elasto PVT LTD, donated this hospital on 6th of June 1977.</li> <br> <li>The hospital was opened to the public by Mrs. Siva Obesekara, the health minister of Sirimawo Bandaranayake government era.</li> <br> </h3>
             </div><!--body-->
           </div><!--footer-->
         </div><!--headerr-->
