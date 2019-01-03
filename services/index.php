@@ -102,6 +102,7 @@
 
           <h5><span style="color: #135cae;"><strong>Room No 13- Surgical Clinic</strong></span></h5>
                 <p>In this room VS OPD will conduct a clinic for the OPD patients who underwent surgeries at OPD Theatre from 8.00 am to 12.00 noon on week days.</p>
+                <hr id="mce-hr-marker" />
 
 
   
