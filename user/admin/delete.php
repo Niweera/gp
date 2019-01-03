@@ -116,7 +116,7 @@
 	if (null !==(filter_input(INPUT_POST, 'submit'))){
         $userid=mysqli_real_escape_string($conn,filter_input(INPUT_POST, 'userid'));
         $sql1 = "DELETE FROM admin WHERE adminid='$userid';";
-        $sql1 .= "DELETE FROM user WHERE userid='$userid';";
+        $sql1 .= "DELETE FROM user WHERE userid='$userid';"; // run multiple queries at once
         $result2 = mysqli_multi_query($conn,$sql1);
         if (!$result2){
             echo "<script>alert(\"Error Occured!\");</script>";
