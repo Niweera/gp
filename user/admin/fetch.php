@@ -5,7 +5,7 @@ if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
 	$query = "
-	SELECT drug.drugname, drug.count, dispenser.name,drugupdate.timestamp FROM drug LEFT JOIN drugupdate ON drug.drugid = drugupdate.drugid LEFT JOIN dispenser ON drugupdate.dispid = dispenser.dispid WHERE drugname LIKE '%".$search."%';
+	SELECT drug.drugname, drug.count, dispenser.name,drugupdate.timestamp FROM drug LEFT JOIN drugupdate ON drug.drugid = drugupdate.drugid LEFT JOIN dispenser ON drugupdate.dispid = dispenser.dispid WHERE drugname LIKE '%".$search."%' ORDER BY drug.count ASC;
 	";
 }    
 else
@@ -17,6 +17,7 @@ else
 			ON drug.drugid = drugupdate.drugid
 		LEFT JOIN dispenser
 			ON drugupdate.dispid = dispenser.dispid
+			ORDER BY drug.count ASC
 	;";
 }
 $result = mysqli_query($connect, $query);
