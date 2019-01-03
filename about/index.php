@@ -12,7 +12,7 @@
 
     <title>Overview</title>
 
-    <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../images/favicon.ico"/><!--change-->
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
