@@ -94,7 +94,7 @@
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>
-                <input type="submit" value="Submit" class="col-md-2 text-center btn btn-info btn" name="submit" onclick="return confirm('Are you sure?')"><!--change-->
+                <input type="submit" value="Delete" class="col-md-2 text-center btn btn-info btn" name="submit" onclick="return confirm('Are you sure?')">
                 <div class="col-sm-5"></div>
             </div>
         </div>    
