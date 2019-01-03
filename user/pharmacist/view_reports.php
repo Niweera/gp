@@ -113,7 +113,7 @@ if ($queryResult > 0){
                         <h5 class="text-center">You have new request reports to view!</h5>
                     </div>
                     <div class="col-md-2">
-                        <button  class="btn btn-primary btn-sm mb-2" onclick="window.location.href = './viewreports.php';">View</button>
+                        <button  class="btn btn-info btn-sm mb-2" onclick="window.location.href = './viewreports.php';">View</button>
                     </div>
                     <div class="col-md-2"></div>
                 </div>
@@ -135,7 +135,7 @@ if ($queryResult > 0){
                 <div class="col-sm-4"></div>
                 <div class="col-sm-2">
                     <input type="submit" value="View Report" class="btn btn-info btn-lg mb-2" name="submit">
-                </div><!--change-->
+                </div>
                 <div class="col-sm-2">
                     <button  class="btn btn-info btn-lg mb-2" onclick="window.location.href = './index.php';">Home</button><!--change-->
                 </div>
