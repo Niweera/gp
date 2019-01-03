@@ -88,7 +88,7 @@
 
           </div><!--container-->
      </section><!--navbar navbar-default navbar-static-top-->
-  <br>
+  
 
     <!--HEADER IMAGE-->
     <div class="im">
