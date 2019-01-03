@@ -78,7 +78,6 @@
             </div><!--container-->
      </section><!--navbar navbar-default navbar-static-top-->
 
-<br>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
      <!-- PRE LOADER -->
@@ -89,7 +88,7 @@
      </section><!--preloader-->
 
      <!-- HOME -->
-     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+     <section id="home" class="slider" data-stellar-background-ratio="0.5"  style="padding: 0px 0;">
           <div class="container">
                <div class="row">
 

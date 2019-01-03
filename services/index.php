@@ -97,7 +97,7 @@
 
 <div class="rw">
   <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-left: 25px;">
 
 
           <h5><span style="color: #135cae;"><strong>Room No 13- Surgical Clinic</strong></span></h5>
