@@ -260,6 +260,15 @@
 
             <div class="col-md-4 col-sm-4"> 
                 <div class="footer-thumb">
+                    <div class="follow-us">
+                        <h4 class="wow fadeInUp" data-wow-delay="0.4s">Follow Us</h4>
+                    </div><!--follow-us-->
+                    <ul class="social-icon">
+                        <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                    </ul>
                 </div><!--footer-thumb-->
             </div><!--col-md-4 col-sm-4-->
 
