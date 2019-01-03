@@ -97,12 +97,12 @@
 
     <!--CONTENT-->
     <div id="body">
-      <div id="contents">
+      <div id="contents" style="min-height:0px">
         <div class="headerr">
           <div class="footer">
             <div class="body">
                 <h1>Overview and History...</h1><br>
-                <h3><li>Mr.Donald Gunasekara and his brother Wilson Gunasekara, of Elasto PVT LTD, donated this hospital on 6th of June 1977.</li> <br> <li>The hospital was opened to the public by Mrs. Siva Obesekara, the heslth minister of Sirimawo Bandaranayke government era.</li> <br> <li>This Hospital is a government hospital in Bentota, Sri Lanka.  It  is controlled by the central government.</li> <br> <li>As of 2017 it had 900 beds.The hospital has a intensive care unit and 2 operating theaters. It employs 3,000 staff of which 200 are doctors.</li> <br> <li>The hospital treats over one million out patients a year.</li></h3>
+                <h3><li>Mr.Donald Gunasekara and his brother Wilson Gunasekara, of Elasto PVT LTD, donated this hospital on 6th of June 1977.</li> <br> <li>The hospital was opened to the public by Mrs. Siva Obesekara, the heslth minister of Sirimawo Bandaranayake government era.</li> <br> </h3>
             </div><!--body-->
           </div><!--footer-->
         </div><!--headerr-->
@@ -116,7 +116,7 @@
         <!-- Slider -->
         <div class="row">
           <div class="col-lg-12">
-            <h3>Image Gallery</h3>
+            <h3>Image Gallery</h3><br>
         </div><!--col-lg-12-->
             
             <div class="col-sm-6">
@@ -242,7 +242,7 @@
 
 
  
-
+<br>
     <!-- FOOTER -->
     <footer data-stellar-background-ratio="5">
       <div class="container">
