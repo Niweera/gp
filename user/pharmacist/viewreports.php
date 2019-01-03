@@ -111,7 +111,7 @@ if ($queryResult > 0){
     <div class="container border bg-light rounded">
         <form action = "view_reports.php" method="post">
             <div id="printthis" class="container mt-5 mb-5">
-                <div class="container border pt-4 bg-light rounded">
+                <div class="container border bg-light rounded">
                     <div class="row">
                         <div class="col-md-12 bg-light border">
                             <h1 class="text-center">Divisional Hospital, Bentota</h1>
