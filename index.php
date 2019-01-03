@@ -97,8 +97,8 @@
                               <div class="item item-first">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Let's make your life happier</h3>
-                                             <h1>Healthy Living</h1>
+                                             <h3></h3>
+                                             <h1>Welcome to Divisional Hospital Bentota</h1>
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
                               </div><!--item item-first-->
@@ -107,7 +107,7 @@
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3></h3>
-                                             <h1>Providing Health Solutions</h1>    
+                                             <h1>Welcome to Divisional Hospital Bentota</h1>    
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
                               </div><!--item item-second-->
@@ -116,7 +116,7 @@
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3></h3>
-                                             <h1>Your Health Benefits</h1>
+                                             <h1>Welcome to Divisional Hospital Bentota</h1>
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
                               </div><!--item item-third-->
@@ -132,10 +132,10 @@
                <div class="row">
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ospital</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Divisional<br> <i class="fa fa-h-square"></i>ospital Bentota</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>The entry of Bentota Hospitals into the state dominated healthcare sector in 1977, saw the public health care system take root in Sri Lanka.</p> 
-                                   <p>The launch of the hospital and the overwhelming response it received from the people demonstrated a long felt need for healthcare in a pleasant environment.</p>
+                                   <p>Divisional Hospital of Bentota also known as Gunasekara Memorial Hospital is in the heart of Bentota town. Since its establishment in 1977, the hospital has been a blessing to the local people as well as foreigns.</p> 
+                                   <p>The kind hearted staff of the hospital and the enthusiastic nature of them has proven that this hospital is providing good public service.</p>
                               </div><!--wow fadeInUp-->
                          </div><!--about-info-->
                     </div><!--col-md-6 col-sm-6-->                    
