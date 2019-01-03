@@ -134,7 +134,7 @@
                 <label class="col-sm-2 col-form-label"><h5><b><?php echo $clinicArray['0'];?></b></h5></label>
                 <label class="col-sm-3 col-form-label"><h5>Appointment No:</h5></label>
                 <?php if ($appointmentArray['0'] == ""){?>
-                <input type="submit" value="Get an Appointment No." class="col-md-2 text-center btn-sm btn-primary btn" name="dcappoint" 
+                <input type="submit" value="Get an Appointment No." class="col-md-2 text-center btn-sm btn-info btn" name="dcappoint" 
                 <?php 
                     date_default_timezone_set('Asia/Colombo');
                     $today = date("Y-m-d");
