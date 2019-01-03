@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="script.js"></script>
-    <script src="getscript.js"></script>
+    <script src="getscript.js"></script> <!--jquery script for retriving admin ids -->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
