@@ -143,7 +143,7 @@
                                         <img src="../images/5.jpg" alt="1"></div>
 
                                     <div class="item" data-slide-number="5">
-                                        <img src="../images/6.jpeg" alt="1"></div>
+                                        <img src="../images/6.jpg" alt="1"></div>
                                     
                                     <div class="item" data-slide-number="6">
                                         <img src="../images/7.jpeg" alt="1"></div>
@@ -207,7 +207,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <a class="thumbnail" id="carousel-selector-5"><img src="../images/6.jpeg" alt="1"></a>
+                        <a class="thumbnail" id="carousel-selector-5"><img src="../images/6.jpg" alt="1"></a>
                     </div>
                     <div class="col-sm-3">
                         <a class="thumbnail" id="carousel-selector-6"><img src="../images/7.jpeg" alt="1"></a>
