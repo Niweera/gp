@@ -196,7 +196,7 @@
                           <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
                           <div class="contact-info">
                               <p><i class="fa fa-phone"></i>034-2275260</p>
-                              <p><i class="fa fa-envelope-o"></i> <a href="#">info@divisionalhospitalbentota.com</a></p>
+                              <p><i class="fa fa-envelope-o"></i> <a href="#">info@dhbentota.com</a></p>
                           </div><!--contact-info-->
 
                       </div><!--footer-thumb-->
@@ -204,16 +204,6 @@
 
                   <div class="col-md-4 col-sm-4"> 
                       <div class="footer-thumb">
-                          <div class="follow-us">
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Follow Us</h4>
-                          </div><!--follow-us--> 
-                          <ul class="social-icon">
-                              <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                              <li><a href="#" class="fa fa-twitter"></a></li>
-                              <li><a href="#" class="fa fa-instagram"></a></li>
-                              <li><a href="#" class="fa fa-google-plus"></a></li>
-                          </ul>
-
                       </div><!--footer-thumb-->
                   </div><!--col-md-4 col-sm-4-->
 
