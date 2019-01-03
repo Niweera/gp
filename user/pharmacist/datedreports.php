@@ -115,7 +115,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         
     <div class="container border bg-light rounded">
         <div id="printthis" class="container mt-5 mb-5">
-            <div class="container border pt-4 bg-light rounded">
+            <div class="container border bg-light rounded">
                 <div class="row">
                     <div class="col-md-12 bg-light border">
                         <h1 class="text-center">Divisional Hospital, Bentota</h1>
@@ -144,8 +144,8 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                 <h5>The following drugs and their respective counts are hereby requested.</h5>
                 <br>
                 <table class="table" style="width:50%;margin-left:auto; margin-right:auto;">
-                    <thead class="thead-light">
-                        <tr>
+                    <thead>
+                        <tr class="table-primary">
                         <th scope="col">Name of The Drug</th>
                         <th scope="col">Requested Count</th>
                         </tr>
