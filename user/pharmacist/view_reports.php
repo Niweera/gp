@@ -9,13 +9,13 @@ if(!isset($_SESSION['userid'])){
             header('location: ../../login');        
         }
     }
-$sql = "SELECT DISTINCT(reportid) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;";
+$sql = "SELECT DISTINCT(reportid) FROM pharmdisp WHERE readtime IS NULL LIMIT 1;"; //check if there are new reports
 $result = mysqli_query($conn,$sql);
 $queryResult=mysqli_num_rows($result);
 if ($queryResult > 0){
-    $_SESSION['report_status'] = 1;
+    $_SESSION['report_status'] = 1; //if there is new reports available set 1
 }else{
-    $_SESSION['report_status'] = 0;
+    $_SESSION['report_status'] = 0; //if there is no new reports available set 0
 }
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ if ($queryResult > 0){
     }
     </style>
 </head>
-<body onload="showUser(document.getElementById('strval').value);">
+<body>
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;"><!--change-->
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
@@ -85,7 +85,7 @@ if ($queryResult > 0){
 <!--End of the Header navigation bar for the website-->
 <br>
     <?php
-    if (null !==(filter_input(INPUT_POST, 'submit'))){
+    if (null !==(filter_input(INPUT_POST, 'submit'))){ //when the Ackowledge button is pressed in the viewreports.php page
         $reportID = $_POST['reportid'];
         $pharmaid = $_SESSION['userid'];
         $sqlupdate = "UPDATE pharmdisp SET readtime = CURRENT_TIMESTAMP(), pharmaid = '$pharmaid' WHERE reportid = '$reportID';";

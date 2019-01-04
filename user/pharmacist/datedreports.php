@@ -11,9 +11,9 @@
         }
 ?>
 <?php
-if (null !==(filter_input(INPUT_POST, 'submit'))){
+if (null !==(filter_input(INPUT_POST, 'submit'))){ //when the View Report button is pressed in view_reports.php page
     $reportid = $_POST['reportid'];
-    $reportid = substr($reportid, 2);
+    $reportid = substr($reportid, 2); //remove the first two characters from the string
     $sql = "SELECT dispenser.name, pharmdisp.createtime FROM pharmdisp INNER JOIN dispenser ON dispenser.dispid = pharmdisp.dispid WHERE reportid = '$reportid';";
     $result = mysqli_query($conn,$sql);
     $queryResult=mysqli_num_rows($result);
@@ -21,7 +21,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
         $row=mysqli_fetch_assoc($result);
         $dispname = $row['name'];
         $createtime = $row['createtime'];
-        $time_array = preg_split('/\s+/', $createtime, -1, PREG_SPLIT_NO_EMPTY);
+        $time_array = preg_split('/\s+/', $createtime, -1, PREG_SPLIT_NO_EMPTY); //Split the given string by a regular expression.
         $createdate = $time_array[0];
         $create_time = $time_array[1];
     }else{
@@ -66,7 +66,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     }
     </style>
 </head>
-<body onload="showUser(document.getElementById('strval').value);">
+<body>
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;">
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>

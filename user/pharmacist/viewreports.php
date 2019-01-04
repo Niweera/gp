@@ -61,7 +61,7 @@ if ($queryResult > 0){
     }
     </style>
 </head>
-<body onload="showUser(document.getElementById('strval').value);">
+<body>
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;">
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
