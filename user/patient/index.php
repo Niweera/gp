@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="container">
-                <img class="border" src=<?php echo returnImage(); ?> style="width:266px;height:266px" alt="Patient"/><!--change-->
+                <img class="border" src=<?php echo returnImage($conn); ?> style="width:266px;height:266px" alt="Patient"/><!--change-->
             </div>
         </div>
         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
@@ -130,8 +130,7 @@
     include '../../footer.php';
 ?>
 <?php
-    function returnImage() {
-        include '../../dbconf/dbh.php';
+    function returnImage($conn) {
         $clinicno = $_SESSION['userid'];
         $sql = "SELECT gender FROM patient WHERE clinicno = '$clinicno';";
         $query = mysqli_query($conn,$sql);
