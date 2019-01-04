@@ -115,13 +115,28 @@
 <?php
 	if (null !==(filter_input(INPUT_POST, 'submit'))){
         $userid=mysqli_real_escape_string($conn,filter_input(INPUT_POST, 'userid'));
-        $sql1 = "DELETE FROM admin WHERE adminid='$userid';";
-        $sql1 .= "DELETE FROM user WHERE userid='$userid';"; // run multiple queries at once
-        $result2 = mysqli_multi_query($conn,$sql1);
-        if (!$result2){
-            echo "<script>alert(\"Error Occured!\");</script>";
+        if (isExist($userid,$conn)){ //if the entered username is in the database then delete the profile data
+            $sql1 = "DELETE FROM admin WHERE adminid='$userid';";
+            $sql1 .= "DELETE FROM user WHERE userid='$userid';"; // run multiple queries at once
+            $result2 = mysqli_multi_query($conn,$sql1);
+            if (!$result2){
+                echo "<script>alert(\"Error Occured!\");</script>";
+            }else {
+                echo "<script>alert(\"Successfully deleted!\");</script>";
+            }
         }else {
-            echo "<script>alert(\"Successfully deleted!\");</script>";
+            echo "<script>alert(\"Username is not valid. Please check the usename again!\");</script>";
+        }
+    }
+
+    function isExist($username,$conn){ //checking is the entered username is in the database
+        $sql="SELECT * FROM admin WHERE adminid = '".$username."'";
+        $result = mysqli_query($conn,$sql);
+        $queryResult=mysqli_num_rows($result);
+        if ($queryResult == 1){
+            return True;
+        }else{
+            return False;
         }
     }
 ?>
