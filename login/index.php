@@ -115,7 +115,7 @@
                   <ul class="nav navbar-nav navbar-right">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php if (isset($_SESSION['userid'])) {include '../homelink.php';}else{echo "../";}?>"><?php if (isset($_SESSION['userid'])) { include '../homename.php';}else{echo "";}?> Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="<?php if (isset($_SESSION['userid'])) {include './homelink.php';}else{echo "../";}?>"><?php if (isset($_SESSION['userid'])) { include '../homename.php';}else{echo "";}?> Home<span class="sr-only">(current)</span></a>
                         </li>
 
                         <li class="dropdown">

@@ -12,7 +12,7 @@ session_start();
 
     <title>Password Reset</title>
 
-    <link rel="shortcut icon" type="image/png" href="https://www.niwder.me/tvdb/logo.jpg"/>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../images/favicon.ico"/>
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
@@ -48,7 +48,7 @@ session_start();
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php if (isset($_SESSION['userid'])) {include '../homelink.php';}else{echo "../";}?>"><?php if (isset($_SESSION['userid'])) { include '../homename.php';}else{echo "";}?> Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php if (isset($_SESSION['userid'])) {include './homelink.php';}else{echo "../";}?>"><?php if (isset($_SESSION['userid'])) { include '../homename.php';}else{echo "";}?> Home<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="dropdown">
@@ -66,8 +66,6 @@ session_start();
                         <li><a href="../services/opd.php">OPD Services</a></li>
                     </ul>
                 </li>
-
-                <li><a href="../contact" class="smoothScroll">Contact Details</a></li>
 
                 <li class="nav-item">
                     <?php
@@ -103,7 +101,7 @@ session_start();
                     <br>
 
                 </div>
-                <button type="submit" class="btn btn-primary" name="reset">Reset Password</button>
+                <button type="submit" class="btn btn-info" name="reset">Reset Password</button>
 
             </form>
 
@@ -112,25 +110,23 @@ session_start();
 </div><!--container bg-danger-->
 <br><br>
 <!-- FOOTER -->
-<footer data-stellar-background-ratio="5" style="background-color: white;">
-    <div class="container">
-        <div class="row">
+<footer data-stellar-background-ratio="5"  style="background-color: white;">
+          <div class="container">
+              <div class="row">
 
-            <div class="col-md-4 col-sm-4">
-                <div class="footer-thumb">
-                    <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                    <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i>034-2275260</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@dhbentota.com</a></p>
+                              </div><!--contact-info-->
+                         </div><!--footer-thumb-->
+                    </div><!--col-md-4 col-sm-4-->
 
-                    <div class="contact-info">
-                        <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                        <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
-                    </div><!--contact-info-->
-                </div><!--footer-thumb-->
-            </div><!--col-md-4 col-sm-4-->
-
-            <div class="col-md-4 col-sm-4">
-                <div class="footer-thumb">
-                    <div class="follow-us">
+                     <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb">
+                          <div class="follow-us">
                         <h4 class="wow fadeInUp" data-wow-delay="0.4s">Follow Us</h4>
                     </div><!--follow-us-->
                     <ul class="social-icon">
@@ -139,45 +135,46 @@ session_start();
                         <li><a href="#" class="fa fa-instagram"></a></li>
                         <li><a href="#" class="fa fa-google-plus"></a></li>
                     </ul>
-                </div><!--footer-thumb-->
-            </div><!--col-md-4 col-sm-4-->
+                         </div><!--footer-thumb-->
+                    </div><!--col-md-4 col-sm-4-->
 
 
-            <div class="col-md-4 col-sm-4">
-                <div class="footer-thumb">
-                    <h4 class="wow fadeInUp" data-wow-delay="0.4s">Our Location</h4>
-                    <div class="latest-stories">
-                        <div class="stories-image">
-                            <a href="#"><img src="../images/news-image.jpg" class="img-responsive" alt=""></a>
-                        </div><!--stories-image-->
-                        <div class="stories-info">
-                            <h5>Address</h5></a>
-                        </div><!--stories-info-->
-                    </div><!--latest-stories-->
-                </div><!--footer-thumb-->
-            </div><!--col-md-4 col-sm-4-->
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Our Location</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="../images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div><!--stories-image-->
+                                   <div class="stories-info">
+                                        <h5>Address</h5>
+                                        <p>Divisional Hospital, Bentota</p></a>
+                                   </div><!--stories-info-->
+                              </div><!--latest-stories-->
+                         </div><!--footer-thumb-->
+                    </div><!--col-md-4 col-sm-4-->
 
-            <div class="col-md-12 col-sm-12 border-top">
-                <div class="col-md-4 col-sm-6">
-                    <div class="copyright-text">
-                        <p>Copyright &copy; 2018 Divisional Hospital of Bentota. | All right Reserved.</p>
-                    </div><!--copyright-text-->
-                </div><!--col-md-4 col-sm-6-->
-                <div class="col-md-6 col-sm-6">
-                    <div class="copyright-text">
-                        <p>Developed by Group 16 of University of Colombo School of Computing</p>
-                    </div><!--copyright-text-->
-                </div><!--col-md-6 col-sm-6-->
-                <div class="col-md-2 col-sm-2 text-align-center">
-                    <div class="angle-up-btn">
-                        <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
-                    </div><!--angle-up-btn-->
-                </div><!--col-md-2 col-sm-2 text-align-center-->
-            </div><!--col-md-12 col-sm-12 border-top-->
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2018 Divisional Hospital of Bentota. | All right Reserved.</p>
+                              </div><!--copyright-text-->
+                         </div><!--col-md-4 col-sm-6-->
+                         <div class="col-md-6 col-sm-6">
+                            <div class="copyright-text"> 
+                               <p>Developed by Group 16 of University of Colombo School of Computing</p>
+                            </div><!--copyright-text-->
+                         </div><!--col-md-6 col-sm-6-->
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div><!--angle-up-btn-->
+                         </div><!--col-md-2 col-sm-2 text-align-center-->  
+                    </div><!--col-md-12 col-sm-12 border-top-->
 
-        </div><!--row-->
-    </div><!--container-->
-</footer>
+               </div><!--row-->
+          </div><!--container-->
+     </footer>        
 
 
 <!-- SCRIPTS -->
