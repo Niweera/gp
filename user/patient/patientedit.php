@@ -29,7 +29,7 @@
         $dc =  $row['dc'];
         $mc =  $row['mc'];
     }else{
-        echo "<script>alert('Please check the Patient ID and try again!');window.location.href = './patientview.php';</script>";
+        echo "<script>alert('Error Occured!');</script>";
     }
     
 ?>
