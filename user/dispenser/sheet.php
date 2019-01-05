@@ -65,7 +65,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                 </div>
             </div>
             <br>
-            <h2 class="text-center">Drug Requst Report</h2>
+            <h2 class="text-center">Drug Request Report</h2>
             <hr>
 
             <div class="row mt-3">
@@ -88,8 +88,8 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             <h5>The following drugs and their respective counts are hereby requested.</h5>
             <br>
             <table class="table" style="width:50%;margin-left:auto; margin-right:auto;">
-                <thead class="thead-light">
-                    <tr>
+                <thead>
+                    <tr class="table-primary">
                     <th scope="col">Name of The Drug</th>
                     <th scope="col">Requested Count</th>
                     </tr>
@@ -124,7 +124,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center mb-5">
-                <button  class="btn btn-primary btn-lg ml-2" onclick="history.go(-1);">Go Back</button>
+                <button  class="btn btn-info btn-lg ml-2" onclick="history.go(-1);">Go Back</button>
             </div>
         </div>
     </div>
