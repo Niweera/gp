@@ -152,5 +152,6 @@
 mysqli_close($conn);
 ?>
 
-
+<!--Mysql query for check whether a drug is below the count threshold-->
+<!--insert into hmsdb.sysmsg(message) select drug.drugid from hmsdb.drug where drug.drugid in (select drug.drugid from hmsdb.drug where drug.count <='500')-->
 
