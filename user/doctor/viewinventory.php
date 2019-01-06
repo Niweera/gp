@@ -98,11 +98,7 @@
             </div>
             <div id="result"></div>
             <br>
-            <div class="form-group row mb-5">
-                <div class="col-sm-5"></div>
-                <button  class="col-md-2 text-center btn btn-info btn mb-2" onclick="window.location.href='./drugissue.php'">Update Inventory</button><!--change-->
-                <div class="col-sm-5"></div>
-            </div>
+         
         </div>    
     
     
