@@ -132,7 +132,7 @@
                     <div class="form-group row">
                         <label for="dob" class="col-sm-4 col-form-label"><h5>Date of Birth</h5></label>
                         <div class="col-lg-8">
-                            <input type="date" class="form-control form-control-sm" name="dob" id="dob" value="<?php echo $dob;?>" autocomplete="off">
+                            <input type="date" class="form-control form-control-sm" name="dob" id="dob" max="2018-12-31" value="<?php echo $dob;?>" autocomplete="off">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -150,7 +150,7 @@
                     <div class="form-group row">
                         <label for="contactno" class="col-sm-4 col-form-label"><h5>Telephone Number</h5></label>
                         <div class="col-lg-8">
-                            <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" value="<?php echo $contactno;?>" required autofocus>
+                            <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" min="1" step="1" max="9999999999" value="<?php echo $contactno;?>" required autofocus>
                         </div>
                     </div>
                     <div class="form-group row">
