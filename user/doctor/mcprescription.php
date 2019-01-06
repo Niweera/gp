@@ -131,7 +131,7 @@
                                 echo "<td style=\"width: 20.00%\">";
                                 echo "<div class=\"row\">";
                                 echo "<div class=\"col-md-8\">";
-                                echo "<input type=\"number\" class=\"form-control form-control-sm\" name=".$drugid."d>";
+                                echo "<input type=\"number\" min=\"1\" step=\"1\" class=\"form-control form-control-sm\" name=".$drugid."d>";
                                 echo "</div>";
                                 echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
                                 echo "<td style=\"width: 20.00%\">";
