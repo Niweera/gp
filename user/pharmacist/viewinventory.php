@@ -109,7 +109,7 @@
         </div><!--container border pt-4 bg-light rounded mt-3 mb-5-->      
 
 <br>
-<br>
+<br><br>
 
 <?php
     include '../../real_footer.php';
