@@ -159,7 +159,7 @@
                     $_SESSION['name'] = $name;
                     $_SESSION['email'] = $email;
                     $_SESSION['contactno'] = $contactno;
-                    echo "<script>alert(\"Successfully Updated! Please refresh the browser to see the changes.\");</script>";
+                    echo "<script>alert(\"Successfully Updated! Please refresh the browser to see the changes.\");</script>";//change this according to nurseedit.php
 
                 }
     }
