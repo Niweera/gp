@@ -89,7 +89,7 @@
                 <div class="col-sm-2"></div>
                 <label for="date" class="col-sm-3 col-form-label"><h5>Please enter date:</h5></label>
                 <div class="col-lg-4 mb-1">
-                    <input type="date" class="form-control form-control-sm" name="date" id="date" placeholder="Enter Date" required>
+                    <input type="date" class="form-control form-control-sm" name="date" id="date" placeholder="Enter Date" max="2050-12-31" required>
                 </div>
                 <div class="col-sm-3"></div>
             </div>
