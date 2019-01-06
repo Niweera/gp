@@ -83,12 +83,10 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./dispedit.php">Edit Profile</a>
                 <a class="dropdown-item active" href="./drugissue.php">Issue Drugs</a>
-                <a class="dropdown-item" href="#">View Reports</a>
-                <a class="dropdown-item" href="#">Send Reports</a>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./#">Reports</a>
+            <a class="nav-link" href="./sendreports.php">Reports</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../logout">Logout</a>

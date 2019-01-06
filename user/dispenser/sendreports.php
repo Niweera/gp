@@ -145,7 +145,7 @@
                             echo $drugcount;
                             echo "</td>";
                             echo "<td style=\"width: 30.00%\">";
-                            echo "<input type=\"number\" class=\"form-control form-control-sm\" name=".$drugid."d autofocus>";
+                            echo "<input type=\"number\" min=\"1\" step=\"1\" class=\"form-control form-control-sm\" name=".$drugid."d autofocus>";
                             echo "</td>";
                             echo "</tr>";
                         }

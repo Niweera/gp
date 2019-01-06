@@ -104,7 +104,7 @@
             <div class="form-group row mt-3">
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Count:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
-                    <input type="number" class="form-control form-control-sm" name="drugcount" id="drugcount" placeholder="Enter Drug Count" autocomplete="off" required autofocus>
+                    <input type="number" class="form-control form-control-sm" name="drugcount" id="drugcount" min="1" step="1" placeholder="Enter Drug Count" autocomplete="off" required autofocus>
                 </div>
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Flag:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
