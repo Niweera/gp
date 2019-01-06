@@ -54,3 +54,4 @@ else
 	echo 'Data Not Found';
 }
 ?>
+<!--this file is to retrieve the drug data from the database -->

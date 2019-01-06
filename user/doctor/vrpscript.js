@@ -43,4 +43,4 @@ function showUser(str) {
     }
 }
 
-//this script1.js file is the script file for backend-search3.php file only for view patient medical records
+//this vrpscript.js file is the script file for vrp-search.php file only for view patient medical records

@@ -46,6 +46,6 @@ if(isset($_REQUEST["term"])){
 // close connection
 mysqli_close($conn);
 
-//This backend-search.php file is for view patient medical records 
+//This vrd-search.php file is for view patient medical records 
 ?>
 

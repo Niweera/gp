@@ -9,11 +9,7 @@ $(document).ready(function(){
 			success:function(data)
 			{
 				$('#result').html(data);
-			}/*,
-			complete: function() {
-				// Schedule the next request when the current one's complete
-				setTimeout(load_data, 20000); //the load_data function will execute every two seconds
-			}*/
+			}
 		});
 	}
 	
@@ -43,3 +39,4 @@ $(document).ready(function(){
 	
 });
 
+//this file is for viewinventory.php 

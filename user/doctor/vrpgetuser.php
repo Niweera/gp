@@ -65,5 +65,5 @@ if ($queryResult == 1){
 }
 mysqli_close($conn);
 
-//This backend-search.php file is for view medical records
+//This vrogetuser.php file is for view medical records
 ?>

@@ -15,3 +15,5 @@ $(function(){
         }
     });
 });
+
+//this file is for validating the dc prescription sheet

@@ -21,4 +21,4 @@ $(document).ready(function(){
 });
 
 
-//this script5.js file is the script file for backend-search4.php file only for view patient medical records 
+//this vrdscript.js file is the script file for vrd-search.php file only for view patient medical records 

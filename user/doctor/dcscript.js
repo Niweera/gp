@@ -43,4 +43,4 @@ function showUser(str) {
     }
 }
 
-//this script.js file is the script file for backend-search.php file only for dc clinic prescription sheet
+//this dcscript.js file is the script file for dc-search.php file only for dc clinic prescription sheet

@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./getscript.js"></script>
+    <script src="./getscript.js"></script><!--ajax script for retriving data-->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;

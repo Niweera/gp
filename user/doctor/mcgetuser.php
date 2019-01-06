@@ -45,5 +45,5 @@ if ($queryResult == 1){
 }
 mysqli_close($conn);
 
-//This backend-search.php file is for the mc prescription sheet
+//This mcgetuser.php file is for the mc prescription sheet
 ?>

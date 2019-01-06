@@ -15,3 +15,4 @@ $(function(){
         }
     });
 });
+//this file is to validate the form of mc prescription sheet
