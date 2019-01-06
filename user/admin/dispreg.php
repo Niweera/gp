@@ -85,7 +85,7 @@
                     <div class="form-group row">
                         <label for="contactno" class="col-sm-4 col-form-label"><h5>Telephone Number</h5></label>
                         <div class="col-lg-8">
-                            <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" placeholder="Enter Telephone Number" required autofocus>
+                            <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" min="1" step="1" max="9999999999" placeholder="Enter Telephone Number" required autofocus>
                         </div>
                     </div>
                     <div class="form-group row">
