@@ -97,7 +97,7 @@
                 <div class="col-sm-3"></div>
             </div>
             <div id="txtHint"></div>
-            
+            <br>
             <div class="form-group row">
                 <div class="col-sm-3"></div>
                 <label for="date" class="col-sm-2 col-form-label"><h5>Required date:</h5></label>
