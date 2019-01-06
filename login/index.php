@@ -29,7 +29,7 @@
                     $_SESSION['name'] = $row1['name'];
                     $_SESSION['email'] = $row1['email'];
                     $_SESSION['contactno'] = $row1['contactno'];
-          $_SESSION['userid'] = $row['userid'];
+                    $_SESSION['userid'] = $row['userid'];
                     $_SESSION['flag'] = $row['flag'];
                     if ($_SESSION['flag'] == 0){
                         header('location: ../user/admin');
@@ -39,7 +39,7 @@
                         header('location: ../user/doctor');
               exit;
                     }
-          elseif ($_SESSION['flag'] == 2){
+                    elseif ($_SESSION['flag'] == 2){
                         header('location: ../user/dispenser');
               exit;
                     }

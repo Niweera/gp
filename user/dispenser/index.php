@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="../admin/script.js"></script>
-    <script src="./msgcountscript.js"></script>
+    <script src="../admin/script.js"></script><!--script for viewing time-->
+    <script src="./msgcountscript.js"></script><!--script for viewing the system msg count-->
 </head>
 <body onload="startTime()">
 <!--Header navigation bar for the website-->

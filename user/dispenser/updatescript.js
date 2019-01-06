@@ -35,3 +35,4 @@ $(document).ready(function(){
 	 alert(throwError);
 	 });
  }
+ //this file is for ajax support in adddrugs.php
