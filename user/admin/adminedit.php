@@ -73,6 +73,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group row">
+                        <label for="name" class="col-sm-4 col-form-label"><h5>Admin ID</h5></label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control form-control-sm" name="adminid" id="adminid" value="<?php echo $_SESSION['userid'];?>" autocomplete="off" required disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label for="name" class="col-sm-4 col-form-label"><h5>Name</h5></label>
                         <div class="col-lg-8">
                             <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Enter Name" value="<?php echo $_SESSION['name'];?>" autocomplete="off" required autofocus>
