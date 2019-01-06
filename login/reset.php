@@ -219,7 +219,7 @@ if (null !==(filter_input(INPUT_POST, 'reset'))){
             $to = $email;
             $subject = "Your Recovered Password";
             $message = "Please use this username and password to login: \nUsername: " . $username . "\nPassword: ". $password ."\nGo to this link to login: http://localhost/gp/login/ \nPlease change the password after the login.";
-            $headers = "From: hmsystem.noreply@gmail.me";
+            $headers = "From: hmsystem.noreply@gmail.com";
             if(mail($to, $subject, $message, $headers)){
                 echo '<script>alert("Your Password has been sent to your email id");</script>';
             }
