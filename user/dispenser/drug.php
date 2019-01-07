@@ -127,7 +127,11 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                         $dose = $row['dose'];
                         $frequency = $row['frequency'];
                         $duration = $row['duration'];
-
+                        if ($drugid == "d17"){
+                            $unit = "ml";
+                        }else{
+                            $unit = "mg";
+                        }
                         if ($frequency == "BD"){
                             $freq = 2;
                         }elseif ($frequency == "TDS"){
@@ -153,7 +157,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                         echo "<div class=\"col-md-8\">";
                         echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$dose.">";
                         echo "</div>";
-                        echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
+                        echo "<div class=\"col-md-4 pl-0\"><p>".$unit."</p></div></div></td>";
                         echo "<td style=\"width: 20.00%\">";
                         echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$frequency.">";
                         echo "</td>";

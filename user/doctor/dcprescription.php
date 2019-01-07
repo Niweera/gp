@@ -127,6 +127,11 @@
                             if ($flag == '0' || $flag == '2'){
                                 $drugid = $row['drugid'];
                                 $drugname = $row['drugname'];
+                                if ($drugid == "d17"){
+                                    $unit = "ml";
+                                }else{
+                                    $unit = "mg";
+                                }
                                 echo "<tr>";
                                 echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
                                 echo "<td style=\"width: 20.00%\">";
@@ -134,7 +139,7 @@
                                 echo "<div class=\"col-md-8\">";
                                 echo "<input type=\"number\" min=\"1\" step=\"1\" class=\"form-control form-control-sm\" name=".$drugid."d>";
                                 echo "</div>";
-                                echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
+                                echo "<div class=\"col-md-4 pl-0\"><p>".$unit."</p></div></div></td>";
                                 echo "<td style=\"width: 20.00%\">";
                                 echo "<select class ='form-control form-control-sm' name=".$drugid."f>";
                                 echo '<option selected value="BD">BD</option>';

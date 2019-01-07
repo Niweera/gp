@@ -149,7 +149,11 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                         while ($row=mysqli_fetch_assoc($result)){
                             $drugid = $row['drugid'];
                             $drugname = $row['drugname'];
-                            
+                            if ($drugid == "d17"){
+                                $unit = "ml";
+                            }else{
+                                $unit = "mg";
+                            }
                             $d = filter_input(INPUT_POST,$drugid."d");
                             if ($d != ""){
                                 echo "<tr>";
@@ -159,7 +163,7 @@ if (null !==(filter_input(INPUT_POST, 'submit'))){
                                 echo "<div class=\"col-md-8\">";
                                 echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$d.">";
                                 echo "</div>";
-                                echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
+                                echo "<div class=\"col-md-4 pl-0\"><p>".$unit."</p></div></div></td>";
                                 echo "<td style=\"width: 20.00%\">";
                                 $f = filter_input(INPUT_POST,$drugid."f");
                                 echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$f.">";
