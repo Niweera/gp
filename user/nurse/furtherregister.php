@@ -51,12 +51,12 @@
             <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Patient Management
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./register.php">Register Patient</a>
-                <a class="dropdown-item active" href="./register2.php">Further Patient Registration</a>
+                <a class="dropdown-item active" href="./furtherregister.php">Further Patient Registration</a>
                 <a class="dropdown-item" href="./patientview.php">View Patient Details</a>
             </div>
         </li>
