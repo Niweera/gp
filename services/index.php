@@ -146,7 +146,7 @@
       </div><!--col-md-6-->
 
   </div><!--row-->
- </div> 
+ </div><!--rw--> 
   
     <!-- FOOTER -->
      <footer data-stellar-background-ratio="5">

@@ -126,8 +126,6 @@
 
       <div class="col-md-6">
 
-
-
             <h5><span style="color: #135cae;"><strong>Room No 9,10- Urine Test &amp; Bool Collection Rooms</strong></span></h5>
                 <p>All the OPD based Urine and Blood sample testing are done at this room.</p>
                 <hr id="mce-hr-marker" />
@@ -140,10 +138,6 @@
                 <p>The patients who needs inward medical or surgical treatment will be admitted t the wards from this room. This service is 24 hours service.</p>
                 <hr id="mce-hr-marker" />
 
-         
-
-          
-
           <h5><span style="color: #135cae;"><strong>Emergency Treatment Unit</strong></span></h5>
               <p>For the patients who needs Emergency medical treatments this unit provides its service in 24 hours per day.</p>
               <hr id="mce-hr-marker" />
@@ -152,24 +146,14 @@
               <p>For all the OPD&nbsp; patients who needs drugs will be issued from this room.</p>
               <hr id="mce-hr-marker" />
 
-
-
       </div><!--col-md-6-->
 
   </div><!--row-->
-</div>
+</div><!--rw-->
 
 
-
-
-    <!--CONTENT-->
-    
-   
-
-  
-
+<br>
     <!-- FOOTER -->
-    <div>
      <footer data-stellar-background-ratio="5">
           <div class="container">
                <div class="row">
@@ -233,8 +217,7 @@
 
                </div><!--row-->
           </div><!--container--> 
-     </footer>  
-     </div>       
+     </footer>        
 
     <!-- SCRIPTS -->
     <script src="../js/jquery.js"></script>
