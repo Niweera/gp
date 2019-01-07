@@ -101,91 +101,6 @@
           </div><!--carousel-inner-->
       </div><!--homeCarousel-->
 
-    <!--CONTENT-->
-   <!-- <div id="body">
-      <div id="contents">
-        <div class="headerr">
-          <div class="footer">
-            <div class="body">
-                <h1>Our Vision</h1>
-                <p> Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What&acute;s more, they&acute;re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the Terms of Use. You can even remove all our links if you want to. </p>
-
-                <h1>Our Mission</h1>
-                <p> Looking for more templates? Just browse through all our Free Website Templates and find what you&acute;re looking for. But if you don&acute;t find any website template you can use, you can try our Free Web Design service and tell us all about it. Maybe you&acute;re looking for something different, something special. And we love the challenge of doing something different and something special. </p>
-
-                <h1>Our Mission</h1>
-                <p> If you&acute;re experiencing issues and concerns about this website template, join the discussion on our forum and meet other people in the community who share the same interests with you. </p>
-
-                <h1>Our Mission</h1>
-                <p> Version 11<br>
-                Website Template details, discussion and updates for this Natural Health Web Template. Website Template design by Free Website Templates. Please feel free to remove some or all the text and links of this page and replace it with your own About content. </p>
-          </div><!--body-->
-        </div><!--footer-->
-      </div><!--headerr-->
-    </div><!--contents-->
-  </div><!--body-->
-
-
-  <!--FOUNDER-->
-
-  <!--<div class="container">
-    <div class="reasons-titles">
-        <h2>Our Department</h2>    
-    </div><!--reasons-titles-->
-    <!--<div class="row">
-      <div  class="col-md-6">
-
-        <div class="alert alert-success">
-          <h4><strong>Lab Test Department</strong></h4>
-            <p>The lab at Hospital offers tests covering the full range of medicinal pathology. </p>
-        </div><!--alert alert-success-->
-
-         <!--<div class="alert alert-info">
-          <h4><strong>Dental Department</strong></h4>
-            <p>The Dental Clinic program tremendously affects patients' lives. </p>
-        </div><!--alert alert-info-->
-
-         <!--<div class="alert alert-warning">
-          <h4><strong>Primary Health</strong></h4>
-            <p>Primary healthcare services are provided by general practitioners and nurses in Hospital. </p>
-        </div><!--alert alert-warning-->
-        
-      <!--</div><!--col-md-8-->  
-
-      <!--<div class="col-md-6">
-        <img src="../images/images-2.jpg" alt="" width="100%" class="img-rounded">
-      </div><!--col-md-6-->
-
-    <!--</div><!--row-->  
-
-    <!--<div class="row">
-      <div  class="col-md-6">
-
-        <div class="alert alert-success">
-          <h4><strong>Pediatrics Department</strong></h4>
-            <p>From that moment your child is born, your goal is to keep them healthy and safe.</p>
-        </div><!--alert alert-success-->
-
-         <!--<div class="alert alert-info">
-          <h4><strong>Neurology Department</strong></h4>
-            <p>The Hospital Department of Neurology is one of the biggest on the planet.</p>
-        </div><!--alert alert-info-->
-
-         <!--<div class="alert alert-warning">
-          <h4><strong>Gynecology Department</strong></h4>
-            <p>Welcome to the Department of Obstetrics and Gynecology at Hospital Clinic.</p>
-        </div><!--alert alert-warning-->
-
-      <!--</div><!--col-md-8--> 
-
-      <!--<div class="col-md-6">        
-        <img src="../images/department-2.jpg" alt="" width="100%" class="img-rounded">       
-      </div><!--col-md-6-->
-
-    <!--</div><!--row-->  
-  <!--</div><!--container-->
-
-
     <!-- FOOTER -->
     <footer data-stellar-background-ratio="5">
         <div class="container">
@@ -264,7 +179,7 @@
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/custom.js"></script>
 
-  <!-- Template main javascript -->
+  <!--main javascript -->
   <script src="main.js"></script>
 
 </body>
