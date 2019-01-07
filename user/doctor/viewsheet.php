@@ -107,11 +107,16 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
                     $queryResult=mysqli_num_rows($result);
                     if ($queryResult > 0){
                         while ($row=mysqli_fetch_assoc($result)){
+                            $drugid = $row['drugid'];
                             $drugname = $row['drugname'];
                             $dose = $row['dose'];
                             $frequency = $row['frequency'];
                             $duration = $row['duration'];
-                            
+                            if ($drugid == "d17"){
+                                $unit = "ml";
+                            }else{
+                                $unit = "mg";
+                            }
                             
                             echo "<tr>";
                             echo "<th style=\"width: 40.00%\" scope=\"row\">".$drugname."</th>";  
@@ -120,7 +125,7 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['contactno']))
                             echo "<div class=\"col-md-8\">";
                             echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$dose.">";
                             echo "</div>";
-                            echo "<div class=\"col-md-4 pl-0\"><p>mg</p></div></div></td>";
+                            echo "<div class=\"col-md-4 pl-0\"><p>".$unit."</p></div></div></td>";
                             echo "<td style=\"width: 20.00%\">";
                             echo "<input type=\"text\" class=\"form-control form-control-sm\" value=".$frequency.">";
                             echo "</td>";
