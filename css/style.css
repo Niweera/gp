@@ -101,37 +101,3 @@
 #featured div.body p a, #contents p a {
 	color: #618200;
 }
-
-/*---- CONTENTS ----*/
-#contents {
-	background: url(../images/bg-content.jpg) no-repeat center top;
-	min-height: 695px;
-	padding-top: 90px;
-}
-#contents div.body {
-	background-position: 0 -464px;
-	max-height: 640px;
-	padding: 10px 20px 20px;
-}
-#contents div.body h1 {
-	color: #615c3f;
-	font-family: 'DeliusSwashCapsRegular';
-	line-height: 42px;
-	margin: 0;
-	text-shadow: 1px 1px #f9faf5;
-}
-#contents div.body h4 {
-	color: #743200;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0;
-}
-#contents div.body p {
-	color: #766249;
-	font-size: 12px;
-	line-height: 24px;
-	margin: 0;
-	padding: 0 0 24px;
-	text-align: justify;
-}
-
