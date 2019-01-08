@@ -33,7 +33,9 @@ if ($queryResult > 0){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
     <title>View Reports</title>
+
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../images/favicon.ico"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -61,6 +63,7 @@ if ($queryResult > 0){
     }
     </style>
 </head>
+
 <body>
 <!--Header navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;">
@@ -80,7 +83,7 @@ if ($queryResult > 0){
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./viewinventory.php">View Inventory</a>
-            </div>
+            </div><!--dropdown-menu-->
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,7 +91,7 @@ if ($queryResult > 0){
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./pharmaedit.php">Edit Profile</a>
-            </div>
+            </div><!--dropdown-menu-->
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="./view_reports.php">Reports</a>
@@ -97,14 +100,14 @@ if ($queryResult > 0){
             <a class="nav-link" href="../../logout">Logout</a>
         </li>
         </ul>
-    </div>
+    </div><!--navbar-collapse collapse w-100 order-3 dual-collapse2-->
 </nav>
 <!--End of the Header navigation bar for the website-->
 <br>
 
     <div class="container">
         <center><h1 style="color:#242424;">View Reports</h1></center>
-    </div>
+    </div><!--container-->
     <br>
     <br>
         
@@ -115,30 +118,33 @@ if ($queryResult > 0){
                     <div class="row">
                         <div class="col-md-12 bg-light border">
                             <h1 class="text-center">Divisional Hospital, Bentota</h1>
-                        </div>
-                    </div>
+                        </div><!--col-md-12 bg-light border-->
+                    </div><!--row-->
+
                     <br>
+
                     <h2 class="text-center">Drug Request Report</h2>
                     <hr>
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <label class="h4"><strong>Date: </strong><?php echo $createdate; ?></label>
-                        </div>
+                        </div><!--col-md-6-->
                         <div class="col-md-6">
                             <label class="h4"><strong>Time: </strong><?php echo $create_time; ?></label>
-                        </div>
-                    </div>
+                        </div><!--col-md-6-->
+                    </div><!--row mt-3-->
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <label class="h4"><strong>Dispenser: </strong><?php echo $dispname; ?></label>
-                        </div>
+                        </div><!--col-md-6-->
                         <div class="col-md-6">
                             <label class="h4"><strong>Report ID: </strong><?php echo "DR".$reportID; ?></label>
-                        </div>
-                    </div>
+                        </div><!--col-md-6-->
+                    </div><!--row mt-3-->
                     <hr>
                     <h5>The following drugs and their respective counts are hereby requested.</h5>
                     <br>
+
                     <table class="table" style="width:50%;margin-left:auto; margin-right:auto;">
                         <thead>
                             <tr class="table-primary">
@@ -165,21 +171,22 @@ if ($queryResult > 0){
                         </tbody>
                     </table>
                     <hr>
-                </div>
-            </div>
+                </div><!--container border bg-light rounded-->
+            </div><!--container mt-5 mb-5-->
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-2">
                     <button id="printbutton" class="btn btn-info btn-lg mr-2" onclick="printContent('printthis')">Print Content</button>
-                </div>
+                </div><!--col-sm-2-->
                 <div class="col-md-2">
                     <input type="hidden" value="<?php echo $reportID; ?>" name="reportid">
                     <input type="submit" value="Acknowledge" class="btn btn-info btn-lg mb-2" name="submit">
-                </div>
-                <div class="col-md-4"></div>
-            </div>               
+                </div><!--col-md-2-->
+                <div class="col-md-4"></div><!--col-md-4-->
+            </div><!--row-->               
         </form>
-    </div>
+    </div><!--container border bg-light rounded-->
+
 <br>
 <?php
     include '../../real_footer.php';
@@ -190,6 +197,7 @@ if ($queryResult > 0){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+
 <?php
 }else{
     $_SESSION['report_status'] = 0;

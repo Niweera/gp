@@ -16,13 +16,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
     <title>Edit Profile</title>
+
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../images/favicon.ico"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
+
     <script src="script.js"></script>
     <script>
         var check = function() {
@@ -37,8 +40,9 @@
     </script>
 </head>
 <body>
+
 <!--Header navigation bar for the website-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;"><!--change-->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0097a7;box-shadow: 0px 0px 12px #828282;">
     <a class="navbar-brand" href="../../">Divisional Hospital, Bentota</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -55,7 +59,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="./viewinventory.php">View Inventory</a>
-            </div>
+            </div><!--dropdown-menu-->
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,7 +67,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item active" href="./pharmaedit.php">Edit Profile</a>
-            </div>
+            </div><!--dropdown-menu-->
         </li>
         <li class="nav-item">
             <a class="nav-link" href="./view_reports.php">Reports</a>
@@ -72,7 +76,7 @@
             <a class="nav-link" href="../../logout">Logout</a>
         </li>
         </ul>
-    </div>
+    </div><!--navbar-collapse collapse w-100 order-3 dual-collapse2-->
 </nav>
 <!--End of the Header navigation bar for the website-->
 <br>
@@ -80,7 +84,7 @@
     <form name="doclog" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">
         <div class="container">
             <center><h1 style="color:#242424;">Edit Pharmacist Profile</h1></center>
-        </div>
+        </div><!--container-->
         <br>
         <br>
         <div class="container border pt-4 bg-light rounded">
@@ -90,44 +94,44 @@
                         <label for="name" class="col-sm-4 col-form-label"><h5>Pharmacist ID</h5></label>
                         <div class="col-lg-3">
                             <input type="text" class="form-control form-control-sm" name="pharmaid" id="pharmaid" value="<?php echo $_SESSION['userid'];?>" autocomplete="off" required disabled>
-                        </div>
-                    </div>
+                        </div><!--col-lg-3-->
+                    </div><!--form-group row-->
                     <div class="form-group row">
                         <label for="name" class="col-sm-4 col-form-label"><h5>Name</h5></label>
                         <div class="col-lg-8">
                             <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Enter Name" value="<?php echo $_SESSION['name'];?>" required autofocus>
-                        </div>
-                    </div>
+                        </div><!--col-lg-8-->
+                    </div><!--form-group row-->
                     <div class="form-group row">
                         <label for="email" class="col-sm-4 col-form-label"><h5>Email</h5></label>
                         <div class="col-lg-8">
                             <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Enter Email" value="<?php echo $_SESSION['email'];?>">
-                        </div>
-                    </div>
+                        </div><!--col-lg-8-->
+                    </div><!--form-group row-->
                     <div class="form-group row">
                         <label for="contactno" class="col-sm-4 col-form-label"><h5>Telephone Number</h5></label>
                         <div class="col-lg-8">
                             <input type="number" class="form-control form-control-sm" name="contactno" id="contactno" min="1" step="1" max="9999999999" placeholder="Enter Telephone Number" value = "<?php echo $_SESSION['contactno'];?>" required autofocus>
-                        </div>
-                    </div>
+                        </div><!--col-lg-8-->
+                    </div><!--form-group row-->
                     <div class="form-group row">
                         <label for="password" class="col-sm-4 col-form-label"><h5>Password</h5></label>
                         <div class="col-lg-8">
                             <input type="password" class="form-control form-control-sm" name="password" id="password" placeholder="Enter Password" onkeyup='check();' required autofocus>
-                        </div>
-                    </div> 
+                        </div><!--col-lg-8-->
+                    </div><!--form-group row-->
                     <div class="form-group row">
                         <label for="repassword" class="col-sm-4 col-form-label"><h5>Re-enter Password</h5></label>
                         <div class="col-lg-8">
                             <input type="password" class="form-control form-control-sm" name="repassword" id="repassword" placeholder="Re-enter Password" onkeyup='check();' required autofocus>
-                            <div class="mt-2" id='message'></div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <center> <input type="submit" value="Edit Profile" class="btn btn-info btn-lg" name="submit"> </center><!--change-->  
+                            <div class="mt-2" id='message'></div><!--mt-2-->
+                        </div><!--col-lg-8-->
+                    </div><!--form-group row-->
+                </div><!--col-lg-12-->
+            </div><!--row-->
+            <center> <input type="submit" value="Edit Profile" class="btn btn-info btn-lg" name="submit"> </center>
             <br>
-        </div>
+        </div><!--container border pt-4 bg-light rounded-->
         <br>
         <br>
           
@@ -136,10 +140,8 @@
     </form>
 
 
-
-
-    <br>
-    <?php
+<br>
+<?php
     include '../../real_footer.php';
     include '../../footer.php';
 ?>
