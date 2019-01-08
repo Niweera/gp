@@ -125,7 +125,7 @@
                 echo "<script>alert(\"Successfully deleted!\");</script>";
             }
         }else {
-            echo "<script>alert(\"Username is not valid. Please check the usename again!\");</script>";
+            echo "<script>alert(\"Username is not valid. Please check the username again!\");</script>";
         }
     }
 
