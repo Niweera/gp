@@ -25,7 +25,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
-    <script src="script.js"></script>
+    <script src="script.js"></script><!--script to validate password-->
 </head>
 <body>
 <!--Header navigation bar for the website-->

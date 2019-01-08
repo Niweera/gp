@@ -86,11 +86,11 @@
                 <label for="userid" class="col-sm-2 col-form-label"><h5>Admin ID:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="userid" id="userid" placeholder="Enter Admin ID" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
+                    <div id='resultbox' class="result"></div><!--results from backend-search.php is displayed here-->
                 </div>
                 <div class="col-sm-3"></div>
             </div>
-            <div id="txtHint"></div>
+            <div id="txtHint"></div><!--results from getuser.php is displayed here-->
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>

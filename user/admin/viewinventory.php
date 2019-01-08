@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
             </div>
-            <div id="result"></div>
+            <div id="result"></div><!--results from fetch.php is displayed here-->
             <br>
         </div>    
     
