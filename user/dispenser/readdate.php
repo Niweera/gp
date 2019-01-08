@@ -46,6 +46,15 @@ the following is the query,
 create event checkDrugLevels on schedule every 1 day starts '2018-11-01 00:00:01' on completion preserve enable do insert into hmsdb.sysmsg(message) select drug.drugid from hmsdb.drug where drug.drugid in (select drug.drugid from hmsdb.drug where drug.count <='500');
 -->
 
+<!--to turn on Mysql event scheduler-->
+<!--SET GLOBAL event_scheduler = ON;-->
+
+<!--Mysql query for check whether a drug is below the count threshold-->
+<!--insert into hmsdb.sysmsg(message) select drug.drugid from hmsdb.drug where drug.drugid in (select drug.drugid from hmsdb.drug where drug.count <='500')-->
+
+<!--Mysql query for complete event-->
+<!--CREATE DEFINER=`root`@`localhost` EVENT `checkDrugLevels` ON SCHEDULE EVERY 1 DAY STARTS '2019-01-06 00:00:01' ON COMPLETION PRESERVE ENABLE DO insert into hmsdb.sysmsg(message) select drug.drugid from hmsdb.drug where drug.drugid in (select drug.drugid from hmsdb.drug where drug.count <='500')-->
+
 
 
 
