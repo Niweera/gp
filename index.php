@@ -30,11 +30,6 @@
     <section class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container">
                 <div class="navbar-header">
-                  <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
                    
                     <!-- lOGO TEXT HERE -->
                     <a href="./" class="navbar-brand"><i class="fa fa-h-square"></i>&nbsp &nbsp Divisional Hospital, Bentota</a>
@@ -96,7 +91,6 @@
                               <div class="item item-first">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3></h3>
                                              <h1>Welcome to Divisional Hospital Bentota</h1>
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
@@ -105,7 +99,6 @@
                               <div class="item item-second">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3></h3>
                                              <h1>Welcome to Divisional Hospital Bentota</h1>    
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
@@ -114,7 +107,6 @@
                               <div class="item item-third">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3></h3>
                                              <h1>Welcome to Divisional Hospital Bentota</h1>
                                         </div><!--col-md-offset-1 col-md-10-->
                                    </div><!--caption-->
