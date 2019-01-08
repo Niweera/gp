@@ -78,7 +78,7 @@
     <br>
     <div class="container border pt-2 bg-light rounded"> <!--List of all the patients previously registered-->
         <h5 class="pb-3">Last Registered:</h5>
-        <div id="resultnurse"><p class="text-danger">Please wait, system is retrieving data!</p></div><br>
+        <div id="resultnurse"><p class="text-danger">Please wait, system is retrieving data!</p></div><br><!--displayes results from register_getuser.php-->
     </div>
     <br>
     <form name="doclog" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">

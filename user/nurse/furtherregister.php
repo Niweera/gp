@@ -89,11 +89,11 @@
                 <label for="clinicno" class="col-sm-2 col-form-label"><h5>Patient ID:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="clinicno" id="clinicno" placeholder="Enter Patient ID" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
+                    <div id='resultbox' class="result"></div><!--results from backend-search.php-->
                 </div>
                 <div class="col-sm-3"></div>
             </div>
-            <div id="txtHint"></div>
+            <div id="txtHint"></div><!--results from getuser.php-->
             <br>
             <hr>
             <div class="form-group row">
