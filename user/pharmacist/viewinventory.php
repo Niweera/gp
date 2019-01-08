@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="getscript.js"></script>
+    <script src="getscript.js"></script><!--ajax file to retrieve data-->
 
     <style>
     input[type='number'] {
@@ -103,7 +103,7 @@
                     <button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2"></button>
                 </div><!--col-sm-3-->
             </div><!--form-group row mt-3-->
-            <div id="result">
+            <div id="result"><!--result from fetch.php-->
             </div><!--result-->
             <br>
         </div><!--container border pt-4 bg-light rounded mt-3 mb-5-->      

@@ -15,3 +15,4 @@ $(document).ready(function(){
 
 	load_data("msgcount");
 });
+//this file is to display new badge in pharmacist homepage in view reports card

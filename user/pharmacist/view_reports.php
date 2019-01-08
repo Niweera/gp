@@ -136,7 +136,7 @@ if ($queryResult > 0){
                 <label for="reportid" class="col-sm-3 col-form-label"><h5>Please enter Report ID:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="reportid" id="reportid" placeholder="Enter only the Report ID number" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div><!--result-->
+                    <div id='resultbox' class="result"></div><!--result from backend-search.php-->
                 </div><!--col-lg-4 mb-1 search-box-->
                 <div class="col-sm-3"></div>
             </div><!--form-group row-->

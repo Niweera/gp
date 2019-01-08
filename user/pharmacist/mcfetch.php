@@ -22,4 +22,5 @@ if(mysqli_num_rows($result) > 0)
 	}
 }
 }
+//mcfetch.php is used to check whether new reports are arrived
 ?>
