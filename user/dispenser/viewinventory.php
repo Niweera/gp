@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="getscript.js"></script>
+    <script src="getscript.js"></script><!--ajax file for retrieving data-->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
             </div>
-            <div id="result"></div>
+            <div id="result"></div><!--results from fetch.php is displayed here-->
             <br>
             <div class="form-group row mb-5">
                 <div class="col-sm-5"></div>

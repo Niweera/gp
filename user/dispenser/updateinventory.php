@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="updatescript.js"></script>
-    <script src="drugscript.js"></script>
+    <script src="updatescript.js"></script><!--ajax file to post the form data-->
+    <script src="drugscript.js"></script><!--ajax file for retrieving data-->
     <style>
     input[type='number'] {
     -moz-appearance:textfield;
@@ -100,7 +100,7 @@
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Name:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="drugname" id="drugname" placeholder="Enter Drug Name" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
+                    <div id='resultbox' class="result"></div><!--results from drug-search.php is displayed here-->
                 </div>
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Drug Count:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
@@ -117,21 +117,20 @@
         </form>
         <?php
         if (isset($_POST['dispid'])){
-            $connect = mysqli_connect("localhost", "root", "srilanka", "hmsdb");
             $dispid = filter_input(INPUT_POST,'dispid');
             $drugname = filter_input(INPUT_POST,'drugname');
             $drugcount = filter_input(INPUT_POST,'drugcount');
             $drugsql = "SELECT drugid FROM drug WHERE drugname = '$drugname';";
-            $drugresult = mysqli_query($connect, $drugsql);
+            $drugresult = mysqli_query($conn, $drugsql);
             if(mysqli_num_rows($drugresult) == 1){
                 $row = mysqli_fetch_array($drugresult);
                 $drugid = $row['drugid']; 
                 $sqldelete = "DELETE FROM drugupdate WHERE drugid = '$drugid';";
                 $sql = "INSERT INTO drugupdate(dispid,drugid,count) VALUES('$dispid', '$drugid','$drugcount');";
                 $updatesql ="UPDATE drug SET count = count + '$drugcount' WHERE drugid = '$drugid';";
-                $deleteresult = mysqli_query($connect, $sqldelete);
-                $result = mysqli_query($connect, $sql);
-                $updateresult = mysqli_query($connect, $updatesql);
+                $deleteresult = mysqli_query($conn, $sqldelete);
+                $result = mysqli_query($conn, $sql);
+                $updateresult = mysqli_query($conn, $updatesql);
                 if($deleteresult && $result && $updateresult){
                     echo "<div class='text-center h5'>Successfully Updated!</div><br>";
                 }else{

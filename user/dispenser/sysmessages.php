@@ -102,7 +102,7 @@
             </div>
             <div class="col-sm-3"><button id="newButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
         </div>
-        <div id="newresult"></div>
+        <div id="newresult"></div><!--results from newdate.php is displayed here-->
         <div class="form-group row mt-3">
             <div class="col-sm-5"></div>
             <div class="col-sm-2"><button id="okButton" class="text-center btn btn-info btn-block" disabled>OK</button></div><!--change-->
@@ -126,7 +126,7 @@
             </div>
             <div class="col-sm-3"><button id="readButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
         </div>
-        <div id="readresult"></div>
+        <div id="readresult"></div><!--results from readdate.php is displayed here-->
         <br>
     </div>    
 
@@ -151,7 +151,11 @@
 <?php
 mysqli_close($conn);
 ?>
+<!--to turn on Mysql event scheduler-->
+<!--SET GLOBAL event_scheduler = ON;-->
 
 <!--Mysql query for check whether a drug is below the count threshold-->
 <!--insert into hmsdb.sysmsg(message) select drug.drugid from hmsdb.drug where drug.drugid in (select drug.drugid from hmsdb.drug where drug.count <='500')-->
 
+<!--Mysql query for complete event-->
+<!--CREATE DEFINER=`root`@`localhost` EVENT `checkDrugLevels` ON SCHEDULE EVERY 1 DAY STARTS '2019-01-06 00:00:01' ON COMPLETION PRESERVE ENABLE DO insert into hmsdb.sysmsg(message) select drug.drugid from hmsdb.drug where drug.drugid in (select drug.drugid from hmsdb.drug where drug.count <='500')-->
