@@ -91,12 +91,12 @@
                 <label for="drug" class="col-sm-2 col-form-label"><h5>Search:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="search_text" id="search_text" placeholder="Search for a drug" autocomplete="off" autofocus>
-                    <div id='resultbox' class="result"></div>
+                    <!--<div id='resultbox' class="result"></div>-->
                 </div>
                 <div class="col-sm-3"><button id="thisButton" class="col-md-2 text-center btn btn-light btn mb-2"></button></div>
                 
             </div>
-            <div id="result"></div>
+            <div id="result"></div><!--results from the fetch.php is displayed here-->
             <br>
          
         </div>    

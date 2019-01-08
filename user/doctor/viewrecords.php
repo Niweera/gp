@@ -92,18 +92,18 @@
                 <label for="clinicno" class="col-sm-2 col-form-label"><h5>Patient ID:</h5></label>
                 <div class="col-lg-4 mb-1 search-box">
                     <input type="text" class="form-control form-control-sm" name="clinicno" id="clinicno" placeholder="Enter Patient ID" autocomplete="off" required autofocus>
-                    <div id='resultbox' class="result"></div>
+                    <div id='resultbox' class="result"></div><!--results from vrp-search.php is displayed here-->
                 </div>
                 <div class="col-sm-3"></div>
             </div>
-            <div id="txtHint"></div>
+            <div id="txtHint"></div><!--results from vrpgetuser.php is displayed here-->
             <br>
             <div class="form-group row">
                 <div class="col-sm-3"></div>
                 <label for="date" class="col-sm-2 col-form-label"><h5>Required date:</h5></label>
                 <div class="col-lg-4 mb-1 search-box2">
                     <input type="text" class="form-control form-control-sm" name="date" id="date" placeholder="Enter date YYYY-MM-DD" autocomplete="off" required autofocus>
-                    <div id='resultbox2' class="result2"></div>
+                    <div id='resultbox2' class="result2"></div><!--results from vrd-search.php is displayed here-->
                 </div>
                 <div class="col-sm-3"></div>
             </div>

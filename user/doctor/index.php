@@ -23,7 +23,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" type="text/css" href="./custom.css"/>
-    <script src="../admin/script.js"></script>
+    <script src="../admin/script.js"></script><!--the javacript to view the time-->
 </head>
 <body onload="startTime()">
 <!--Header navigation bar for the website-->
