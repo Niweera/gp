@@ -93,7 +93,7 @@ CREATE TABLE `dispenser` (
 
 LOCK TABLES `dispenser` WRITE;
 /*!40000 ALTER TABLE `dispenser` DISABLE KEYS */;
-INSERT INTO `dispenser` VALUES ('K.S. Vithanage',766419486,'disp','w.nipuna@gmail.com');
+INSERT INTO `dispenser` VALUES ('K.S. Vithanage',766419485,'disp','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `dispenser` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,7 +121,7 @@ CREATE TABLE `doctor` (
 
 LOCK TABLES `doctor` WRITE;
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` VALUES ('H.G.S.P. Abeynayake',766419486,'doctor','w.nipuna@gmail.com');
+INSERT INTO `doctor` VALUES ('H.G.S.P. Abeynayake',766419485,'doctor','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +147,7 @@ CREATE TABLE `drug` (
 
 LOCK TABLES `drug` WRITE;
 /*!40000 ALTER TABLE `drug` DISABLE KEYS */;
-INSERT INTO `drug` VALUES ('d1','AMLODIPINE',499,1),('d10','GTN',1000,1),('d11','HCT',1000,1),('d12','ISMN',1000,1),('d13','LASIX',1000,1),('d14','LOSARTAN K.',944,2),('d15','METFORMIN',944,0),('d16','METOPROLOL',1000,1),('d17','MIX.INSULIN',1000,0),('d18','NSR',1000,1),('d19','OLEMESARTAN',1000,1),('d2','ASPIRIN',1000,2),('d20','PIOGLITAZONE',1000,0),('d21','SITAGLIPTIN',1000,0),('d22','TOLBUTAMIDE',1000,0),('d23','VERPAMIL',1000,1),('d3','ATENOLOL',1000,1),('d4','ATORVASTATIN',1000,2),('d5','CARVEDILOL',1000,1),('d6','CLOPIDOGREL',1000,2),('d7','DILTIAZEM',1000,1),('d8','ENALAPRIL',1000,0),('d9','GLIBENCLAMIDE',1000,0);
+INSERT INTO `drug` VALUES ('d1','AMLODIPINE',499,1),('d10','GTN',1000,1),('d11','HCT',1000,1),('d12','ISMN',1000,1),('d13','LASIX',1000,1),('d14','LOSARTAN K.',1472,2),('d15','METFORMIN',972,0),('d16','METOPROLOL',1000,1),('d17','MIX.INSULIN',1000,0),('d18','NSR',1000,1),('d19','OLEMESARTAN',1000,1),('d2','ASPIRIN',1000,2),('d20','PIOGLITAZONE',1000,0),('d21','SITAGLIPTIN',1000,0),('d22','TOLBUTAMIDE',1000,0),('d23','VERPAMIL',1000,1),('d3','ATENOLOL',1000,1),('d4','ATORVASTATIN',1000,2),('d5','CARVEDILOL',1000,1),('d6','CLOPIDOGREL',1000,2),('d7','DILTIAZEM',1000,1),('d8','ENALAPRIL',1000,0),('d9','GLIBENCLAMIDE',1000,0);
 /*!40000 ALTER TABLE `drug` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,7 +176,7 @@ CREATE TABLE `drugupdate` (
 
 LOCK TABLES `drugupdate` WRITE;
 /*!40000 ALTER TABLE `drugupdate` DISABLE KEYS */;
-INSERT INTO `drugupdate` VALUES ('disp','d1',50,'2019-01-01 16:53:50'),('disp','d10',500,'2019-01-02 04:23:51'),('disp','d11',500,'2019-01-02 03:40:27'),('disp','d12',1000,'2018-10-28 11:01:12'),('disp','d13',1000,'2018-10-28 11:01:17'),('disp','d14',0,'2019-01-06 11:42:52'),('disp','d15',112,'2019-01-01 16:54:18'),('disp','d16',1000,'2018-10-28 11:02:02'),('disp','d17',112,'2019-01-01 16:54:07'),('disp','d18',1000,'2018-10-28 11:01:43'),('disp','d19',1000,'2018-10-28 11:01:52'),('disp','d2',56,'2018-10-30 11:53:11'),('disp','d20',1000,'2018-10-28 11:02:15'),('disp','d21',1000,'2018-10-28 11:02:23'),('disp','d22',1000,'2018-10-28 11:02:32'),('disp','d23',1000,'2018-10-28 11:02:37'),('disp','d3',1000,'2018-10-28 10:53:27'),('disp','d4',56,'2018-10-30 11:53:31'),('disp','d5',1000,'2018-10-28 11:00:17'),('disp','d6',1000,'2018-10-28 11:00:28'),('disp','d7',1000,'2018-10-28 11:00:35'),('disp','d8',1000,'2018-10-28 11:00:40'),('disp','d9',1000,'2018-10-28 11:00:46');
+INSERT INTO `drugupdate` VALUES ('disp','d1',500,'2019-01-08 16:51:30'),('disp','d10',500,'2019-01-02 04:23:51'),('disp','d11',500,'2019-01-02 03:40:27'),('disp','d12',1000,'2018-10-28 11:01:12'),('disp','d13',1000,'2018-10-28 11:01:17'),('disp','d14',500,'2019-01-07 05:41:09'),('disp','d15',160,'2019-01-07 04:18:11'),('disp','d16',1000,'2018-10-28 11:02:02'),('disp','d17',112,'2019-01-01 16:54:07'),('disp','d18',1000,'2018-10-28 11:01:43'),('disp','d19',1000,'2018-10-28 11:01:52'),('disp','d2',56,'2018-10-30 11:53:11'),('disp','d20',1000,'2018-10-28 11:02:15'),('disp','d21',1000,'2018-10-28 11:02:23'),('disp','d22',1000,'2018-10-28 11:02:32'),('disp','d23',1000,'2018-10-28 11:02:37'),('disp','d3',1000,'2018-10-28 10:53:27'),('disp','d4',56,'2018-10-30 11:53:31'),('disp','d5',1000,'2018-10-28 11:00:17'),('disp','d6',1000,'2018-10-28 11:00:28'),('disp','d7',1000,'2018-10-28 11:00:35'),('disp','d8',1000,'2018-10-28 11:00:40'),('disp','d9',1000,'2018-10-28 11:00:46');
 /*!40000 ALTER TABLE `drugupdate` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -204,7 +204,7 @@ CREATE TABLE `nurse` (
 
 LOCK TABLES `nurse` WRITE;
 /*!40000 ALTER TABLE `nurse` DISABLE KEYS */;
-INSERT INTO `nurse` VALUES ('H.S. Silva',766419486,'nurse','w.nipuna@gmail.com');
+INSERT INTO `nurse` VALUES ('H.S. Silva',718132631,'nurse','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `nurse` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -240,7 +240,7 @@ CREATE TABLE `patient` (
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
-INSERT INTO `patient` VALUES ('Chamith Jayathilake',1,'1995-05-11',751234567,'patient0','cjayathilake@gmail.com','No 25, Asiri Mawatha, Thalpitiya, Wadduwa','nurse','2018-09-18 13:03:51',1,0),('Sanjaya Hashan',1,'1995-06-01',751234567,'patient1','sanjayahash@gmail.com','No 25, Asiri Mawatha, Thalpitiya, Wadduwa','nurse','2018-09-18 13:03:51',0,1),('J.U. Udara',1,'1995-05-15',766419486,'u950004','w.nipuna@gmail.com','45, Sausiri Mawatha, Nagoda.','nurse','2019-01-06 11:35:07',0,1),('W.M.D.N.L. Weerasekara',1,'1996-03-11',766419486,'w960003','w.nipuna@gmail.com','45, Sausiri Mawatha, Nagoda.','nurse','2018-10-20 06:11:59',1,0);
+INSERT INTO `patient` VALUES ('Chamith Jayathilake',1,'1995-05-11',751234567,'patient0','cjayathilake@gmail.com','No 25, Asiri Mawatha, Thalpitiya, Wadduwa','nurse','2018-09-18 13:03:51',1,0),('Sanjaya Hashan',1,'1995-06-01',751234567,'patient1','sanjayahash@gmail.com','No 25, Asiri Mawatha, Thalpitiya, Wadduwa','nurse','2018-09-18 13:03:51',0,1),('J.U. Udara',1,'1995-05-15',766419486,'u950004','w.nipuna@gmail.com','45, Sausiri Mawatha, Nagoda.','nurse','2019-01-06 11:35:07',0,1),('W.M. Weerasekara',1,'1994-03-11',766419486,'w940005','w.nipuna@gmail.com','45, Sausiri Mawatha','nurse','2019-01-07 05:33:53',1,0),('W.M.D.N.L. Weerasekara',1,'1996-03-11',766419486,'w960003','w.nipuna@gmail.com','45, Sausiri Mawatha, Nagoda.','nurse','2018-10-20 06:11:59',1,0);
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,7 +294,7 @@ CREATE TABLE `pharmacist` (
 
 LOCK TABLES `pharmacist` WRITE;
 /*!40000 ALTER TABLE `pharmacist` DISABLE KEYS */;
-INSERT INTO `pharmacist` VALUES ('N. Jayathissa',766419486,'pharma','w.nipuna@gmail.com');
+INSERT INTO `pharmacist` VALUES ('N. Jayathissa',766419485,'pharma','w.nipuna@gmail.com');
 /*!40000 ALTER TABLE `pharmacist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -328,7 +328,7 @@ CREATE TABLE `pharmdisp` (
 
 LOCK TABLES `pharmdisp` WRITE;
 /*!40000 ALTER TABLE `pharmdisp` DISABLE KEYS */;
-INSERT INTO `pharmdisp` VALUES ('pharma','disp','2018-11-28 08:58:19','2018-12-03 06:40:52','d1',1000,1),('pharma','disp','2018-11-28 08:58:19','2018-12-03 06:40:52','d10',1000,1),('pharma','disp','2018-11-28 08:58:19','2018-12-03 06:40:52','d11',1000,1),('pharma','disp','2018-12-03 06:41:28','2018-12-03 06:42:04','d1',1000,2),('pharma','disp','2018-12-03 06:41:28','2018-12-03 06:42:04','d10',1000,2),('pharma','disp','2018-12-03 06:41:28','2018-12-03 06:42:04','d11',1000,2),('pharma','disp','2019-01-02 03:37:53','2019-01-02 03:39:01','d10',501,3),('pharma','disp','2019-01-02 03:37:53','2019-01-02 03:39:01','d11',500,3),('pharma','disp','2019-01-02 04:21:56','2019-01-02 04:22:44','d10',500,4),('pharma','disp','2019-01-03 08:14:25','2019-01-06 11:47:16','d14',1000,5);
+INSERT INTO `pharmdisp` VALUES ('pharma','disp','2018-11-28 08:58:19','2018-12-03 06:40:52','d1',1000,1),('pharma','disp','2018-11-28 08:58:19','2018-12-03 06:40:52','d10',1000,1),('pharma','disp','2018-11-28 08:58:19','2018-12-03 06:40:52','d11',1000,1),('pharma','disp','2018-12-03 06:41:28','2018-12-03 06:42:04','d1',1000,2),('pharma','disp','2018-12-03 06:41:28','2018-12-03 06:42:04','d10',1000,2),('pharma','disp','2018-12-03 06:41:28','2018-12-03 06:42:04','d11',1000,2),('pharma','disp','2019-01-02 03:37:53','2019-01-02 03:39:01','d10',501,3),('pharma','disp','2019-01-02 03:37:53','2019-01-02 03:39:01','d11',500,3),('pharma','disp','2019-01-02 04:21:56','2019-01-02 04:22:44','d10',500,4),('pharma','disp','2019-01-03 08:14:25','2019-01-06 11:47:16','d14',1000,5),('pharma','disp','2019-01-07 05:40:47','2019-01-07 05:43:54','d1',500,6);
 /*!40000 ALTER TABLE `pharmdisp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -387,7 +387,7 @@ CREATE TABLE `sysmsg` (
 
 LOCK TABLES `sysmsg` WRITE;
 /*!40000 ALTER TABLE `sysmsg` DISABLE KEYS */;
-INSERT INTO `sysmsg` VALUES ('d1','2019-01-06 06:42:06',NULL);
+INSERT INTO `sysmsg` VALUES ('d1','2019-01-05 18:30:01',NULL);
 /*!40000 ALTER TABLE `sysmsg` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -413,7 +413,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('admin','$2y$10$Zo/G8sbbJadthYK0z0g1Oe98kA.bnTgKVCbDZh7uZoHHYm.z13wS.',0,'2018-09-16 06:52:03'),('disp','$2y$10$ELILlzwRZq/h8IrSeqrIceqxj7XHW/cOTB0htCqvfMtjUoFs.jtKW',2,'2018-09-16 06:52:03'),('doctor','$2y$10$SG0JT8lj69kPjc8eb2D9keXOoMS8PLDQuRlM8IecCzfbGdqd0uKxu',1,'2018-09-16 06:52:03'),('nurse','$2y$10$3yhgNSPOLQTmkCFjCIoGU.pGOU4mtXSe11TLpGpCPk3ogxWVpJmyW',4,'2018-09-16 06:52:03'),('patient0','$2y$10$mB2msX7f9uVjhLTMgOLmFuZTxTTVZmYjMfQUmIJP2NdgSNeIe/fVC',5,'2018-09-18 13:01:03'),('patient1','$2y$10$mB2msX7f9uVjhLTMgOLmFuZTxTTVZmYjMfQUmIJP2NdgSNeIe/fVC',5,'2018-09-18 13:01:03'),('pharma','$2y$10$KZdth47eWtpr4UjSVxToKO6OXBWtehUxmArn4EzpWl1In4/xWqBue',3,'2018-09-16 06:52:03'),('u950004','$2y$10$RUUziXcQdAZh6OAhaLzik.FxePzx0RcsHU9JPJuxtiJ0Yu8YH36NW',5,'2019-01-06 11:35:07'),('w960003','$2y$10$7HACg0KNLmtqtmaWLqbLQ.0rxMHHGK9sbMBknLqlBZK2Iw1QSfjbK',5,'2018-10-20 06:11:59');
+INSERT INTO `user` VALUES ('admin','$2y$10$Zo/G8sbbJadthYK0z0g1Oe98kA.bnTgKVCbDZh7uZoHHYm.z13wS.',0,'2018-09-16 06:52:03'),('disp','$2y$10$keT/buvz6KW0bKoXkXifoOLHJbOPJdOKotVnqUofwW27crg.Nh3Em',2,'2018-09-16 06:52:03'),('doctor','$2y$10$iPLMDaTAnOUrX6DUiQSeIee4rC91L7PWJ5QbwXbv8bjIsjRobhQRS',1,'2018-09-16 06:52:03'),('nurse','$2y$10$w7BM4VR9no5oZr5npjr6..CWq.RkmFy9utONQCVs1hYq2lZsAzrMC',4,'2018-09-16 06:52:03'),('patient0','$2y$10$mB2msX7f9uVjhLTMgOLmFuZTxTTVZmYjMfQUmIJP2NdgSNeIe/fVC',5,'2018-09-18 13:01:03'),('patient1','$2y$10$mB2msX7f9uVjhLTMgOLmFuZTxTTVZmYjMfQUmIJP2NdgSNeIe/fVC',5,'2018-09-18 13:01:03'),('pharma','$2y$10$c5ZpVQr8iORyCfbB0ctr1.VkW1zFyYBlNWeSWXMZplPH2SSmubzkK',3,'2018-09-16 06:52:03'),('u950004','$2y$10$RUUziXcQdAZh6OAhaLzik.FxePzx0RcsHU9JPJuxtiJ0Yu8YH36NW',5,'2019-01-06 11:35:07'),('w940005','$2y$10$/dEtyjhTwV3doLhx.KANEeq1gXpHq6/biq72bkfP3NQ2R6lYgR4qm',5,'2019-01-07 05:33:53'),('w960003','$2y$10$7HACg0KNLmtqtmaWLqbLQ.0rxMHHGK9sbMBknLqlBZK2Iw1QSfjbK',5,'2018-10-20 06:11:59');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -426,4 +426,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-07  8:43:46
+-- Dump completed on 2019-01-08 23:15:06
